@@ -8,6 +8,7 @@ section{
     height: 600px;
     box-sizing: border-box;
     text-align: center;
+    margin-top: 20px;
 }
 
 .nav-lat{
@@ -65,14 +66,15 @@ section{
     float: left;
     border: 1px solid black;
     box-sizing: border-box;
+    padding-top: 20px;
 }
 
 iframe{
     width: 90%;
-    height: 550px;
+    height: 500px;
     margin: auto;
     margin-top: 20px;
-    border: none;
+    border: 3px solid black;
 }
 
 

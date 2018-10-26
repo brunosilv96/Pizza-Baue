@@ -47,8 +47,16 @@ body{
     margin: auto;
 }
 
-.nav2 ul li{
+.lista{
     width: 30%;
+    height: 70px;
+    float: left;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.login{
+    width: 40%;
     height: 70px;
     float: left;
     box-sizing: border-box;
@@ -66,17 +74,6 @@ body{
     </ul>
 </form>
 */
-
-.sub-login{
-    width: 500px;
-    height: 500px;
-    float: left;
-    box-sizing: border-box;
-    list-style: none;
-    border: 2px solid black;
-    position: absolute;
-}
-
 
 ul{
     width: 100%;
@@ -103,7 +100,9 @@ a{
     height: 30px;
     border: 1px solid black;
     box-sizing: border-box;
+    margin-top: 20px;
 }
+
 
 
 
