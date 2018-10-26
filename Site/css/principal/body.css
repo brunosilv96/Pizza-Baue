@@ -8,7 +8,7 @@ section{
     height: 600px;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 20px;
+    
 }
 
 .nav-lat{
@@ -56,8 +56,9 @@ section{
     height: 30px;
     float: left;
     list-style: none;
-    border: 1px solid black;
     margin: 10px;
+    padding: 5px;
+    background-color: #FFE4B5;
 }
 
 .conteudo{
@@ -74,7 +75,7 @@ iframe{
     height: 500px;
     margin: auto;
     margin-top: 20px;
-    border: 3px solid black;
+    border: 1px solid black;
 }
 
 
