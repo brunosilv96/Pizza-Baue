@@ -6,26 +6,40 @@
         <meta name="description" content="Pagina Inicial de Login do Cliente">
         
         <!--Folhas de Estilo - CSS-->
-        <link rel="stylesheet" type="text/css" href="css/principal/nav.css">
-        <link rel="stylesheet" type="text/css" href="css/principal/body.css">
-        <link rel="stylesheet" type="text/css" href="css/principal/footer.css">
-
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/principal.css">
     </head>
     <body>
         <header>
-            <p>Header - "Pode ser um banner ou imagem"</p>
-        </header>
-        <nav class="principal">
-            <nav class="menu">
+            <input type="checkbox" id="bt-menu">
+            <label for="bt-menu">&#9776;</label>
+            <nav class="navbar">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cardapio</a></li>
-                    <li><a href="#">Localização</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Login</a></li>
+                    <div class="container-nav">
+                        <li ><a href="index.html">Home</a></li>
+                        <li ><a href="sobre.html">Sobre</a></li>
+                        <li ><a href="plans.html">Planos e Preços</a></li>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html" class="logo"><img src="./images/logo.png"> </a>
+                    </div>
+                </ul>
+
+                <ul class="ul2">
+                    <div class="container-nav2">
+                        <li ><a href="contact.html">Contato</a></li>
+                        <li ><a href="contact.html">Contato</a></li>
+                        <li ><a href="contact.html">Contato</a></li>
+                        <div class="line">  </div>
+                    </div>
                 </ul>
             </nav>
-        </nav>
+            <div class="jumbotron">
+                <h1 class="jumbotron-heading">Bem-vindo à Pizza Baue</h1>
+                <p class="jumbotron-text">Monte sua pizza, veja as melhores promoções e muito mais.</p>
+            </div>
+        </header>
         <nav class="navegacao">
             <p>Home > Login > Principal</p>
         </nav>
@@ -60,4 +74,5 @@
             <p>Rodapé</p>
         </footer>
     </body>
+    <script type="text/javascript" src="js/global.js"></script>
 </html>
