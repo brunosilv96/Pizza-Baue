@@ -1,5 +1,33 @@
 .navbar{
+    width: 100%;
     margin-top: 15px;
+}
+
+.container-nav{
+    width: 40%;
+    float: left;
+    margin: 0rem !important;
+}
+
+.logo{
+    width: 20%;
+    float: left;
+    padding: 0rem !important;
+    margin: 0px !important;
+}
+
+.container-nav2{
+    width: 40%;
+    float: left;
+    margin: 0rem;
+}
+
+.ul1{
+    width: 100%;
+}
+
+.ul2{
+    width: 100%;
 }
 
 .navbar.scrolling{
