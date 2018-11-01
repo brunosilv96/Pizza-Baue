@@ -1,0 +1,23 @@
+table{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3{
+    width: 90%;
+    margin: auto;
+}
+
+.tam-pqn{
+    width: 20%;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.tam-med{
+    widows: 40%;
+    height: 50px;
+    border: 1px solid black;
+}
