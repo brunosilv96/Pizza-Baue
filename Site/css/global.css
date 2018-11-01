@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +16,42 @@ h5 {
     text-transform: uppercase;
     padding: 2rem 0;
 }
+
+.section-hidden {
+    opacity: 0;
+}
+
+.section-visible {
+    opacity: 1;
+}
+
+.page {
+    transition: fadeIn 300ms ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+    display: block;
+}
+
+.loading {
+    z-index: 10;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+}
+
+
 /* CONTAINER */
 .container{
     width: 90%;
@@ -69,12 +106,334 @@ svg{
     position: absolute;
     bottom: -1;
     margin-top: 2rem;
-    width: 100%;
 }
 .svg2{
     position: absolute;
     bottom: -600;
 }
+/* < INPUTS_STYLES > */
+
+input {
+    display: block;
+    width: 320px;
+    height: 45px;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border: none;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5em;
+    padding: 0;
+}
+
+.form-control .input-group span {
+    color: white;
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 50px;
+    text-align: center;
+    width: 40px;
+    margin-left: 0.4rem;
+    background-color: transparent;
+    position: absolute;
+}
+
+.form-control .input-group input {
+    height: 47px;
+    border-radius: 10px;
+}
+
+.form-control .input-group input[type="text"],
+input[type="password"] {
+    color: #e2e2e2;
+    margin-bottom: 1em;
+    padding: 0 3rem;
+    width: 400px;
+    background-color: rgb(107, 107, 107);
+}
+
+::-webkit-input-placeholder {
+    color: #e2e2e2;
+    text-transform: uppercase;
+}
+
+ ::-moz-placeholder {
+    color: #e2e2e2;
+    text-transform: uppercase;
+}
+
+ :-ms-input-placeholder {
+    color: #e2e2e2;
+    text-transform: uppercase;
+}
+
+ :-moz-placeholder {
+    color: #e2e2e2;
+    text-transform: uppercase;
+}
+
+/* BEGIN:MODAL_STYLES */
+
+
+.modal-content::before {
+    content: "";
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    display: block;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(1px);
+    background-color: rgba(167, 167, 167, 0.8);
+}
+
+.modal-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+   
+    width: 100%;
+    height: 100%;
+}
+
+.login-form {
+    position: absolute;
+    top: 45%;
+    margin-top: -50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+}
+
+.register-form {
+    position: absolute;
+    top: 40%;
+    margin-top: -50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    height: 300px;
+}
+
+.lost-form {
+    position: absolute;
+    top: 20%;
+    margin-top: -50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+}
+
+.ga {
+    margin-top: 1.4rem;
+}
+
+.lost-form h2 {
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    height: 100%;
+    border-bottom: 2px solid rgb(255, 203, 0);
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .2rem 0;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 600ms ease-in-out;
+   
+}
+
+.modal::after {
+    background: rgba(0, 0, 0, .5);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.modal.closed {
+    z-index: -1;
+}
+
+.modal-content {
+    width: 52%;
+    height: 70%;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-10%) translateY(-85%);
+}
+
+.modal-header {
+    background: rgb(143, 143, 143);
+    height: 10%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    margin: 1% 5%;
+    text-decoration: none;
+    font-size: 2.5rem;
+
+}
+
+.modal-close i {
+    color: white;
+ 
+
+}
+
+.modal-close i:hover {
+    color: #c94848;
+    transition: all 300ms ease-in-out;
+}
+
+.modal.opened {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lost-password {
+    width: 100%;
+}
+
+.lost-password a {
+    text-decoration: none;
+    color: #c94848;
+    
+}
+
+.tabs-page {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.tabs-select {
+    transition: all 600ms ease-in-out;
+}
+
+.tabs-page.tab-active {
+    visibility: visible;
+    margin-left: 0;
+    display: flex;
+    opacity: 1;
+}
+
+.tabs-select {
+    position: absolute;
+    top: 15%;
+    margin-top: -50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+}
+
+.tabs-select .tab {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    color: #a8a8a8;
+}
+
+.tabs-select .tab.tab-selected {
+    border-bottom: 2px solid #c94848;
+    color: white;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.form-header {
+    width: 100%;
+}
+
+.campo-cpf {
+    color: rgba(255, 255, 255);
+    text-align: center;
+}
+
+
+/* < LOGIN-REGISTER-LPASSWORD_STYLES > */
+
+.user-profile {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.user-profile img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+.modal hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/* END:MODAL_STYLES */
+
+
  /* MENU */
 .navbar {
     position: fixed;
@@ -114,15 +473,12 @@ svg{
 
 .navbar ul li a:hover{
     color: #9b3030;
-  
 border-bottom: 2px solid #9b3030;  
 }
-
 
 .navbar .container-nav {
     margin: 0 10rem;
 }
-
 .navbar .container-nav2{
     margin: 0 -12rem;
 }
@@ -169,12 +525,9 @@ label[for="bt-menu"]{
     height: 50px;
     margin-top: -3.8rem;
 }
-
 #bt-menu{
-    display: none;
-    
+    display: none;   
 }
-
 label[for="bt-menu"]{
     display: none;
 }
@@ -185,16 +538,13 @@ label[for="bt-menu"]{
     width: 100%;
     height: 60px;
     background-color: #9b3030;
-    z-index: 1000;
-    
+    z-index: 1000;  
 }
-
 .container-bt h4{
     color: #fff;
     line-height: 3px;
     font-size: 1.6rem;
     margin-left: 10px;
-   
 }
     label[for="bt-menu"]{
         display: block;
@@ -251,7 +601,7 @@ label[for="bt-menu"]{
     top: 30%;
     transform: translateY(-50%);
 }
-.jumbotron-heading{
+.jumbotron-heading {
     font: 2.6rem/1.5 'Ubuntu';
     margin: 0;
     color: #fff;
@@ -261,7 +611,43 @@ label[for="bt-menu"]{
     margin: 0;
     color: #fff;
 }
-/* BOTÃO */
+/* BUTTONS STYLES */
+
+.btn {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+
+.btn-submit {
+    margin-top: 1.4rem;
+    font-size: 0.9rem;
+    color: #e2e2e2;
+    margin-bottom: 1em;
+    padding: .7rem 8rem;
+    background-color: #c94848;
+    transition: all 300ms ease-in-out;
+}
+.btn-submit:hover{
+    background-color: #9b3030;
+}
+.btn-back {
+    margin-left: 1.5rem;
+    background: transparent;
+    color: #e2e2e2;
+    font-size: 0.9rem;
+    margin-bottom: 1em;
+    padding: .7rem 8rem;
+    background-color: rgba(155, 43, 31, 0.8);
+    transition: all 300ms ease-in-out;
+}
+
+.btn-back:hover {
+    background-color: rgba(226, 60, 43, 0.8);
+}
 .button-page{
     background-color: #c94848;
     padding: 7px 30px;
@@ -273,8 +659,159 @@ label[for="bt-menu"]{
     line-height: 20px;
     transition: all 300ms ease-in-out;
 }
-
 .button-page:hover{
 background-color: #9b3030;
 cursor: pointer;
+}
+
+/* BEGIN:ANIMATION_EFFECTS */
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadeOut;
+    animation-duration: 1.5s;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-o-keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadeIn {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* INICIO DO FOOTER */
+
+footer{
+    width: 100%;
+    height: 30rem;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: #FAB106;
+}
+
+.cont-footer{
+    width: 90%;
+    height: 250px;
+    margin: auto;
+}
+
+.bloco{
+    width: 20%;
+    height: 200px;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 5rem;
+    padding: 10px;
+}
+
+.titulo{
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(53, 53, 53);
+    text-transform: capitalize;
+    color:  #585858;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.bl-conteudo{
+    text-align: right;
+    padding-top: 3rem;
+}
+
+.ft-logo{
+    width: 37%;
+    height: 200px;
+    float: left;    
+    margin-top: 5rem;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.copyright{
+    width: 100%;
+    height: 6rem;
+    box-sizing: border-box;
+    background-color: #79766F;
+    margin-top: 10rem;
+}
+
+.copyright p{
+    color: rgb(255,255,255);
+    
 }

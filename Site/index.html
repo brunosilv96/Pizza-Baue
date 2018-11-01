@@ -9,7 +9,109 @@
         <link rel="stylesheet" href="css/global.css">
         
     </head>
-    <body>
+<body>
+
+     <!--<div class="loading fadeOut">
+        <img src="./images/loading.svg">
+     </div>
+    <div class="page hidden fadeIn">
+ <!-- BEGIN:MODALS -->
+ 
+    
+        <div class="modal closed" id="modal-login">
+            
+       
+            <div class="modal-content ">
+                    <div class="modal-close">
+                            <a href="#" onclick="fnModalClose()"><i class="fas fa-times-circle"></i></a>
+                        </div>
+                <div class="modal-body">
+                    <div class="tabs-select">
+                        <a href="#" id="login-form" class="tab tab-selected" onclick="fnTabs(this)">Login</a>
+                        <a href="#" id="register-form" class="tab" onclick="fnTabs(this)">Cadastrar</a>
+                    </div>
+                    <div class="login-form tab-active tabs-page" id="login-form-tab">
+                        
+                        <form action="javascript:void(0);" method="get" class="form-control">
+                            <div class="input-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" placeholder="Username">
+                            </div>
+                            <div class="input-group">
+                                <span class="fas fa-lock"></span>
+                                <input type="password" placeholder="Senha">
+                            </div>
+                            <div class="input-group align-center">
+                                <button type="submit" class="btn btn-submit">Entrar</button>
+                            </div>
+                            <hr>
+                            <div class="lost-password align-center">
+                                <a href="#" class="tab" id="lost-form" onclick="fnTabs(this)">Esqueceu sua senha?</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="register-form tabs-page" id="register-form-tab">
+                        <form action="javascript:void(0);" method="get" class="form-control">
+                            <div class="input-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" placeholder="Username">
+                            </div>
+
+                            <div class="input-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" placeholder="E-mail">
+                            </div>
+                            <div class="input-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" placeholder="CPF" id="cpf">
+                            </div>
+                           
+          
+
+                            <div class="input-group">
+                                <span class="fas fa-lock ga"></span>
+                                <input type="password" placeholder="Senha" id="senha">
+                            </div>
+                            <div class="input-group">
+                                <span class="fas fa-lock"></span>
+                                <input type="password" placeholder="Confirmar Senha " id="confirmasenha">
+                            </div>
+
+
+
+
+                            <div class="input-group align-center">
+                                <button type="submit" class="btn btn-submit" id="envia" onclick="mostrar()">Cadastrar</button>
+                            </div>
+                            <div class="campo-cpf">
+                                <span class="viewCPF"></span><br><span class="aradio"></span><br>
+                                <span class="viewSenha"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="lost-form tabs-page" id="lost-form-tab">
+                        <div class="form-header">
+                            <h2 class="align-center">RECUPERAR SENHA</h2>
+                        </div>
+                        <form action="javascript:void(0);" method="get" class="form-control">
+                            <div class="input-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" placeholder="Username">
+                            </div>
+                            <div class="input-group align-center">
+                                <button type="submit" class="btn btn-submit">
+                                                Recuperar</button>
+                            </div>
+                            <div class="input-group align-center">
+                                <button type="button" class="btn btn-back" onclick="fnBack()">Voltar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div>
+        <!-- END:MODALS -->
 
     <header>
             <div class="container-bt">
@@ -35,7 +137,7 @@
                                     <div class="container-nav2">
                                 <li ><a href="contact.html">Contato</a></li>
                                 <li ><a href="contact.html">Contato</a></li>
-                                <li ><a href="contact.html">Contato</a></li>
+                                <li><a href="#modal-login" class="btn-login" onclick="fnModal(this)">Login</a></li>
                                 <div class="line"></div>
                             </div>
                             </ul>
@@ -62,7 +164,7 @@ viewBox="0 0 11007 2540"
 </section> 
 </header>
 <main>
-    <section class="description">
+    <section class="description section-hidden">
         <div class="container-description description-baue">
             <h1>Monte sua pizza</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc augue ex, pellentesque at nulla vel, convallis accumsan dolor. Sed tellus tellus, placerat ut fermentum id, cursus non nisl. Etiam suscipit diam justo, at mattis lacus finibus a. Nulla pharetra ultrices nulla suscipit porttitor. Mauris vehicula dui ut pretium porta. Cras nec sodales libero. Duis non odio magna. Donec lacinia faucibus finibus. Cras ac vestibulum nisl</p>
@@ -86,7 +188,9 @@ viewBox="0 0 11007 2540"
 -->
 
 <!--- PARALAX -->
-<div class="paralax-1">
+<section class="section-visible fadeIn">
+
+<div class="paralax-1 ">
     <div class="jumbotron">
         <h1 class="jumbotron-heading">Pizza do dia</h1>
         <p class="jumbotron-text">R$ 9,00 </p><br>
@@ -94,9 +198,9 @@ viewBox="0 0 11007 2540"
 
     </div>
 </div>
+</section>
 
-
-    <section class="sec">
+    <section class="sec section-hidden">
         <div class="promos container-slider">
     <h1>Nossos melhores preços</h1>
 
@@ -323,7 +427,7 @@ viewBox="0 0 11007 2540"
 
 
 </section><br><br><br><br><br>
-<section class="icons ">
+<section class="icons section-hidden">
     <h1 class="text-center">Nossos serviços</h1><br><br>
     
    <div class="card-icon">
@@ -378,6 +482,30 @@ viewBox="0 0 11007 2540"
 
 </section>
 </main>
+<footer>
+    <div class="cont-footer">
+        <div class="bloco">
+            <p class="titulo">Bloco</p>
+            <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+        </div>
+        <div class="bloco">
+            <p class="titulo">Bloco</p>
+            <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+        </div>
+        <div class="bloco">
+            <p class="titulo">Bloco</p>
+            <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+        </div>
+        <div class="ft-logo">
+            <p class="titulo">Bloco</p>
+            <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright</p>
+    </div>
+</footer>
+</body>
 
     </body>
     <script src="js/global.js"></script>
