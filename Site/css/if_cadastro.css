@@ -1,0 +1,33 @@
+table{
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h3{
+    width: 90%;
+    margin: auto;
+}
+
+td{
+	padding: 10px;
+}
+
+.lb{
+	width: 30%;
+	height: 30px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	text-align: right;
+}
+
+.txt{
+	width: 70%;
+	height: 30px;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+
+.btn{
+	text-align: center;
+}
