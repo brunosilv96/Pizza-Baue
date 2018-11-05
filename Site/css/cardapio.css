@@ -1,67 +1,122 @@
+/* < IMAGEM BACKGROUND >*/
+.text-cardapio{
+     color:  rgb(51, 51, 51);
+    text-align: center;
+    font-size: 2rem;
+
+}
+.text-cardapio-2{
+     color:  rgb(51, 51, 51);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header{
+    background:url(../images/banner-cardapio.jpg);
+ }
+
+ .str0 {stroke:rgb(255, 193, 84);
+    stroke-width:8.47;
+}
+.fil0 {fill:rgb(255, 193, 84);
+}
+
+svg{
+    position: absolute;
+    bottom: -1;
+    margin-top: 2rem;
+}
+.svg2{
+    position: absolute;
+    bottom: -600;
+}
+
+.container-monte{
+    background-color: rgb(255, 193, 84);
+    width: 100%;
+    background-attachment: fixed;
+    height: 46rem;
+}
+
+.container-monte img{
+    width: 55rem;
+    height:400px ;
+    margin-left: 23%;
+    margin-top: 1rem;
+}
+
+.btn-2{
+    background-color: #c94848;
+    padding: 15px 45px;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    line-height: 20px;
+    transition: all 300ms ease-in-out;
+    margin-left: 41%;
+}
+.btn-2:hover{
+background-color: #9b3030;
+cursor: pointer;
+}
+.btn-2-cardapio{
+    background-color: #c94848;
+    padding: 15px 45px;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    line-height: 20px;
+    transition: all 300ms ease-in-out;
+    margin-left: 21%;
+    margin-top: 2rem;
+}
+.btn-2-cardapio:hover{
+background-color: #9b3030;
+cursor: pointer;
+}
+
+/*.container-cardapio img{
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    margin-left: 10rem;
+  
+}
+.container-cardapio h1,p{
+    text-align: center;
+    width: 30rem;
+    margin-left: 10rem;
+   
+}
+.container-cardapio p{
+    margin-bottom: 2rem;
+}
+
+.cardapio{
+    margin-left: 15rem;
+    
+}
+
+.select-cardapio select{
+    padding: 10px 70px;
+    font-size: 1rem;
+
+}
+*/
+
+
 /* Configuração do Menu - NAV*/
-
-.navbar{
-    width: 100%;
-    margin-top: 15px;
-}
-
-.container-nav{
-    width: 40%;
-    float: left;
-    margin: 0rem !important;
-}
-
-.logo{
-    width: 20%;
-    float: left;
-    padding: 0rem !important;
-    margin: 0px !important;
-}
-
-.container-nav2{
-    width: 40%;
-    float: left;
-    margin: 0rem;
-}
-
-.ul1{
-    width: 100%;
-}
-
-.ul2{
-    width: 100%;
-}
-
-.navbar.scrolling{
-    margin-top: 0%;
-    height: 65px;
-}
 
 .navegacao{
     width: 100%;
     height: 40px;
     padding-top: 13px;
     box-sizing: border-box;
-}
-
-/* Fim do Menu - NAV */
-
-/* Inicio do BODY */
-
-body{
-    background-color: #DCDCDC;
-}
-
-header{
-    height: 75vh;
-}
-
-header::before{
-    height: 75vh;
-}
-
-.jumbotron {
-    top: 55%;
+    text-align: center;
 }
 
 .bd-cardapio{
@@ -71,17 +126,17 @@ header::before{
 
 .cd-card{
     width: 80%;
-    height: 250px;
+    height: 20rem;
     box-sizing: border-box;
     margin: auto;
     clear: both;
-    border: 2px solid black;
     margin-top: 30px;
-    background-color: #B22222;
-}
+   border: 1px solid rgb(214, 214, 214);
+    transition: all 300ms ease-in-out;  
 
-.pz-descricao p{
-    color: white;
+}
+.cd-card:hover{
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
 }
 
 .pz-foto{
@@ -95,10 +150,19 @@ header::before{
     width: 200px;
     height: 200px;
     margin: auto;
-    margin-top: 20px;
-    border: 2px solid black;
+    margin-top: 3.5rem;
     border-radius: 50%;
     background-color: white;
+}
+
+.foto-pz img{
+   width: 200px;
+    height: 200px;
+    transition: all 300ms ease-in-out;  
+}
+
+.foto-pz img:hover{
+     transform: scale(1.1);
 }
 
 .pz-descricao{
@@ -136,11 +200,12 @@ header::before{
 
 select{
     width: 40%;
-    height: 40px;
+    height: 50px;
     margin-right: 10px;
     margin-left: 10px;
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid black;    
+    border-radius: 10px;
+    font-size: 1rem;
+       
 }
 
 input{
@@ -150,13 +215,8 @@ input{
     background-color: white;
     color: black;
     margin-top: 8px;
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid green; 
+    border-radius: 10px;
+  
 }
-
-
-
-
-
 
 

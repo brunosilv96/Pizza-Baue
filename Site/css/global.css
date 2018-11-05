@@ -1,13 +1,15 @@
+@import '/Site/fonts/nunito/css/nunito-all.css';
+@import '/Site/fonts/fontawesome/css/fontawesome-all.min.css';
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Century Gothic';
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    margin: 0;
 }
 
-body{
-    font-family: 'Century Gothic'; 
-}
 main section h1,
 h2,
 h3,
@@ -26,7 +28,7 @@ h5 {
 }
 
 .page {
-    transition: fadeIn 300ms ease-in-out;
+    transition: 'fadeIn' 300ms ease-in-out;
 }
 
 .hidden {
@@ -69,6 +71,17 @@ h5 {
     margin-left: 41rem;
 }
 
+.text-align{
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 2.5rem;
+}
+.text-align-2{
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 /* HEADER */
 header{
     position: relative;
@@ -91,26 +104,12 @@ header::before{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgba(0, 0, 0, 0.4);
+    background-color:rgba(0, 0, 0, 0.6);
     display: block;
 
 }
 
-.str0 {stroke:#FEFEFE;
-    stroke-width:8.47;
-}
-.fil0 {fill:rgb(255, 255, 255);
-}
 
-svg{
-    position: absolute;
-    bottom: -1;
-    margin-top: 2rem;
-}
-.svg2{
-    position: absolute;
-    bottom: -600;
-}
 /* < INPUTS_STYLES > */
 
 input {
@@ -537,6 +536,10 @@ label[for="bt-menu"]{
     display: none;
 }
 
+.container-bt h4{
+    color: transparent;
+        
+    }
 /* < RESPONSIVE MENU >*/
 @media(max-width:800px){
     .container-bt{
@@ -599,6 +602,7 @@ label[for="bt-menu"]{
 
 /* < JUMBOTRON TEXTO DA IMAGEM BACKGROUND>*/
 .jumbotron {
+    
     text-align: center;
     color: var(--white);
     z-index: 2;
@@ -607,17 +611,20 @@ label[for="bt-menu"]{
     transform: translateY(-50%);
 }
 .jumbotron-heading {
-    font: 2.6rem/1.5 'Ubuntu';
+    font: 2.6rem/1.5 'Nunito';
     margin: 0;
     color: #fff;
 }
 .jumbotron-text {
-    font: 1.7rem/1.5 'Ubuntu';
+    font: 1.7rem/1.5 'Nunito';
     margin: 0;
     color: #fff;
 }
 /* BUTTONS STYLES */
-
+.btn2{
+    margin-left: 42%;
+    font-size: 2rem;
+}
 .btn {
     border: none;
     text-transform: uppercase;

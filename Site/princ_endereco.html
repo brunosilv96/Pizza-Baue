@@ -9,19 +9,15 @@
     </head>
     <body>
         <div class="titulo">
-            <h1>Dados de Endereço</h1>
+            <h1>Endereço</h1>
         </div>
         <div class="conteudo">
             <h3>Alterar Endereço</h3>
 	            <form action="#" method="post">
 	            	<table>
-                        <tr>
-	            			<td class="lb"><label>CEP:</label></td>
-	            			<td class="txt"><input type="text" name="txtCep"></td>
-	            		</tr>
 	            		<tr>
-	            			<td class="lb"><label>Endereço:</label></td>
-	            			<td class="txt"><input type="text" name="txtEndereco"></td>
+	            			<td class="lb"><label>Lagradouro:</label></td>
+	            			<td class="txt"><input type="text" name="txtLagradouro"></td>
 	            		</tr>
 	            		<tr>
 	            			<td class="lb"><label>Número:</label></td>
@@ -32,14 +28,18 @@
 	            			<td class="txt"><input type="text" name="txtEstado"></td>
 	            		</tr>
 	            		<tr>
+	            			<td class="lb"><label>UF:</label></td>
+	            			<td class="txt"><input type="text" name="txtUf"></td>
+	            		</tr>
+	            		<tr>
 	            			<td class="lb"><label>Complemento:</label></td>
 	            			<td class="txt"><input type="text" name="txtComplemento"></td>
-                        </tr>
+	            		</tr>
+	            		<tr>
+	            			<td class="btn"><input type="reset" name="btnLimpar" value="Limpar"></td>
+	            			<td class="btn"><input type="submit" name="btnSalvar" value="Salvar"></td>
+	            		</tr>
 	            	</table>
-                    <div class="btns">     
-                        <input type="reset" name="btnLimpar" value="Limpar">
-                        <input type="submit" name="btnSalvar" value="Atualizar">
-                    </div>
 	            </form>
         </div>
     </body>

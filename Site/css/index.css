@@ -2,6 +2,21 @@
 header{
    background:rgb(221, 74, 16,.6) url(../images/banner2.jpg);
 }
+.str0 {stroke:#FEFEFE;
+    stroke-width:8.47;
+}
+.fil0 {fill:rgb(255, 255, 255);
+}
+
+svg{
+    position: absolute;
+    bottom: -1;
+    margin-top: 2rem;
+}
+.svg2{
+    position: absolute;
+    bottom: -600;
+}
 .container-slider{
     width: 90%;
     margin: 20px auto 0 auto;
