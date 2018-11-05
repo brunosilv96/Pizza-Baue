@@ -6,23 +6,30 @@
 .navbar{
     width: 100%;
     height: 60px;
-    border: 1px solid black;
     text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bolha{
+    width: 15%;
+    height: 60px;
+    float: left;
 }
 
 .nav-int{
     width: 70%;
     height: 60px;
-    margin: auto;
+    float: left;
 }
 
-.box-ul1{
-    width: 30%;
+.box-ul{
+    width: 40%;
     height: 60px;
     float: left;
 }
 
-.ul1{
+ul{
     width: 100%;
     height: 60px;
     float: left;
@@ -32,20 +39,14 @@
     width: 20%;
     height: 60px;
     float: left;
-    border: 1px solid black;
     box-sizing: border-box;
+    padding: 0.2em;
 }
 
-.box-ul2{
-    width: 30%;
-    height: 60px;
-    float: left;
-}
-
-.ul2{
-    width: 100%;
-    height: 60px;
-    float: left;
+.img-logo{
+    width: 70%;
+    height: auto;
+    max-height: 100px;
 }
 
 li{
