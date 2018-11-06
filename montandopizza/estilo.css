@@ -1,0 +1,57 @@
+DIV
+{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	border: 1px solid #606060;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+ASIDE
+{
+	margin: 20px;
+	float: right;
+	height: 200px;
+	overflow-y: auto;
+}
+
+UL
+{
+	list-style: none;
+}
+
+UL > LI
+{
+	width: 300px;
+}
+
+UL > LI:hover
+{
+	background: #CFCFCF;
+}
+
+UL > LI > IMG
+{
+	width: 100px;
+	height: 100px;
+}
+SECTION
+{
+	display: inline-block;
+	border: 1px solid #990000;
+	width: 49%;
+	height: 49%;
+}
+
+NAV
+{
+	position: absolute;
+	width: 100px;
+}
+
+NAV > BUTTON
+{
+	width: 100%;
+	margin: 5px;
+}
