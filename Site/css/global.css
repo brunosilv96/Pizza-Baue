@@ -9,7 +9,7 @@
 body {
     margin: 0;
 }
-
+/* ELEMENTOS IMPORTANTES */
 main section h1,
 h2,
 h3,
@@ -17,6 +17,11 @@ h4,
 h5 {
     text-transform: uppercase;
     padding: 2rem 0;
+}
+hr{
+    width: 30%;
+    border: 2px solid rgb(211, 19, 19);
+    margin-left: 3%;
 }
 
 .section-hidden {
@@ -621,10 +626,7 @@ label[for="bt-menu"]{
     color: #fff;
 }
 /* BUTTONS STYLES */
-.btn2{
-    margin-left: 42%;
-    font-size: 2rem;
-}
+
 .btn {
     border: none;
     text-transform: uppercase;

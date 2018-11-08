@@ -1,8 +1,32 @@
+
+.xp{
+    width: 90%;
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 12px 15px 20px rgba(175, 0, 0, 0.05);
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    
+}
+
+.xp >h4{
+    width: 90%;
+    padding: 15px;
+    margin-left: 3%;
+    color: rgb(134, 134, 134);
+    font-weight: 800px;
+    text-transform: capitalize;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+}
 table{
     width: 90%;
     margin: auto;
     text-align: center;
     margin-top: 10px;
+   
 }
 
 h3{
@@ -13,11 +37,36 @@ h3{
 .tam-pqn{
     width: 20%;
     height: 50px;
-    border: 1px solid black;
+    border: 1.5px solid rgb(219, 219, 219);
+    color: rgb(114, 114, 114)
 }
 
 .tam-med{
     widows: 40%;
     height: 50px;
-    border: 1px solid black;
+    border: 1.5px solid rgb(219, 219, 219);
+    color: rgb(114, 114, 114);
+}
+
+.dados-cliente{
+    width: 40%;
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 12px 15px 20px rgba(194, 6, 6, 0.05);
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+
+.dados-cliente > h3{
+    text-align: center;
+}
+
+.dados-cliente > h2{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgba(37, 58, 68, 1);
 }

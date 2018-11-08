@@ -1,16 +1,19 @@
 table{
-    width: 50%;
+    width: 60%;
     margin: auto;
-    margin-top: 50px;
+	margin-top: 50px;
+	margin-left: 100px;
 }
 
 h3{
     width: 90%;
-    margin: auto;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 td{
-	padding: 10px;
+	padding: 5px;
 }
 
 .lb{
@@ -19,15 +22,48 @@ td{
 	margin-top: 10px;
 	box-sizing: border-box;
 	text-align: right;
+	color: rgb(80, 80, 80);
+    font-weight: 800px;
+	text-transform: capitalize;
+	font-size: 20px;
 }
 
 .txt{
 	width: 70%;
-	height: 30px;
+	height: 2rem;;
 	margin-top: 10px;
 	box-sizing: border-box;
 }
 
+.input-cadastro{
+	width: 100%;
+	height: 2.5rem;
+	font-size: 1.5rem;
+    border-radius: 5px;
+    outline: none;
+    transition: all 400ms ease-in-out;
+	color: #5a5a5a;
+	box-sizing: border-box;
+    border: 2px solid #d3d3d3;
+}
+
+.input-cadastro:focus{
+	border: 2px solid rgba(190, 13, 13, 0.849);
+}
 .btn{
 	text-align: center;
+}
+.btn-cadastro{
+	font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3em;
+    padding: 10px 30px;
+	background-color: #c94848;
+	transition: all 300ms ease-in-out;
+	border-radius: 20px;
+	border: none;
+}
+.btn-cadastro:hover{
+	background-color: #9b3030;
+cursor: pointer;
 }

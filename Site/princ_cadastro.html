@@ -8,32 +8,34 @@
         <link rel="stylesheet" href="css/if_cadastro.css">
     </head>
     <body>
-        <div class="titulo">
-            <h1>Dados Cadastrais</h1>
-        </div>
+       
         <div class="conteudo">
-            <h3>Alterar Dados</h3>
+            <h3>ALTERAR DADOS</h3>
 	            <form action="#" method="post">
 	            	<table>
 	            		<tr>
 	            			<td class="lb"><label>Nome:</label></td>
-	            			<td class="txt"><input type="text" name="txtNome"></td>
+	            			<td class="txt"><input type="text" class="input-cadastro" name="txtNome"></td>
 	            		</tr>
 	            		<tr>
 	            			<td class="lb"><label>Sobrenome:</label></td>
-	            			<td class="txt"><input type="text" name="txtSobrenome"></td>
+	            			<td class="txt"><input type="text" class="input-cadastro" name="txtSobrenome"></td>
 	            		</tr>
 	            		<tr>
 	            			<td class="lb"><label>E-mail:</label></td>
-	            			<td class="txt"><input type="text" name="txtEmail"></td>
+	            			<td class="txt"><input type="text" class="input-cadastro" name="txtEmail"></td>
 	            		</tr>
 	            		<tr>
 	            			<td class="lb"><label>Senha:</label></td>
-	            			<td class="txt"><input type="password" name="txtSenha"></td>
-	            		</tr>
+	            			<td class="txt"><input type="password" class="input-cadastro" name="txtSenha"></td>
+						</tr>
+						<tr>
+								<td class="lb"><label>Confirmar senha:</label></td>
+								<td class="txt"><input type="password" class="input-cadastro" name="txtSenha"></td>
+							</tr>
 	            		<tr>
-	            			<td class="btn"><input type="reset" name="btnLimpar" value="Limpar"></td>
-	            			<td class="btn"><input type="submit" name="btnSalvar" value="Salvar"></td>
+	            			<td class="btn"><input type="reset" name="btnLimpar" class="btn-cadastro" value="Limpar"></td>
+	            			<td class="btn"><input type="submit" name="btnSalvar"  class="btn-cadastro" value="Salvar"></td>
 	            		</tr>
 	            	</table>
 	            </form>

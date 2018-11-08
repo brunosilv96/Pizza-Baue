@@ -17,6 +17,7 @@ svg{
     position: absolute;
     bottom: -600;
 }
+
 .container-slider{
     width: 90%;
     margin: 20px auto 0 auto;
@@ -33,7 +34,7 @@ svg{
 .description-baue h1{
     font-size: 2em;
     color:  #4e4e4e;
-    margin-left: 13rem;  
+    margin-left: 3rem;  
 }
 .description-baue p{
     width: 55%;

@@ -125,7 +125,7 @@ cursor: pointer;
 }
 
 .cd-card{
-    width: 80%;
+    width: 100%;
     height: 20rem;
     box-sizing: border-box;
     margin: auto;
@@ -150,14 +150,14 @@ cursor: pointer;
     width: 200px;
     height: 200px;
     margin: auto;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     border-radius: 50%;
     background-color: white;
 }
 
 .foto-pz img{
-   width: 200px;
-    height: 200px;
+   width: 250px;
+    height: 250px;
     transition: all 300ms ease-in-out;  
 }
 
