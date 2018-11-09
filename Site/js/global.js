@@ -250,4 +250,3 @@ window.onload = function() {
 responsiveSlider();  
 }
 
-

@@ -1,12 +1,12 @@
 @import '/Site/fonts/nunito/css/nunito-all.css';
 @import '/Site/fonts/fontawesome/css/fontawesome-all.min.css';
 
-
 *{
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
 }
+
 body {
     margin: 0;
 }
