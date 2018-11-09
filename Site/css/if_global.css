@@ -22,15 +22,13 @@
     background-color: rgb(255, 255, 255);
     padding-top: 30px;
     box-sizing: border-box;
-    box-shadow: 12px 15px 20px rgba(194, 6, 6, 0.05);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
     margin-top: 2rem;
-   
 }
 
 h3{
     padding: 15px;
     margin-left: 3%;
-    
     font-weight: 800px;
     text-transform: capitalize;
     font-size: 1.2rem;

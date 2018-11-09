@@ -44,9 +44,7 @@ svg{
     height: 355px;  
     margin-top: 20px;
     margin-bottom: 10rem;
-    padding: 20px;
-    /*background-color: rgb(240, 240, 240);*/
-   
+    padding: 20px;   
 }
 
 .descricao h3{
@@ -87,7 +85,6 @@ svg{
     margin-top: 20px;
     margin-bottom: 10rem;
     padding: 20px;
-   /* background-color: rgb(240, 240, 240);*/
     margin-left: 40%;
     
 }

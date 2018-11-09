@@ -3,7 +3,7 @@
     width: 90%;
     height: 8rem;
     background-color: rgb(255, 255, 255);
-    box-shadow: 12px 15px 20px rgba(175, 0, 0, 0.05);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px 5px 5px 5px;
     margin-left: 5%;
     margin-bottom: 3%;
@@ -52,7 +52,7 @@ h3{
     width: 40%;
     height: 8rem;
     background-color: rgb(255, 255, 255);
-    box-shadow: 12px 15px 20px rgba(194, 6, 6, 0.05);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px 5px 5px 5px;
     float: left;
     margin-top: 3%;

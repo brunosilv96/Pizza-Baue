@@ -1,7 +1,7 @@
 table{
     width: 60%;
     margin: auto;
-	margin-top: 50px;
+	margin-top: 25px;
 	margin-left: 100px;
 }
 
@@ -9,7 +9,9 @@ h3{
     width: 90%;
 	margin: auto;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2rem;
+	color: black;
+	font: bold;
 }
 
 td{
@@ -66,4 +68,26 @@ td{
 .btn-cadastro:hover{
 	background-color: #9b3030;
 cursor: pointer;
+}
+
+.conteudo{
+	margin-top: 7rem;
+	height: 600px;
+}
+
+.botoes{
+	width: 80%;
+	height: 30px;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.botoes input{
+	width: 200px;
+	height: 40px;
+	margin-right: 3%;
+	margin-left: 3%;
+	font-size: 19px;
+	padding-top: 12px;
 }
