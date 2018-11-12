@@ -13,7 +13,7 @@
 <body>
         <div class="modal closed" id="modal-login">
             
-       
+            <!--- Formulário de Login de Usuário -->
             <div class="modal-content ">
                     <div class="modal-close">
                             <a href="#" onclick="fnModalClose()"><i class="fas fa-times-circle"></i></a>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="login-form tab-active tabs-page" id="login-form-tab">
                         
-                        <form action="javascript:void(0);" method="get" class="form-control">
+                        <form action="javascript:void(0); php/Cadastro.php" method="get" class="form-control">
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
                                 <input type="text" placeholder="Username">
@@ -43,6 +43,8 @@
                             </div>
                         </form>
                     </div>
+
+                    <!--- Formulário de Cadastro de Usuário -->
                     <div class="register-form tabs-page" id="register-form-tab">
                         <form action="javascript:void(0);" method="get" class="form-control">
                             <div class="input-group">
