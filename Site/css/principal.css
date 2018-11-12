@@ -46,8 +46,9 @@
 
 /* INICIO DO BODY */
 body{
+    width: 100%;
     background-color: rgb(248, 250, 251);
-    font-family: 'panpizza';
+    margin: auto;
 }
 
 header{
@@ -63,8 +64,7 @@ header::before{
 }
 
 section{
-    max-width: 1500px;
-    width: 100%;
+    width: 90%;
     height: 800px;
     box-sizing: border-box;
     text-align: center;
@@ -161,7 +161,7 @@ section{
 }
 
 .conteudo{
-    width: 70%;
+    width: 75%;
     height: 1000px;
     float: left;
     box-sizing: border-box;
