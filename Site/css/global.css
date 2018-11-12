@@ -18,11 +18,16 @@ h4,
 h5 {
     text-transform: uppercase;
     padding: 2rem 0;
+    color: #4e4e4e;
+}
+main section p{
+    color: #585858;
 }
 hr{
     width: 30%;
     border: 2px solid rgb(211, 19, 19);
     margin-left: 3%;
+    margin-top: -2%;
 }
 
 .section-hidden {
@@ -62,7 +67,7 @@ hr{
 
 /* CONTAINER */
 .container{
-    width: 90%;
+    width: 75%;
     margin: 20px auto 0 auto;
 
 }
@@ -76,8 +81,10 @@ hr{
     text-align: center;
     margin-left: 41rem;
 }
-
 .text-align{
+    text-align: center;
+}
+.text-align-1{
     color: rgb(255,255,255);
     text-align: center;
     font-size: 2.5rem;
@@ -86,6 +93,12 @@ hr{
     color: rgb(255,255,255);
     text-align: center;
     font-size: 1.5rem;
+}
+
+.descricao h3{
+    font-size: 2em;
+    color:  #4e4e4e;
+    margin-left: 4.7%;
 }
 
 /* HEADER */
@@ -225,7 +238,7 @@ input[type="password"] {
 
 .register-form {
     position: absolute;
-    top: 30%;
+    top: 40%;
     margin-top: -50px;
     width: 100%;
     align-items: center;
@@ -258,8 +271,8 @@ input[type="password"] {
     text-transform: uppercase;
     margin-bottom: 4rem;
     height: 100%;
-    border-bottom: 2px solid rgb(255, 203, 0);
-    color: #000;
+    border-bottom: 2px solid #c94848;
+    text-align: center;
     width: 50%;
     margin-left: auto;
     margin-right: auto;

@@ -1,0 +1,113 @@
+header{
+    background:url(../images/banner6.jpg);
+ }
+
+ .str0 {stroke:rgb(255, 255, 255);
+    stroke-width:8.47;
+}
+.fil0 {fill:rgb(255, 255, 255);
+}
+
+svg{
+    position: absolute;
+    bottom: -1;
+    margin-top: 2rem;
+}
+.svg2{
+    position: absolute;
+    bottom: -600;
+}
+
+.monte-sua-pizza{
+    float: left;
+    
+    width: 60%;
+}
+
+
+
+.select-monte{
+    margin-bottom: 1.5%;
+    margin-top: 4%;
+}
+
+.select-monte h3{
+    margin-top: -3.5rem;
+}
+
+select{
+    width: 80%;
+    height: 85px;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    color: rgb(93, 93, 93);
+    
+}
+.option{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.image-construir{
+    width:80px;
+    height: 85px;
+    float: left;
+    background-color: rgb(151, 10, 0);  
+}
+.calcula{
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    height: 16rem;
+    float: left;
+    margin-left: 5%;
+    margin-top: 7.5%;
+    border: 1px solid #e4e4e4;
+    
+    transition: all 300ms ease-in-out;
+}
+
+.calcula:hover{
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.20);
+}
+
+.icon{
+    font-size: 2.6rem;
+    float: left;
+    
+    
+}
+
+.price-boleto h1{
+   font-size: 2rem;
+   margin-left: 2%;
+}
+
+.price-boleto h4{
+    margin-top: -18%;
+    font-size: .7rem;
+    margin-left: 19%;
+}
+.price-cartao{
+    margin-top: -21%;
+}
+.price-cartao h4{
+    line-height: 2.4rem;
+    margin-top: 10%;
+}
+.button-monte{
+    background-color: #c94848;
+    padding: 7px 30px;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    line-height: 20px;
+    transition: all 300ms ease-in-out;
+}
+.button-monte:hover{
+background-color: #9b3030;
+cursor: pointer;
+}
