@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="modal.css" rel="stylesheet" type="text/css">
+	<title>Formulário de cadastro</title>
+
+</head>
+<body onload="zerapage()">
+<script type="">
+	function zerapage(){
+		document.getElementById('form').reset();
+	}
+</script>
+
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <div class="modal-header">
+        <span class="close">&times;</span>
+        <a href="#" id="login-form" class="tab tab-selected" onclick="fnTabs(this)">Login</a>
+        <a href="#" id="register-form" class="tab" onclick="fnTabs(this)">Cadastrar</a>
+    </div>
+
+        <div class="modal-body">
+            <form name="frmcadastro" method="post" action="" class="formulario" id="form">
+                <br>
+                <label for="" class="form_label">Nome:</label>
+                <input type="text" name="txtnome" class="form_input" placeholder="Digite seu nome">
+                <br><br>
+                <label for="" class="form_label">Email:</label>
+                <input type="text" name="txtemail" class="form_input" placeholder="Digite seu e-mail">
+                <br><br>
+                <label for="" class="form_label">Telefone:</label>
+                <input type="text" name="txttelefone" class="form_input" placeholder="Digite seu telefone">
+                <br><br>
+                <label for="" class="form_label">Senha:</label>
+                <input type="password" name="senha1" class="form_input" placeholder="minímo 6 caracteres">
+                <br><br>
+                <label for="" class="form_label">Confirme sua senha:</label>
+                <input type="password" name="senha2" class="form_input" placeholder="Digite sua senha novamente">
+                <br><br>
+                <input type="submit" name="btnenviar" value="Enviar" class="form_submit" onclick="return verificaForm()">
+            </form>
+        </div>
+
+    <div class="modal-footer">
+        <br>
+        <a href="" id="" onclick="">Esqueceu sua senha?</a>
+    </div>
+  </div>
+</div>
+
+<script src="validacao.js"></script>
+
+</body>
