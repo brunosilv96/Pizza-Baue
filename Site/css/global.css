@@ -238,7 +238,7 @@ input[type="password"] {
 
 .register-form {
     position: absolute;
-    top: 40%;
+    top: 27%;
     margin-top: -50px;
     width: 100%;
     align-items: center;
@@ -419,7 +419,7 @@ input[type="password"] {
 }
 
 .campo-cpf {
-    color: rgba(255, 255, 255);
+    color: rgba(0, 0, 0);
     text-align: center;
 }
 

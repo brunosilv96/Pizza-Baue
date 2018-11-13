@@ -111,6 +111,71 @@ function menuSticky() {
 
 /* FIM MODAL */
 
+
+var inputs = document.getElementsByClassName('form_input');
+
+function verificaForm(){
+         nome = document.frmcadastro.txtnome.value;
+         email = document.frmcadastro.txtemail.value;
+         cpf = document.frmcadastro.txtcpf.value;
+         senha1 = document.frmcadastro.senha1.value;
+         senha2 = document.frmcadastro.senha2.value;
+
+
+        if(nome == ""){
+            alert("Obrigatório preecher o campo Nome !!");
+            document.frmcadastro.txtnome.focus();
+            return false;
+        }
+
+        else if(nome.length < 4){
+            alert("Favor informar o nome completo !!");
+            document.frmcadastro.txtnome.focus();
+            return false;
+        }
+
+        else if(email == ""){
+                alert("Obrigatório preecher o campo Email");
+                document.frmcadastro.txtemail.focus();
+                return false;
+            }
+
+            else if(email.indexOf('@') >=0 == -1 ||  email.indexOf('.')==-1)//-1 é que não existe o @ e nem o ponto.
+             {
+                alert("O email não é valido");
+                document.frmcadastro.txtemail.focus();
+                return false;
+            }
+
+            else if(cpf == ""){
+                alert("Obrigatório preecher o campo cpf")
+                document.frmcadastro.txtcpf.focus();
+                return false;
+            }
+
+            else if (document.frmcadastro.senha1.value.length < 6)
+                {
+                    alert("A senha deve conter no mínimo 6 caracteres.");
+                    document.frmcadastro.senha1.focus();
+                    return false;
+                }
+
+             else if (senha2 ==""){
+                alert("Por favor confirme sua senha");
+                document.frmcadastro.senha2.focus();
+                return false;
+             }
+
+                  else if(senha1 != senha2)
+                {
+                    alert("SENHAS DIFERENTES")
+                    document.frmcadastro.senha2.focus();
+                    return false;
+                }
+
+        
+}
+
 //ValidaçãoCPF
 
 var btnEnvia = document.querySelector('#envia');
@@ -142,16 +207,12 @@ btnEnvia.addEventListener('click', () => {
 
     }
 
-
-
     var result = parseInt((cpf[0] * 10 + cpf[1] * 9 + cpf[2] * 8 + cpf[3] * 7 + cpf[4] * 6 + cpf[5] * 5 + cpf[6] * 4 + cpf[7] * 3 + cpf[8] * 2));
 
 
     var resto = (result * 10) % 11;
 
     //console.log(resto);
-
-
 
     var result1 = parseInt((cpf[0] * 11) + (cpf[1] * 10) + (cpf[2] * 9) + (cpf[3] * 8) + (cpf[4] * 7) + (cpf[5] * 6) + (cpf[6] * 5) + (cpf[7] * 4 + cpf[8] * 3) + cpf[9] * 2);
 
@@ -182,14 +243,9 @@ btnEnvia.addEventListener('click', () => {
             view2.classList.add('campo-cpf-muda');
             //campoCpf.classList.add('erro');
         }
-
-
-
-
     }
 
 });
-
 
 
 /* CARROSEL */

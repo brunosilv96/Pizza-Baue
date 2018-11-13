@@ -46,40 +46,39 @@
 
                     <!--- Formulário de Cadastro de Usuário -->
                     <div class="register-form tabs-page" id="register-form-tab">
-                        <form action="javascript:void(0);" method="get" class="form-control">
+                        <form action="javascript:void(0);" method="get" class="form-control" name="frmcadastro">
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
-                                <input type="text" placeholder="Username">
+                                <input type="text" name="txtnome" placeholder="Username" class="form_input">
                             </div>
 
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
-                                <input type="text" placeholder="E-mail">
+                                <input type="text" name="txtemail" placeholder="E-mail" class="form_input">
                             </div>
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
-                                <input type="text" placeholder="CPF" id="cpf">
+                                <input type="text" name="txtcpf" placeholder="cpf" id="cpf" class="form_input">
                             </div>
                            
-          
-
                             <div class="input-group">
                                 <span class="fas fa-lock ga"></span>
-                                <input type="password" placeholder="Senha" id="senha">
+                                <input type="password" name="senha1" placeholder="Senha" id="senha" class="form_input">
                             </div>
                             <div class="input-group">
                                 <span class="fas fa-lock"></span>
-                                <input type="password" placeholder="Confirmar Senha " id="confirmasenha">
+                                <input type="password" name="senha2" placeholder="Confirmar Senha" id="confirmasenha" class="form_input">
                             </div>
-
-
 
 
                             <div class="input-group align-center">
-                                <button type="submit" class="btn btn-submit" id="envia" onclick="mostrar()">Cadastrar</button>
+                                <button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia" onclick="return verificaForm()">Cadastrar</button>
                             </div>
+
+
                             <div class="campo-cpf">
-                                <span class="viewCPF"></span><br><span class="aradio"></span><br>
+                                <span class="viewCPF"></span><br>
+                                <span class="aradio"></span><br>
                                 <span class="viewSenha"></span>
                             </div>
                         </form>
