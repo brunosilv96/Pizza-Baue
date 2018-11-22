@@ -178,12 +178,12 @@ function verificaForm(){
 
 //ValidaçãoCPF
 
-var btnEnvia = document.querySelector('#envia');
+/*var btnEnvia = document.querySelector('#envia');
 var campoCpf = document.querySelector('#cpf');
 var view2 = document.querySelector(".campo-cpf");
 var viewcpf = document.querySelector(".viewCPF");
 
-btnEnvia.addEventListener('click', () => {
+btnEnvia.addEventListener('click', function() {
 
     event.preventDefault();
 
@@ -246,9 +246,9 @@ btnEnvia.addEventListener('click', () => {
     }
 
 });
+*/
 
-
-/* CARROSEL */
+/* CARROSEL DE PIZZAS */
 
 var responsiveSlider = function() {
 var slider = document.getElementById("slider");
@@ -322,3 +322,4 @@ window.onclick = function(event) {
     }
   }
 }
+

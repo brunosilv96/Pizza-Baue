@@ -46,8 +46,8 @@ svg{
 }
 .description-baue img{
     margin-left: 3rem;
-    width: 37%;
-    height: 15rem;
+    width: 39%;
+    height: 12.5rem;
 }
 
 
@@ -279,4 +279,122 @@ svg{
 
 }
 
+/* COMENTÁRIOS */
+/*.left{
+    float: left;
+    margin-left: 40rem;
+}*/
+.comenta{
+    margin-top: 2rem;
+    background-color: rgb(253, 253, 253);
+}
+.comments {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(253, 253, 253);
+}
 
+.slideshow-container {
+    max-width: 550px;
+    position: relative;
+    margin: auto;
+}
+
+.numbertext {
+    color: #b8b8b8;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.box-comment {
+    margin: 0 auto;
+    max-width: 550px;
+    height: 240px;
+    background-color: #fff;
+    margin: 3rem 0;
+    border: 1px solid #f1f1f1;
+    line-height: 27px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.comment-img {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.comment-img img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, .16);
+    object-fit: cover;
+}
+
+.comment-author {
+    font-family: 'Montserrat', verdana, sans-serif;
+    color: rgb(22, 22, 22);
+    font-size: 16px;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.comment-author span {
+    border-top: 1px solid #D4D4D4;
+    padding: 2px 25px;
+    margin-top: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #ca4f4f;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* END:MAIN */

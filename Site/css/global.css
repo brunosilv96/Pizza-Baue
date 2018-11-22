@@ -72,14 +72,15 @@ hr{
 
 }
 /* TEXTO CENTRALIZADO-TITULOS*/
-.text-center{
+.text-center h1{
     color: #3d3d3d;
     display: inline-block;
     border-bottom: 4px solid  #c94848;
     padding-bottom: 10px;
     margin-bottom: 1rem;
     text-align: center;
-    margin-left: 41rem;
+    
+    
 }
 .text-align{
     text-align: center;
@@ -622,7 +623,6 @@ label[for="bt-menu"]{
 
 /* < JUMBOTRON TEXTO DA IMAGEM BACKGROUND>*/
 .jumbotron {
-    
     text-align: center;
     color: var(--white);
     z-index: 2;
@@ -786,7 +786,7 @@ footer{
     width: 100%;
     height: 30rem;
     margin: auto;
-    margin-top: 20px;
+    margin-top:20px; 
     box-sizing: border-box;
     background-color: #FAB106;
 }

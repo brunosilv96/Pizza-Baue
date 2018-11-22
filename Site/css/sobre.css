@@ -42,8 +42,8 @@ svg{
 .descricao {
     width: 55%;
     height: 355px;  
-    margin-top: 20px;
-    margin-bottom: 10rem;
+    margin-top: 10px;
+    margin-bottom: 5rem;
     padding: 20px;   
 }
 .descricao img{
@@ -75,8 +75,8 @@ svg{
 .descricao-2 {
     width: 55%;
     height: 355px;  
-    margin-top: 20px;
-    margin-bottom: 10rem;
+    margin-top: 15px;
+    margin-bottom: 5rem;
     padding: 20px;
     margin-left: 40%;
     
@@ -114,7 +114,7 @@ svg{
 }
 
 .jumbotrom-sobre{
-    background-image: linear-gradient(265deg,#ee7a71,#ca0d0d);
+    background-image: linear-gradient(265deg,#ee7a71,#c72b2b);
     color: #FFF;
     letter-spacing: -.3px;
     text-align: center;
@@ -124,11 +124,15 @@ svg{
     line-height: 1.5;
 }
 
+.jumbotrom-sobre h3{
+    color: #FFF;
+}
+
 .time{
     width: 100%;
     background-color: #fbfbfb;
     height: 29rem;
-    margin-bottom: 5rem;
+   
 }
 .integrantes {
     width: 100%;
@@ -148,6 +152,7 @@ svg{
     background-color: white;
     border: 1px solid #EFF1F9;
     box-shadow: 4px 4px 20px 0 rgba(120,135,182,.1);
+    margin-top: -1.5rem;
     
     
 }
