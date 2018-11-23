@@ -121,17 +121,22 @@ cursor: pointer;
     height: 250px;
     float: left;
     box-sizing: border-box;
+
 }
 
 .foto-pz{
     width: 200px;
     height: 200px;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 1.7rem;
     border-radius: 50%;
+
    
 }
-
+.foto-pz h2{
+    margin-top: -2rem;
+    margin-left: 4.7rem;
+}
 .foto-pz img{
    width: 250px;
     height: 250px;
