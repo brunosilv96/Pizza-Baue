@@ -29,7 +29,7 @@ if(isset($_POST["txtNome"]) == true){
                     /* Todo processo vai ser colocado nesta estrutura abaixo (dentro do 'try') */
                     try {
                         /* Faz a instancia da Classe Usuario */
-                        $user = new Usuario();
+                        $user = new z
 
                         /* Atribui os Valores ultilizando a instância */
                         $user->setNome($_POST["txtNome"]);

@@ -31,53 +31,58 @@ function fnScrollLoadingEffect() {
 }
 
 document.querySelector(".modal-close").onclick = function() {
-    //Remove a classe "opened" para que o modal suma
+    // Remove a classe "opened" para que o modal suma
     document.querySelector(".modal").classList.remove("opened");
-    //Adiciona a classe "closed" para manté-lo fechado
+    // Adiciona a classe "closed" para manté-lo fechado
     document.querySelector(".modal").classList.add("closed");
 }
 
 function fnModal(modal) {
-    //Verifica se existe algum id com o "href" do elemento a, e se tem a classe "opened"
+    // Verifica se existe algum id com o "href" do elemento a, e se tem a classe
+	// "opened"
     if (!document.querySelector(modal.getAttribute("href")).classList.contains("opened")) {
-        //Se não existir, remove a classe "closed" que mantém o modal fechado
+        // Se não existir, remove a classe "closed" que mantém o modal fechado
         document.querySelector(modal.getAttribute("href")).classList.remove("closed")
-            //Adiciona a classe "opened" para abri-lo
+            // Adiciona a classe "opened" para abri-lo
         document.querySelector(modal.getAttribute("href")).classList.add("opened")
     } else {
-        //Se existir, adiciona a classe "closed"
+        // Se existir, adiciona a classe "closed"
         document.querySelector(modal.getAttribute("href")).classList.add("closed");
-        //Remove a classe "opened"
+        // Remove a classe "opened"
         document.querySelector(modal.getAttribute("href")).classList.remove("opened");
     }
 }
 
 function fnTabs(tab) {
-    //Verifica se a tab que foi clicada está com a classe "tab-selected"
+    // Verifica se a tab que foi clicada está com a classe "tab-selected"
     if (!tab.classList.contains("tab-selected")) {
-        //Se não estiver, verifica se o id do elemento clicado é igual a "lost-form"
+        // Se não estiver, verifica se o id do elemento clicado é igual a
+		// "lost-form"
         if (tab.id == "lost-form") {
-            //Se for, adicionar a classe "hide" nas tabs
+            // Se for, adicionar a classe "hide" nas tabs
             document.querySelector(".tabs-select").classList.add("hide");
-            //Remove a classe "tab-active" para retirar a tab que está selecionada
+            // Remove a classe "tab-active" para retirar a tab que está
+			// selecionada
             document.querySelector(".tab-active").classList.remove("tab-active");
-            //Adiciona a classe "tab-active" para dizer que tem uma tab ativa
+            // Adiciona a classe "tab-active" para dizer que tem uma tab ativa
             document.getElementById(tab.id + "-tab").classList.add("tab-active");
         } else {
-            //Se não, verificar se existe alguma tab com a classe "hide"
+            // Se não, verificar se existe alguma tab com a classe "hide"
             if (document.querySelector(".tabs-select").classList.contains("hide")) {
-                //Se existir, remove a classe "hide"
+                // Se existir, remove a classe "hide"
                 document.querySelector(".tabs-select").classList.remove("hide");
             }
-            //Remove a classe "tab-active" da tab atual
+            // Remove a classe "tab-active" da tab atual
             document.querySelector(".tab-active").classList.remove("tab-active");
-            //Adiciona a classe "tab-active" para a tab clicada
+            // Adiciona a classe "tab-active" para a tab clicada
             document.getElementById(tab.id + "-tab").classList.add("tab-active");
-            //Verifica se a id da tab clicada está selecionada no selector de tabs
+            // Verifica se a id da tab clicada está selecionada no selector de
+			// tabs
             if (!document.getElementById(tab.id).classList.contains("tab-selected")) {
-                //Se não existir, remover a classe "tab-selected" da tab que está selecionada
+                // Se não existir, remover a classe "tab-selected" da tab que
+				// está selecionada
                 document.querySelector(".tab-selected").classList.remove("tab-selected");
-                //Adiciona a classe "tab-selected" para tab clicalda
+                // Adiciona a classe "tab-selected" para tab clicalda
                 document.getElementById(tab.id).classList.add("tab-selected");
             }
         }
@@ -85,18 +90,18 @@ function fnTabs(tab) {
 }
 
 function fnBack() {
-    //Adiciona a classe "hide" para o selector de tabs
+    // Adiciona a classe "hide" para o selector de tabs
     document.querySelector(".tabs-select").classList.remove("hide");
-    //Remove a classe "tab-active" da tab esqueceu sua senha
+    // Remove a classe "tab-active" da tab esqueceu sua senha
     document.getElementById("lost-form-tab").classList.remove("tab-active");
-    //Adiciona a classe "tab-active" para a tab login
+    // Adiciona a classe "tab-active" para a tab login
     document.getElementById("login-form-tab").classList.add("tab-active");
 }
 
 function fnModalClose() {
-    //Remove a classe "opened" do modal
+    // Remove a classe "opened" do modal
     document.querySelector(".modal").classList.remove("opened");
-    //Adiciona a classe "closed" no modal
+    // Adiciona a classe "closed" no modal
     document.querySelector(".modal").classList.add("closed");
 }
 
@@ -114,139 +119,122 @@ function menuSticky() {
 
 var inputs = document.getElementsByClassName('form_input');
 
-function verificaForm(){
-         nome = document.frmcadastro.txtnome.value;
-         email = document.frmcadastro.txtemail.value;
-         cpf = document.frmcadastro.txtcpf.value;
-         senha1 = document.frmcadastro.senha1.value;
-         senha2 = document.frmcadastro.senha2.value;
+function verificaForm(event){
+		 event.preventDefault();
+         nome = document.getElementById("txtNome").value;
+         email = document.getElementById("txtEmail").value;
+         cpf = document.getElementById("cpf").value;
+         senha1 = document.getElementById("senha").value;
+         senha2 = document.getElementById("confirmasenha").value;
 
 
         if(nome == ""){
             alert("Obrigatório preecher o campo Nome !!");
-            document.frmcadastro.txtnome.focus();
+            //document.frmcadastro.txtnome.focus();
             return false;
         }
 
         else if(nome.length < 4){
             alert("Favor informar o nome completo !!");
-            document.frmcadastro.txtnome.focus();
+            //document.frmcadastro.txtnome.focus();
             return false;
         }
 
         else if(email == ""){
                 alert("Obrigatório preecher o campo Email");
-                document.frmcadastro.txtemail.focus();
+                //document.frmcadastro.txtemail.focus();
                 return false;
-            }
+         }
 
-            else if(email.indexOf('@') >=0 == -1 ||  email.indexOf('.')==-1)//-1 é que não existe o @ e nem o ponto.
-             {
-                alert("O email não é valido");
-                document.frmcadastro.txtemail.focus();
-                return false;
-            }
+        else if(email.indexOf('@') < 0 || email.indexOf('.') < 0){
+        	// -1 é que não existe o @ e nem o ponto.
+            alert("O email não é valido");
+           // document.frmcadastro.txtemail.focus();
+            return false;
+        }
+        else if(cpf == ""){
+            alert("Obrigatório preecher o campo cpf")
+            //document.frmcadastro.txtcpf.focus();
+            return false;
+        }
+        else if (senha1.length < 6){
+            alert("A senha deve conter no mínimo 6 caracteres.");
+            //document.frmcadastro.senha1.focus();
+            return false;
+        }
+        else if (senha2 ==""){
+            alert("Por favor confirme sua senha");
+           // document.frmcadastro.senha2.focus();
+            return false;
+        }
 
-            else if(cpf == ""){
-                alert("Obrigatório preecher o campo cpf")
-                document.frmcadastro.txtcpf.focus();
-                return false;
-            }
-
-            else if (document.frmcadastro.senha1.value.length < 6)
-                {
-                    alert("A senha deve conter no mínimo 6 caracteres.");
-                    document.frmcadastro.senha1.focus();
-                    return false;
-                }
-
-             else if (senha2 ==""){
-                alert("Por favor confirme sua senha");
-                document.frmcadastro.senha2.focus();
-                return false;
-             }
-
-                  else if(senha1 != senha2)
-                {
-                    alert("SENHAS DIFERENTES")
-                    document.frmcadastro.senha2.focus();
-                    return false;
-                }
-
+        else if(senha1 != senha2){
+            alert("SENHAS DIFERENTES")
+            //document.frmcadastro.senha2.focus();
+            return false;
+        }
         
+        document.getElementById("frmcadastro").submit();
+        return true;
 }
 
-//ValidaçãoCPF
+// ValidaçãoCPF
 
-/*var btnEnvia = document.querySelector('#envia');
-var campoCpf = document.querySelector('#cpf');
-var view2 = document.querySelector(".campo-cpf");
-var viewcpf = document.querySelector(".viewCPF");
-
-btnEnvia.addEventListener('click', function() {
-
-    event.preventDefault();
-
-    var campo = new Array(14);
-    var cpf = new Array(11);
-
-    campo = campoCpf.value;
-
-    if ((!(/\d{3}.\d{3}.\d{3}-\d{2}/.test(campo)))) {
-        //view2.textContent = '*Preencha o campo CPF Corretamente';
-        ///view2.classList.add('mudaView');
-        ///campoCpf.classList.add('erro');
-    } else {
-
-        ///view2.classList.remove('mudaView');
-        //campoCpf.classList.remove('erro');
-
-        cpf = campo;
-        cpf = cpf.split('.').join('');
-        cpf = cpf.split('-').join('');
-
-    }
-
-    var result = parseInt((cpf[0] * 10 + cpf[1] * 9 + cpf[2] * 8 + cpf[3] * 7 + cpf[4] * 6 + cpf[5] * 5 + cpf[6] * 4 + cpf[7] * 3 + cpf[8] * 2));
-
-
-    var resto = (result * 10) % 11;
-
-    //console.log(resto);
-
-    var result1 = parseInt((cpf[0] * 11) + (cpf[1] * 10) + (cpf[2] * 9) + (cpf[3] * 8) + (cpf[4] * 7) + (cpf[5] * 6) + (cpf[6] * 5) + (cpf[7] * 4 + cpf[8] * 3) + cpf[9] * 2);
-
-    var resto1 = (result1 * 10) % 11;
-    //console.log(resto1);
-
-
-    if (resto1 == 10 || resto1 == 11) {
-        resto1 = 0;
-        //  console.log(resto1);
-    }
-
-
-    if (!(cpf[9] == resto && cpf[10] == resto1)) {
-
-        viewcpf.textContent = '*CPF inválido';
-        view2.classList.add('campo-cpf-muda');
-        //campoCpf.classList.add('erro');
-    } else {
-        viewcpf.textContent = '*CPF Válido';
-        view2.classList.remove('campo-cpf-muda');
-
-        if ((cpf[0] == cpf[1]) && (cpf[1] == cpf[2]) &&
-            (cpf[2] == cpf[3]) && (cpf[3] == cpf[4]) && (cpf[4] == cpf[5]) &&
-            (cpf[6] == cpf[7]) && (cpf[8] == cpf[9]) && cpf[9] == cpf[10]) {
-
-            viewcpf.textContent = '*CPF inválido';
-            view2.classList.add('campo-cpf-muda');
-            //campoCpf.classList.add('erro');
-        }
-    }
-
-});
-*/
+/*
+ * var btnEnvia = document.querySelector('#envia'); var campoCpf =
+ * document.querySelector('#cpf'); var view2 =
+ * document.querySelector(".campo-cpf"); var viewcpf =
+ * document.querySelector(".viewCPF");
+ * 
+ * btnEnvia.addEventListener('click', function() {
+ * 
+ * event.preventDefault();
+ * 
+ * var campo = new Array(14); var cpf = new Array(11);
+ * 
+ * campo = campoCpf.value;
+ * 
+ * if ((!(/\d{3}.\d{3}.\d{3}-\d{2}/.test(campo)))) { //view2.textContent =
+ * '*Preencha o campo CPF Corretamente'; ///view2.classList.add('mudaView');
+ * ///campoCpf.classList.add('erro'); } else {
+ * 
+ * ///view2.classList.remove('mudaView'); //campoCpf.classList.remove('erro');
+ * 
+ * cpf = campo; cpf = cpf.split('.').join(''); cpf = cpf.split('-').join(''); }
+ * 
+ * var result = parseInt((cpf[0] * 10 + cpf[1] * 9 + cpf[2] * 8 + cpf[3] * 7 +
+ * cpf[4] * 6 + cpf[5] * 5 + cpf[6] * 4 + cpf[7] * 3 + cpf[8] * 2));
+ * 
+ * 
+ * var resto = (result * 10) % 11;
+ * 
+ * //console.log(resto);
+ * 
+ * var result1 = parseInt((cpf[0] * 11) + (cpf[1] * 10) + (cpf[2] * 9) + (cpf[3] *
+ * 8) + (cpf[4] * 7) + (cpf[5] * 6) + (cpf[6] * 5) + (cpf[7] * 4 + cpf[8] * 3) +
+ * cpf[9] * 2);
+ * 
+ * var resto1 = (result1 * 10) % 11; //console.log(resto1);
+ * 
+ * 
+ * if (resto1 == 10 || resto1 == 11) { resto1 = 0; // console.log(resto1); }
+ * 
+ * 
+ * if (!(cpf[9] == resto && cpf[10] == resto1)) {
+ * 
+ * viewcpf.textContent = '*CPF inválido'; view2.classList.add('campo-cpf-muda');
+ * //campoCpf.classList.add('erro'); } else { viewcpf.textContent = '*CPF
+ * Válido'; view2.classList.remove('campo-cpf-muda');
+ * 
+ * if ((cpf[0] == cpf[1]) && (cpf[1] == cpf[2]) && (cpf[2] == cpf[3]) && (cpf[3] ==
+ * cpf[4]) && (cpf[4] == cpf[5]) && (cpf[6] == cpf[7]) && (cpf[8] == cpf[9]) &&
+ * cpf[9] == cpf[10]) {
+ * 
+ * viewcpf.textContent = '*CPF inválido'; view2.classList.add('campo-cpf-muda');
+ * //campoCpf.classList.add('erro'); } }
+ * 
+ * });
+ */
 
 /* CARROSEL DE PIZZAS */
 
