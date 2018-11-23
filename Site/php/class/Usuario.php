@@ -1,16 +1,16 @@
 <?php
-/* Criando a Classe do Usuário */
 
-class usuario{
+/* Criando a Classe do Usuário */
+class Usuario{
+
     private $nome;
     private $email;
     private $cpf;
     private $senha;
-    
-    
+
     /**
      * Get the value of nome
-     */ 
+     */
     public function getNome()
     {
         return $this->nome;
@@ -19,8 +19,8 @@ class usuario{
     /**
      * Set the value of nome
      *
-     * @return  self
-     */ 
+     * @return self
+     */
     public function setNome($nome)
     {
         $this->nome = $nome;
@@ -30,7 +30,7 @@ class usuario{
 
     /**
      * Get the value of email
-     */ 
+     */
     public function getEmail()
     {
         return $this->email;
@@ -39,8 +39,8 @@ class usuario{
     /**
      * Set the value of email
      *
-     * @return  self
-     */ 
+     * @return self
+     */
     public function setEmail($email)
     {
         $this->email = $email;
@@ -50,7 +50,7 @@ class usuario{
 
     /**
      * Get the value of cpf
-     */ 
+     */
     public function getCpf()
     {
         return $this->cpf;
@@ -59,8 +59,8 @@ class usuario{
     /**
      * Set the value of cpf
      *
-     * @return  self
-     */ 
+     * @return self
+     */
     public function setCpf($cpf)
     {
         $this->cpf = $cpf;
@@ -70,7 +70,7 @@ class usuario{
 
     /**
      * Get the value of senha
-     */ 
+     */
     public function getSenha()
     {
         return $this->senha;
@@ -79,8 +79,8 @@ class usuario{
     /**
      * Set the value of senha
      *
-     * @return  self
-     */ 
+     * @return self
+     */
     public function setSenha($senha)
     {
         $this->senha = $senha;

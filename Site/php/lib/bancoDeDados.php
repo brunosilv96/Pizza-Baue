@@ -54,13 +54,13 @@ class BancoDeDados {
 	 */
 	public function abrirConexao(): bool {
 		try {
-			$end = "mysql:host=127.0.0.1;dbname=quitanda";
+			$end = "mysql:host=127.0.0.1;dbname=pizza";
 
 			$conf = array (
 					PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
 			);
 
-			$this->conexao = new PDO ( $end, "teste", "1234", $conf );
+			$this->conexao = new PDO ( $end, "baue", "1234", $conf );
 			return true;
 		} catch ( Exception $e ) {
 			echo "Falha ao conectar com o banco de dados";
