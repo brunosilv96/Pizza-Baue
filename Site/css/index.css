@@ -1,6 +1,6 @@
 /* < IMAGEM BACKGROUND >*/
 header{
-   background:rgb(221, 74, 16,.6) url(../images/banner2.jpg);
+   background:rgb(221, 74, 16,.6) url(../images/banner-.jpg);
 }
 .str0 {stroke:#FEFEFE;
     stroke-width:8.47;
@@ -164,6 +164,9 @@ svg{
    float: left;
    margin-left: 2rem;
    transition: all 300ms ease-in-out;
+  }
+  .card p{
+    height: 90px;
   }
   .card:hover{
     box-shadow: 0 0 30px rgba(0,0,0,0.3);

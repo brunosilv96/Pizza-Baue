@@ -15,7 +15,7 @@ body{
 }
 
 header{
-    background:url(../images/banner-cardapio.jpg);
+    background:url(../images/banner-1.jpg);
  }
 
  .str0 {stroke:rgb(255, 193, 84);
@@ -46,8 +46,12 @@ svg{
     height:400px ;
     margin-left: 23%;
     margin-top: 1rem;
+    transition: all 300ms ease-in-out;
 }
 
+.container-monte img:hover{
+    transform: scale(1.1);
+}
 .btn-2{
     background-color: #c94848;
     padding: 15px 45px;
@@ -121,17 +125,22 @@ cursor: pointer;
     height: 250px;
     float: left;
     box-sizing: border-box;
+
 }
 
 .foto-pz{
     width: 200px;
     height: 200px;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 1.7rem;
     border-radius: 50%;
+
    
 }
-
+.foto-pz h2{
+    margin-top: -2rem;
+    margin-left: 4.7rem;
+}
 .foto-pz img{
    width: 250px;
     height: 250px;

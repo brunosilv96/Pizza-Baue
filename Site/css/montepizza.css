@@ -104,6 +104,10 @@ h3,
 p {
     text-align: center;
     color: #585858;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    
 }
 
 .image {
@@ -123,7 +127,7 @@ p {
     background-color: #ffffff;
     padding: 7px 30px;
     color: rgb(53, 53, 53);
-    margin-top: 1px;
+    margin-top: 4rem;
     border-bottom: #ccc;
     border: 1px solid #585858;
     font-size: .9rem;
@@ -144,6 +148,8 @@ p {
     text-align: center;
     font-size: 1.3rem;
     margin-top: -1.5rem;
+    line-height: 80px;
+   
 }
 
 .button-monte {

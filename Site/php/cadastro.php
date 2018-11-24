@@ -1,62 +1,68 @@
 <?php
 /* Faz a requisição da Biblioteca do Banco de Dados */
-require_once 'class/Usuario.php';
 require_once 'lib/bancoDeDados.php';
+require_once 'class/Usuario.php';
+
 
 /* Faz a 'validação' dos campos em $_POST */
-$campos = Array("txtEmail", "txtCpf", "senha1", "senha2");
+if(isset($_POST["txtNome"]) == true){
+    if(isset($_POST["txtEmail"]) == true){
+        if(isset($_POST["txtCpf"]) == true){
+            if(isset($_POST["senha1"]) == true){
+                if(isset($_POST["senha2"]) == true){
 
-if(verificaForm($campos) == true){
-    /* Cria um objeto do tipo Usuario */
-    $user = new Usuario();
-    
-    /* Seta os valores para a classe */
-    $user->setNome($_POST["txtNome"]);
-    $user->setEmail($_POST["txtEmail"]);
-    $user->setCpf($_POST["txtCpf"]);
-    $user->setSenha($_POST["senha1"]);
-    
-    /* Inicia o processo de adição dos dados no Banco */
-    try {
-        /* Cria um objeto do tipo Banco de Dados */
-        $conex = new BancoDeDados();
-        
-                
-        if ($conex->abrirConexao()){ 
-           /*Atribuindo os valores da classe a variaveis*/ 
-           $nome = $user->getNome();
-           $email = $user->getEmail();
-           $cpf = $user->getCpf();
-           $senha = $user->getSenha();
-           
-           /*inserindo os dados no banco*/
-           $conex-> executarSql("INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
-           
+                    /* Atribui os valores das senhas para as variaveis */
+                    $senha1 = $_POST["senha1"];
+                    $senha2 = $_POST["senha2"];
 
-           header("Location: exibeMsg.php?txtresultado=Sucesso");
+                    /* Faz a comparação das senhas */
+                    if ($senha1 != $senha2) {
+                        /* 
+                            * Se as senhas forem diferentes, redireciona de volta para a index.html
+                              parando a execução do PHP
+                        */
+                        echo("As senhas não são iguais");
+                        header("Location: ./index.html");
+                        exit();
+                    }
+                    
+                    /* Todo processo vai ser colocado nesta estrutura abaixo (dentro do 'try') */
+                    try {
+                        /* Faz a instancia da Classe Usuario */
+                        $user = new Usuario();
 
+                        /* Atribui os Valores ultilizando a instância */
+                        $user->setNome($_POST["txtNome"]);
+                        $user->setEmail($_POST["txtEmail"]);
+                        $user->setCpf($_POST["txtCpf"]);
+                        $user->setSenha($senha1);
+                        
+                    } catch (Exception $e) {
+                        /* 
+                            * Aqui é pra onde o script segue caso aconteça algum erro no bloco 'try'
+                            * A variavel '$e' armazena o erro
+                        */
+                        echo("ERRO: ".$e);
+                    }
+                    
+                }else{
+                    echo "Falha no campo CONFIRME SUA SENHA";
+                    exit(); /* O 'exit()' garante que sairá da execução */
+                }
+            }else{
+                echo "Falha no campo SENHA";
+                exit();
+            }
         }else{
-            echo "Erro de conexão com o Banco de Dados";
+            echo "Falha no campo CPF";
+            exit();
         }
-        
-    } catch (Exception $e) {
-        echo "Erro ao salvar os dados no Banco " . $e;
+    }else{
+        echo "Falha no campo E-MAIL";
+        exit();
     }
-    
 }else{
-    echo "Erro nos campos do formulário";
+    echo "Falha no campo NOME";
+    exit();
 }
-
-
-/* Função para fazaer a validação dos campos do formulário */
-function verificaForm(Array $campos){
-    foreach($campos as $itens){
-        if (isset($_POST[$itens]) == true) {
-            return true; 
-        } else {
-            return false;
-        }
-    }
-}
-
 ?>

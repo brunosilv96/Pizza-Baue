@@ -43,17 +43,18 @@
                             </div>
                         </form>
                     </div>
+
                     <!--- Formulário de Cadastro de Usuário -->
                     <div class="register-form tabs-page" id="register-form-tab">
-                        <form method="POST" action="./php/cadastro.php" class="form-control" id="frmcadastro" onsubmit="return verificaForm(event)">
+                        <form method="POST" action="php/cadastro.php" class="form-control" name="frmcadastro">
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
-                                <input type="text" name="txtNome" id="txtNome" placeholder="Username" class="form_input">
+                                <input type="text" name="txtNome" placeholder="Username" class="form_input">
                             </div>
 
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
-                                <input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" class="form_input">
+                                <input type="text" name="txtEmail" placeholder="E-mail" class="form_input">
                             </div>
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
@@ -71,7 +72,7 @@
 
 
                             <div class="input-group align-center">
-                                <button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia">Cadastrar</button>
+                                <button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia" onclick="return verificaForm()">Cadastrar</button>
                             </div>
 
 
@@ -86,7 +87,7 @@
                         <div class="form-header">
                             <h2 class="align-center">RECUPERAR SENHA</h2>
                         </div>
-                        <form action="javascript:void(0);" method="post" class="form-control">
+                        <form action="javascript:void(0);" method="get" class="form-control">
                             <div class="input-group">
                                 <span class="fas fa-user"></span>
                                 <input type="text" placeholder="Username">
@@ -202,8 +203,8 @@ viewBox="0 0 11007 2540"
         <ul id="slideWrap"> 
           <li id="itemsSlider">
             <div class="card">
-             <img src="./images/pizza.png" alt="" class="image">
-             <h2>Pizza Mussarela</h2>
+             <img src="./images/mussarela.png" alt="" class="image">
+             <h2>Mussarela</h2>
              <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
              <div class="price-card-slider">
                  <h3>R$ 22,00</h3>
@@ -212,22 +213,22 @@ viewBox="0 0 11007 2540"
             </div>
 
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/baue.png" alt="" class="image">
+                <h2>Pizza Baue</h2>
+                <p> Pepperoni, cebola, pimentão, champignon, incrível seleção de carnes (bovinas e suínas) e mussarela.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 40,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/calabresa.png" alt="" class="image">
+                <h2>Calabresa</h2>
+                <p> Deliciosas fatias de calabresa, acompanhadas de cebola, azeitonas verdes e mussarela especial Pizza Baue.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 23,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
@@ -236,31 +237,31 @@ viewBox="0 0 11007 2540"
         </li>
           <li id="itemsSlider">
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/portuguesa.png" alt="" class="image">
+                <h2>Portuguesa</h2>
+                <p> Presunto especial acompanhado de cebola e azeitonas verdes, coberto pela exclusiva mussarela Pizza Baue.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 30,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/margherita.png" alt="" class="image">
+                <h2>Margherita</h2>
+                <p> Mussarela, manjericão, tomates selecionados e queijo parmesão.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 24,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/vegetariana.png" alt="" class="image">
+                <h2>Vegetariana</h2>
+                <p> Saborosa combinção de mussarela, tomates selecionados, champignon, pimentão, cebola e azeitonas verdes.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 32,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
@@ -268,33 +269,33 @@ viewBox="0 0 11007 2540"
           </li>
           <li id="itemsSlider">
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/pepperoni.png" alt="" class="image">
+                <h2>Pepperoni</h2>
+                <p> Deliciosas fatias de pepperoni (salame especial condimentado com páprica) e mussarela.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 35,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/peito-de-peru.png" alt="" class="image">
+                <h2>Peito de Peru</h2>
+                <p> Exclusiva mussarela, fatias de peito de peru e o legitimo Cream Cheese Philadelphia, finalizado com tomates e azeitonas pretas. </p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 35,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/catupiry.png" alt="" class="image">
+                <h2>Frango com Catupiry</h2>
+                <p> Frango desfiado, cebola e catupiry.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 32,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
@@ -302,32 +303,32 @@ viewBox="0 0 11007 2540"
           </li>
           <li id="itemsSlider">
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/carne-seca.png" alt="" class="image">
+                <h2>Carne Seca</h2>
+                <p> Mussarela, carne-seca, cebola e Philadelphia.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 33,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/bacon.png" alt="" class="image">
+                <h2>Meat & Bacon</h2>
+                <p> Mussarela, bacon, calabresa, pepperoni e presunto.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 29,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/bauru.png" alt="" class="image">
+                <h2>Bauru</h2>
+                <p> Mussarela, presunto, requeijão e tomate.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 26,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
@@ -335,33 +336,33 @@ viewBox="0 0 11007 2540"
           </li>
           <li id="itemsSlider">
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/frango-grelhado.png" alt="" class="image">
+                <h2>Frango Grelhado</h2>
+                <p> Mussarela, frango, requeijão, tomate, azeitona preta e manjericão.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 30,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/labianca.png" alt="" class="image">
+                <h2>La Bianca</h2>
+                <p> Mussarela, mussarela de búfala, requeijão, parmesão ralado e manjericão.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 30,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
 
 
                <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/napolitana.png" alt="" class="image">
+                <h2>Napolitana</h2>
+                <p> Mussarela, tomate e parmesão ralado.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 28,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
                </div>
@@ -369,32 +370,32 @@ viewBox="0 0 11007 2540"
           </li>
           <li id="itemsSlider">
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/queijos.png" alt="" class="image">
+                <h2>4 Queijos</h2>
+                <p> Mussarela, requeijão, gorgonzola e parmesão ralado.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 25,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
             </div>
 
 
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/veggie.png" alt="" class="image">
+                <h2>Veggie</h2>
+                <p> Mussarela, champignon, azeitona preta, cebola e pimentão verde.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 35,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
             </div>
 
             <div class="card">
-                <img src="./images/pizza.png" alt="" class="image">
-                <h2>Pizza Mussarela</h2>
-                <p> Coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural.</p>
+                <img src="./images/presunto.png" alt="" class="image">
+                <h2>Presunto</h2>
+                <p> Mussarela e presunto.</p>
                 <div class="price-card-slider">
-                    <h3>R$ 22,00</h3>
+                    <h3>R$ 25,00</h3>
                 </div>
                 <button class="btn-slider">Adicionar ao carrinho</button>
             </div>
@@ -486,7 +487,7 @@ viewBox="0 0 11007 2540"
                     <div class="left">
                     <div class="numbertext">1 / 3</div>
                     <div class="comment-img">
-                        <img src="../images/autor1.jpg">
+                        <img src="./images/user.png">
                     </div>
                     <div class="box-comment"><br><br><br>
                         <p>"A proposta é bem diferente do tradicional, bem inovadora, tem futuro"</p>
@@ -508,7 +509,7 @@ viewBox="0 0 11007 2540"
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
                     <div class="comment-img">
-                        <img src="../images/autor2.jpg">
+                        <img src="./images/user.png">
                     </div>
                     <div class="box-comment"><br><br><br>
                         <p>"A ideia de montar a minha própria pizza, me chamou muita atenção, pois é bom para os vegetarianos e veganos saber o que tem na pizza."</p>
@@ -518,7 +519,7 @@ viewBox="0 0 11007 2540"
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
                     <div class="comment-img">
-                        <img src="../images/autor3.jpg">
+                        <img src="./images/user.png">
                     </div>
                     <div class="box-comment"><br><br><br>
                         <p>"O sistema oferece um ótimo serviço"</p>
