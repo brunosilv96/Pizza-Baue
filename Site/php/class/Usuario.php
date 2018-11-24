@@ -7,7 +7,19 @@ class Usuario{
     private $email;
     private $cpf;
     private $senha;
-
+    
+    public function verificaForm(Array $campos){
+        foreach($campos as $itens){
+            if (isset($_POST[$itens]) == true) {
+                return true;
+            } else {
+                echo "O campo não existe: ". $campos;
+                break;
+                return false;
+            }
+        }
+    }
+    
     /**
      * Get the value of nome
      */

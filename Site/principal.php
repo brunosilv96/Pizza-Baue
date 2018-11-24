@@ -59,15 +59,15 @@
                 <div class="menu-usuario">
                     <h3>Nome Usuário</h3>
                     <ul>
-                        <li><a href="princ_pedidos.html" target="iframe-conteudo">Pedidos</a></li>
-                        <li><a href="princ_cadastro.html" target="iframe-conteudo">Alterar Cadastro</a></li>
-                        <li><a href="princ_endereco.html" target="iframe-conteudo">Alterar Endereço</a></li>
-                        <li><a href="#">Sair</a></li>
+                        <li><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
+                        <li><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
+                        <li><a href="princ_endereco.php" target="iframe-conteudo">Endereço</a></li>
+                        <li><a href="php/deslogar.php">Sair</a></li>
                     </ul>
                 </div>
             </div>
             <div class="conteudo">
-                <iframe name="iframe-conteudo" src="princ_pedidos.html">
+                <iframe name="iframe-conteudo" src="princ_pedidos.php">
                     
                     <!--
                         Aqui é linkado as páginas referentes ao usuario

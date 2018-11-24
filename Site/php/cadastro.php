@@ -1,68 +1,55 @@
 <?php
-/* Faz a requisição da Biblioteca do Banco de Dados */
-require_once 'lib/bancoDeDados.php';
 require_once 'class/Usuario.php';
+require_once 'lib/bancoDeDados.php';
 
+/* Cria um objeto do tipo Usuario */
+    $user = new Usuario();
+    
+/* Cria um Array com os nomes dos campos dos formulários */
+$campos = Array(
+    "txtEmail",
+    "txtCpf",
+    "senha1",
+    "senha2"
+);
 
-/* Faz a 'validação' dos campos em $_POST */
-if(isset($_POST["txtNome"]) == true){
-    if(isset($_POST["txtEmail"]) == true){
-        if(isset($_POST["txtCpf"]) == true){
-            if(isset($_POST["senha1"]) == true){
-                if(isset($_POST["senha2"]) == true){
+/* Chama a função que faz a veriricação dos campos no formulário */
+if ($user->verificaForm($campos) == true) {
 
-                    /* Atribui os valores das senhas para as variaveis */
-                    $senha1 = $_POST["senha1"];
-                    $senha2 = $_POST["senha2"];
+    /* Seta os valores para a classe */
+    $user->setNome($_POST["txtNome"]);
+    $user->setEmail($_POST["txtEmail"]);
+    $user->setCpf($_POST["txtCpf"]);
+    $user->setSenha($_POST["senha1"]);
 
-                    /* Faz a comparação das senhas */
-                    if ($senha1 != $senha2) {
-                        /* 
-                            * Se as senhas forem diferentes, redireciona de volta para a index.html
-                              parando a execução do PHP
-                        */
-                        echo("As senhas não são iguais");
-                        header("Location: ./index.html");
-                        exit();
-                    }
-                    
-                    /* Todo processo vai ser colocado nesta estrutura abaixo (dentro do 'try') */
-                    try {
-                        /* Faz a instancia da Classe Usuario */
-                        $user = new Usuario();
+    /* Inicia o processo de adição dos dados no Banco */
+    try {
+        /* Cria um objeto do tipo Banco de Dados */
+        $conex = new BancoDeDados();
 
-                        /* Atribui os Valores ultilizando a instância */
-                        $user->setNome($_POST["txtNome"]);
-                        $user->setEmail($_POST["txtEmail"]);
-                        $user->setCpf($_POST["txtCpf"]);
-                        $user->setSenha($senha1);
-                        
-                    } catch (Exception $e) {
-                        /* 
-                            * Aqui é pra onde o script segue caso aconteça algum erro no bloco 'try'
-                            * A variavel '$e' armazena o erro
-                        */
-                        echo("ERRO: ".$e);
-                    }
-                    
-                }else{
-                    echo "Falha no campo CONFIRME SUA SENHA";
-                    exit(); /* O 'exit()' garante que sairá da execução */
-                }
-            }else{
-                echo "Falha no campo SENHA";
-                exit();
-            }
-        }else{
-            echo "Falha no campo CPF";
-            exit();
+        if ($conex->abrirConexao()) {
+            /* Atribuindo os valores da classe a variaveis */
+            $nome = $user->getNome();
+            $email = $user->getEmail();
+            $cpf = $user->getCpf();
+            $senha = $user->getSenha();
+
+            /* Comando que irá para o Banco de Dados */
+            $conex->executarSql("INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
+            
+            /* Se a inserção for um sucesso, redirciona para a página de mensagem */
+            header("Location: exibeMsg.php?txtresultado=Sucesso!");
+            
+        } else {
+            /* Se caso ocorrer algum erro na hora da adição de registro */
+            header("Location: exibeMsg.php?txtresultado=Falha ao Conectar com o Banco de Dados");
         }
-    }else{
-        echo "Falha no campo E-MAIL";
-        exit();
+    } catch (Exception $e) {
+        header("Location: exibeMsg.php?txtresultado=Erro de conexão com o Banco '. $e'");
     }
-}else{
-    echo "Falha no campo NOME";
-    exit();
+} else {
+    echo "Erro nos campos do formulário";
 }
+
+
 ?>
