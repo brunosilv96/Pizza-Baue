@@ -130,19 +130,19 @@ function verificaForm(event){
 
         if(nome == ""){
             alert("Obrigatório preecher o campo Nome !!");
-            //document.frmcadastro.txtnome.focus();
+            // document.frmcadastro.txtnome.focus();
             return false;
         }
 
         else if(nome.length < 4){
             alert("Favor informar o nome completo !!");
-            //document.frmcadastro.txtnome.focus();
+            // document.frmcadastro.txtnome.focus();
             return false;
         }
 
         else if(email == ""){
                 alert("Obrigatório preecher o campo Email");
-                //document.frmcadastro.txtemail.focus();
+                // document.frmcadastro.txtemail.focus();
                 return false;
          }
 
@@ -154,12 +154,12 @@ function verificaForm(event){
         }
         else if(cpf == ""){
             alert("Obrigatório preecher o campo cpf")
-            //document.frmcadastro.txtcpf.focus();
+            // document.frmcadastro.txtcpf.focus();
             return false;
         }
         else if (senha1.length < 6){
             alert("A senha deve conter no mínimo 6 caracteres.");
-            //document.frmcadastro.senha1.focus();
+            // document.frmcadastro.senha1.focus();
             return false;
         }
         else if (senha2 ==""){
@@ -170,7 +170,7 @@ function verificaForm(event){
 
         else if(senha1 != senha2){
             alert("SENHAS DIFERENTES")
-            //document.frmcadastro.senha2.focus();
+            // document.frmcadastro.senha2.focus();
             return false;
         }
         

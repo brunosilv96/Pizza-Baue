@@ -2,6 +2,11 @@
 require_once 'class/Usuario.php';
 require_once 'lib/bancoDeDados.php';
 
+if (! isset ( $_SESSION ["cod"] )) {
+    header ( "location: index.php" );
+    return;
+}
+
 /* Cria um objeto do tipo Usuario */
     $user = new Usuario();
     

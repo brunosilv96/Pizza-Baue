@@ -1,71 +1,83 @@
 <?php
-class BancoDeDados {
 
-	/**
-	 * Guarda a conexão com o banco de dados
-	 * @var PDO
-	 */
-	private $conexao;
+class BancoDeDados
+{
 
-	/**
-	 * Guarda os resultados que vem do
-	 * banco de dados
-	 * @var PDOStatement
-	 */
-	private $resultado;
+    /**
+     * Guarda a conexão com o banco de dados
+     *
+     * @var PDO
+     */
+    private $conexao;
 
-	/**
-	 * Retorna um array com os dados pedidos
-	 * @return array
-	 */
-	public function lerResultados(): array {
-		return $this->resultado->fetchAll ();
-	}
+    /**
+     * Guarda os resultados que vem do
+     * banco de dados
+     *
+     * @var PDOStatement
+     */
+    private $resultado;
 
-	/**
-	 * Executa uma ou mais instruções SQL
-	 * @param string $sql
-	 * @return bool
-	 */
-	public function executarSQL(string $sql): bool {
-		try {
-			$this->conexao->beginTransaction ();
-			$this->resultado = $this->conexao->prepare ( $sql );
-			$this->resultado->execute ();
-			$this->conexao->commit ();
-			return true;
-		} catch ( Exception $e ) {
-			return false;
-		}
-	}
+    /**
+     * Retorna um array com os dados pedidos
+     *
+     * @return array
+     */
+    public function lerResultados(): array
+    {
+        return $this->resultado->fetchAll();
+    }
 
-	/**
-	 * Fecha a conexa
-	 * @return bool
-	 */
-	public function fecharConexao(): bool {
-		$this->conexao = null;
-		return true;
-	}
+    /**
+     * Executa uma ou mais instruções SQL
+     *
+     * @param string $sql
+     * @return bool
+     */
+    public function executarSQL(string $sql): bool
+    {
+        try {
+            $this->conexao->beginTransaction();
+            $this->resultado = $this->conexao->prepare($sql);
+            $this->resultado->execute();
+            $this->conexao->commit();
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 
-	/**
-	 * Abre a conexão
-	 * @return bool
-	 */
-	public function abrirConexao(): bool {
-		try {
-			$end = "mysql:host=127.0.0.1;dbname=quitanda";
+    /**
+     * Fecha a conexa
+     *
+     * @return bool
+     */
+    public function fecharConexao(): bool
+    {
+        $this->conexao = null;
+        return true;
+    }
 
-			$conf = array (
-					PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
-			);
+    /**
+     * Abre a conexão
+     *
+     * @return bool
+     */
+    public function abrirConexao(): bool
+    {
+        try {
+            $end = "mysql:host=127.0.0.1;dbname=pizza";
 
-			$this->conexao = new PDO ( $end, "teste", "1234", $conf );
-			return true;
-		} catch ( Exception $e ) {
-			echo "Falha ao conectar com o banco de dados";
-			exit ( 0 );
-		}
-	}
+            $conf = array(
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+            );
+
+            $this->conexao = new PDO($end, "root", "1234", $conf);
+            return true;
+        } catch (Exception $e) {
+            echo "Falha ao conectar com o banco de dados";
+            exit(0);
+        }
+    }
 }
 ?>

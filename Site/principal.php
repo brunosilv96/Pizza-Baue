@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if (! isset ( $_SESSION ["id_usuario"] )) {
+    header ( "Location: index.html" );
+    return;
+}
+?>
+
 <html>
     <head>
         <title>Pagina Inicial</title>
@@ -62,7 +71,7 @@
                         <li><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
                         <li><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
                         <li><a href="princ_endereco.php" target="iframe-conteudo">Endereço</a></li>
-                        <li><a href="php/deslogar.php">Sair</a></li>
+                        <li><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
             </div>
