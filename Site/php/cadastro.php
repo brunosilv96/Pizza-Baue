@@ -2,11 +2,6 @@
 require_once 'class/Usuario.php';
 require_once 'lib/bancoDeDados.php';
 
-if (! isset ( $_SESSION ["cod"] )) {
-    header ( "location: index.php" );
-    return;
-}
-
 /* Cria um objeto do tipo Usuario */
     $user = new Usuario();
     
@@ -41,14 +36,17 @@ if ($user->verificaForm($campos) == true) {
 
             /* Comando que irá para o Banco de Dados */
             $conex->executarSql("INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
-            
-            /* Se a inserção for um sucesso, redirciona para a página de mensagem */
-            header("Location: exibeMsg.php?txtresultado=Sucesso!");
+
+            /* Se a inserção for um sucesso, redirciona para a página do usuario */
+            header("Location: ../index.html");
             
         } else {
             /* Se caso ocorrer algum erro na hora da adição de registro */
-            header("Location: exibeMsg.php?txtresultado=Falha ao Conectar com o Banco de Dados");
+            header("Location: exibeMsg.php?txtresultado=Erro de conexão com o Banco");
         }
+
+        $conex->fecharConexao();
+
     } catch (Exception $e) {
         header("Location: exibeMsg.php?txtresultado=Erro de conexão com o Banco '. $e'");
     }
