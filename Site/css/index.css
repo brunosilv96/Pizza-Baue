@@ -245,7 +245,7 @@ svg{
 
 }
 .service-box i{
-   margin-left: 4rem;
+   margin-left: 5rem;
     display: block;
     font-size: 65px;
     color: #c94848;
@@ -254,6 +254,7 @@ svg{
 
 .service-box:hover{
     background-color: #c94848;
+    height: 21rem;
 }
 
 .service-box:before{

@@ -819,8 +819,31 @@ footer{
 }
 
 .bl-conteudo{
-    text-align: right;
+    text-align: center;
     padding-top: 3rem;
+   
+}
+.bl-conteudo .gab{
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    transition: all 300ms ease-in-out;
+}
+.ga{
+    font-size: 1rem;
+    display: block;
+    text-align: left;
+    margin-left: 2rem;
+   
+    
+}
+.bl-conteudo .gab:hover{
+    color: #c94848;
+    cursor: pointer;
+}
+.bl-conteudo img{
+    width: 150px;
+    height: 150px;
 }
 
 .ft-logo{
@@ -838,9 +861,11 @@ footer{
     box-sizing: border-box;
     background-color: #79766F;
     margin-top: 11rem;
+    
 }
 
 .copyright p{
     color: rgb(255,255,255);
+    line-height: 4.1rem;
     
 }

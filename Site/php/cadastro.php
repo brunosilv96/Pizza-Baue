@@ -38,7 +38,7 @@ if ($user->verificaForm($campos) == true) {
             $conex->executarSql("INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
 
             /* Se a inserção for um sucesso, redirciona para a página do usuario */
-            header("Location: ../index.html");
+            header("Location: ../index.html#modal-login");
             
         } else {
             /* Se caso ocorrer algum erro na hora da adição de registro */

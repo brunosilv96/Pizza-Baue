@@ -1,31 +1,3 @@
-<?php
-require_once 'php/lib/bancoDeDados.php';
-
-session_start();
-
-if (! isset ( $_SESSION ["id_usuario"] )) {
-    header ( "Location: index.html" );
-    return;
-}
-
-$conex = new BancoDeDados();
-
-$codigo = $_SESSION["id_usuario"];
-
-if($conex->abrirConexao()){
-    $conex->executarSql("SELECT * FROM usuario WHERE id_usuario = '$codigo'");
-    
-    $resultado = $conex->lerResultados();
-    
-    $nome = $resultado[0][1];
-    
-    $conex->fecharConexao();
-}else{
-    echo "Erro de conexão com o Banco de Dados";
-}
-
-?>
-
 <html>
     <head>
         <title>Pagina Inicial</title>
@@ -85,17 +57,17 @@ if($conex->abrirConexao()){
                     <a href="#">Alterar Foto</a>
                 </div>
                 <div class="menu-usuario">
-                    <h3><?php echo $nome;?></h3>
+                    <h3>Nome Usuário</h3>
                     <ul>
-                        <li><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
-                        <li><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><a href="princ_endereco.php" target="iframe-conteudo">Endereço</a></li>
-                        <li><a href="php/sair.php">Sair</a></li>
+                        <li><a href="princ_pedidos.html" target="iframe-conteudo">Pedidos</a></li>
+                        <li><a href="princ_cadastro.html" target="iframe-conteudo">Alterar Cadastro</a></li>
+                        <li><a href="princ_endereco.html" target="iframe-conteudo">Alterar Endereço</a></li>
+                        <li><a href="#">Sair</a></li>
                     </ul>
                 </div>
             </div>
             <div class="conteudo">
-                <iframe name="iframe-conteudo" src="princ_pedidos.php">
+                <iframe name="iframe-conteudo" src="princ_pedidos.html">
                     
                     <!--
                         Aqui é linkado as páginas referentes ao usuario
@@ -104,28 +76,42 @@ if($conex->abrirConexao()){
             </div>
         </section>
         <footer>
-            <div class="cont-footer">
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                <div class="cont-footer">
+                    <div class="bloco">
+                        <p class="titulo">Telefones de contato</p>
+                        <p class="bl-conteudo">
+                                <i class="fas fa-phone ga"></i>	+55(11)94631-0146
+                                <i class="fas fa-phone ga"></i>	+55(11)95275-0119
+                                <i class="fas fa-phone ga"></i>	+55(11)94893-2802
+                                <i class="fas fa-phone ga"></i>	+55(11)95876-6887	
+                                <i class="fas fa-phone ga"></i>		+55(11)94539-8380
+                        </p>
+                    </div>
+                    <div class="bloco">
+                        <p class="titulo">Bloco</p>
+                        <p class="bl-conteudo">Caso precise tirar dúvidas, entre em contato conosco através de nosso e-mail:
+                                pizzabaue@gmai.com  </p>
+                    </div>
+                    <div class="bloco">
+                        <p class="titulo">Bloco</p>
+                        <p class="bl-conteudo">
+                                    <i class="fab fa-facebook-square gab" alt="Facebook" title="Facebook"></i>
+                                <i class="fab fa-instagram gab" alt="Instagram" title="Instagram"></i>
+                                <i class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i>
+                                <i class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
+                        </p>
+                    </div>
+                    <div class="ft-logo">
+                        <p class="titulo">Bloco</p>
+                        <p class="bl-conteudo">
+                            <img src="./images/logo4.png">
+                        </p>
+                    </div>
                 </div>
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                <div class="copyright">
+                    <p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC - Informática para internet.</p>
                 </div>
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-                <div class="ft-logo">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright</p>
-            </div>
-        </footer>
+            </footer>
     </body>
     <script type="text/javascript" src="js/global.js"></script>
 </html>

@@ -3,7 +3,7 @@
 
 class Endereco {
     
-    private $lagradouro;
+    private $logradouro;
     private $numero;
     private $estado;
     private $uf;
@@ -21,9 +21,9 @@ class Endereco {
         }
     }
     
-    public function getLagradouro()
+    public function getLogradouro()
     {
-        return $this->lagradouro;
+        return $this->logradouro;
     }
 
     public function getNumero()
@@ -46,7 +46,7 @@ class Endereco {
         return $this->complemento;
     }
 
-    public function setLagradouro($lagradouro)
+    public function setLogradouro($logradouro)
     {
         $this->lagradouro = $lagradouro;
     }
