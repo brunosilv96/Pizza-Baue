@@ -8,39 +8,26 @@ $codigo = $_SESSION["id_usuario"];
 
 $conex = new BancoDeDados();
 
-$campos = Array(
-    "txtLogradouro",
-    "txtNumero",
-    "txtEstado",
-    "txtUf",
-    "txtComplemento"
-);
-
-$conex->executarSQL("SELECT * FROM endereco WHERE id_usuario_fk = '$codigo'");
-
-$resultado = $conex->lerResultados();
-
-if (count($resultado) > 0) {
-    $logradouro = $resultado[0][1];
-    $numero = $resultado[0][2];
-    $estado = $resultado[0][3];
-    $uf = $resultado[0][4];
-    $complemento = $resultado[0][5];
-}
+$logradouro = null;
+$numero = null;
+$estado = null;
+$uf = null;
+$complemento = null;
 
 if ($conex->abrirConexao()) {
-    if ($endereco->validaForm($campos) == true) {
-        $endereco = new Endereco();
 
-        $endereco->setLogradouro($_POST["txtLogradouro"]);
-        $endereco->setNumero($_POST["txtNumero"]);
-        $endereco->setEstado($_POST["txtEstado"]);
-        $endereco->setUf($_POST["txtUf"]);
-        $endereco->setComplemento($_POST["txtComplemento"]);
+    $conex->executarSQL("SELECT * FROM endereco WHERE id_usuario_fk = '$codigo'");
 
-        $conex->executarSQL("UPDATE endereco SET lagradouro = '$logradouro', numero = '$numero', estado = '$estado', uf = '$uf', complemento = '$complemento' WHERE id_usuario_fk = '$codigo';");
+    $resultado = $conex->lerResultados();
 
-        header("Location: ../principal.php");
+    if (count($resultado) > 0) {
+        $logradouro = $resultado[0][1];
+        $numero = $resultado[0][2];
+        $estado = $resultado[0][3];
+        $uf = $resultado[0][4];
+        $complemento = $resultado[0][5];
+        
+        $conex->fecharConexao();
     }
 }
 
@@ -58,7 +45,7 @@ if ($conex->abrirConexao()) {
 
 	<div class="conteudo">
 		<h3>Alterar Endereço</h3>
-		<form action="princ_endereco.php" method="post">
+		<form action="php/atualizaEndereco.php" method="post">
 			<table>
 				<tr>
 					<td class="lb"><label>Logradouro:</label></td>
