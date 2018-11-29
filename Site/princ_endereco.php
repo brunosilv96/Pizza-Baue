@@ -79,7 +79,7 @@ if ($conex->abrirConexao()) {
 				</tr>
 				<tr>
 					<td colspan="2"><label class="lb-msg"><p><?php echo $flag;?></p></label></td>
-			</tr>
+				</tr>
 			</table>
 			<div class="botoes">
 				<input type="reset" name="btnLimpar" class="btn-cadastro"
