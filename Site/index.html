@@ -35,7 +35,7 @@
 					<form action="php/login.php" method="post" class="form-control">
 						<div class="input-group">
 							<span class="fas fa-user"></span> <input type="text"
-								placeholder="Username" name="txtUser">
+								placeholder="Nome" name="txtUser">
 						</div>
 						<div class="input-group">
 							<span class="fas fa-lock"></span> <input type="password"
@@ -59,7 +59,7 @@
 						onsubmit="return verificaForm(event)">
 						<div class="input-group">
 							<span class="fas fa-user"></span> <input type="text"
-								name="txtNome" id="txtNome" placeholder="Username"
+								name="txtNome" id="txtNome" placeholder="Nome"
 								class="form_input">
 						</div>
 
@@ -70,7 +70,7 @@
 						</div>
 						<div class="input-group">
 							<span class="fas fa-user"></span> <input type="text"
-								name="txtCpf" placeholder="cpf" id="cpf" class="form_input">
+								name="txtCpf" placeholder="cpf" id="cpf" maxlength="14" class="form_input" onkeydown="javascript: fMasc( this, mCPF );">
 						</div>
 
 						<div class="input-group">

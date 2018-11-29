@@ -157,6 +157,11 @@ function verificaForm(event){
             // document.frmcadastro.txtcpf.focus();
             return false;
         }
+        else if(cpf.length < 11){
+            alert("O cpf deve conter 11 digitos")
+            // document.frmcadastro.txtcpf.focus();
+            return false;
+        }
         else if (senha1.length < 6){
             alert("A senha deve conter no mínimo 6 caracteres.");
             // document.frmcadastro.senha1.focus();
@@ -177,6 +182,24 @@ function verificaForm(event){
         document.getElementById("frmcadastro").submit();
         return true;
 }
+
+// MASCARA CPF
+function fMasc(objeto,mascara) {
+    obj = objeto
+    masc = mascara
+    setTimeout("fMascEx()",1)
+}
+function fMascEx() {
+    obj.value=masc(obj.value)
+}
+function mCPF(cpf){
+    cpf = document.getElementById("cpf").value.replace(/\D/g,"")
+    cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+    return cpf
+}
+
 
 // ValidaçãoCPF
 
