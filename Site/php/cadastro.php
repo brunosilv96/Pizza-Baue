@@ -35,7 +35,10 @@ if ($user->verificaForm($campos) == true) {
             $senha = $user->getSenha();
 
             /* Comando que irá para o Banco de Dados */
-            $conex->executarSql("INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
+
+            $sql = "INSERT usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));";
+
+            $conex->executarSQL($sql);
 
             /* Se a inserção for um sucesso, redirciona para a página do usuario */
             header("Location: ../index.html#modal-login");
