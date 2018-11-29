@@ -28,11 +28,23 @@ td{
 	height: 30px;
 	margin-top: 10px;
 	box-sizing: border-box;
-	text-align: right;
+	text-align: center;
 	color: rgb(80, 80, 80);
     font-weight: 800px;
 	text-transform: capitalize;
 	font-size: 20px;
+}
+
+td > label > p{
+	text-aling: center;
+}		
+
+.lb-msg{
+	text-aling: center;
+	color:rgb(193, 21, 21);
+	background-color:rgb(201, 78, 78);
+	height:10px;
+	font-size:17px;
 }
 
 .txt{

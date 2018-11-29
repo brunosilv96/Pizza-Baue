@@ -43,11 +43,6 @@ if(verificaForm($campos) == true){
         echo "Falha ao buscar usuário no Banco de Dados <br>".$e;
     }
     
-if (isset ( $_SESSION ["id_usuario"] )) {
-    header ( "location: ./principal.php" );
-    return;
-}
-    
 }
 
 function verificaForm(Array $campos){

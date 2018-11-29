@@ -11,7 +11,7 @@ $conex = new BancoDeDados();
 $campos = Array(
     "txtLogradouro",
     "txtNumero",
-    "txtEstado",
+    "txtCidade",
     "txtUf",
     "txtComplemento"
 );
@@ -29,13 +29,13 @@ if ($conex->abrirConexao()) {
 
             $logradouro = $_POST["txtLogradouro"];
             $numero = $_POST["txtNumero"];
-            $estado = $_POST["txtEstado"];
+            $cidade = $_POST["txtCidade"];
             $uf = $_POST["txtUf"];
             $complemento = $_POST["txtComplemento"];
 
-            $conex->executarSQL("UPDATE endereco SET logradouro = '$logradouro', numero = '$numero', estado = '$estado', uf = '$uf', complemento = '$complemento' WHERE id_usuario_fk = '$codigo';");
+            $conex->executarSQL("UPDATE endereco SET logradouro = '$logradouro', numero = '$numero', cidade = '$cidade', uf = '$uf', complemento = '$complemento' WHERE id_usuario_fk = '$codigo';");
 
-            header("Location: ../princ_endereco.php");
+            header("Location: ../princ_endereco.php?flag=Cadastro atualizado com sucesso!");
         } else {
             echo "Erro ao atualizar endereço no Banco de Dados";
         }
@@ -44,13 +44,13 @@ if ($conex->abrirConexao()) {
 
             $logradouro = $_POST["txtLogradouro"];
             $numero = $_POST["txtNumero"];
-            $estado = $_POST["txtEstado"];
+            $cidade = $_POST["txtCidade"];
             $uf = $_POST["txtUf"];
             $complemento = $_POST["txtComplemento"];
 
-            $conex->executarSQL("INSERT endereco(logradouro, numero, estado, uf, complemento, id_usuario_fk) VALUES('$logradouro', '$numero', '$estado', '$uf', '$complemento', '$codigo');");
-
-            header("Location: ../princ_endereco.php");
+            $conex->executarSQL("INSERT endereco(logradouro, numero, cidade, uf, complemento, id_usuario_fk) VALUES('$logradouro', '$numero', '$cidade', '$uf', '$complemento', '$codigo');");
+                        
+            header("Location: ../princ_endereco.php?flag=Cadastro inserido com sucesso!");
         } else {
             echo "Erro ao adicionar endereço no Banco de Dados";
         }

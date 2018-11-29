@@ -1,9 +1,4 @@
 <?php
-/*  
- * Necessário ter uma sessão ativa para adicionar a foto
- * 
- * */
-
 require_once 'lib/bancoDeDados.php';
 
 if (! conectar()) {
@@ -13,12 +8,12 @@ if (! conectar()) {
 
 session_start();
 
-if (! isset($_SESSION["cod"])) {
-    header("Location: index.php");
+if (! isset($_SESSION["id_usuario"])) {
+    header("Location: ../index.html");
     return;
 }
 
-$codDono = $_SESSION["cod"];
+$codDono = $_SESSION["id_usuario"];
 
 /*
  * Script que deve ser inserido quando for subir a imagem para o Banco de Dados

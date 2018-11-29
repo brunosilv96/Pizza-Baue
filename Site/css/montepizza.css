@@ -1,7 +1,9 @@
 header {
     background: url(../images/banner6.jpg);
 }
-
+.left{
+    margin-left: 20rem;
+}
 .str0 {
     stroke: rgb(255, 255, 255);
     stroke-width: 8.47;
@@ -38,6 +40,7 @@ svg {
 .title-igredientes h3 {
     margin-top: -4%;
     color: rgb(255, 255, 255);
+    
 }
 
 
@@ -48,7 +51,10 @@ svg {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 4%;
 }
+
+
 
 .imagem-monte {
     margin-left: 10%;
@@ -59,11 +65,8 @@ svg {
     width: 15rem;
     height: 17rem;
     margin-left: 2%;
-    float: left;
     margin-bottom: 5%;
     display: inline-block;
-
-
 }
 
 

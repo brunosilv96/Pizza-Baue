@@ -5,7 +5,7 @@ class Endereco {
     
     private $logradouro;
     private $numero;
-    private $estado;
+    private $cidade;
     private $uf;
     private $complemento;
     
@@ -31,7 +31,7 @@ class Endereco {
         return $this->numero;
     }
 
-    public function getEstado()
+    public function getCidade()
     {
         return $this->estado;
     }
@@ -56,9 +56,9 @@ class Endereco {
         $this->numero = $numero;
     }
 
-    public function setEstado($estado)
+    public function setCidade($cidade)
     {
-        $this->estado = $estado;
+        $this->estado = $cidade;
     }
 
     public function setUf($uf)
@@ -69,10 +69,6 @@ class Endereco {
     public function setComplemento($complemento)
     {
         $this->complemento = $complemento;
-    }
-
-    function function_name() {
-        
     }
 }
 

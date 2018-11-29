@@ -1,5 +1,5 @@
 /* Base de Dados da Pizzaria Baue */
-
+drop database pizza;
 create database pizza;
 use pizza;
 
@@ -13,9 +13,9 @@ CREATE TABLE usuario(
 
 CREATE TABLE endereco(
     id_endereco INT primary key auto_increment,
-    lagradouro VARCHAR(100) not null,
+    logradouro VARCHAR(100) not null,
     numero VARCHAR(10) not null,
-    estado VARCHAR(30),
+    cidade VARCHAR(30),
     uf CHAR(2),
     complemento VARCHAR(100),
     id_usuario_fk INT,
@@ -38,3 +38,5 @@ CREATE TABLE imagem(
     id_usuario_fk INT,
     FOREIGN KEY (id_usuario_fk) REFERENCES usuario(id_usuario)
 );
+
+select * from usuario;

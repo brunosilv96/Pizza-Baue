@@ -1,3 +1,41 @@
+<?php
+require_once 'php/lib/bancoDeDados.php';
+
+session_start();
+
+$codigo = $_SESSION["id_usuario"];
+
+$conex = new BancoDeDados();
+
+$logradouro = null;
+$numero = null;
+$cidade = null;
+$uf = null;
+$complemento = null;
+$flag = null;
+
+if(isset($_GET["flag"])){
+    $flag = $_GET["flag"];
+}
+
+if ($conex->abrirConexao()) {
+
+    $conex->executarSQL("SELECT * FROM endereco WHERE id_usuario_fk = '$codigo'");
+
+    $resultado = $conex->lerResultados();
+
+    if (count($resultado) > 0) {
+        $logradouro = $resultado[0][1];
+        $numero = $resultado[0][2];
+        $cidade = $resultado[0][3];
+        $uf = $resultado[0][4];
+        $complemento = $resultado[0][5];
+        
+        $conex->fecharConexao();
+    }
+}
+
+?>
 <html>
 <head>
 <meta charset="utf-8">

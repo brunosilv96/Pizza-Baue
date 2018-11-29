@@ -10,9 +10,14 @@ $conex = new BancoDeDados();
 
 $logradouro = null;
 $numero = null;
-$estado = null;
+$cidade = null;
 $uf = null;
 $complemento = null;
+$flag = null;
+
+if(isset($_GET["flag"])){
+    $flag = $_GET["flag"];
+}
 
 if ($conex->abrirConexao()) {
 
@@ -23,7 +28,7 @@ if ($conex->abrirConexao()) {
     if (count($resultado) > 0) {
         $logradouro = $resultado[0][1];
         $numero = $resultado[0][2];
-        $estado = $resultado[0][3];
+        $cidade = $resultado[0][3];
         $uf = $resultado[0][4];
         $complemento = $resultado[0][5];
         
@@ -58,9 +63,9 @@ if ($conex->abrirConexao()) {
 						name="txtNumero" value="<?php echo $numero;?>"></td>
 				</tr>
 				<tr>
-					<td class="lb"><label>Estado:</label></td>
+					<td class="lb"><label>Cidade:</label></td>
 					<td class="txt"><input type="text" class="input-cadastro"
-						name="txtEstado" value="<?php echo $estado;?>"></td>
+						name="txtCidade" value="<?php echo $cidade;?>"></td>
 				</tr>
 				<tr>
 					<td class="lb"><label>UF:</label></td>
@@ -72,10 +77,14 @@ if ($conex->abrirConexao()) {
 					<td class="txt"><input type="text" class="input-cadastro"
 						name="txtComplemento" value="<?php echo $complemento;?>"></td>
 				</tr>
+				<tr>
+					<td colspan="2"><label class="lb-msg"><p><?php echo $flag;?></p></label></td>
+			</tr>
 			</table>
 			<div class="botoes">
 				<input type="reset" name="btnLimpar" class="btn-cadastro"
-					value="Limpar"> <input type="submit" name="btnSalvar"
+					value="Limpar"> 
+					<input type="submit" name="btnSalvar"
 					class="btn-cadastro" value="Salvar">
 			</div>
 		</form>

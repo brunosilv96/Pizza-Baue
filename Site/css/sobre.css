@@ -48,8 +48,16 @@ svg{
 }
 .descricao img{
     margin-left: 40rem;
-    width: 60%;
-    height: 15rem;
+    width: 70%;
+    height: 17rem;
+    margin-top: -18rem;
+    
+}
+
+.imge-monte img{
+    margin-left: 10rem;
+    width: 70%;
+    height: 30rem;
     margin-top: -18rem;
     
 }
@@ -91,8 +99,8 @@ svg{
 }
 
 .descricao-2 img{
-    width: 60%;
-    height: 15rem;
+    width: 70%;
+    height: 18rem;
     margin-top: -20rem;
     margin-right: 140%;
     
