@@ -41,7 +41,7 @@ if ($user->verificaForm($campos) == true) {
             $conex->executarSQL($sql);
 
             /* Se a inserção for um sucesso, redirciona para a página do usuario */
-            header("Location: ../index.html#modal-login");
+            header("Location: ../index.php#modal-login");
             
         } else {
             /* Se caso ocorrer algum erro na hora da adição de registro */

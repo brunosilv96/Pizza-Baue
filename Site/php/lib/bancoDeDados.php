@@ -69,7 +69,7 @@ class BancoDeDados
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
             );
 
-            $this->conexao = new PDO($end, "root", "", $conf);
+            $this->conexao = new PDO($end, "root", "pizzabaue", $conf);
             return true;
         } catch (Exception $e) {
             echo "Falha ao conectar com o banco de dados ".$e;

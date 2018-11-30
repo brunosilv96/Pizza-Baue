@@ -1,0 +1,13 @@
+Conta do GMail ->
+Email: pizzabaue@gmail.com  
+Senha: pizzabaue123
+---
+Conta do Hostinger ->
+Email: pizzabaue@gmail.com
+Senha: pizzabaue123
+Site: https://pizzabaue.000webhostapp.com/
+
+Base de Dados do Hostinger->
+Nome BD: pizza
+Usuario: root
+Senha: pizzabaue
