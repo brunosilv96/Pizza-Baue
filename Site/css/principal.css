@@ -80,6 +80,7 @@ section{
     margin: auto;
     color: white;
 }
+
 .nome-user > a{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -101,8 +102,8 @@ section{
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 10px;
-    color: black;
-    border-bottom: 2px solid black;
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 .menu-usuario ul{

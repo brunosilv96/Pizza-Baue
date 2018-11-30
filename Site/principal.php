@@ -8,6 +8,9 @@ if (! isset ( $_SESSION ["id_usuario"] )) {
     return;
 }
 
+$label = "Login";
+$link = "#modal-login";
+
 $conex = new BancoDeDados();
 
 $codigo = $_SESSION["id_usuario"];
@@ -44,29 +47,33 @@ if($conex->abrirConexao()){
     <body>
         <header>
            
-                <nav class="navbar">
-                        <ul>
-                           <div class="container-nav">
-                              <li ><a href="index.html">Home</a></li>
-                              <li ><a href="sobre.html">Sobre</a></li>
-                              <li ><a href="cardapio.html">Cardápio</a></li>
-                              </div>
-                             <div class="logo">
-                                    <a href="index.html" class="logo"><img src="./images/logo4.png"> </a>
-                                  </div>
-                              </ul>
-                            
-                              <ul class="ul2">
-                                      <div class="container-nav2">
-                                  <li ><a href="montepizza.html">Monte sua pizza</a></li>
-                                  <li ><a href="contact.html">Contato</a></li>
-                                  <li><a href="#modal-login" class="btn-login" onclick="fnModal(this)">Login</a></li>
-                                  <div class="line"></div>
-                              </div>
-                              </ul>
-                            
-                      </div>
-                  </nav>
+        <nav class="navbar">
+			<ul>
+				<div class="container-nav">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="cardapio.php">Cardápio</a></li>
+					<li><a href="montepizza.php">Monte sua pizza</a></li>
+				
+					
+				</div>
+				<div class="logo">
+					<a href="index.php" class="logo"><img src="./images/logo4.png">
+					</a>
+				</div>
+			</ul>
+
+			<ul class="ul2">
+				<div class="container-nav2">
+						<li><a href="sobre.php">Sobre</a></li>
+					<li><a href="#contato">Contato</a></li>
+					<li><a href="<?php echo $link;?>" class="btn-login"
+						onclick="fnModal(this)"><?php echo $nome;?></a></li>
+					<div class="line"></div>
+				</div>
+			</ul>
+
+			</div>
+		</nav>
             <div class="jumbotron">
                 <h1 class="jumbotron-heading">Bem-vindo à Pizza Baue</h1>
                 <p class="jumbotron-text">Monte sua pizza, veja as melhores promoções e muito mais.</p>
@@ -104,28 +111,44 @@ if($conex->abrirConexao()){
             </div>
         </section>
         <footer>
-            <div class="cont-footer">
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-                <div class="bloco">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-                <div class="ft-logo">
-                    <p class="titulo">Bloco</p>
-                    <p class="bl-conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright</p>
-            </div>
-        </footer>
+			<div class="cont-footer">
+				<div class="bloco">
+					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="bl-conteudo">
+						<i class="fas fa-phone ga"></i> +55(11)94631-0146 <i
+							class="fas fa-phone ga"></i> +55(11)95275-0119 <i
+							class="fas fa-phone ga"></i> +55(11)94893-2802 <i
+							class="fas fa-phone ga"></i> +55(11)95876-6887 <i
+							class="fas fa-phone ga"></i> +55(11)94539-8380
+					</p>
+				</div>
+				<div class="bloco">
+					<p class="titulo">EM CASO DE DÚVIDAS</p>
+					<p class="bl-conteudo">Caso precise tirar dúvidas, entre em
+						contato conosco através de nosso e-mail: pizzabaue@gmail.com</p>
+				</div>
+				<div class="bloco">
+					<p class="titulo">REDES SOCIAIS</p>
+					<p class="bl-conteudo">
+						<i class="fab fa-facebook-square gab" alt="Facebook"
+							title="Facebook"></i> <i class="fab fa-instagram gab"
+							alt="Instagram" title="Instagram"></i> <i
+							class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i> <i
+							class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
+					</p>
+				</div>
+				<div class="ft-logo">
+					<p class="titulo">PIZZA BAUE</p>
+					<p class="bl-conteudo">
+						<img src="./images/logo4.png">
+					</p>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
+					Informática para internet.</p>
+			</div>
+		</footer>
     </body>
     <script type="text/javascript" src="js/global.js"></script>
 </html>

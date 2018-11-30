@@ -1,3 +1,33 @@
+<?php 
+require_once 'php/lib/bancoDeDados.php';
+
+session_start();
+
+$label = "Login";
+$link = "#modal-login";
+
+if(isset($_SESSION["id_usuario"])){
+	$link = "principal.php";
+
+	$conex = new BancoDeDados();
+
+	$codigo = $_SESSION["id_usuario"];
+
+	if($conex->abrirConexao()){
+		$conex->executarSql("SELECT nome FROM usuario WHERE id_usuario = '$codigo'");
+		
+		$resultado = $conex->lerResultados();
+		
+		$label = $resultado[0][0];
+		
+		$conex->fecharConexao();
+	}else{
+		echo "Erro de conexão com o Banco de Dados";
+	}
+}
+
+?>
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -54,9 +84,7 @@
 
 				<!--- Formulário de Cadastro de Usuário -->
 				<div class="register-form tabs-page" id="register-form-tab">
-					<form method="POST" action="./php/cadastro.php"
-						class="form-control" id="frmcadastro"
-						onsubmit="return verificaForm(event)">
+					<form method="POST" action="./php/cadastro.php"	class="form-control" id="frmcadastro" onsubmit="return verificaForm(event)">
 						<div class="input-group">
 							<span class="fas fa-user"></span> <input type="text"
 								name="txtNome" id="txtNome" placeholder="Nome"
@@ -129,24 +157,24 @@
 		<nav class="navbar">
 			<ul>
 				<div class="container-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="cardapio.html">Cardápio</a></li>
-					<li><a href="montepizza.html">Monte sua pizza</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="cardapio.php">Cardápio</a></li>
+					<li><a href="montepizza.php">Monte sua pizza</a></li>
 				
 					
 				</div>
 				<div class="logo">
-					<a href="index.html" class="logo"><img src="./images/logo4.png">
+					<a href="index.php" class="logo"><img src="./images/logo4.png">
 					</a>
 				</div>
 			</ul>
 
 			<ul class="ul2">
 				<div class="container-nav2">
-						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="#contato">Contato</a></li>
-					<li><a href="#modal-login" class="btn-login"
-						onclick="fnModal(this)">Login</a></li>
+					<li><a href="<?php echo $link;?>" class="btn-login"
+						onclick="fnModal(this)"><?php echo $label;?></a></li>
 					<div class="line"></div>
 				</div>
 			</ul>
@@ -612,7 +640,7 @@
 				<div class="bloco">
 					<p class="titulo">EM CASO DE DÚVIDAS</p>
 					<p class="bl-conteudo">Caso precise tirar dúvidas, entre em
-						contato conosco através de nosso e-mail: pizzabaue@gmai.com</p>
+						contato conosco através de nosso e-mail: pizzabaue@gmail.com</p>
 				</div>
 				<div class="bloco">
 					<p class="titulo">REDES SOCIAIS</p>

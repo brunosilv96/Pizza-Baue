@@ -77,9 +77,15 @@ if ($conex->abrirConexao()) {
 					<td class="txt"><input type="text" class="input-cadastro"
 						name="txtComplemento" value="<?php echo $complemento;?>"></td>
 				</tr>
+				<?php
+					if(trim($flag) != ""){
+				?>
 				<tr>
-					<td colspan="2"><label class="lb-msg"><p><?php echo $flag;?></p></label></td>
+					<td colspan="2"><label class="lb-msg"><p class="p sucesso"><?php echo $flag;?></p></label></td>
 				</tr>
+				<?php
+				}
+				?>
 			</table>
 			<div class="botoes">
 				<input type="reset" name="btnLimpar" class="btn-cadastro"
