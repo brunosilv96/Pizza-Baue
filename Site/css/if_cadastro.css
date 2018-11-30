@@ -24,7 +24,7 @@ td{
 }
 
 .lb{
-	width: 30%;
+	width: 40%;
 	height: 30px;
 	margin-top: 10px;
 	box-sizing: border-box;
@@ -56,10 +56,15 @@ td{
 }
 
 .txt{
-	width: 70%;
+	width: 60%;
 	height: 2rem;;
 	margin-top: 10px;
 	box-sizing: border-box;
+}
+
+.txt-img{
+	width: 100%;
+	font-size: 20px;
 }
 
 .input-cadastro{

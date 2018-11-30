@@ -4,7 +4,7 @@ require_once 'php/lib/bancoDeDados.php';
 session_start();
 
 if (! isset ( $_SESSION ["id_usuario"] )) {
-    header ( "Location: index.html" );
+    header ( "Location: index.php" );
     return;
 }
 

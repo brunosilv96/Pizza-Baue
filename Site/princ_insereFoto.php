@@ -1,11 +1,15 @@
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="author" content="Bruno Silva">
+<meta name="description" content="Alterar Imagem do Usuário">
+
+<link rel="stylesheet" href="css/if_global.css">
+<link rel="stylesheet" href="css/if_imagem.css">
 </head>
 <body>
-	<form action="php/inserirFoto.php" method="post" enctype="multipart/form-data">
-		<label for="arquivo">Escolha um arquivo</label>
-		<input type="file" name="arquivo" /> 
-		<input type="submit" value="Enviar">
-	</form>
+	<div class="form-img">
+		<form action="" method="">
+	</div>
 </body>
 </html>
