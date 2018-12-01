@@ -15,7 +15,7 @@ $uf = null;
 $complemento = null;
 $flag = null;
 
-if(isset($_GET["flag"])){
+if (isset($_GET["flag"])) {
     $flag = $_GET["flag"];
 }
 
@@ -31,7 +31,7 @@ if ($conex->abrirConexao()) {
         $cidade = $resultado[0][3];
         $uf = $resultado[0][4];
         $complemento = $resultado[0][5];
-        
+
         $conex->fecharConexao();
     }
 }
@@ -78,20 +78,17 @@ if ($conex->abrirConexao()) {
 						name="txtComplemento" value="<?php echo $complemento;?>"></td>
 				</tr>
 				<?php
-					if(trim($flag) != ""){
-				?>
+    if (trim($flag) != "") {
+        ?>
 				<tr>
 					<td colspan="2"><label class="lb-msg"><p class="p sucesso"><?php echo $flag;?></p></label></td>
 				</tr>
 				<?php
-				}
-				?>
+    }
+    ?>
 			</table>
-			<div class="botoes">
-				<input type="reset" name="btnLimpar" class="btn-cadastro"
-					value="Limpar"> 
-					<input type="submit" name="btnSalvar"
-					class="btn-cadastro" value="Salvar">
+			<div class="botoes"> 
+				<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
 			</div>
 		</form>
 	</div>

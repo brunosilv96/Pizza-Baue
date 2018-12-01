@@ -1,17 +1,16 @@
-*{
-    font-family: 'Nunito';
+* {
+	font-family: 'Nunito';
 }
 
-
-table{
-    width: 60%;
-    margin: auto;
+table {
+	width: 60%;
+	margin: auto;
 	margin-top: 25px;
 	margin-left: 100px;
 }
 
-h3{
-    width: 90%;
+h3 {
+	width: 90%;
 	margin: auto;
 	text-align: center;
 	font-size: 2rem;
@@ -19,93 +18,96 @@ h3{
 	font: bold;
 }
 
-td{
+td {
 	padding: 5px;
 }
 
-.lb{
+.lb {
 	width: 40%;
 	height: 30px;
 	margin-top: 10px;
 	box-sizing: border-box;
 	text-align: center;
 	color: rgb(80, 80, 80);
-    font-weight: 800px;
+	font-weight: 800px;
 	text-transform: capitalize;
 	font-size: 20px;
 }
 
-.lb-msg{
+.lb-msg {
 	color: #155724;
 	font-size: 20px;
 	height: 50px;
 }
 
-.sucesso{
+.sucesso {
 	background: #a9d8b4;
 	border-radius: 10px;
 	border: solid 1px #6ebf80;
 	height: 50px;
 	width: 80%;
-	margin-left: 25%; 
+	margin-left: 25%;
 }
 
-.p{
+.p {
 	text-align: center;
 	line-height: 50px;
 }
 
-.txt{
+.txt {
 	width: 60%;
 	height: 2rem;;
 	margin-top: 10px;
 	box-sizing: border-box;
 }
 
-.txt-img{
+.txt-img {
 	width: 100%;
 	font-size: 20px;
 }
 
-.input-cadastro{
+.input-cadastro {
 	width: 100%;
 	height: 2.5rem;
 	font-size: 1.5rem;
-    border-radius: 5px;
-    outline: none;
-    transition: all 400ms ease-in-out;
+	border-radius: 5px;
+	outline: none;
+	transition: all 400ms ease-in-out;
 	color: #5a5a5a;
 	box-sizing: border-box;
-    border: 2px solid #d3d3d3;
+	border: 2px solid #d3d3d3;
 }
 
-.input-cadastro:focus{
+.input-cadastro:focus {
 	border: 2px solid rgba(190, 13, 13, 0.849);
 }
-.btn{
+
+.btn {
 	text-align: center;
 }
-.btn-cadastro{
+
+.btn-cadastro {
 	font-size: 0.9rem;
-    color: rgb(255, 255, 255);
-    margin-bottom: 3em;
-    padding: 10px 30px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 3em;
+	padding: 10px 30px;
 	background-color: #c94848;
 	transition: all 300ms ease-in-out;
 	border-radius: 20px;
 	border: none;
 }
-.btn-cadastro:hover{
+
+.btn-cadastro:hover {
 	background-color: #9b3030;
-cursor: pointer;
+	cursor: pointer;
 }
 
-.conteudo{
+.conteudo {
 	margin-top: 7rem;
-	height: 600px;
+	height: 700px;
 }
 
-.botoes{
+.botoes {
 	width: 80%;
 	height: 30px;
 	margin: auto;
@@ -113,7 +115,7 @@ cursor: pointer;
 	margin-top: 50px;
 }
 
-.botoes input{
+.botoes input {
 	width: 200px;
 	height: 40px;
 	margin-right: 3%;

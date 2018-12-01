@@ -23,16 +23,16 @@ if ($resultado) {
 
     if(count($resultado) > 0){
         $conex->executarSQL("UPDATE imagem SET nome = '$nomeDoArquivo' WHERE id_usuario_fk = '$codigo';");
-        header("Local: ../principal.php");
-        header("Refresh: 0; URL = ../princ_insereFoto.php");
+        header("Location: ../princ_insereFoto.php?flag=Imagem de perfil atualizada!");
     }else{
         $conex->executarSQL("INSERT INTO imagem(nome, id_usuario_fk) VALUE('$nomeDoArquivo', '$codigo');");
-        header("Local: ../principal.php");
-        header("Refresh: 0; url = ../princ_insereFoto.php");
+        header("Location: ../princ_insereFoto.php?flag=Imagem de perfil adicionada!");
     }
 
     $conex->fecharConexao();
 }
+}else{
+    header("Location: ../princ_insereFoto.php?flag=Selecione uma imagem antes de inserir!");
 }
 
 ?>

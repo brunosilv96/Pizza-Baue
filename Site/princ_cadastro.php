@@ -62,7 +62,7 @@ if ($conex->abrirConexao()) {
 					<td class="txt"><input type="text" class="input-cadastro" name="txtCpf" value="<?php echo $cpf;?>"></td>
 				</tr>
 				<tr>
-					<td class="lb"><label>Senha:</label></td>
+					<td class="lb"><label>Nova senha:</label></td>
 					<td class="txt"><input type="password" class="input-cadastro" name="txtSenha1"></td>
 				</tr>
 				<tr>
@@ -74,14 +74,15 @@ if ($conex->abrirConexao()) {
 				?>
 				<tr>
 					<td colspan="2"><label class="lb-msg"><p class="p sucesso"><?php echo $flag;?></p></label></td>
+					
 				</tr>
+				<tr><td colspan="2" class="lb-msg"><p class="p sucesso">Aperte F5 para ver as alterações</p></td></tr>
 				<?php
 				}
 				?>
 			</table>
-			<div class="botoes">
-				<input type="reset" name="btnLimpar" class="btn-cadastro" value="Limpar"> <input type="submit" name="btnSalvar"
-				 class="btn-cadastro" value="Salvar">
+			<div class="botoes"> 
+				<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
 			</div>
 
 		</form>
