@@ -47,7 +47,7 @@ if ($conex->abrirConexao()) {
 
 	<div class="conteudo">
 		<h3>Alterar Dados</h3>
-		<form action="php/atualizaCadastro.php" method="post" enctype="multipart/form-data">
+		<form action="php/atualizaCadastro.php" method="post">
 			<table>
 				<tr>
 					<td class="lb"><label>Nome:</label></td>
@@ -60,10 +60,6 @@ if ($conex->abrirConexao()) {
 				<tr>
 					<td class="lb"><label>CPF:</label></td>
 					<td class="txt"><input type="text" class="input-cadastro" name="txtCpf" value="<?php echo $cpf;?>"></td>
-				</tr>
-				<tr>
-					<td class="lb"><label>Foto de Perfil:</label></td>
-					<td class="txt-img"><input type="file" name="fileImagem"></td>
 				</tr>
 				<tr>
 					<td class="lb"><label>Senha:</label></td>

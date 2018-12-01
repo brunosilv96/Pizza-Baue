@@ -1,39 +1,38 @@
 <?php
 require_once 'lib/bancoDeDados.php';
 
-if (! conectar()) {
-    echo "Falha ao atualizar o banco de dados!";
-    return;
-}
-
 session_start();
 
-if (! isset($_SESSION["id_usuario"])) {
-    header("Location: ../index.html");
-    return;
-}
+$codigo = $_SESSION["id_usuario"];
 
-$codDono = $_SESSION["id_usuario"];
+$nomeDoArquivo = $_FILES["fileImagem"]["name"];
 
-/*
- * Script que deve ser inserido quando for subir a imagem para o Banco de Dados
- *
- */
+$caminhoDoArquivo = $_FILES["fileImagem"]["tmp_name"];
 
-$nomeDoArquivo = rand() . microtime(true) . "." . end(explode(".", $_FILES["arquivo"]["name"]));
-
-$caminhoDoArquivo = $_FILES["arquivo"]["tmp_name"];
-
-$descricao = $_POST["descricao"];
-
-$visibilidade = $_POST["visibilidade"] == "on" ? 1 : 0;
-
-$destino = "./images/$nomeDoArquivo";
+$destino = "../images/user/$nomeDoArquivo";
 
 $resultado = move_uploaded_file($caminhoDoArquivo, $destino);
 
+$conex = new BancoDeDados();
+
 if ($resultado) {
-    $sql = "insert into Foto (nome, descricao, visibilidade, cod_canal) values	('$nomeDoArquivo','$descricao',$visibilidade,'$codDono')";
-    executarSQL($sql);
+    if($conex->abrirConexao()){
+
+    $conex->executarSQL("SELECT * FROM imagem WHERE id_usuario_fk = '$codigo';");
+    $resultado = $conex->lerResultados();
+
+    if(count($resultado) > 0){
+        $conex->executarSQL("UPDATE imagem SET nome = '$nomeDoArquivo' WHERE id_usuario_fk = '$codigo';");
+        header("Local: ../principal.php");
+        header("Refresh: 0; URL = ../princ_insereFoto.php");
+    }else{
+        $conex->executarSQL("INSERT INTO imagem(nome, id_usuario_fk) VALUE('$nomeDoArquivo', '$codigo');");
+        header("Local: ../principal.php");
+        header("Refresh: 0; url = ../princ_insereFoto.php");
+    }
+
+    $conex->fecharConexao();
 }
+}
+
 ?>

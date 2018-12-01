@@ -34,7 +34,7 @@ class BancoDeDados
      * @param string $sql
      * @return bool
      */
-    public function executarSQL(string $sql){
+    public function executarSQL($sql){
         try {
             $this->conexao->beginTransaction();
             $this->resultado = $this->conexao->prepare($sql);

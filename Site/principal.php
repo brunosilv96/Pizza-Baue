@@ -10,23 +10,32 @@ if (! isset ( $_SESSION ["id_usuario"] )) {
 
 $label = "Login";
 $link = "#modal-login";
+$nomeImagem = "user.png";
 
 $conex = new BancoDeDados();
 
 $codigo = $_SESSION["id_usuario"];
 
 if($conex->abrirConexao()){
-    $conex->executarSql("SELECT * FROM usuario WHERE id_usuario = '$codigo'");
+    $conex->executarSQL("SELECT * FROM usuario WHERE id_usuario = '$codigo'");
     
     $resultado = $conex->lerResultados();
     
     $nome = $resultado[0][1];
     
+    $conex->executarSQL("SELECT nome FROM imagem WHERE id_usuario_fk = '$codigo';");
+    $resultado = $conex->lerResultados();
+
+    if(count($resultado) > 0){
+        $nomeImagem = $resultado[0][0];
+
+    }
+    
     $conex->fecharConexao();
 }else{
     echo "Erro de conexão com o Banco de Dados";
 }
-
+    
 ?>
 
 <html>
@@ -85,11 +94,10 @@ if($conex->abrirConexao()){
         <section>
             <div class="nav-lat">
                 <div class="foto-user">
-                    <!--Sera a imagem que o usúario desejar-->
-                  
+                    <img class="foto-perfil" src="images/user/<?php echo $nomeImagem;?>" />
                 </div>
                 <div class="nome-user">
-                    <a href="#">Alterar Foto</a>
+                    <a href="princ_insereFoto.php" target="iframe-conteudo">Alterar Foto</a>
                 </div>
                 <div class="menu-usuario">
                     <h3><?php echo $nome;?></h3>
@@ -115,11 +123,11 @@ if($conex->abrirConexao()){
 				<div class="bloco">
 					<p class="titulo">TELEFONES DE CONTATO</p>
 					<p class="bl-conteudo">
-						<i class="fas fa-phone ga"></i> +55(11)94631-0146 <i
-							class="fas fa-phone ga"></i> +55(11)95275-0119 <i
-							class="fas fa-phone ga"></i> +55(11)94893-2802 <i
-							class="fas fa-phone ga"></i> +55(11)95876-6887 <i
-							class="fas fa-phone ga"></i> +55(11)94539-8380
+						<i class="fas fa-phone ga"></i> +55(11)94631-0146
+						<i	class="fas fa-phone ga"></i> +55(11)95275-0119 
+						<i	class="fas fa-phone ga"></i> +55(11)94893-2802 
+						<i	class="fas fa-phone ga"></i> +55(11)95876-6887 
+						<i	class="fas fa-phone ga"></i> +55(11)94539-8380
 					</p>
 				</div>
 				<div class="bloco">
