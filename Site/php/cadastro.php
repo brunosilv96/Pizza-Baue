@@ -34,21 +34,28 @@ if ($user->verificaForm($campos) == true) {
             $cpf = $user->getCpf();
             $senha = $user->getSenha();
 
-            /* Comando que irá para o Banco de Dados */
-            $conex->executarSQL("INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
+            $conex->executarSQL("SELECT email FROM usuario WHERE email = '$email';");
 
-            /* Se a inserção for um sucesso, redirciona para a página do usuario */
-            header("Location: ../index.php#modal-login");
-            
+            $resultado = $conex->lerResultados();
+
+            if(count($resultado) > 0){
+                header("Location: ../index.php?flag=Usuario já cadastrado!");
+            }else{
+                /* Comando que irá para o Banco de Dados */
+                $conex->executarSQL("INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
+
+                /* Se a inserção for um sucesso, redirciona para a página do usuario */
+                header("Location: ../index.php#modal-login?flag=Cadastrado com sucesso, faça login agora!");
+            }
         } else {
             /* Se caso ocorrer algum erro na hora da adição de registro */
-            header("Location: exibeMsg.php?txtresultado=Erro de conexão com o Banco");
+            header("Location: exibeMsg.php?flag=Erro de conexão com o Banco");
         }
 
         $conex->fecharConexao();
 
     } catch (Exception $e) {
-        header("Location: exibeMsg.php?txtresultado=Erro de conexão com o Banco '. $e'");
+        header("Location: exibeMsg.php?flag=Erro de conexão com o Banco '. $e'");
     }
 } else {
     echo "Erro nos campos do formulário";

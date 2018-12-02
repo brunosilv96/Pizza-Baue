@@ -8,6 +8,11 @@ header{
 .fil0 {fill:rgb(255, 255, 255);
 }
 
+.flag{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
 svg{
     position: absolute;
     bottom: -1;
