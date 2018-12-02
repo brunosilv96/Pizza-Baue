@@ -1,5 +1,4 @@
 /* Base de Dados da Pizzaria Baue */
-drop database pizza;
 create database pizza;
 use pizza;
 
