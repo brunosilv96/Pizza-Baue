@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Nunito';
-    src: url(./webfonts/Nunito-Regular.ttf);
+    src: url(../webfonts/Nunito-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Ubuntu Bold';
-    src: url(./webfonts/Nunito-Bold.ttf);
+    src: url(../webfonts/Nunito-Bold.ttf);
 }
 
 @font-face{
     font-family: 'panpizza';
-    src: url(./fonts/pan_pizza/panpizza.ttf);
+    src: url(../fonts/pan_pizza/panpizza.ttf);
 }

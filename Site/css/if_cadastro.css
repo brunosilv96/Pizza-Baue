@@ -7,15 +7,32 @@ table {
 	margin: auto;
 	margin-top: 25px;
 	margin-left: 100px;
+
 }
 
-h3 {
+form{
+	height: 90%;
+}
+
+.container-conteudo{
+  width: 75%;
+  height: 800px;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(rgba(0,0,0,.1));
+  box-sizing: border-box;
+  margin: 50px auto 10px;
+}
+
+.container-conteudo > h3{
 	width: 90%;
 	margin: auto;
 	text-align: center;
-	font-size: 2rem;
-	color: black;
+	color: rgb(192, 21, 21);
 	font: bold;
+	padding: 4px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 td {
@@ -27,11 +44,22 @@ td {
 	height: 30px;
 	margin-top: 10px;
 	box-sizing: border-box;
-	text-align: center;
 	color: rgb(80, 80, 80);
 	font-weight: 800px;
 	text-transform: capitalize;
-	font-size: 20px;
+	font-size: 18px;
+	
+}
+
+.lb label {
+	display: block;
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
 }
 
 .lb-msg {
@@ -46,7 +74,7 @@ td {
 	border: solid 1px #6ebf80;
 	height: 50px;
 	width: 80%;
-	margin-left: 25%;
+	margin-left: 22%;
 }
 
 .p {
@@ -55,7 +83,7 @@ td {
 }
 
 .txt {
-	width: 60%;
+	width: 80%;
 	height: 2rem;;
 	margin-top: 10px;
 	box-sizing: border-box;
@@ -67,59 +95,51 @@ td {
 }
 
 .input-cadastro {
-	width: 100%;
-	height: 2.5rem;
-	font-size: 1.5rem;
-	border-radius: 5px;
 	outline: none;
-	transition: all 400ms ease-in-out;
-	color: #5a5a5a;
-	box-sizing: border-box;
-	border: 2px solid #d3d3d3;
+    display: block;
+    background: rgba(182, 182, 182, 0.1);
+    width: 115%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: all 300ms ease-in-out;
 }
 
 .input-cadastro:focus {
-	border: 2px solid rgba(190, 13, 13, 0.849);
+	border: 1.5px solid rgba(190, 13, 13, 0.849);
 }
-
+input[type="password"] {
+	width: 115%;
+}
 .btn {
 	text-align: center;
 }
 
 .btn-cadastro {
-	font-size: 0.9rem;
-	color: rgb(255, 255, 255);
-	margin-bottom: 3em;
-	padding: 10px 30px;
-	background-color: #c94848;
+	outline: none;
+    background: rgba(190, 13, 13, 0.849);
+    width: 60%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+	cursor: pointer;
 	transition: all 300ms ease-in-out;
-	border-radius: 20px;
-	border: none;
+	margin-left: 10rem;
 }
 
 .btn-cadastro:hover {
-	background-color: #9b3030;
+	background-color: #ff0000;
 	cursor: pointer;
-}
-
-.conteudo {
-	margin-top: 7rem;
-	height: 700px;
-}
-
-.botoes {
-	width: 80%;
-	height: 30px;
-	margin: auto;
-	text-align: center;
-	margin-top: 50px;
-}
-
-.botoes input {
-	width: 200px;
-	height: 40px;
-	margin-right: 3%;
-	margin-left: 3%;
-	font-size: 19px;
-	padding-top: 12px;
 }

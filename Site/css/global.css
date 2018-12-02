@@ -1,5 +1,5 @@
-@import '/Site/fonts/nunito/css/nunito-all.css';
-@import '/Site/fonts/fontawesome/css/fontawesome-all.min.css';
+@import '../fonts/nunito/css/nunito-all.css';
+@import '../fonts/fontawesome/css/fontawesome.min.css';
 
 *{
     margin: 0;
@@ -15,9 +15,12 @@ main section h1,
 h2,
 h3,
 h4,
-h5 {
+h5{
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    color: #4e4e4e;
+}
+p{
     color: #4e4e4e;
 }
 main section p{
@@ -141,7 +144,7 @@ input {
     margin-bottom: 10px;
     color: #ffffff;
     border: none;
-    font-family: 'Ubuntu', Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     line-height: 1.5em;
     padding: 0;
@@ -173,6 +176,8 @@ input[type="password"] {
     padding: 0 3rem;
     width: 400px;
     background-color: rgb(244, 244, 244);
+
+  
 }
 
 ::-webkit-input-placeholder {
@@ -266,6 +271,7 @@ input[type="password"] {
 
 .ga {
     margin-top: -.2rem;
+    color: #4e4e4e;
 }
 
 .lost-form h2 {
@@ -463,7 +469,7 @@ input[type="password"] {
     width: 100%;
     transition: all 300ms ease-in-out;
     z-index: 10;  
-    margin-top: -4%;
+    margin-top:-2%;
     
 }
 .navbar .logo {
@@ -509,7 +515,7 @@ input[type="password"] {
 }
 /* MENU SCROLL*/
 .navbar.scrolling {
-    margin-top: -5.5%;
+    margin-top: -3.5%;
     background: rgb(192, 42, 42);
     position: fixed;
     height: 80px;
@@ -806,7 +812,10 @@ footer{
     margin-top: 5rem;
     padding: 10px;
 }
+.tel{
+    margin-top: -1.2rem;
 
+}
 .titulo{
     text-align: center;
     padding-bottom: 5px;

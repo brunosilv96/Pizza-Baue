@@ -34,8 +34,14 @@ if(isset($_SESSION["id_usuario"])){
         <title>Cardápio</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="/fonts/nunito/css/nunito.all.css"
+	rel="stylesheet">
+    <link href="fonts/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
+
         <link rel="stylesheet" href="css/cardapio.css">
         <link rel="stylesheet" href="css/global.css">
         
@@ -357,11 +363,11 @@ viewBox="0 0 11007 2540"
 				<div class="bloco">
 					<p class="titulo">TELEFONES DE CONTATO</p>
 					<p class="bl-conteudo">
-						<i class="fas fa-phone ga"></i> +55(11)94631-0146 <i
-							class="fas fa-phone ga"></i> +55(11)95275-0119 <i
-							class="fas fa-phone ga"></i> +55(11)94893-2802 <i
-							class="fas fa-phone ga"></i> +55(11)95876-6887 <i
-							class="fas fa-phone ga"></i> +55(11)94539-8380
+						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
+						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
+						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94893-2802 </p>
+						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)95876-6887 </p>
+						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)94539-8380</p>
 					</p>
 				</div>
 				<div class="bloco">

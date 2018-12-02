@@ -29,8 +29,8 @@ if ($user->verificaForm($campos) == true) {
     $senha2 = $_POST["txtSenha2"];
     
     if ($senha != $senha2 || ($senha == "" && $senha2 == "") || ($senha == "" || $senha2 == "")) {
-        header("Location: ../princ_cadastro.php?flag=As senhas s„o diferentes!");
-        echo "As senhas s„o diferentes";
+        header("Location: ../princ_cadastro.php?flag=As senhas s√£o diferentes!");
+        echo "As senhas s√£o diferentes";
     } else {
 
         try {
@@ -39,10 +39,10 @@ if ($user->verificaForm($campos) == true) {
 
                 header("Location: ../princ_cadastro.php?flag=Cadastro Atualizado!");
             } else {
-                echo "Falha ao atualizar o cadastro do usu·rio!";
+                echo "Falha ao atualizar o cadastro do usu√°rio!";
             }
         } catch (Exception $e) {
-            echo "Falha na atualizaÁ„o!<br>" . $e;
+            echo "Falha na atualiza√ß√£o!<br>" . $e;
         }
 
         $conex->fecharConexao();

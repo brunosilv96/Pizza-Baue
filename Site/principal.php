@@ -123,11 +123,11 @@ if($conex->abrirConexao()){
 				<div class="bloco">
 					<p class="titulo">TELEFONES DE CONTATO</p>
 					<p class="bl-conteudo">
-						<i class="fas fa-phone ga"></i> +55(11)94631-0146
-						<i	class="fas fa-phone ga"></i> +55(11)95275-0119 
-						<i	class="fas fa-phone ga"></i> +55(11)94893-2802 
-						<i	class="fas fa-phone ga"></i> +55(11)95876-6887 
-						<i	class="fas fa-phone ga"></i> +55(11)94539-8380
+						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
+						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
+						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94893-2802 </p>
+						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)95876-6887 </p>
+						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)94539-8380</p>
 					</p>
 				</div>
 				<div class="bloco">

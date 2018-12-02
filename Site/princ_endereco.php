@@ -45,38 +45,63 @@ if ($conex->abrirConexao()) {
 
 <link rel="stylesheet" href="css/if_global.css">
 <link rel="stylesheet" href="css/if_cadastro.css">
+<link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
-	<div class="conteudo">
+	<div class="container-conteudo">
 		<h3>Alterar Endereço</h3>
 		<form action="php/atualizaEndereco.php" method="post">
 			<table>
 				<tr>
 					<td class="lb"><label>Logradouro:</label></td>
-					<td class="txt"><input type="text" class="input-cadastro"
+                </tr>
+
+
+                <tr>
+                <td class="txt"><input type="text" class="input-cadastro"
 						name="txtLogradouro" value="<?php echo $logradouro;?>"></td>
-				</tr>
+                </tr>
+
+
+
 				<tr>
-					<td class="lb"><label>Número:</label></td>
+                <td class="lb"><label>Número:</label></td>
+                </tr>
+                    
+                <tr>
 					<td class="txt"><input type="text" class="input-cadastro"
 						name="txtNumero" value="<?php echo $numero;?>"></td>
-				</tr>
+                </tr>
+                
+
 				<tr>
 					<td class="lb"><label>Cidade:</label></td>
-					<td class="txt"><input type="text" class="input-cadastro"
+                </tr>
+                
+                <tr>
+                <td class="txt"><input type="text" class="input-cadastro"
 						name="txtCidade" value="<?php echo $cidade;?>"></td>
-				</tr>
+                </tr>
+
 				<tr>
 					<td class="lb"><label>UF:</label></td>
-					<td class="txt"><input type="text" class="input-cadastro"
+                </tr>
+                
+                <tr> 
+                <td class="txt"><input type="text" class="input-cadastro"
 						name="txtUf" value="<?php echo $uf;?>"></td>
-				</tr>
+</tr>
+
+
 				<tr>
 					<td class="lb"><label>Complemento:</label></td>
-					<td class="txt"><input type="text" class="input-cadastro"
+                </tr>
+                
+                <tr>
+                <td class="txt"><input type="text" class="input-cadastro"
 						name="txtComplemento" value="<?php echo $complemento;?>"></td>
-				</tr>
+</tr>
 				<?php
     if (trim($flag) != "") {
         ?>
@@ -87,9 +112,9 @@ if ($conex->abrirConexao()) {
     }
     ?>
 			</table>
-			<div class="botoes"> 
+			
 				<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
-			</div>
+			
 		</form>
 	</div>
 </body>

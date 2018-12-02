@@ -4,8 +4,10 @@
         <meta name="author" content="Bruno Silva">
         <meta name="description" content="Pedidos do Wireframe">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/if_global.css">
         <link rel="stylesheet" href="css/if_pedidos.css">
+        <link rel="stylesheet" href="css/if_global.css">
+
+        
     </head>
     <body>
         <div>
@@ -18,7 +20,7 @@
            <h4>Nenhuma pizza comprada</h4>
        </div>
 
-        <div class="conteudo">
+        <div class=" pedidos conteudo">
             <h3>HISTÓRICO DE PEDIDOS</h3>
             <table>
                 <tr>
