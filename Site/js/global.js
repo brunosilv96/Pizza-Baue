@@ -16,6 +16,7 @@ document.querySelector("body").onload = function() {
     }, 300);
 
 };
+
 /* FUNCTIONS */
 
 function fnScrollLoadingEffect() {
@@ -116,6 +117,7 @@ function menuSticky() {
 
 /* FIM MODAL */
 
+/* VALIDACAO CADASTRO */ 
 
 var inputs = document.getElementsByClassName('form_input');
 
@@ -199,6 +201,25 @@ function mCPF(cpf){
     cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d{1,2})$/,"$1.$2")
     return cpf
 }
+
+
+/* VALIDACAO ENDERECO */
+
+function verificaEnde(event){
+    event.preventDefault();
+    log = document.getElementById("log").value;
+
+    if (log == "") {
+        alert("Preencha o campo Logradouro");
+        // document.endereco.log.focus();
+        return false;
+    }
+
+
+
+
+}
+
 
 /* CARROSEL DE PIZZAS */
 

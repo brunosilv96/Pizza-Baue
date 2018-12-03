@@ -51,10 +51,10 @@ if ($conex->abrirConexao()) {
 
 	<div class="container-conteudo">
 		<h3>Alterar Endereço</h3>
-		<form action="php/atualizaEndereco.php" method="post">
+		<form action="php/atualizaEndereco.php" method="post" id="endereco" onsubmit="return verificaEnde(event)">
 			<table>
 				<tr>
-					<td class="lb"><label>Logradouro:</label></td>
+					<td class="lb" id="log"><label>Logradouro:</label></td>
                 </tr>
 
 
@@ -118,6 +118,7 @@ if ($conex->abrirConexao()) {
 		</form>
 	</div>
 </body>
+<script src="js/global.js"></script>
 </html>
 
 <!--
