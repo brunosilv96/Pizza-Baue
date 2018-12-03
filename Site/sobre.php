@@ -222,7 +222,7 @@ if(isset($_SESSION["id_usuario"])){
 						pizza pode ir para o nosso cardápio. Desse modo, o usuário, pode
 						ganhar muito mais medalhas.</p>
 				</div>
-				<img src="./images/pizza-description.jpg" class="imge-monte">
+				<img src="./images/ingredientes_pizza.png" class="imge-monte">
 	
 			</div>
 			<div class="descricao-2">
@@ -236,7 +236,7 @@ if(isset($_SESSION["id_usuario"])){
 						escolha um de nossos complementos, por fim, deixe sua pizza com um
 						toque especial escolhendo um dos temperos da Pizza Baue.</p>
 				</div>
-				<img src="./images/pizza-description.jpg"  class="imagem-2">
+				<img src="./images/monte-pizza.png"  class="imagem-2">
 			</div>
 		
 	</section>
@@ -254,7 +254,7 @@ if(isset($_SESSION["id_usuario"])){
 					referência em qualidade e credibilidade na arte da pizza, fazendo
 					com que nosso cliente volte em busca de um serviço diferenciado.</p>
 			</div>
-			<img src="./images/pizza-description.jpg">
+			<img src="./images/missao.png">
 		</div>
 
 		<div class="descricao-2 section-visible fadeIn">
@@ -266,7 +266,7 @@ if(isset($_SESSION["id_usuario"])){
 					cumprimento da missão e geração de oportunidades para sócios e
 					colaboradores.</p>
 			</div>
-			<img src="./images/pizza-description.jpg" class="imagem-2">
+			<img src="./images/visao.png" class="imagem-2">
 
 		</div>
 
@@ -278,7 +278,7 @@ if(isset($_SESSION["id_usuario"])){
 					socio-ambiental, trabalho em equipe, criatividade, inovação e
 					excelência.</p>
 			</div>
-			<img src="./images/pizza-description.jpg">
+			<img src="./images/valores.png">
 		</div>
 	</section>
 	<section class="time section-hidden">
