@@ -36,7 +36,6 @@ if(isset($_SESSION["id_usuario"])){
 <html>
 
 <head>
-
 <meta charset="utf-8">
 <title>Pizza Baue</title>
 <meta charset="utf-8">

@@ -8,6 +8,7 @@ $codigo = $_SESSION["id_usuario"];
 
 /* Instância um novo objeto do tipo Usuário */
 $conex = new bancoDeDados();
+$user = new Usuario();
 
 /* Indica o nome dos campos para atualizar */
 $campos = Array(
