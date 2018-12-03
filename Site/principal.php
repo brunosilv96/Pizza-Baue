@@ -10,7 +10,7 @@ if (! isset ( $_SESSION ["id_usuario"] )) {
 
 $label = "Login";
 $link = "#modal-login";
-$nomeImagem = "user.png";
+$nomeImagem = "avatar.png";
 
 $conex = new BancoDeDados();
 
@@ -40,9 +40,10 @@ if($conex->abrirConexao()){
 
 <html>
     <head>
-        <title>Pagina Inicial</title>
+        <title>Perfil Pizza Baue</title>
         <meta charset="utf-8">
         <meta name="author" content="Bruno Silva">
+        <link rel="shortcut icon" href="./images/favicon.png" />
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
@@ -89,7 +90,7 @@ if($conex->abrirConexao()){
             </div>
         </header>
         <nav class="navegacao">
-            <p>Home > Principal</p>
+            <p>Home > Perfil</p>
         </nav>
         <section>
             <div class="nav-lat">
@@ -121,7 +122,7 @@ if($conex->abrirConexao()){
         <footer>
 			<div class="cont-footer">
 				<div class="bloco">
-					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="titulo">CONTATO</p>
 					<p class="bl-conteudo">
 						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
 						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 

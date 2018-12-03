@@ -49,21 +49,8 @@ if(isset($_SESSION["id_usuario"])){
 	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
 	crossorigin="anonymous">
-
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/global.css">
-
-	<meta charset="utf-8">
-	<title>Pizza Baue</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/global.css">
-
-
 </head>
 
 <body>
@@ -80,7 +67,9 @@ if(isset($_SESSION["id_usuario"])){
 					 class="tab" onclick="fnTabs(this)">Cadastrar</a>
 				</div>
 				<div class="login-form tab-active tabs-page" id="login-form-tab">
-
+				<div class="user-profile">
+                            <img src="./images/avatar.png">
+                        </div>
 					<form action="php/login.php" method="post" class="form-control">
 						<div class="input-group">
 							<span class="fas fa-user"></span> 
@@ -225,7 +214,7 @@ if(isset($_SESSION["id_usuario"])){
 					nosso cardápio. Desse modo, o usuário, pode ganhar muito mais
 					medalhas.</p>
 				<p>
-					<a href="sobre.html"><button class="button-page">Saiba mais...</button></a>
+					<a href="sobre.php"><button class="button-page">Saiba mais...</button></a>
 				</p>
 				<img src="./images/banner-monte.png">
 
@@ -560,7 +549,7 @@ if(isset($_SESSION["id_usuario"])){
 							<div class="left">
 								<div class="numbertext">1 / 3</div>
 								<div class="comment-img">
-									<img src="./images/user.png">
+									<img src="./images/avatar.png">
 								</div>
 								<div class="box-comment">
 									<br> <br> <br>
@@ -576,26 +565,28 @@ if(isset($_SESSION["id_usuario"])){
 						<div class="mySlides fade">
 							<div class="numbertext">2 / 3</div>
 							<div class="comment-img">
-								<img src="./images/user.png">
+								<img src="./images/avatar.png">
+							</div>
+							<div class="box-comment">
+								<br> <br> <br>
+								<p>"O sistema oferece um ótimo serviço"</p>
+								<p class="comment-author">
+									<span>Autor anônimo</span>
+								</p>
+							</div>
+						</div>
+
+						
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<div class="comment-img">
+								<img src="./images/avatar.png">
 							</div>
 							<div class="box-comment">
 								<br> <br> <br>
 								<p>"A ideia de montar a minha própria pizza, me chamou muita
 									atenção, pois é bom para os vegetarianos e veganos saber o que
 									tem na pizza."</p>
-								<p class="comment-author">
-									<span>Autor anônimo</span>
-								</p>
-							</div>
-						</div>
-						<div class="mySlides fade">
-							<div class="numbertext">3 / 3</div>
-							<div class="comment-img">
-								<img src="./images/user.png">
-							</div>
-							<div class="box-comment">
-								<br> <br> <br>
-								<p>"O sistema oferece um ótimo serviço"</p>
 								<p class="comment-author">
 									<span>Autor anônimo</span>
 								</p>
@@ -615,9 +606,10 @@ if(isset($_SESSION["id_usuario"])){
 	</main>
 	<a name="contato"></a>
 	<footer>
+		
 			<div class="cont-footer">
 				<div class="bloco">
-					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="titulo">CONTATO</p>
 					<p class="bl-conteudo">
 						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
 						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
@@ -630,6 +622,7 @@ if(isset($_SESSION["id_usuario"])){
 					<p class="titulo">EM CASO DE DÚVIDAS</p>
 					<p class="bl-conteudo">Caso precise tirar dúvidas, entre em
 						contato conosco através de nosso e-mail: pizzabaue@gmail.com</p>
+						
 				</div>
 				<div class="bloco">
 					<p class="titulo">REDES SOCIAIS</p>

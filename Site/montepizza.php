@@ -32,9 +32,17 @@ if(isset($_SESSION["id_usuario"])){
 <head>
 <meta charset="utf-8">
 <title>Monte sua Pizza - Baue</title>
+<link rel="shortcut icon" href="./images/favicon.png" />
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+	<link href="/fonts/nunito/css/nunito.all.css"
+	rel="stylesheet">
+    <link href="fonts/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
 <link rel="stylesheet" href="css/montepizza.css">
 <link rel="stylesheet" href="css/global.css">
 
@@ -171,6 +179,7 @@ if(isset($_SESSION["id_usuario"])){
 		</nav>
 		<div class="jumbotron">
 			<h1 class="jumbotron-heading">O QUE VOCÊ QUER CUSTOMIZAR?</h1>
+			<p class="jumbotron-text">Monte sua pizza da melhor maneira</p>
 		</div>
 
 		<section>
@@ -436,7 +445,7 @@ if(isset($_SESSION["id_usuario"])){
 			</div>
 			<button class="btn-slider">Adicionar ao carrinho</button>
 		</div>
-		<a href="cardapio.html">
+		<a href="cardapio.php">
 			<button class="button-monte">Ver mais</button>
 		</a>
 	</section>

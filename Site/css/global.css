@@ -30,7 +30,7 @@ hr{
     width: 30%;
     border: 2px solid rgb(211, 19, 19);
     margin-left: 3%;
-    margin-top: -2%;
+    margin-top: .1rem;
 }
 
 .section-hidden {
@@ -441,10 +441,11 @@ input[type="password"] {
     justify-content: center;
     margin: 1rem 0;
     width: 100%;
+    margin-top: -1rem;
 }
 
 .user-profile img {
-    width: 150px;
+    width: 90px;
     border-radius: 100%;
 }
 
@@ -496,11 +497,12 @@ input[type="password"] {
     text-transform: uppercase;
     color: white;
     transition: color 300ms ease-in-out;
+    border-radius: 2px;
 }
 
 .navbar ul li a:hover{
-    color: #9b3030;
-    border-bottom: 2px solid #000; 
+    color: #ffffff;
+    border-bottom: 3px solid rgb(255, 255, 255); 
     transition: all 300ms ease-in-out; 
 }
 
@@ -516,7 +518,7 @@ input[type="password"] {
 /* MENU SCROLL*/
 .navbar.scrolling {
     margin-top: -3.5%;
-    background: rgb(192, 42, 42);
+    background: #bc2026;
     position: fixed;
     height: 80px;
     line-height: 80px;
@@ -640,11 +642,13 @@ label[for="bt-menu"]{
     font: 2.6rem/1.5 'Nunito';
     margin: 0;
     color: #fff;
+    font-weight: 600;
 }
 .jumbotron-text {
     font: 1.7rem/1.5 'Nunito';
     margin: 0;
     color: #fff;
+    font-weight: 600;
 }
 /* BUTTONS STYLES */
 
@@ -878,3 +882,5 @@ footer{
     line-height: 4.1rem;
     
 }
+
+

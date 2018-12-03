@@ -118,11 +118,12 @@ if ($conex->abrirConexao()) {
 		</form>
 	</div>
 </body>
-<script src="js/global.js"></script>
+
 </html>
 
 <!--
-	Combo BOX com as UF dos Estádos:
+    Combo BOX com as UF dos Estádos:
+    <script src="js/global.js"></script>
 
 	<select name="estado"> 
     <option value="ac">Acre</option> 

@@ -196,15 +196,22 @@ svg{
     color:  #4e4e4e;
     font-weight: 800;
     text-transform: capitalize;
-    margin-top: -30px;
+    margin-top: -15px;
 }
 
 .nome >p{
     text-align: center;
     color: #585858; 
-    margin-top: -25px;
+    margin-top: -20px;
 }
 
 footer {
     clear: both;
+}
+
+.tel{
+    margin-left: 3rem;
+}
+.copyright p{
+    text-align: center;
 }

@@ -139,7 +139,7 @@ cursor: pointer;
    
 }
 .foto-pz h2{
-    margin-top: -2rem;
+    margin-top: .1rem;
     margin-left: 4.7rem;
 }
 .foto-pz img{
@@ -206,4 +206,12 @@ input{
   
 }
 
+.tel{
+    margin-left: 3.5rem;
+}
+
+
+.copyright p{
+    text-align: center;
+}
 

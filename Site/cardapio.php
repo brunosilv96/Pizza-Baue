@@ -33,6 +33,7 @@ if(isset($_SESSION["id_usuario"])){
         <meta charset="utf-8">
         <title>Cardápio</title>
         <meta charset="utf-8">
+        <link rel="shortcut icon" href="./images/favicon.png" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
         <link href="/fonts/nunito/css/nunito.all.css"
 	rel="stylesheet">
@@ -186,6 +187,7 @@ if(isset($_SESSION["id_usuario"])){
 		</nav>
                 <div class="jumbotron">
                         <h1 class="jumbotron-heading">Escolha a sua pizza preferida</h1>
+                        <p class="jumbotron-text">Veja as melhores	promoções e os melhores sabores</p>
     
                     </div>
                     
@@ -355,12 +357,191 @@ viewBox="0 0 11007 2540"
                     </div>
                 </div>
             </div>
+
+                <div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="images/margherita.png">
+                    <h2>R$ 24,00</h2>
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                        <h2>PIZZA MARGHERITA</h2>
+                    </div>
+                    <div class="pz-desc">
+                        <p> Mussarela, manjericão, tomates selecionados e queijo
+									parmesão.
+</p>
+                    </div>
+                    <div class="opt">
+                        <form action="#" method="post">
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+             <div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="images/vegetariana.png">
+                    <h2>R$ 32,00</h2>
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                        <h2>PIZZA VEGETARIANA</h2>
+                    </div>
+                    <div class="pz-desc">
+                        <p> Saborosa combinção de mussarela, tomates selecionados,
+									champignon, pimentão, cebola e azeitonas verdes.
+</p>
+                    </div>
+                    <div class="opt">
+                        <form action="#" method="post">
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="images/pepperoni.png">
+                    <h2>R$ 35,00</h2>
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                        <h2>PIZZA PEPPERONI</h2>
+                    </div>
+                    <div class="pz-desc">
+                        <p> Deliciosas fatias de pepperoni (salame especial
+									condimentado com páprica) e mussarela.
+</p>
+                    </div>
+                    <div class="opt">
+                        <form action="#" method="post">
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="images/catupiry.png">
+                    <h2>R$ 32,00</h2>
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                        <h2>FRANGO COM CATUPIRY</h2>
+                    </div>
+                    <div class="pz-desc">
+                        <p>Frango desfiado, cebola e catupiry.
+</p>
+                    </div>
+                    <div class="opt">
+                        <form action="#" method="post">
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="images/4-queijos.png" class="image-cardapio">
+                    <h2>R$ 25,00</h2>
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                        <h2>4 QUEIJOS </h2>
+                    </div>
+                    <div class="pz-desc">
+                        <p>Mussarela, requeijão, gorgonzola e parmesão ralado.
+</p>
+                    </div>
+                    <div class="opt">
+                        <form action="#" method="post">
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <a name="contato"></a>
         <footer>
 			<div class="cont-footer">
 				<div class="bloco">
-					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="titulo">CONTATO</p>
 					<p class="bl-conteudo">
 						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
 						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 

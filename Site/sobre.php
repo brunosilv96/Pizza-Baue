@@ -33,6 +33,7 @@ if(isset($_SESSION["id_usuario"])){
 <meta charset="utf-8">
 <title>Sobre</title>
 <meta charset="utf-8">
+<link rel="shortcut icon" href="./images/favicon.png" />
 <meta name="viewport"
 	content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Nunito"
@@ -206,7 +207,7 @@ if(isset($_SESSION["id_usuario"])){
 			<h2>Quem Somos?</h2>
 		</div>
 		<div class="descricao">
-				<h3>Monte sua pizza</h3>
+				<h3>Monte sua Pizza</h3>
 				<hr>
 				<div class="sobre-conteudo">
 					<p>Nosso sistema oferece uma proposta inovadora e beneficente
@@ -242,7 +243,6 @@ if(isset($_SESSION["id_usuario"])){
 	<section>
 		<div class="jumbotrom-sobre section-hidden">
 			<h3>Monte sua pizza, as melhores promoções e muito mais.</h3>
-		<a href="montepizza.html"><button class="button-page">Monte sua pizza</button></a>
 		</div>
 	</section>
 	<section class="conteudo section-hidden">
@@ -351,7 +351,7 @@ if(isset($_SESSION["id_usuario"])){
 	<footer>
 			<div class="cont-footer">
 				<div class="bloco">
-					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="titulo">CONTATO</p>
 					<p class="bl-conteudo">
 						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
 						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
