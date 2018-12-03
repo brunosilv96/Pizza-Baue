@@ -46,104 +46,99 @@ if(isset($_SESSION["id_usuario"])){
 
 </head>
 <body>
-	<div class="modal closed" id="modal-login">
-		<div class="modal-content ">
-			<div class="modal-close">
-				<a href="#" onclick="fnModalClose()"><i
-					class="fas fa-times-circle"></i></a>
+<div class="modal closed" id="modal-login">
+
+<!--- Formulário de Login de Usuário -->
+<div class="modal-content ">
+	<div class="modal-close">
+		<a href="#" onclick="fnModalClose()"><i class="fas fa-times-circle"></i></a>
+	</div>
+	<div class="modal-body">
+		<div class="tabs-select">
+			<a href="#" id="login-form" class="tab tab-selected" onclick="fnTabs(this)">Login</a> <a href="#" id="register-form"
+			 class="tab" onclick="fnTabs(this)">Cadastrar</a>
+		</div>
+		<div class="login-form tab-active tabs-page" id="login-form-tab">
+
+			<form action="php/login.php" method="post" class="form-control">
+				<div class="input-group">
+					<span class="fas fa-user"></span> 
+					<input type="text" placeholder="Email" name="txtUser">
+				</div>
+				<div class="input-group">
+					<span class="fas fa-lock"></span> 
+					<input type="password" placeholder="Senha" name="txtSenha">
+				</div>
+				<div class="input-group align-center">
+					<button type="submit" class="btn btn-submit">Entrar</button>
+				</div>
+				<hr>
+				<div class="lost-password align-center">
+					<a href="#" class="tab" id="lost-form" onclick="fnTabs(this)">Esqueceu
+						sua senha?</a>
+				</div>
+			</form>
+		</div>
+
+		<!--- Formulário de Cadastro de Usuário -->
+		<div class="register-form tabs-page" id="register-form-tab">
+			<form method="POST" action="./php/cadastro.php" class="form-control" id="frmcadastro" onsubmit="return verificaForm(event)">
+				<div class="input-group">
+					<span class="fas fa-user"></span> 
+					<input type="text" name="txtNome" id="txtNome" placeholder="Nome" class="form_input">
+				</div>
+
+				<div class="input-group">
+					<span class="fas fa-user"></span> 
+					<input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" class="form_input">
+				</div>
+				<div class="input-group">
+					<span class="fas fa-user"></span> 
+					<input type="text" name="txtCpf" placeholder="cpf" id="cpf" maxlength="14" class="form_input" onkeydown="javascript: fMasc( this, mCPF );">
+				</div>
+
+				<div class="input-group">
+					<span class="fas fa-lock ga"></span> 
+					<input type="password" name="senha1" placeholder="Senha" id="senha" class="form_input">
+				</div>
+				<div class="input-group">
+					<span class="fas fa-lock"></span> 
+					<input type="password" name="senha2" placeholder="Confirmar Senha" id="confirmasenha" class="form_input">
+				</div>
+				<div class="input-group align-center">
+					<button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia">Cadastrar</button>
+				</div>
+
+				<div class="campo-cpf">
+					<span class="viewCPF"></span><br> 
+					<span class="aradio"></span><br>
+					<span class="viewSenha"></span>
+				</div>
+
+			</form>
+		</div>
+		
+		<div class="lost-form tabs-page" id="lost-form-tab">
+			<div class="form-header">
+				<h2 class="align-center">RECUPERAR SENHA</h2>
 			</div>
-			<div class="modal-body">
-				<div class="tabs-select">
-					<a href="#" id="login-form" class="tab tab-selected"
-						onclick="fnTabs(this)">Login</a> <a href="#" id="register-form"
-						class="tab" onclick="fnTabs(this)">Cadastrar</a>
+			<form action="javascript:void(0);" method="get" class="form-control">
+				<div class="input-group">
+					<span class="fas fa-user"></span> 
+					<input type="text" placeholder="Username">
 				</div>
-				<div class="login-form tab-active tabs-page" id="login-form-tab">
-
-					<form action="javascript:void(0);" method="get"
-						class="form-control">
-						<div class="input-group">
-							<span class="fas fa-user"></span> <input type="text"
-								placeholder="Username">
-						</div>
-						<div class="input-group">
-							<span class="fas fa-lock"></span> <input type="password"
-								placeholder="Senha">
-						</div>
-						<div class="input-group align-center">
-							<button type="submit" class="btn btn-submit">Entrar</button>
-						</div>
-						<hr>
-						<div class="lost-password align-center">
-							<a href="#" class="tab" id="lost-form" onclick="fnTabs(this)">Esqueceu
-								sua senha?</a>
-						</div>
-					</form>
+				<div class="input-group align-center">
+					<button type="submit" class="btn btn-submit">Recuperar</button>
 				</div>
-				<div class="register-form tabs-page" id="register-form-tab">
-					<form action="javascript:void(0);" method="get"
-						class="form-control">
-						<div class="input-group">
-							<span class="fas fa-user"></span> <input type="text"
-								placeholder="Username">
-						</div>
-
-						<div class="input-group">
-							<span class="fas fa-user"></span> <input type="text"
-								placeholder="E-mail">
-						</div>
-						<div class="input-group">
-							<span class="fas fa-user"></span> <input type="text"
-								placeholder="CPF" id="cpf">
-						</div>
-
-
-
-						<div class="input-group">
-							<span class="fas fa-lock ga"></span> <input type="password"
-								placeholder="Senha" id="senha">
-						</div>
-						<div class="input-group">
-							<span class="fas fa-lock"></span> <input type="password"
-								placeholder="Confirmar Senha " id="confirmasenha">
-						</div>
-
-
-
-
-						<div class="input-group align-center">
-							<button type="submit" class="btn btn-submit" id="envia"
-								onclick="mostrar()">Cadastrar</button>
-						</div>
-						<div class="campo-cpf">
-							<span class="viewCPF"></span><br>
-							<span class="aradio"></span><br> <span class="viewSenha"></span>
-						</div>
-					</form>
+				<div class="input-group align-center">
+					<button type="button" class="btn btn-back" onclick="fnBack()">Voltar</button>
 				</div>
-				<div class="lost-form tabs-page" id="lost-form-tab">
-					<div class="form-header">
-						<h2 class="align-center">RECUPERAR SENHA</h2>
-					</div>
-					<form action="javascript:void(0);" method="get"
-						class="form-control">
-						<div class="input-group">
-							<span class="fas fa-user"></span> <input type="text"
-								placeholder="Username">
-						</div>
-						<div class="input-group align-center">
-							<button type="submit" class="btn btn-submit">Recuperar</button>
-						</div>
-						<div class="input-group align-center">
-							<button type="button" class="btn btn-back" onclick="fnBack()">Voltar</button>
-						</div>
-					</form>
-				</div>
-			</div>
+			</form>
 		</div>
 	</div>
-	</div>
-	<!-- END:MODALS -->
+</div>
+</div>
+<!-- END:MODALS -->
 
 	<header>
 		<div class="container-bt">

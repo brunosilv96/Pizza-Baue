@@ -130,14 +130,15 @@ if(isset($_SESSION["id_usuario"])){
 							<button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia">Cadastrar</button>
 						</div>
 
-
 						<div class="campo-cpf">
 							<span class="viewCPF"></span><br> 
 							<span class="aradio"></span><br>
 							<span class="viewSenha"></span>
 						</div>
+
 					</form>
 				</div>
+				
 				<div class="lost-form tabs-page" id="lost-form-tab">
 					<div class="form-header">
 						<h2 class="align-center">RECUPERAR SENHA</h2>
