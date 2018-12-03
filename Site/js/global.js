@@ -199,7 +199,7 @@ function mCPF(cpf){
     cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d)/,"$1.$2")
     cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d)/,"$1-$2")
     cpf = document.getElementById("cpf").value.replace(/(\d{3})(\d{1,2})$/,"$1.$2")
-    return cpf
+    return cpf;
 }
 
 
@@ -208,16 +208,28 @@ function mCPF(cpf){
 function verificaEnde(event){
     event.preventDefault();
     log = document.getElementById("log").value;
+    num = document.getElementById("num").value;
+    cid = document.getElementById("cid").value;
+    uf = document.getElementById("uf").value;
 
     if (log == "") {
         alert("Preencha o campo Logradouro");
-        // document.endereco.log.focus();
         return false;
     }
-
-
-
-
+    if (num == "") {
+        alert("Preencha o campo Número");
+        return false;
+        }
+    if (cid == "") {
+        alert("Preencha o campo Cidade");
+        return false;
+    }
+    if (uf == "") {
+        alert("Preencha o campo UF");
+        return false;
+    }
+    document.getElementById("endereco").submit();
+    return true;
 }
 
 

@@ -54,23 +54,20 @@ if ($conex->abrirConexao()) {
 		<form action="php/atualizaEndereco.php" method="post" id="endereco" onsubmit="return verificaEnde(event)">
 			<table>
 				<tr>
-					<td class="lb" id="log"><label>Logradouro:</label></td>
+					<td class="lb"><label>Logradouro:</label></td>
                 </tr>
-
 
                 <tr>
-                <td class="txt"><input type="text" class="input-cadastro"
+                <td class="txt"><input type="text" id="log" class="input-cadastro"
 						name="txtLogradouro" value="<?php echo $logradouro;?>"></td>
                 </tr>
-
-
 
 				<tr>
                 <td class="lb"><label>Número:</label></td>
                 </tr>
                     
                 <tr>
-					<td class="txt"><input type="text" class="input-cadastro"
+					<td class="txt"><input type="text" class="input-cadastro" id="num" 
 						name="txtNumero" value="<?php echo $numero;?>"></td>
                 </tr>
                 
@@ -80,7 +77,7 @@ if ($conex->abrirConexao()) {
                 </tr>
                 
                 <tr>
-                <td class="txt"><input type="text" class="input-cadastro"
+                <td class="txt"><input type="text" class="input-cadastro" id="cid" 
 						name="txtCidade" value="<?php echo $cidade;?>"></td>
                 </tr>
 
@@ -89,9 +86,41 @@ if ($conex->abrirConexao()) {
                 </tr>
                 
                 <tr> 
-                <td class="txt"><input type="text" class="input-cadastro"
+                <td class="txt"><input type="text" class="input-cadastro" id="uf" 
 						name="txtUf" value="<?php echo $uf;?>"></td>
-</tr>
+                </tr>
+
+                <tr> 
+                <td><select name="estado"> 
+    <option value="ac">Acre</option> 
+    <option value="al">Alagoas</option> 
+    <option value="am">Amazonas</option> 
+    <option value="ap">Amapá</option> 
+    <option value="ba">Bahia</option> 
+    <option value="ce">Ceará</option> 
+    <option value="df">Distrito Federal</option> 
+    <option value="es">Espírito Santo</option> 
+    <option value="go">Goiás</option> 
+    <option value="ma">Maranhão</option> 
+    <option value="mt">Mato Grosso</option> 
+    <option value="ms">Mato Grosso do Sul</option> 
+    <option value="mg">Minas Gerais</option> 
+    <option value="pa">Pará</option> 
+    <option value="pb">Paraíba</option> 
+    <option value="pr">Paraná</option> 
+    <option value="pe">Pernambuco</option> 
+    <option value="pi">Piauí</option> 
+    <option value="rj">Rio de Janeiro</option> 
+    <option value="rn">Rio Grande do Norte</option> 
+    <option value="ro">Rondônia</option> 
+    <option value="rs">Rio Grande do Sul</option> 
+    <option value="rr">Roraima</option> 
+    <option value="sc">Santa Catarina</option> 
+    <option value="se">Sergipe</option> 
+    <option value="sp">São Paulo</option> 
+    <option value="to">Tocantins</option> 
+   </select></td>
+                </tr>
 
 
 				<tr>
@@ -99,9 +128,10 @@ if ($conex->abrirConexao()) {
                 </tr>
                 
                 <tr>
-                <td class="txt"><input type="text" class="input-cadastro"
+                <td class="txt"><input type="text" class="input-cadastro" id="com" 
 						name="txtComplemento" value="<?php echo $complemento;?>"></td>
-</tr>
+                </tr>
+
 				<?php
     if (trim($flag) != "") {
         ?>
@@ -118,7 +148,7 @@ if ($conex->abrirConexao()) {
 		</form>
 	</div>
 </body>
-
+<script src="js/global.js"></script>
 </html>
 
 <!--
