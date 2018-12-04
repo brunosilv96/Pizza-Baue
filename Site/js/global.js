@@ -203,7 +203,7 @@ function mCPF(cpf){
 }
 
 
-/* VALIDACAO ENDERECO */
+/* VALIDACAO PAG ENDERECO */
 
 function verificaEnde(event){
     event.preventDefault();
@@ -231,6 +231,57 @@ function verificaEnde(event){
     document.getElementById("endereco").submit();
     return true;
 }
+
+/* VALIDACAO PAG CADASTRO */
+
+function verificaCad(event){
+    event.preventDefault();
+    nome = document.getElementById("nome").value;
+    email = document.getElementById("email").value;
+    cpf = document.getElementById("cpf").value;
+    senha1 = document.getElementById("senha1").value;
+    senha2 = document.getElementById("senha2").value;
+
+    if(nome == ""){
+            alert("Obrigatório preecher o campo Nome !!");
+            return false;
+        }
+        else if(nome.length < 4){
+            alert("Favor informar o nome completo !!");
+            return false;
+        }
+        else if(email == ""){
+                alert("Obrigatório preecher o campo Email");
+                return false;
+         }
+        else if(email.indexOf('@') < 0 || email.indexOf('.') < 0){
+            alert("O email não é valido");
+            return false;
+        }
+        else if(cpf == ""){
+            alert("Obrigatório preecher o campo cpf")
+            return false;
+        }
+        else if(cpf.length < 11){
+            alert("O cpf deve conter 11 digitos")
+            return false;
+        }
+        else if (senha1.length < 6){
+            alert("A senha deve conter no mínimo 6 caracteres.");
+            return false;
+        }
+        else if (senha2 ==""){
+            alert("Por favor confirme sua senha");
+            return false;
+        }
+        else if(senha1 != senha2){
+            alert("SENHAS DIFERENTES")
+            return false;
+        }
+        document.getElementById("cadastro").submit();
+        return true;
+}
+
 
 
 /* CARROSEL DE PIZZAS */

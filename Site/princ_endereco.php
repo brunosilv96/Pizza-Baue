@@ -86,7 +86,7 @@ if ($conex->abrirConexao()) {
                 </tr>
                 
                 <tr> 
-                <td class="txt"><input type="text" class="input-cadastro" id="uf" 
+                <td class="txt"><input type="text" class="input-cadastro" maxlength="2" id="uf" 
 						name="txtUf" value="<?php echo $uf;?>"></td>
                 </tr>
 

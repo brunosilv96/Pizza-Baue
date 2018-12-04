@@ -48,14 +48,14 @@ if ($conex->abrirConexao()) {
 
 	<div class="container-conteudo">
 		<h3>Alterar Dados</h3>
-		<form action="php/atualizaCadastro.php" method="post">
+		<form action="php/atualizaCadastro.php" method="post" id="cadastro" onsubmit="return verificaCad(event)">
 			<table>
 				<tr>
 					<td class="lb"><label>Nome:</label></td>
 				</tr>
 
 				<tr>
-				<td class="txt"><input type="text" class="input-cadastro" name="txtNome" value="<?php echo $nome;?>"></td>
+				<td class="txt"><input type="text" id="nome" class="input-cadastro" name="txtNome" value="<?php echo $nome;?>"></td>
 				</tr>
 
 				<tr>
@@ -63,7 +63,7 @@ if ($conex->abrirConexao()) {
 				</tr>
 
 				<tr>
-				<td class="txt"><input type="text" class="input-cadastro" name="txtEmail" value="<?php echo $email;?>"></td>
+				<td class="txt"><input type="text" id="email" class="input-cadastro" name="txtEmail" value="<?php echo $email;?>"></td>
 				</tr>
 
 				<tr>
@@ -71,7 +71,7 @@ if ($conex->abrirConexao()) {
 				</tr>
 
 				<tr>
-				<td class="txt"><input type="text" class="input-cadastro" name="txtCpf" value="<?php echo $cpf;?>"></td>
+				<td class="txt"><input type="text" id="cpf" class="input-cadastro" name="txtCpf" value="<?php echo $cpf;?>"></td>
 				</tr>
 
 
@@ -80,7 +80,7 @@ if ($conex->abrirConexao()) {
 				</tr>
 
 				<tr>
-				<td class="txt"><input type="password" class="input-cadastro" name="txtSenha1"></td>
+				<td class="txt"><input type="password" id="senha1" class="input-cadastro" name="txtSenha1"></td>
 				</tr>
 
 				<tr>
@@ -88,7 +88,7 @@ if ($conex->abrirConexao()) {
 				</tr>
 
 				<tr>
-				<td class="txt"><input type="password" class="input-cadastro" name="txtSenha2"></td>
+				<td class="txt"><input type="password" id="senha2" class="input-cadastro" name="txtSenha2"></td>
 			</tr>
 				<?php
 					if(trim($flag) != ""){
@@ -97,7 +97,7 @@ if ($conex->abrirConexao()) {
 					<td colspan="2"><label class="lb-msg"><p class="p sucesso"><?php echo $flag;?></p></label></td>
 					
 				</tr>
-				<tr><td colspan="2" class="lb-msg"><p class="p sucesso">Aperte F5 para ver as altera��es</p></td></tr>
+				<tr><</tr>
 				<?php
 				}
 				?>
@@ -109,5 +109,5 @@ if ($conex->abrirConexao()) {
 		</form>
 	</div>
 </body>
-
+<script src="js/global.js"></script>
 </html>
