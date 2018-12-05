@@ -32,7 +32,7 @@ if(isset($_SESSION["id_usuario"])){
 <head>
 <meta charset="utf-8">
 <title>Monte sua Pizza - Baue</title>
-<link rel="shortcut icon" href="./images/favicon.png" />
+<link rel="shortcut icon" href="./images/favicon2.png" />
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
@@ -454,7 +454,7 @@ if(isset($_SESSION["id_usuario"])){
 	<footer>
 			<div class="cont-footer">
 				<div class="bloco">
-					<p class="titulo">TELEFONES DE CONTATO</p>
+					<p class="titulo">CONTATO</p>
 					<p class="bl-conteudo">
 						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
 						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 

@@ -38,6 +38,7 @@ if (isset($_SESSION["id_usuario"])) {
 <head>
 <title>Pizza Baue</title>
 <meta charset="utf-8">
+<link rel="shortcut icon" href="./images/favicon2.png" />
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
 <link href="/fonts/nunito/css/nunito.all.css" rel="stylesheet">
 <link href="fonts/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -623,7 +624,7 @@ if (isset($_SESSION["id_usuario"])) {
 					<i class="fas fa-phone ga"></i>
 				
 				
-				<p class="tel">+55(11)94631-0146</p>
+				<p class="tel">+55(11)94631-0146</p><br>
 				<i class="fas fa-phone ga"></i>
 				<p class="tel">+55(11)95275-0119</p>
 				<i class="fas fa-phone ga"></i>

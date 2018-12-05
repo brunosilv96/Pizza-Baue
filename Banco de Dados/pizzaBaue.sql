@@ -38,4 +38,4 @@ CREATE TABLE imagem(
     FOREIGN KEY (id_usuario_fk) REFERENCES usuario(id_usuario)
 );
 
-select * from usuario;
+
