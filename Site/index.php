@@ -620,11 +620,9 @@ if (isset($_SESSION["id_usuario"])) {
 		<div class="cont-footer">
 			<div class="bloco">
 				<p class="titulo">CONTATO</p>
-				<p class="bl-conteudo">
-					<i class="fas fa-phone ga"></i>
-				
-				
-				<p class="tel">+55(11)94631-0146</p><br>
+				<p class="bl-conteudo ajuste">
+				<i class="fas fa-phone ga"></i>
+				<p class="tel">+55(11)94631-0146</p>
 				<i class="fas fa-phone ga"></i>
 				<p class="tel">+55(11)95275-0119</p>
 				<i class="fas fa-phone ga"></i>

@@ -56,19 +56,22 @@ if(isset($_SESSION["id_usuario"])){
 	</div>
 	<div class="modal-body">
 		<div class="tabs-select">
-			<a href="#" id="login-form" class="tab tab-selected" onclick="fnTabs(this)">Login</a> <a href="#" id="register-form"
-			 class="tab" onclick="fnTabs(this)">Cadastrar</a>
+			<a href="#" id="login-form" class="tab tab-selected"
+				onclick="fnTabs(this)">Login</a> <a href="#" id="register-form"
+				class="tab" onclick="fnTabs(this)">Cadastrar</a>
 		</div>
 		<div class="login-form tab-active tabs-page" id="login-form-tab">
-
+			<div class="user-profile">
+				<img src="./images/avatar.png">
+			</div>
 			<form action="php/login.php" method="post" class="form-control">
 				<div class="input-group">
-					<span class="fas fa-user"></span> 
-					<input type="text" placeholder="Email" name="txtUser">
+					<span class="fas fa-user"></span> <input type="text"
+						placeholder="Email" name="txtUser">
 				</div>
 				<div class="input-group">
-					<span class="fas fa-lock"></span> 
-					<input type="password" placeholder="Senha" name="txtSenha">
+					<span class="fas fa-lock"></span> <input type="password"
+						placeholder="Senha" name="txtSenha">
 				</div>
 				<div class="input-group align-center">
 					<button type="submit" class="btn btn-submit">Entrar</button>
@@ -83,50 +86,57 @@ if(isset($_SESSION["id_usuario"])){
 
 		<!--- Formulário de Cadastro de Usuário -->
 		<div class="register-form tabs-page" id="register-form-tab">
-			<form method="POST" action="./php/cadastro.php" class="form-control" id="frmcadastro" onsubmit="return verificaForm(event)">
+			<form method="POST" action="./php/cadastro.php"
+				class="form-control" id="frmcadastro"
+				onsubmit="return verificaForm(event)">
 				<div class="input-group">
-					<span class="fas fa-user"></span> 
-					<input type="text" name="txtNome" id="txtNome" placeholder="Nome" class="form_input">
+					<span class="fas fa-user"></span> <input type="text"
+						name="txtNome" id="txtNome" placeholder="Nome"
+						class="form_input">
 				</div>
 
 				<div class="input-group">
-					<span class="fas fa-user"></span> 
-					<input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" class="form_input">
+					<span class="fas fa-user"></span> <input type="text"
+						name="txtEmail" id="txtEmail" placeholder="E-mail"
+						class="form_input">
 				</div>
 				<div class="input-group">
-					<span class="fas fa-user"></span> 
-					<input type="text" name="txtCpf" placeholder="cpf" id="cpf" maxlength="14" class="form_input" onkeydown="javascript: fMasc( this, mCPF );">
+					<span class="fas fa-user"></span> <input type="text"
+						name="txtCpf" placeholder="cpf" id="cpf" maxlength="14"
+						class="form_input" onkeydown="javascript: fMasc( this, mCPF );">
 				</div>
 
 				<div class="input-group">
-					<span class="fas fa-lock ga"></span> 
-					<input type="password" name="senha1" placeholder="Senha" id="senha" class="form_input">
+					<span class="fas fa-lock ga"></span> <input type="password"
+						name="senha1" placeholder="Senha" id="senha" class="form_input">
 				</div>
 				<div class="input-group">
-					<span class="fas fa-lock"></span> 
-					<input type="password" name="senha2" placeholder="Confirmar Senha" id="confirmasenha" class="form_input">
+					<span class="fas fa-lock"></span> <input type="password"
+						name="senha2" placeholder="Confirmar Senha" id="confirmasenha"
+						class="form_input">
 				</div>
 				<div class="input-group align-center">
-					<button type="submit" name="btnEnvia" class="btn btn-submit" id="btnEnvia">Cadastrar</button>
+					<button type="submit" name="btnEnvia" class="btn btn-submit"
+						id="btnEnvia">Cadastrar</button>
 				</div>
 
 				<div class="campo-cpf">
-					<span class="viewCPF"></span><br> 
-					<span class="aradio"></span><br>
+					<span class="viewCPF"></span><br> <span class="aradio"></span><br>
 					<span class="viewSenha"></span>
 				</div>
 
 			</form>
 		</div>
-		
+
 		<div class="lost-form tabs-page" id="lost-form-tab">
 			<div class="form-header">
 				<h2 class="align-center">RECUPERAR SENHA</h2>
 			</div>
-			<form action="javascript:void(0);" method="get" class="form-control">
+			<form action="javascript:void(0);" method="get"
+				class="form-control">
 				<div class="input-group">
-					<span class="fas fa-user"></span> 
-					<input type="text" placeholder="Username">
+					<span class="fas fa-user"></span> <input type="text"
+						placeholder="Username">
 				</div>
 				<div class="input-group align-center">
 					<button type="submit" class="btn btn-submit">Recuperar</button>
@@ -349,44 +359,51 @@ if(isset($_SESSION["id_usuario"])){
 	</section>
 	<a name="contato"></a>
 	<footer>
-			<div class="cont-footer">
-				<div class="bloco">
-					<p class="titulo">CONTATO</p>
-					<p class="bl-conteudo">
-						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
-						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
-						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94893-2802 </p>
-						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)95876-6887 </p>
-						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)94539-8380</p>
-					</p>
-				</div>
-				<div class="bloco">
-					<p class="titulo">EM CASO DE DÚVIDAS</p>
-					<p class="bl-conteudo">Caso precise tirar dúvidas, entre em
-						contato conosco através de nosso e-mail: pizzabaue@gmail.com</p>
-				</div>
-				<div class="bloco">
-					<p class="titulo">REDES SOCIAIS</p>
-					<p class="bl-conteudo">
-						<i class="fab fa-facebook-square gab" alt="Facebook"
-							title="Facebook"></i> <i class="fab fa-instagram gab"
-							alt="Instagram" title="Instagram"></i> <i
-							class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i> <i
-							class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
-					</p>
-				</div>
-				<div class="ft-logo">
-					<p class="titulo">PIZZA BAUE</p>
-					<p class="bl-conteudo">
-						<img src="./images/logo4.png">
-					</p>
-				</div>
-			</div>
-			<div class="copyright">
-				<p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
-					Informática para internet.</p>
-			</div>
-		</footer>
+
+<div class="cont-footer">
+	<div class="bloco">
+		<p class="titulo">CONTATO</p>
+		<p class="bl-conteudo ajuste">
+		<i class="fas fa-phone ga"></i>
+		<p class="tel">+55(11)94631-0146</p>
+		<i class="fas fa-phone ga"></i>
+		<p class="tel">+55(11)95275-0119</p>
+		<i class="fas fa-phone ga"></i>
+		<p class="tel">+55(11)94893-2802</p>
+		<i class="fas fa-phone ga"></i>
+		<p class="tel">+55(11)95876-6887</p>
+		<i class="fas fa-phone ga"></i>
+		<p class="tel">+55(11)94539-8380</p>
+		</p>
+	</div>
+	<div class="bloco">
+		<p class="titulo">EM CASO DE DÚVIDAS</p>
+		<p class="bl-conteudo">Caso precise tirar dúvidas, entre em contato
+			conosco através de nosso e-mail: pizzabaue@gmail.com</p>
+
+	</div>
+	<div class="bloco">
+		<p class="titulo">REDES SOCIAIS</p>
+		<p class="bl-conteudo">
+			<i class="fab fa-facebook-square gab" alt="Facebook"
+				title="Facebook"></i> <i class="fab fa-instagram gab"
+				alt="Instagram" title="Instagram"></i> <i
+				class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i> <i
+				class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
+		</p>
+	</div>
+	<div class="ft-logo">
+		<p class="titulo">PIZZA BAUE</p>
+		<p class="bl-conteudo">
+			<img src="./images/logo4.png">
+		</p>
+	</div>
+</div>
+<div class="copyright">
+	<p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
+		Informática para internet.</p>
+</div>
+</footer>
 </body>
 <script type="text/javascript" src="js/global.js"></script>
 

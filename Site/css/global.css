@@ -816,10 +816,7 @@ footer{
     margin-top: 5rem;
     padding: 10px;
 }
-.tel{
-    margin-top: -1.2rem;
 
-}
 .titulo{
     text-align: center;
     padding-bottom: 5px;
@@ -847,8 +844,15 @@ footer{
     display: block;
     text-align: left;
     margin-left: 2rem;
-   
-    
+    margin-top: .3rem;
+}
+
+.tel{
+    margin-top: -.9rem;
+}
+
+.ajuste{
+    margin-top: -1.3rem;
 }
 .bl-conteudo .gab:hover{
     color: #c94848;

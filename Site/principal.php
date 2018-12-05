@@ -119,45 +119,54 @@ if($conex->abrirConexao()){
                 </iframe>
             </div>
         </section>
+
+        <a name="contato"></a>
         <footer>
-			<div class="cont-footer">
-				<div class="bloco">
-					<p class="titulo">CONTATO</p>
-					<p class="bl-conteudo">
-						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94631-0146</p>
-						<i class="fas fa-phone ga"></i><p class="tel"> +55(11)95275-0119</p> 
-						<i class="fas fa-phone ga"></i> <p class="tel">+55(11)94893-2802 </p>
-						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)95876-6887 </p>
-						<i	class="fas fa-phone ga"></i> <p class="tel">+55(11)94539-8380</p>
-					</p>
-				</div>
-				<div class="bloco">
-					<p class="titulo">EM CASO DE DÚVIDAS</p>
-					<p class="bl-conteudo">Caso precise tirar dúvidas, entre em
-						contato conosco através de nosso e-mail: pizzabaue@gmail.com</p>
-				</div>
-				<div class="bloco">
-					<p class="titulo">REDES SOCIAIS</p>
-					<p class="bl-conteudo">
-						<i class="fab fa-facebook-square gab" alt="Facebook"
-							title="Facebook"></i> <i class="fab fa-instagram gab"
-							alt="Instagram" title="Instagram"></i> <i
-							class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i> <i
-							class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
-					</p>
-				</div>
-				<div class="ft-logo">
-					<p class="titulo">PIZZA BAUE</p>
-					<p class="bl-conteudo">
-						<img src="./images/logo4.png">
-					</p>
-				</div>
-			</div>
-			<div class="copyright">
-				<p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
-					Informática para internet.</p>
-			</div>
-		</footer>
+
+<div class="cont-footer">
+    <div class="bloco">
+        <p class="titulo">CONTATO</p>
+        <p class="bl-conteudo ajuste">
+        <i class="fas fa-phone ga"></i>
+        <p class="tel">+55(11)94631-0146</p>
+        <i class="fas fa-phone ga"></i>
+        <p class="tel">+55(11)95275-0119</p>
+        <i class="fas fa-phone ga"></i>
+        <p class="tel">+55(11)94893-2802</p>
+        <i class="fas fa-phone ga"></i>
+        <p class="tel">+55(11)95876-6887</p>
+        <i class="fas fa-phone ga"></i>
+        <p class="tel">+55(11)94539-8380</p>
+        </p>
+    </div>
+    <div class="bloco">
+        <p class="titulo">EM CASO DE DÚVIDAS</p>
+        <p class="bl-conteudo">Caso precise tirar dúvidas, entre em contato
+            conosco através de nosso e-mail: pizzabaue@gmail.com</p>
+
+    </div>
+    <div class="bloco">
+        <p class="titulo">REDES SOCIAIS</p>
+        <p class="bl-conteudo">
+            <i class="fab fa-facebook-square gab" alt="Facebook"
+                title="Facebook"></i> <i class="fab fa-instagram gab"
+                alt="Instagram" title="Instagram"></i> <i
+                class="fab fa-twitter gab" alt="Twitter" title="Twitter"></i> <i
+                class="fas fa-envelope gab" alt="E-mail" title="E-mail"></i>
+        </p>
+    </div>
+    <div class="ft-logo">
+        <p class="titulo">PIZZA BAUE</p>
+        <p class="bl-conteudo">
+            <img src="./images/logo4.png">
+        </p>
+    </div>
+</div>
+<div class="copyright">
+    <p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
+        Informática para internet.</p>
+</div>
+</footer>
     </body>
     <script type="text/javascript" src="js/global.js"></script>
 </html>
