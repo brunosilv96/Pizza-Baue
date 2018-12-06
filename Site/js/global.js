@@ -210,7 +210,6 @@ function verificaEnde(event){
     log = document.getElementById("log").value;
     num = document.getElementById("num").value;
     cid = document.getElementById("cid").value;
-    uf = document.getElementById("uf").value;
 
     if (log == "") {
         alert("Preencha o campo Logradouro");
@@ -224,10 +223,7 @@ function verificaEnde(event){
         alert("Preencha o campo Cidade");
         return false;
     }
-    if (uf == "") {
-        alert("Preencha o campo UF");
-        return false;
-    }
+    
     document.getElementById("endereco").submit();
     return true;
 }
