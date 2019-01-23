@@ -29,13 +29,17 @@ if ($user->verificaForm($campos) == true) {
     $senha = $_POST["txtSenha1"];
     $senha2 = $_POST["txtSenha2"];
     
+    /* Faz uma comparação entre as senhas informadas pelo usuário */
     if ($senha != $senha2 || ($senha == "" && $senha2 == "") || ($senha == "" || $senha2 == "")) {
         header("Location: ../princ_cadastro.php?flag=As senhas são diferentes!");
         echo "As senhas são diferentes";
     } else {
 
+        /* Se as senhas forem validas é iniciado o processo de salvamento no Banco */
         try {
             if ($conex->abrirConexao()) {
+
+                /* String de atualização no Banco com criptográfia */
                 $conex->executarSQL("UPDATE usuario SET nome = '$nome', email = '$email', cpf = '$cpf', senha = MD5('$senha') WHERE id_usuario = '$codigo';");
 
                 header("Location: ../princ_cadastro.php?flag=Cadastro Atualizado!");
