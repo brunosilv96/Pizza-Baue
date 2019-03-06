@@ -1,4 +1,7 @@
 <?php
+
+/* VALIDAÇÃO JAVASCRIPT DESATIVADA !!!!!!! */
+
 require_once 'php/lib/bancoDeDados.php';
 require_once 'php/class/Endereco.php';
 
@@ -8,34 +11,25 @@ $codigo = $_SESSION["id_usuario"];
 
 $conex = new BancoDeDados();
 
-$logradouro = null;
-$numero = null;
-$cidade = null;
-$uf = null;
-$complemento = null;
-$flag = null;
+$pesquisa = null;
 
-if (isset($_GET["flag"])) {
-    $flag = $_GET["flag"];
+if (!$conex->abrirConexao()) {
+    echo "Erro ao conectar com o Banco de Dados";
 }
 
-if ($conex->abrirConexao()) {
+if(isset($_GET['flag'])){
+    $conex->executarSQL("SELECT * FROM endereco WHERE id_endereco = '$_GET[flag]'");
 
-    $conex->executarSQL("SELECT * FROM endereco WHERE id_usuario_fk = '$codigo'");
+    $pesquisa = $conex->lerResultados();
 
-    $resultado = $conex->lerResultados();
+    $_SESSION["id_endereco"] = $_GET["flag"];
 
-    if (count($resultado) > 0) {
-        $logradouro = $resultado[0][1];
-        $numero = $resultado[0][2];
-        $cidade = $resultado[0][3];
-        $uf = $resultado[0][4];
-        $complemento = $resultado[0][5];
-
-        $conex->fecharConexao();
-    }
+    unset($_GET["flag"]);
 }
 
+$conex->executarSQL("SELECT * FROM endereco WHERE id_usuario_fk = '$codigo'");
+
+$resultados = $conex->lerResultados();
 ?>
 <html>
 <head>
@@ -48,7 +42,6 @@ if ($conex->abrirConexao()) {
 <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-
 	<div class="container-conteudo">
 		<h3>Alterar Endereço</h3>
 		<form action="php/atualizaEndereco.php" method="post" id="endereco" onsubmit="return verificaEnde(event)">
@@ -59,7 +52,7 @@ if ($conex->abrirConexao()) {
 
                 <tr>
                 <td class="txt"><input type="text" id="log" class="input-cadastro"
-						name="txtLogradouro" value="<?php echo $logradouro;?>"></td>
+						name="txtLogradouro" value="<?php echo $pesquisa[0]['logradouro'] ?>"></td>
                 </tr>
 
 				<tr>
@@ -68,115 +61,47 @@ if ($conex->abrirConexao()) {
                     
                 <tr>
 					<td class="txt"><input type="text" class="input-cadastro" id="num" 
-						name="txtNumero" value="<?php echo $numero;?>"></td>
-                </tr>
-                
-
-				<tr>
-					<td class="lb"><label>Cidade:</label></td>
-                </tr>
-                
-                <tr>
-                <td class="txt"><input type="text" class="input-cadastro" id="cid" 
-						name="txtCidade" value="<?php echo $cidade;?>"></td>
+						name="txtNumero" value="<?php echo $pesquisa[0]['numero']?>"></td>
                 </tr>
 
 				<tr>
-					<td class="lb"><label>UF:</label></td>
-                </tr>
-
-                <tr> 
-                <td><select class="input-cadastro" name="txtUf"> 
-                    <option value="ac">Acre</option> 
-                    <option value="al">Alagoas</option> 
-                    <option value="am">Amazonas</option> 
-                    <option value="ap">Amapá</option> 
-                    <option value="ba">Bahia</option> 
-                    <option value="ce">Ceará</option> 
-                    <option value="df">Distrito Federal</option> 
-                    <option value="es">Espírito Santo</option> 
-                    <option value="go">Goiás</option> 
-                    <option value="ma">Maranhão</option> 
-                    <option value="mt">Mato Grosso</option> 
-                    <option value="ms">Mato Grosso do Sul</option> 
-                    <option value="mg">Minas Gerais</option> 
-                    <option value="pa">Pará</option> 
-                    <option value="pb">Paraíba</option> 
-                    <option value="pr">Paraná</option> 
-                    <option value="pe">Pernambuco</option> 
-                    <option value="pi">Piauí</option> 
-                    <option value="rj">Rio de Janeiro</option> 
-                    <option value="rn">Rio Grande do Norte</option> 
-                    <option value="ro">Rondônia</option> 
-                    <option value="rs">Rio Grande do Sul</option> 
-                    <option value="rr">Roraima</option> 
-                    <option value="sc">Santa Catarina</option> 
-                    <option value="se">Sergipe</option> 
-                    <option value="sp">São Paulo</option> 
-                    <option value="to">Tocantins</option> 
-                </select></td>
-                </tr>
-
-
-				<tr>
-					<td class="lb"><label>Complemento:</label></td>
+					<td class="lb"><label>Referência:</label></td>
                 </tr>
                 
                 <tr>
                 <td class="txt"><input type="text" class="input-cadastro" id="com" 
-						name="txtComplemento" value="<?php echo $complemento;?>"></td>
+						name="txtReferencia" value="<?php echo $pesquisa[0]['referencia']?>"></td>
                 </tr>
-
-				<?php
-    if (trim($flag) != "") {
-        ?>
-				<tr>
-					<td colspan="2"><label class="lb-msg"><p class="p sucesso"><?php echo $flag;?></p></label></td>
-				</tr>
-				<?php
-    }
-    ?>
 			</table>
 			
-				<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
-			
+			<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
+
+            <h3>ENDEREÇOS CADASTRADOS</h3>
+            <table>
+                <tr>
+                    <td class="tam-pqn">N°</td>
+                    <td class="tam-med">Endereço</td>
+                    <td class="tam-pqn">Numero</td>
+                    <td class="tam-med">Referência</td>
+                </tr>
+                <?php 
+                    foreach($resultados as $result){
+                ?>
+                        <tr>
+                            <td class="tam-pqn"><?php echo $result['id_endereco'] ?></td>
+                            <td class="tam-pqn"><?php echo $result['logradouro'] ?></td>
+                            <td class="tam-med"><?php echo $result['numero'] ?></td>
+                            <td class="tam-pqn"><?php echo $result['referencia'] ?></td>
+                            <td class="tam-pqn"><a href="princ_endereco.php?flag=<?php echo $result['id_endereco'] ?>">Atualizar</a></td>
+                        </tr>
+                <?php 
+                    }
+
+                    $conex->fecharConexao();
+                ?>
+            </table>
 		</form>
 	</div>
 </body>
-<script src="js/global.js"></script>
+<!-- <script src="js/global.js"></script> -->
 </html>
-
-<!--
-    Combo BOX com as UF dos Estádos:
-    <script src="js/global.js"></script>
-
-	<select name="estado"> 
-    <option value="ac">Acre</option> 
-    <option value="al">Alagoas</option> 
-    <option value="am">Amazonas</option> 
-    <option value="ap">Amapá</option> 
-    <option value="ba">Bahia</option> 
-    <option value="ce">Ceará</option> 
-    <option value="df">Distrito Federal</option> 
-    <option value="es">Espírito Santo</option> 
-    <option value="go">Goiás</option> 
-    <option value="ma">Maranhão</option> 
-    <option value="mt">Mato Grosso</option> 
-    <option value="ms">Mato Grosso do Sul</option> 
-    <option value="mg">Minas Gerais</option> 
-    <option value="pa">Pará</option> 
-    <option value="pb">Paraíba</option> 
-    <option value="pr">Paraná</option> 
-    <option value="pe">Pernambuco</option> 
-    <option value="pi">Piauí</option> 
-    <option value="rj">Rio de Janeiro</option> 
-    <option value="rn">Rio Grande do Norte</option> 
-    <option value="ro">Rondônia</option> 
-    <option value="rs">Rio Grande do Sul</option> 
-    <option value="rr">Roraima</option> 
-    <option value="sc">Santa Catarina</option> 
-    <option value="se">Sergipe</option> 
-    <option value="sp">São Paulo</option> 
-    <option value="to">Tocantins</option> 
-   </select>
--->

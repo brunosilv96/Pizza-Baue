@@ -5,7 +5,7 @@ use pizza;
 CREATE TABLE usuario(
     id_usuario int primary key auto_increment,
     nome VARCHAR(60) not null,
-    email VARCHAR(100) not null unique,
+    email VARCHAR(100) not null,
     cpf VARCHAR(15) not null,
     senha VARCHAR(100) not null
 );
@@ -14,9 +14,16 @@ CREATE TABLE endereco(
     id_endereco INT primary key auto_increment,
     logradouro VARCHAR(100) not null,
     numero VARCHAR(10) not null,
-    cidade VARCHAR(30),
-    uf CHAR(2),
-    complemento VARCHAR(100),
+    referencia VARCHAR(100),
+    id_usuario_fk INT,
+    FOREIGN KEY (id_usuario_fk) REFERENCES usuario (id_usuario)
+);
+
+CREATE TABLE telefone(
+    id_telefone int primary key auto_increment,
+    numero varchar(15),
+    tipo varchar(15),
+    identificacao varchar(20),
     id_usuario_fk INT,
     FOREIGN KEY (id_usuario_fk) REFERENCES usuario (id_usuario)
 );
@@ -38,4 +45,11 @@ CREATE TABLE imagem(
     FOREIGN KEY (id_usuario_fk) REFERENCES usuario(id_usuario)
 );
 
+CREATE TABLE cardapio(
+    crdcodigo int PRIMARY KEY AUTO_INCREMENT,
+    crdnome varchar(100) NOT NULL,
+    crddescricao varchar(150) NOT NULL,
+    crdpreco float(5.2) NOT NULL,
+    crdimagem varchar(100)
+);
 

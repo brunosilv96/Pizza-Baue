@@ -1,3 +1,21 @@
+<?php 
+require_once 'php/lib/bancoDeDados.php';
+
+session_start();
+$codigo = $_SESSION['id_usuario'];
+
+
+$oCon = new BancoDeDados();
+
+if(!$oCon->abrirConexao()){
+    echo "Falha ao conectar com o Banco de Dados";
+}
+
+$oCon->executarSQL("SELECT * FROM pedido WHERE id_usuario_fk = '$codigo'");
+
+$resultados = $oCon->lerResultados();
+
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,9 +25,6 @@
         <link rel="stylesheet" href="css/if_pedidos.css">
         <link rel="stylesheet" href="css/if_global.css">
         <link rel="stylesheet" href="css/global.css">
-
-
-        
     </head>
     <body>
         <div>
@@ -23,7 +38,7 @@
        </div>
 
         <div class=" pedidos conteudo">
-            <h3>HISTÓRICO DE PEDIDOS</h3>
+            <h3>PEDIDOS</h3>
             <table>
                 <tr>
                     <td class="tam-pqn">Número</td>
@@ -31,6 +46,20 @@
                     <td class="tam-med">Descrição</td>
                     <td class="tam-pqn">Situação</td>
                 </tr>
+                <?php 
+                    foreach($resultados as $result){
+                ?>
+                        <tr>
+                            <td class="tam-pqn"><?php echo $result['num_pedido'] ?></td>
+                            <td class="tam-pqn"><?php echo $result['data_ped'] ?></td>
+                            <td class="tam-med"><?php echo $result['descricao'] ?></td>
+                            <td class="tam-pqn"><?php echo $result['situacao'] ?></td>
+                        </tr>
+                <?php 
+                    }
+
+                    $oCon->fecharConexao();
+                ?>
             </table>
         </div>
 

@@ -105,7 +105,8 @@ if($conex->abrirConexao()){
                     <ul>
                         <li><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
                         <li><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><a href="princ_endereco.php" target="iframe-conteudo">Endereço</a></li>
+                        <li><a href="princ_endereco.php" target="iframe-conteudo">Endereços</a></li>
+                        <li><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
                         <li><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
