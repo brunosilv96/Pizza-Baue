@@ -50,16 +50,15 @@ if($conex->abrirConexao()){
         <meta name="description" content="Pagina Inicial de Login do Cliente">
         
         <!--Folhas de Estilo - CSS-->
-        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="css/principal.css">
     </head>
     <body>
-        <header>
-           
-        <nav class="navbar">
+        <header class="header-user">
+           <section class="user-header">
+        <nav class="navbar-user">
 			<ul>
-				<div class="container-nav">
+				<div class="container-nav-user">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="cardapio.php">Cardápio</a></li>
 					<li><a href="montepizza.php">Monte sua pizza</a></li>
@@ -72,8 +71,8 @@ if($conex->abrirConexao()){
 				</div>
 			</ul>
 
-			<ul class="ul2">
-				<div class="container-nav2">
+			<ul class="ul-2">
+				<div class="container-nav2-user">
 						<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="#contato">Contato</a></li>
 					<li><a href="<?php echo $link;?>" class="btn-login"
@@ -84,18 +83,16 @@ if($conex->abrirConexao()){
 
 			</div>
 		</nav>
-            <div class="jumbotron">
-                <h1 class="jumbotron-heading">Bem-vindo à Pizza Baue</h1>
-                <p class="jumbotron-text">Monte sua pizza, veja as melhores promoções e muito mais.</p>
-            </div>
+</section>
         </header>
-        <nav class="navegacao">
+        <!--<nav class="navegacao">
             <p>Home > Perfil</p>
-        </nav>
+
+        </nav>-->
         <section>
             <div class="nav-lat">
-                <div class="foto-user">
-                    <img class="foto-perfil" src="images/user/<?php echo $nomeImagem;?>" />
+                <div class="foto-user" id="frnCadastro">
+                    <img class="foto-perfil" id="imgFoto" src="images/user/<?php echo $nomeImagem;?>" />
                 </div>
                 <div class="nome-user">
                     <a href="princ_insereFoto.php" target="iframe-conteudo">Alterar Foto</a>
@@ -103,14 +100,16 @@ if($conex->abrirConexao()){
                 <div class="menu-usuario">
                     <h3><?php echo $nome;?></h3>
                     <ul>
-                        <li><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
-                        <li><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><a href="princ_endereco.php" target="iframe-conteudo">Endereços</a></li>
-                        <li><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
-                        <li><a href="php/sair.php">Sair</a></li>
+                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
+                        <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
+                        <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php" target="iframe-conteudo">Endereços</a></li>
+                        <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
+                        <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
             </div>
+            
+            <div class="section-conteudo">
             <div class="conteudo">
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
                     
@@ -119,9 +118,10 @@ if($conex->abrirConexao()){
                     -->
                 </iframe>
             </div>
-        </section>
+</div>
+</section>
 
-        <a name="contato"></a>
+      <!---  <a name="contato"></a>
         <footer>
 
 <div class="cont-footer">
@@ -167,7 +167,8 @@ if($conex->abrirConexao()){
     <p>© Copyright 2018 - Pizza Baue- Desenvolvido por alunos 2°JC -
         Informática para internet.</p>
 </div>
-</footer>
+</footer>-->
     </body>
     <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
 </html>

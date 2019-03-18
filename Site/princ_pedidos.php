@@ -26,7 +26,8 @@ $resultados = $oCon->lerResultados();
         <link rel="stylesheet" href="css/if_global.css">
         <link rel="stylesheet" href="css/global.css">
     </head>
-    <body>
+    <body class="section-conteudo">
+        <section >
         <div>
           <h3>Perfil Pizza Baue</h3>
         </div>
@@ -73,5 +74,6 @@ $resultados = $oCon->lerResultados();
          </div>
         
      </div>
+ </section>
     </body>
 </html>

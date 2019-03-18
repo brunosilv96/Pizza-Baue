@@ -12,6 +12,7 @@
     height: 50px;
     background-color: #B22222;
     color: white;
+
     text-align: center;
 }
 .container-conteudo{
@@ -22,6 +23,9 @@
     box-sizing: border-box;
     box-shadow: 0 0 30px rgba(0,0,0,0.3);
     margin-top: 2rem;
+}
+.section-conteudo{
+    margin-left: 1%;
 }
 .conteudo{
     width: 90%;

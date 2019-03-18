@@ -34,7 +34,8 @@ $resultados = $conex->lerResultados();
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="author" content="Bruno Silva">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 <meta name="description" content="Pedidos do Wireframe">
 
 <link rel="stylesheet" href="css/if_global.css">
@@ -76,13 +77,16 @@ $resultados = $conex->lerResultados();
 			
 			<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
 
-            <h3>ENDEREÇOS CADASTRADOS</h3>
-            <table>
+         
+            <table class="atualiza">
+            <tr>
+                <td class="lb"><label>ENDEREÇOS CADASTRADOS</label></td>
+                </tr>
                 <tr>
-                    <td class="tam-pqn">N°</td>
-                    <td class="tam-med">Endereço</td>
-                    <td class="tam-pqn">Numero</td>
-                    <td class="tam-med">Referência</td>
+                    <td class="tam-pqn input-atualiza">N°</td>
+                    <td class="tam-med input-atualiza">Endereço</td>
+                    <td class="tam-pqn input-atualiza">Numero</td>
+                    <td class="tam-med input-atualiza">Referência</td>
                 </tr>
                 <?php 
                     foreach($resultados as $result){
@@ -92,7 +96,8 @@ $resultados = $conex->lerResultados();
                             <td class="tam-pqn"><?php echo $result['logradouro'] ?></td>
                             <td class="tam-med"><?php echo $result['numero'] ?></td>
                             <td class="tam-pqn"><?php echo $result['referencia'] ?></td>
-                            <td class="tam-pqn"><a href="princ_endereco.php?flag=<?php echo $result['id_endereco'] ?>">Atualizar</a></td>
+                            <td class="tam-pqn"><a href="princ_endereco.php?flag=<?php echo $result['id_endereco'] ?>"><i class="fas fa-edit"></i></a></td>
+                            <td class="tam-pqn input-atualiza"><i class="fas fa-trash-alt"></i></td>
                         </tr>
                 <?php 
                     }

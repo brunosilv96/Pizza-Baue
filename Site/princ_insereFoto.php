@@ -29,7 +29,7 @@ if (isset($_GET["flag"])) {
 				</tr>
 
 				<tr>
-				<td class="txt-img"><input type="file" name="fileImagem"></td>
+				<td class="txt-img"><input type="file" name="fileImagem" onchange="fnCarrega(this)"></td>
 			</tr>
 				<?php
                     if (trim($flag) != "") {
@@ -51,5 +51,5 @@ if (isset($_GET["flag"])) {
 		</form>
 	</div>
 </body>
-
+<script type="text/javascript" src="js/user.js"></script>
 </html>

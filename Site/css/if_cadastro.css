@@ -35,10 +35,6 @@ form{
     text-transform: uppercase;
 }
 
-td {
-	padding: 5px;
-}
-
 .lb {
 	width: 40%;
 	height: 30px;
@@ -143,3 +139,22 @@ input[type="password"] {
 	background-color: #ff0000;
 	cursor: pointer;
 }
+
+.atualiza {
+	border-collapse: collapse;
+	width: 70%;
+  }
+  
+.input-atualiza {
+	
+	padding: 10px 20px;
+	color: #505050;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	
+  }
+
+.menor{
+	width: 10px;
+}
+/*.input-atualiza:nth-child(even) {background-color: #f2f2f2;}*/
