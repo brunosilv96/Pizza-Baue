@@ -7,7 +7,8 @@ CREATE TABLE usuario(
     nome VARCHAR(60) not null,
     email VARCHAR(100) not null,
     cpf VARCHAR(15) not null,
-    senha VARCHAR(100) not null
+    senha VARCHAR(100) not null,
+    funcionario BOOLEAN
 );
 
 CREATE TABLE endereco(
@@ -30,8 +31,8 @@ CREATE TABLE telefone(
 
 CREATE TABLE pedido(
     id_pedido INT PRIMARY KEY auto_increment,
-    num_pedido VARCHAR(15) not null unique,
-    data_ped DATE not null,
+    num_pedido VARCHAR(15) not null,
+    data_ped VARCHAR (15) not null,
     descricao VARCHAR(100),
     situacao VARCHAR(10),
     id_usuario_fk INT,
