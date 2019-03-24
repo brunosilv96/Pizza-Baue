@@ -8,11 +8,12 @@ CREATE TABLE usuario(
     email VARCHAR(100) not null,
     cpf VARCHAR(15) not null,
     senha VARCHAR(100) not null,
-    funcionario BOOLEAN
+    funcionario VARCHAR(3)
 );
 
 CREATE TABLE endereco(
     id_endereco INT primary key auto_increment,
+    cep VARCHAR(10),
     logradouro VARCHAR(100) not null,
     numero VARCHAR(10) not null,
     referencia VARCHAR(100),

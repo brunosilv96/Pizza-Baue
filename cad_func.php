@@ -1,19 +1,3 @@
-<?php 
-require_once "php/lib/bancoDeDados.php";
-
-$oCon = new BancoDeDados();
-
-if(!$oCon->abrirConexao()){
-    echo "Erro de Conexão com Banco de Dados";
-}
-
-if(isset($_POST["chkFuncionario"])){
-    $oCon->executarSQL("INSERT INTO usuario(nome, email, cpf, senha, funcionario) VALUE('$_POST[txtNome]', '$_POST[txtEmail]', '$_POST[txtCpf]', '$_POST[txtSenha]', '$_POST[chkFuncionario]')");
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +33,7 @@ if(isset($_POST["chkFuncionario"])){
     }
     </style>
 
-    <form action="cad_func.php" method="POST">
+    <form action="Site/php/cadastroAdm.php" method="POST" >
         <label>NOME:</label>
         <input type="text" name="txtNome" REQUIRED>
         <label>E-MAIL:</label>
@@ -60,24 +44,10 @@ if(isset($_POST["chkFuncionario"])){
         <input type="password" name="txtSenha" REQUIRED>
         <label>FUNCIONÁRIO?</label>
         <input type="checkbox" name="chkFuncionario" value="1">
-        <label>INSERIR IMAGEM:</label>
-        <img id="imgFoto">
-        <!--Evento quando é alterado alguma propriedade-->
-        <input type="file" name="txtArquivo" onchange="fmCarrega(this)"/>
+
         <input type="submit" value="Enviar"/>
     </form>
+    
 </body>
-<script>
-function fmCarrega(arquivo){
-        if(arquivo.files && arquivo.files[0]){
-            let imagem = new FileReader();
 
-            imagem.onload = function(foto){
-                imgFoto.src = foto.target.result;
-            }
-
-            imagem.readAsDataURL(arquivo.files[0]);
-        }
-    }
-</script>
 </html>

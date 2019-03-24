@@ -39,17 +39,17 @@ if ($user->verificaForm($campos) == true) {
             $resultado = $conex->lerResultados();
 
             if(count($resultado) > 0){
-                header("Location: ../index.php?flag=Usuario já cadastrado!");
+                header("Location: ../index.php");
             }else{
                 /* Comando que irá para o Banco de Dados */
-                $conex->executarSQL("INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome', '$email', '$cpf', MD5('$senha'));");
+                $conex->executarSQL("INSERT INTO usuario(nome, email, cpf, senha, funcionario) VALUES ('$nome', '$email', '$cpf', MD5('$senha'), 'Nao');");
 
                 /* Se a inserção for um sucesso, redirciona para a página do usuario */
-                header("Location: ../index.php#modal-login?flag=Cadastrado com sucesso, faça login agora!");
+                header("Location: ../index.php#modal-login");
             }
         } else {
             /* Se caso ocorrer algum erro na hora da adição de registro */
-            header("Location: exibeMsg.php?flag=Erro de conexão com o Banco");
+            header("Location: exibeMsg.php");
         }
 
         $conex->fecharConexao();

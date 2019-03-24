@@ -11,19 +11,26 @@ $codigo = $_SESSION["id_usuario"];
 $conex = new BancoDeDados();
 
 $pesquisa = null;
+$opcao = "Salvar";
 
 if (!$conex->abrirConexao()) {
     echo "Erro ao conectar com o Banco de Dados";
 }
 
-if(isset($_GET['flag'])){
-    $conex->executarSQL("SELECT * FROM telefone WHERE id_telefone = '$_GET[flag]'");
+if (isset($_GET["acao"])) {
+    $opcao = $_GET["acao"];
+}
+
+if(isset($_GET['cod_tel'])){
+    $conex->executarSQL("SELECT * FROM telefone WHERE id_telefone = '$_GET[cod_tel]'");
 
     $pesquisa = $conex->lerResultados();
 
-    $_SESSION["id_telefone"] = $_GET["flag"];
+    $_SESSION["id_telefone"] = $_GET["cod_tel"];
+    $_SESSION["acao"] = $_GET["acao"];
 
-    unset($_GET["flag"]);
+    unset($_GET["cod_tel"]);
+    unset($_GET["acao"]);
 }
 
 $conex->executarSQL("SELECT * FROM telefone WHERE id_usuario_fk = '$codigo'");
@@ -79,7 +86,7 @@ $resultados = $conex->lerResultados();
                 </tr>
 			</table>
 			
-			<input type="submit" name="btnSalvar" class="btn-cadastro" value="Salvar">
+			<input type="submit" name="btnSalvar" class="btn-cadastro" value="<?php echo $opcao ?>">
             
            
             
@@ -103,8 +110,8 @@ $resultados = $conex->lerResultados();
                             <td class="tam-pqn input-atualiza"><?php echo $result['numero'] ?></td>
                             <td class="tam-med input-atualiza"><?php echo $result['tipo'] ?></td>
                             <td class="tam-pqn input-atualiza"><?php echo $result['identificacao'] ?></td>
-                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?flag=<?php echo $result['id_telefone'] ?>"><i class="fas fa-edit"></i></a></td>
-                            <td class="tam-pqn input-atualiza"><i class="fas fa-trash-alt"></i></td>
+                            <td class="tam-pqn"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=alterar"><i class="fas fa-edit"></i></a></td>
+                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=deletar"><i class="fas fa-trash-alt"></i></td>
                         </tr>
                 <?php 
                     }

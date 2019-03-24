@@ -16,7 +16,8 @@ $endereco = new Endereco();
 $campos = Array(
     "txtLogradouro",
     "txtNumero",
-    "txtReferencia"
+    "txtReferencia",
+    "txtCep"
 );
 
 /* Abre uma conexão com o Banco de Dados */
@@ -29,10 +30,22 @@ if(isset($_SESSION["id_endereco"])){
     $logradouro = $_POST["txtLogradouro"];
     $numero = $_POST["txtNumero"];
     $referencia = $_POST["txtReferencia"];
+    $cep = $_POST["txtCep"];
 
-    /* Faz o update dos dados no Banco com os valores que o usuário quer inserir */
-    $conex->executarSQL("UPDATE endereco SET logradouro = '$logradouro', numero = '$numero', referencia = '$referencia' WHERE id_endereco = '$_SESSION[id_endereco]'");
-
+    switch ($_SESSION['acao']) {
+        case 'alterar':
+            /* Faz o update dos dados no Banco com os valores que o usuário quer inserir */
+            $conex->executarSQL("UPDATE endereco SET cep = '$cep', logradouro = '$logradouro', numero = '$numero', referencia = '$referencia' WHERE id_endereco = '$_SESSION[id_endereco]'");
+            break;
+    
+        case 'deletar':
+            $conex->executarSQL("DELETE FROM endereco WHERE id_endereco = '$_SESSION[id_endereco]'");
+            break;
+        default:
+            echo "A ação não pode ser feita";
+            break;
+    }
+    
     $conex->fecharConexao();
 
     unset($_SESSION["id_endereco"]);
@@ -46,11 +59,10 @@ if(isset($_SESSION["id_endereco"])){
     $logradouro = $_POST["txtLogradouro"];
     $numero = $_POST["txtNumero"];
     $referencia = $_POST["txtReferencia"];
-
-    
+    $cep = $_POST["txtCep"];
 
     /* Faz a inserção dos dados no Banco com os valores que o usuário quer inserir */
-    $conex->executarSQL("INSERT endereco(logradouro, numero, referencia, id_usuario_fk) VALUES('$logradouro', '$numero', '$referencia', '$codigo');");
+    $conex->executarSQL("INSERT endereco(cep, logradouro, numero, referencia, id_usuario_fk) VALUES('$cep', '$logradouro', '$numero', '$referencia', '$codigo');");
 
     $conex->fecharConexao();
     

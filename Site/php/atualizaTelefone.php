@@ -22,7 +22,20 @@ if(isset($_SESSION["id_telefone"])){
     $identificacao = $_POST["txtIdentificacao"];
 
     /* Faz o update dos dados no Banco com os valores que o usuário quer inserir */
-    $conex->executarSQL("UPDATE telefone SET numero = '$numero', tipo = '$tipo', identificacao = '$identificacao' WHERE id_telefone = '$_SESSION[id_telefone]'");
+
+    switch ($_SESSION['acao']) {
+        case 'alterar':
+            /* Faz o update dos dados no Banco com os valores que o usuário quer inserir */
+            $conex->executarSQL("UPDATE telefone SET numero = '$numero', tipo = '$tipo', identificacao = '$identificacao' WHERE id_telefone = '$_SESSION[id_telefone]'");
+            break;
+    
+        case 'deletar':
+            $conex->executarSQL("DELETE FROM telefone WHERE id_telefone = '$_SESSION[id_telefone]'");
+            break;
+        default:
+            echo "A ação não pode ser feita";
+            break;
+    }
 
     $conex->fecharConexao();
 

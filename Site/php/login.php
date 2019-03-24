@@ -37,7 +37,13 @@ if(verificaForm($campos) == true){
             /* É verificado se retornou algum registro, se sim, atribua a $_SESSION e encaminhe */
             if(count($resultado) > 0){
                 $_SESSION["id_usuario"] = $resultado[0]["id_usuario"];
-                header("Location: ../principal.php");
+                $funcionario = $resultado[0]["funcionario"];
+
+                if ($funcionario == "Sim"){
+                    header("Location: ../principal.php?flag=Funcionario");
+                }else {
+                    header("Location: ../principal.php?flag=Cliente");
+                }
             }
             /* Se não, somente encaminhe */
             else{
