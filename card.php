@@ -20,7 +20,8 @@ $resultados = $oCon->lerResultados();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Modelando Card de Cardápio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="site/css/cardapio.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="site/css/global.css">
 </head>
 <style type="text/css">
     *{
@@ -99,28 +100,33 @@ $resultados = $oCon->lerResultados();
     <?php 
         foreach($resultados as $result){
     ?>
-    <div class="card">
-        <div class="imagem">
-            <img src="Site/images/<?php echo $result['crdimagem']; ?>">
+<section class="bd-cardapio">
+<div class="cd-card">
+                <div class="pz-foto">
+                    <div class="foto-pz">
+                    <img src="Site/images/<?php echo $result['crdimagem']; ?>">
+                    </div>
+                </div>
+                <div class="pz-descricao">
+                    <div class="pz-titulo">
+                    <h2><?php echo $result['crdnome'];?></h2>
+                    </div>
+                    <div class="pz-desc">
+                    <p><?php echo $result['crddescricao'];?></p>
+                    </div>
+                    <div class="pz-price">
+                    <h2>R$ <?php echo $result['crdpreco'];?></h2>
         </div>
-        <div class="titulo">
-            <h1><?php echo $result['crdnome'];?></h1>
-        </div>
-        <div class="descricao">
-            <p><?php echo $result['crddescricao'];?></p>
-        </div>
-        <div class="preco">
-            <p>R$ <?php echo $result['crdpreco'];?></p>
-        </div>
-        <div class="botao">
-            <form action="#" method="GET">
-                <input type="submit" value="Adicionar ao Carrinho"> 
-            </form>
-        </div>
-    </div>
+                            <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
+                        </form>
+                    </div>
+                
+            </div>
+    </section>
     <?php 
         }
         $oCon->fecharConexao();
     ?>
+ 
 </body>
 </html>

@@ -80,7 +80,7 @@ cursor: pointer;
     border-radius: 30px;
     line-height: 18px;
     transition: all 300ms ease-in-out;
-    margin-left: 21%;
+    margin-left: -1%;
     margin-top: 2rem;
 }
 .btn-2-cardapio:hover{
@@ -98,14 +98,19 @@ cursor: pointer;
     box-sizing: border-box;
     text-align: center;
 }
-
+.pz-price{
+    margin-top: 5rem;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
 .bd-cardapio{
     max-width: 1200px;
     margin: auto;
 }
 
 .cd-card{
-    width: 100%;
+    width: 50%;
     height: 22rem;
     box-sizing: border-box;
     margin: auto;
@@ -115,6 +120,7 @@ cursor: pointer;
     transition: all 300ms ease-in-out; 
     background-color: rgb(255, 255, 255); 
     border-radius: 10px;
+   
 
 }
 .cd-card:hover{

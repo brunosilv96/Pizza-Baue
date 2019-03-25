@@ -89,8 +89,10 @@ form{
 	width: 100%;
 	font-size: 20px;
 }
-
-.input-cadastro {
+textarea{
+	height: 200px;
+}
+.input-cadastro, textarea{
 	outline: none;
     display: block;
     background: rgba(132, 132, 132, 0.1);

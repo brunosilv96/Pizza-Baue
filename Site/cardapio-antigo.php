@@ -247,7 +247,18 @@ viewBox="0 0 11007 2540"
                     </div>
                     <div class="opt">
                         <form action="#" method="post">
-                           
+                            <select name="tam-pz">
+                                <option>Tamanho da Pizza</option>
+                                <option>Pequena</option>
+                                <option>Média</option>
+                                <option>Grande</option>
+                            </select>
+                            <select name="forma-pz">
+                                <option>Sabor</option>
+                                <option>Mussarela com Calabresa</option>
+                                <option>Mussarela com Pizza Baue</option>
+                                <option>Mussarela com Vegetariana</option>
+                            </select>
                             <input type="submit" name="adc-carrinho" value="Adicionar ao Carrinho" class="btn-2-cardapio">
                         </form>
                     </div>

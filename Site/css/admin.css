@@ -1,0 +1,235 @@
+.avatar {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    width: 30px;
+    height: 30px
+}
+.avatar img{
+    width: 30px;
+    height: 30px
+}
+.navbar{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.navbar.scrolling{
+    margin-top: 0%;
+    height: 80px;
+}
+
+/* INICIO DO BODY */
+body{
+    background-color: rgb(248, 250, 251);
+    font-family: 'Nunito';
+}
+.header-user{
+    height: 0vh;
+   
+}
+
+
+header::before{
+    height: 0vh;
+}
+.user-header{
+    height: 185px;
+    width: 100%;
+    background-color:  rgb(206, 55, 55);
+}
+
+
+section{
+    
+    width: 98%;
+    height: 800px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+}
+ /* INICIO NAVBAR USER */
+ .navbar-user {
+    position: fixed;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    z-index: 10;  
+    margin-top:1%;
+    margin-left: 280;
+    background-color:  rgb(206, 55, 55);
+    
+}
+.navbar-user .logo {
+    padding: 1.7rem 1.6rem;
+    margin-left: 14rem;
+    margin-top: -6.7rem;    
+}
+.logo {
+    padding: 1.7rem 1.6rem;
+   
+}
+.logo img {
+    /*transition: all .5s ease-in-out;*/
+    width: 100px;
+    
+}
+.navbar-user .logo img {
+    /*transition: all .5s ease-in-out;*/
+    width: 100px;
+    margin-top: .5%;
+}
+
+.navbar-user ul {
+    float: right;
+   
+}
+.navbar-user ul li {
+    display: inline;
+}
+.navbar-user ul li a {
+    padding: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*transition: color 300ms ease-in-out;*/
+    border-radius: 2px;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+     border-radius: 2px;
+}
+.navbar-user .ul-2{
+    margin: 0 7rem;
+}
+.navbar-user ul li a:hover{
+    color: #ffffff;
+    border-bottom: 3px solid rgb(255, 255, 255); 
+   /* transition: all 300ms ease-in-out; */
+}
+
+.navbar-user .container-nav-user {
+    margin: 0 25rem;
+}
+
+.navbar-user.scrolling {
+    margin-top: -.1%;
+}
+
+.nav-lat p{
+    color: white;
+}
+
+.nav-lat{
+    width: 280px;
+    height: 950px;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 200px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    transition: all 300ms ease-in-out;
+    margin-left: -1%;
+    position:fixed;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, .2);
+    
+}
+
+.foto-user{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.foto-perfil{
+    width: 150px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nome-user{
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+
+.nome-user > a{
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+}
+.menu-usuario{
+    width: 100%;
+    height: 300px;
+    color: rgb(99, 99, 99);
+}
+.menu-icon{
+    margin-right: 10%;
+}
+.menu-usuario{
+    width: 100%;
+    height: 20px;
+}
+
+.menu-usuario h3{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(87, 87, 87);
+    border-bottom: 1.5px solid rgb(65, 65, 65);
+    font: bold;
+	padding: 4px 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu-usuario ul{
+    width: 90%;
+    height: 280px;
+    margin-top: 30px;
+    margin: auto;
+   
+}
+
+.menu-usuario li{
+    width: 100%;
+    height: 30px;
+    float: left;
+    margin-top: 20px;
+    list-style: none;
+    padding: 5px;
+    line-height: 30px;
+    transition: all 300ms ease-in-out;
+    text-align: left;
+    margin-right: 16px;
+}
+
+.menu-usuario li:hover{
+    height: 29px;
+    background-color: #eeeeee;
+    border-radius:5px;
+    transition: all 350ms ease-in-out;
+}
+
+.menu-usuario a{
+    font-size: 15px;;
+    font-weight: 300;
+    line-height: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0 !important;
+    color: rgba(0, 0, 0, .87);
+    text-decoration: none;
+}
+
+
+/* FIM DO BODY */
+
+footer{
+    clear: both;
+}
+
