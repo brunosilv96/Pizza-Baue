@@ -13,6 +13,7 @@
         <!--Folhas de Estilo - CSS-->
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="css/admin.css">
+        
     </head>
     <body>
         <header class="header-user">
@@ -44,21 +45,10 @@
                     <div class="menu-usuario">
                        
                         <ul>
-                                <div class="dropdown">
-                                        <i class="fas fa-cart-plus menu-icon"></i><a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Pages-drop
-                                          </a>
-                                        
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="princ_cadastro.php" target="iframe-conteudo">Clientes</a>
-                                            <a class="dropdown-item"  href="princ_endereco.php" target="iframe-conteudo">Funcionários</a>
-                                            <a class="dropdown-item" href="princ_telefone.php" target="iframe-conteudo">Configurações</a>
-                                          </div>
-                                        </div>
                             <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
-                            <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                            <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php" target="iframe-conteudo">Endereços</a></li>
-                            <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
+                            <li><i class="fas fa-phone menu-icon"></i><a href="princ_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
+                            <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Funcionários</a></li>
+                            <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php" target="iframe-conteudo">Clientes</a></li>
                             <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                         </ul>
                     </div>
@@ -81,15 +71,15 @@
 </html>
 
 
-  <!--  <div class="dropdown">
-                                  <i class="fas fa-cart-plus menu-icon"></i><a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Pages-drop
-                                    </a>
-                                  
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                      <a class="dropdown-item" href="princ_cadastro.php" target="iframe-conteudo">Clientes</a>
-                                      <a class="dropdown-item"  href="princ_endereco.php" target="iframe-conteudo">Funcionários</a>
-                                      <a class="dropdown-item" href="princ_telefone.php" target="iframe-conteudo">Configurações</a>
-                                    </div>
-                                  </div>-->
+  <!--    <div class="dropdown">
+                                        <i class="fas fa-cart-plus menu-icon"></i><a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Pages-drop
+                                          </a>
+                                        
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="princ_cadastro.php" target="iframe-conteudo">Clientes</a>
+                                            <a class="dropdown-item"  href="princ_endereco.php" target="iframe-conteudo">Funcionários</a>
+                                            <a class="dropdown-item" href="princ_telefone.php" target="iframe-conteudo">Configurações</a>
+                                          </div>
+                                        </div>-->
                    
