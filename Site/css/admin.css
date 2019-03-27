@@ -1,13 +1,4 @@
-.avatar {
-    margin-top: -15px;
-    margin-bottom: -15px;
-    width: 30px;
-    height: 30px
-}
-.avatar img{
-    width: 30px;
-    height: 30px
-}
+
 .navbar{
     width: 100%;
     margin-top: 15px;
@@ -16,6 +7,15 @@
 .navbar.scrolling{
     margin-top: 0%;
     height: 80px;
+}
+
+
+
+.navegacao{
+    width: 100%;
+    height: 40px;
+    padding-top: 13px;
+    box-sizing: border-box;
 }
 
 /* INICIO DO BODY */
@@ -33,7 +33,7 @@ header::before{
     height: 0vh;
 }
 .user-header{
-    height: 185px;
+    height: 80px;
     width: 100%;
     background-color:  rgb(255, 255, 255);
 }
@@ -55,9 +55,10 @@ section{
     width: 100%;
     transition: all 300ms ease-in-out;
     z-index: 10;  
-    margin-top:1%;
+    margin-top:0%;
     margin-left: 280;
     background-color:  rgb(255, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     
 }
 .navbar-user .logo {
@@ -65,24 +66,14 @@ section{
     margin-left: 14rem;
     margin-top: -6.7rem;    
 }
-.logo {
-    padding: 1.7rem 1.6rem;
-   
-}
-.logo img {
-    /*transition: all .5s ease-in-out;*/
-    width: 100px;
-    
-}
 .navbar-user .logo img {
     /*transition: all .5s ease-in-out;*/
     width: 100px;
     margin-top: .5%;
 }
-
 .navbar-user ul {
-    float: right;
-   
+    float:left ;
+    margin-left: 1rem;  
 }
 .navbar-user ul li {
     display: inline;
@@ -94,27 +85,33 @@ section{
     /*transition: color 300ms ease-in-out;*/
     border-radius: 2px;
     font-size: 0.8rem;
-    color: rgb(132, 132, 132);
+    color: rgb(146, 146, 146);
      border-radius: 2px;
 }
 .navbar-user .ul-2{
     margin: 0 7rem;
 }
 .navbar-user ul li a:hover{
-    color: #ffffff;
+    color: #555555;
     border-bottom: 3px solid rgb(255, 255, 255); 
    /* transition: all 300ms ease-in-out; */
 }
 
 .navbar-user .container-nav-user {
-    margin: 0 25rem;
+    margin: 0 10rem;
 }
-
+.navbar-user .container-nav2-user{
+    margin: 0 -12rem;
+}
 .navbar-user.scrolling {
     margin-top: -.1%;
-     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+
+/*FIM NAVBAR USER*/
+
+/*INICIO NAV LATERAL*/
 .nav-lat p{
     color: white;
 }
@@ -126,7 +123,7 @@ section{
     margin-right: 1%;
     margin-bottom: 200px;
     box-sizing: border-box;
-   background: #2c323f;
+    background: #2c323f;
     transition: all 300ms ease-in-out;
     margin-left: -1%;
     position:fixed;
@@ -154,12 +151,12 @@ section{
     width: 50%;
     height: 40px;
     margin: auto;
-    color: rgb(255, 255, 255);
+    color: rgb(189, 189, 189);
 }
 
 .nome-user > a{
     text-decoration: none;
-    color: rgb(126, 126, 126);
+    color: rgb(189, 189, 189);
 }
 .menu-usuario{
     width: 100%;
@@ -179,7 +176,7 @@ section{
     margin: auto;
     margin-top: 30px;
     margin-bottom: 20px;
-    color: rgb(87, 87, 87);
+    color: rgb(189, 189, 189);
     border-bottom: 1.5px solid rgb(65, 65, 65);
     font: bold;
 	padding: 4px 0;
@@ -211,7 +208,7 @@ section{
 
 .menu-usuario li:hover{
     height: 29px;
-    background-color: #a2a2a2;
+    background-color: #1b1b1b;
     border-radius:5px;
     transition: all 350ms ease-in-out;
 }
@@ -223,15 +220,52 @@ section{
     height: 30px;
     margin: 0;
     padding: 0 !important;
-    color: rgba(230, 227, 227, 0.87);
+    color: rgba(241, 241, 241, 0.87);
     text-decoration: none;
-    
-
 }
 
+.conteudo{
+    width: 75%;
+    height: 1000px;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 10%;
+    background-color: rgb(248, 250, 251);
+    margin-left: 20%;
+    padding-top: 15%;
+   
+}
+
+.conteudo h3{
+    color: black;
+    margin-top: -3rem;
+}
+
+iframe{
+    width: 100%;
+    height: 950px;
+    margin: auto;
+    margin-top: -1.5rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    overflow: hidden;
+    
+}
 
 /* FIM DO BODY */
 
 footer{
     clear: both;
+}
+
+.new-badge{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #26a69a;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 2px 5px;
+    margin-left: 4%;
+   
 }

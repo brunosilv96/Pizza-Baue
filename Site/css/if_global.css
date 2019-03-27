@@ -26,6 +26,8 @@
 }
 .section-conteudo{
     margin-left: 1%;
+    overflow: hidden;
+
 }
 .conteudo{
     width: 90%;
@@ -36,6 +38,8 @@
     box-sizing: border-box;
     box-shadow: 0 0 30px rgba(0,0,0,0.3);
     margin-top: 2rem;
+  
+
 }
 
 h3{

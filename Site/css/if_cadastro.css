@@ -15,8 +15,8 @@ form{
 }
 
 .container-conteudo{
-  width: 75%;
-  height: 800px;
+  width: 85%;
+  height: 900px;
   border-radius: 4px;
   box-shadow: 0 0 30px rgba(rgba(0,0,0,.1));
   box-sizing: border-box;
@@ -145,18 +145,58 @@ input[type="password"] {
 .atualiza {
 	border-collapse: collapse;
 	width: 70%;
+	margin-top: 3%;
   }
-  
+.atualiza>tr{
+	width: 20px;
+}
+
 .input-atualiza {
-	
+	width: 50px;
 	padding: 10px 20px;
 	color: #505050;
 	border-bottom: 1px solid #ddd;
-	text-align: left;
 	
   }
 
-.menor{
-	width: 10px;
+.tam-pequeno{
+	width:100px;
+	height:40px;
+	padding:10px;
+}
+.edit{
+	background-color: #f6b321;
+	padding: 5px 30px;
+	border: none;
+	border-radius: 5px;
+
+	
+}
+.edit >a{
+text-decoration: none;
+color: #FFFFFF;
+}
+
+.edit:hover{
+	background-color:  #df7e00;
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
+}
+
+.delete{
+	background-color: #c53116;
+	padding: 5px 30px;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.delete>a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.delete:hover{
+	background-color:  rgb(153, 12, 12);
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
 }
 /*.input-atualiza:nth-child(even) {background-color: #f2f2f2;}*/

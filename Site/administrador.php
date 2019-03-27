@@ -35,12 +35,12 @@ if($conex->abrirConexao()){
 }else{
     echo "Erro de conexão com o Banco de Dados";
 }
-    
+
 ?>
 
 <html>
     <head>
-        <title>Perfil Pizza Baue</title>
+        <title>Perfil Administrativo</title>
         <meta charset="utf-8">
         <meta name="author" content="Bruno Silva">
         <link rel="shortcut icon" href="./images/favicon2.png" />
@@ -51,7 +51,7 @@ if($conex->abrirConexao()){
         
         <!--Folhas de Estilo - CSS-->
         <link rel="stylesheet" type="text/css" href="css/global.css">
-        <link rel="stylesheet" type="text/css" href="css/principal.css">
+        <link rel="stylesheet" type="text/css" href="css/admin.css">
     </head>
     <body>
         <header class="header-user">
@@ -100,10 +100,10 @@ if($conex->abrirConexao()){
                 <div class="menu-usuario">
                     <h3><?php echo $nome;?></h3>
                     <ul>
-                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="../cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
+                    <li><i class="fas fa-phone menu-icon"></i><a href="admin_pedidos.php" target="iframe-conteudo">Principais Pedidos</a><span class="new-badge">0 new</span></li>
+                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
                         <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
-                        <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
                         <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
@@ -111,7 +111,7 @@ if($conex->abrirConexao()){
             
             <div class="section-conteudo">
             <div class="conteudo">
-                <iframe name="iframe-conteudo" src="princ_pedidos.php">
+                <iframe name="iframe-conteudo" src="admin_pedidos.php">
                     <!--
                         Aqui é linkado as páginas referentes ao usuario
                     -->

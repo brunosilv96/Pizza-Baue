@@ -95,23 +95,22 @@ $resultados = $conex->lerResultados();
 					<td class="lb"><label>TELEFONES CADASTRADOS:</label></td>
                 </tr>
                 <tr>
-                    <td class="tam-pqn input-atualiza">N°</td>
-                    <td class="tam-med input-atualiza">Numero</td>
-                    <td class="tam-pqn input-atualiza">Tipo</td>
-                    <td class="tam-med input-atualiza">Identificação</td>
-                    <td class="tam-med input-atualiza">Editar</td>
-                    <td class="tam-med input-atualiza">Excluir</td>
+                    <td class="tam-pequeno input-atualiza">N°</td>
+                    <td class="tam-medio input-atualiza">Numero</td>
+                    <td class="tam-pequeno input-atualiza">Tipo</td>
+                    <td class="tam-medio input-atualiza">Identificação</td>
+                
                 </tr>
                 <?php 
                     foreach($resultados as $result){
                 ?>
-                        <tr>
+                        <tr class="input-atualiza">
                             <td class="tam-pqn input-atualiza"><?php echo $result['id_telefone'] ?></td>
                             <td class="tam-pqn input-atualiza"><?php echo $result['numero'] ?></td>
                             <td class="tam-med input-atualiza"><?php echo $result['tipo'] ?></td>
                             <td class="tam-pqn input-atualiza"><?php echo $result['identificacao'] ?></td>
-                            <td class="tam-pqn"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=alterar"><i class="fas fa-edit"></i></a></td>
-                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=deletar"><i class="fas fa-trash-alt"></i></td>
+                             <td class="tam-pqn"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=alterar"><button class="edit"><i class="fas fa-edit"> </i>Editar</a></button></td>
+                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=deletar"><button class="delete"><i class="fas fa-trash-alt"></i>Excluir</a></button></td>
                         </tr>
                 <?php 
                     }

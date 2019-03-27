@@ -104,9 +104,7 @@ $resultados = $conex->lerResultados();
 
          
             <table class="atualiza">
-            <tr>
-                <td class="lb"><label>ENDEREÇOS CADASTRADOS</label></td>
-                </tr>
+            <h3 class="text-align">Endereços Cadastrados</h3>
                 <tr>
                     <td class="tam-pqn input-atualiza">CEP</td>
                     <td class="tam-med input-atualiza">Endereço</td>
@@ -118,14 +116,14 @@ $resultados = $conex->lerResultados();
                     foreach($resultados as $result){
                 ?>
                         <tr>
-                            <td class="tam-pqn"><?php echo $result['cep'] ?></td>
-                            <td class="tam-pqn"><?php echo $result['logradouro'] ?></td>
-                            <td class="tam-pqn"><?php echo $result['bairro'] ?></td>
-                            <td class="tam-pqn"><?php echo $result['numero'] ?></td>
-                            <td class="tam-med"><?php echo $result['referencia'] ?></td>
-                            <td class="tam-pqn"><a href="princ_endereco.php?cod_end=<?php echo $result['id_endereco']?>&acao=alterar"><i class="fas fa-edit"></i></a></td>
+                            <td class="tam-pqn  input-atualiza"><?php echo $result['cep'] ?></td>
+                            <td class="tam-pqn  input-atualiza"><?php echo $result['logradouro'] ?></td>
+                            <td class="tam-pqn  input-atualiza"><?php echo $result['bairro'] ?></td>
+                            <td class="tam-pqn  input-atualiza"><?php echo $result['numero'] ?></td>
+                            <td class="tam-med  input-atualiza"><?php echo $result['referencia'] ?></td>
+                            <td class="tam-pqn  input-atualiza"><a href="princ_endereco.php?cod_end=<?php echo $result['id_endereco']?>&acao=alterar"><button class="edit"><i class="fas fa-edit"></i>Editar</a></button></td>
                             
-                            <td class="tam-pqn input-atualiza"><a href="princ_endereco.php?cod_end=<?php echo $result['id_endereco']?>&acao=deletar"><i class="fas fa-trash-alt"></i></td>
+                            <td class="tam-pqn input-atualiza"><a href="princ_endereco.php?cod_end=<?php echo $result['id_endereco']?>&acao=deletar"><button class="delete"><i class="fas fa-trash-alt"></i>Excluir<a></button></td>
                         </tr>
                 <?php 
                     }
