@@ -109,8 +109,8 @@ $resultados = $conex->lerResultados();
                             <td class="tam-pqn input-atualiza"><?php echo $result['numero'] ?></td>
                             <td class="tam-med input-atualiza"><?php echo $result['tipo'] ?></td>
                             <td class="tam-pqn input-atualiza"><?php echo $result['identificacao'] ?></td>
-                             <td class="tam-pqn"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=alterar"><button class="edit"><i class="fas fa-edit"> </i>Editar</a></button></td>
-                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=deletar"><button class="delete"><i class="fas fa-trash-alt"></i>Excluir</a></button></td>
+                             <td class="tam-pqn"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=alterar"><i class="fas fa-edit"> </i></a></td>
+                            <td class="tam-pqn input-atualiza"><a href="princ_telefone.php?cod_tel=<?php echo $result['id_telefone']?>&acao=deletar"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                 <?php 
                     }

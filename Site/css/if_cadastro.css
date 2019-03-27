@@ -7,7 +7,6 @@ table {
 	margin: auto;
 	margin-top: 25px;
 	margin-left: 100px;
-
 }
 
 form{
@@ -121,17 +120,17 @@ input[type="password"] {
 
 .btn-cadastro {
 	outline: none;
-    background: rgba(190, 13, 13, 0.849);
-    width: 60%;
-    border: 0;
-    border-radius: 4px;
-    padding: 12px 20px;
-    color: #FFFFFF;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 500;
-    line-height: inherit;
-    text-transform: uppercase;
+	background: rgba(190, 13, 13, 0.849);
+	width: 60%;
+	border: 0;
+	border-radius: 4px;
+	padding: 12px 20px;
+	color: #FFFFFF;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 500;
+	line-height: inherit;
+	text-transform: uppercase;
 	cursor: pointer;
 	transition: all 300ms ease-in-out;
 	margin-left: 8rem;
@@ -142,11 +141,12 @@ input[type="password"] {
 	cursor: pointer;
 }
 
-.atualiza {
+.atualiza{
 	border-collapse: collapse;
 	width: 70%;
 	margin-top: 3%;
-  }
+}
+	
 .atualiza>tr{
 	width: 20px;
 }
@@ -199,4 +199,5 @@ color: #FFFFFF;
 	transition: all 300ms ease-in-out;
 	cursor: pointer;
 }
+
 /*.input-atualiza:nth-child(even) {background-color: #f2f2f2;}*/
