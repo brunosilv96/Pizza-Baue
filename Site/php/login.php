@@ -40,9 +40,9 @@ if(verificaForm($campos) == true){
                 $funcionario = $resultado[0]["funcionario"];
 
                 if ($funcionario == "Sim"){
-                    header("Location: ../principal.php?flag=Funcionario");
+                    header("Location: ../administrador.php");
                 }else {
-                    header("Location: ../principal.php?flag=Cliente");
+                    header("Location: ../principal.php");
                 }
             }
             /* Se não, somente encaminhe */

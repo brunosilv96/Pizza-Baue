@@ -72,6 +72,15 @@ $resultados = $conex->lerResultados();
 						name="txtLogradouro" value="<?php echo $pesquisa[0]['logradouro'] ?>"></td>
                 </tr>
 
+                <tr>
+					<td class="lb"><label>Bairro:</label></td>
+                </tr>
+
+                <tr>
+                <td class="txt"><input type="text" id="log" class="input-cadastro"
+						name="txtBairro" value="<?php echo $pesquisa[0]['bairro'] ?>"></td>
+                </tr>
+
 				<tr>
                 <td class="lb"><label>Número:</label></td>
                 </tr>
@@ -101,6 +110,7 @@ $resultados = $conex->lerResultados();
                 <tr>
                     <td class="tam-pqn input-atualiza">CEP</td>
                     <td class="tam-med input-atualiza">Endereço</td>
+                    <td class="tam-pqn input-atualiza">Bairro</td>
                     <td class="tam-pqn input-atualiza">Numero</td>
                     <td class="tam-med input-atualiza">Referência</td>
                 </tr>
@@ -110,6 +120,7 @@ $resultados = $conex->lerResultados();
                         <tr>
                             <td class="tam-pqn"><?php echo $result['cep'] ?></td>
                             <td class="tam-pqn"><?php echo $result['logradouro'] ?></td>
+                            <td class="tam-pqn"><?php echo $result['bairro'] ?></td>
                             <td class="tam-pqn"><?php echo $result['numero'] ?></td>
                             <td class="tam-med"><?php echo $result['referencia'] ?></td>
                             <td class="tam-pqn"><a href="princ_endereco.php?cod_end=<?php echo $result['id_endereco']?>&acao=alterar"><i class="fas fa-edit"></i></a></td>

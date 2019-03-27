@@ -15,6 +15,7 @@ $endereco = new Endereco();
 /* Cria um Array com os nomes dos campos dos formulário */
 $campos = Array(
     "txtLogradouro",
+    "txtBairro",
     "txtNumero",
     "txtReferencia",
     "txtCep"
@@ -29,13 +30,14 @@ if(isset($_SESSION["id_endereco"])){
     /* Coleta os dados do formulário */
     $logradouro = $_POST["txtLogradouro"];
     $numero = $_POST["txtNumero"];
+    $bairro = $_POST["txtBairro"];
     $referencia = $_POST["txtReferencia"];
     $cep = $_POST["txtCep"];
 
     switch ($_SESSION['acao']) {
         case 'alterar':
             /* Faz o update dos dados no Banco com os valores que o usuário quer inserir */
-            $conex->executarSQL("UPDATE endereco SET cep = '$cep', logradouro = '$logradouro', numero = '$numero', referencia = '$referencia' WHERE id_endereco = '$_SESSION[id_endereco]'");
+            $conex->executarSQL("UPDATE endereco SET cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', numero = '$numero', referencia = '$referencia' WHERE id_endereco = '$_SESSION[id_endereco]'");
             break;
     
         case 'deletar':
@@ -60,9 +62,10 @@ if(isset($_SESSION["id_endereco"])){
     $numero = $_POST["txtNumero"];
     $referencia = $_POST["txtReferencia"];
     $cep = $_POST["txtCep"];
+    $bairro = $_POST["txtBairro"];
 
     /* Faz a inserção dos dados no Banco com os valores que o usuário quer inserir */
-    $conex->executarSQL("INSERT endereco(cep, logradouro, numero, referencia, id_usuario_fk) VALUES('$cep', '$logradouro', '$numero', '$referencia', '$codigo');");
+    $conex->executarSQL("INSERT endereco(cep, bairro, logradouro, numero, referencia, id_usuario_fk) VALUES('$cep', '$bairro', '$logradouro', '$numero', '$referencia', '$codigo');");
 
     $conex->fecharConexao();
     

@@ -14,6 +14,7 @@ CREATE TABLE usuario(
 CREATE TABLE endereco(
     id_endereco INT primary key auto_increment,
     cep VARCHAR(10),
+    bairro VARCHAR(100) not null,
     logradouro VARCHAR(100) not null,
     numero VARCHAR(10) not null,
     referencia VARCHAR(100),

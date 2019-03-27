@@ -100,9 +100,9 @@ if($conex->abrirConexao()){
                 <div class="menu-usuario">
                     <h3><?php echo $nome;?></h3>
                     <ul>
-                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
+                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="../cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php" target="iframe-conteudo">Endereços</a></li>
+                        <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
                         <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php" target="iframe-conteudo">Telefones</a></li>
                         <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
