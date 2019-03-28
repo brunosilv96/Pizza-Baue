@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <body>
 <div class="container-conteudo">
 		<h3>Cadastrar Usuários</h3>
-    <form action="Site/php/cadastroAdm.php" method="POST" >
+    <form action="php/cadastroAdm.php" method="POST" >
 
 
        <table>

@@ -18,6 +18,6 @@ if(isset($_POST["chkFuncionario"])){
 
 $oCon->fecharConexao();
 
-header("Location: ../index.php");
+header("Location: ../cad_func.php");
 
 

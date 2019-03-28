@@ -103,7 +103,7 @@ if($conex->abrirConexao()){
                     <li><i class="fas fa-cart-plus menu-icon"></i><a href="admin_pedidos.php" target="iframe-conteudo">Principais Pedidos</a><span class="new-badge">0 new</span></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
+                        <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
                         <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
