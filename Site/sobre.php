@@ -14,11 +14,18 @@ if(isset($_SESSION["id_usuario"])){
 	$codigo = $_SESSION["id_usuario"];
 
 	if($conex->abrirConexao()){
-		$conex->executarSql("SELECT nome FROM usuario WHERE id_usuario = '$codigo'");
+		$conex->executarSql("SELECT nome, funcionario FROM usuario WHERE id_usuario = '$codigo'");
 		
 		$resultado = $conex->lerResultados();
 		
 		$label = $resultado[0][0];
+		
+		if ($resultado[0][1] == "Sim"){
+			$link = "administrador.php";
+		}else{
+			$link = "principal.php";
+		}
+
 		
 		$conex->fecharConexao();
 	}else{
@@ -177,7 +184,7 @@ if(isset($_SESSION["id_usuario"])){
 				<div class="container-nav2">
 						<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="#contato">Contato</a></li>
-					<li><a href="<?php echo $link;?>" class="btn-login"
+					<li><a href="<?php echo $link; ?>" class="btn-login"
 						onclick="fnModal(this)"><?php echo $label;?></a></li>
 					<div class="line"></div>
 				</div>
