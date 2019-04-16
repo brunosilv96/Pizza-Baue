@@ -475,8 +475,8 @@ input[type="password"] {
 }
 .navbar .logo {
     padding: 1.7rem 1.6rem;
-   margin-left: 15rem;
-   margin-top: -7rem;  
+   margin-left: 1px;
+   margin-top: -3rem;  
 }
 .navbar .logo img {
     transition: all .5s ease-in-out;
@@ -484,8 +484,11 @@ input[type="password"] {
     margin-top: .5%;
 }
 .navbar ul {
-    float:left ;
-    margin-left: 12rem;  
+    margin: 10px;
+  display: flex;
+  list-style:none;
+  padding: -5px;
+  justify-content: space-evenly;
 }
 .navbar ul li {
     display: inline;
@@ -506,15 +509,7 @@ input[type="password"] {
     transition: all 300ms ease-in-out; 
 }
 
-.navbar .container-nav {
-    margin: 0 10rem;
-}
-.navbar .container-nav2{
-    margin: 0 -12rem;
-}
-.navbar ul2 {
-    float:left ; 
-}
+
 /* MENU SCROLL*/
 .navbar.scrolling {
     margin-top: -3.5%;

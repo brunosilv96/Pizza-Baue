@@ -46,6 +46,7 @@ if($conex->abrirConexao()){
     <meta name="author" content="Bruno Silva">
     <link rel="shortcut icon" href="./images/favicon2.png" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <meta name="description" content="Pagina Inicial de Login do Cliente">
@@ -53,75 +54,97 @@ if($conex->abrirConexao()){
     <!--Folhas de Estilo - CSS-->
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/principal.css">
+    <style>
+
+</style>
 </head>
 
 <body>
     <header class="header-user">
         <section class="user-header">
+       
             <nav class="navbar-user">
+                
                 <ul>
-                    <div class="container-nav-user">
+                <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button> 
+        </div>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="cardapio.php">Cardápio</a></li>
                         <li><a href="montepizza.php">Monte sua pizza</a></li>
-
-
-                    </div>
-                    <div class="logo">
-                        <a href="index.php" class="logo"><img src="./images/logo4.png">
-                        </a>
-                    </div>
-                </ul>
-
-                <ul class="ul-2">
-                    <div class="container-nav2-user">
+                        <li><a href="index.php" class="logo"><img src="./images/logo4.png">
+                        </a></li>
                         <li><a href="sobre.php">Sobre</a></li>
                         <li><a href="#contato">Contato</a></li>
                         <li><a href="<?php echo $link;?>" class="btn-login"
                                 onclick="fnModal(this)"><?php echo $nome;?></a></li>
                         <div class="line"></div>
-                    </div>
+
+                   
                 </ul>
 
-                </div>
+               
             </nav>
         </section>
     </header>
     <section>
-        <div class="nav-lat">
-            <div class="foto-user" id="frnCadastro">
-                <img class="foto-perfil" id="imgFoto" src="images/user/<?php echo $nomeImagem;?>" />
+        <div class="nav-lat" id="mySidebar">
+         
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="foto-user" id="frnCadastro">
+                    <img class="foto-perfil" id="imgFoto" src="images/user/<?php echo $nomeImagem;?>" />
+                </div>
+                <div class="nome-user">
+                    <a href="princ_insereFoto.php" target="iframe-conteudo">Alterar Foto</a>
+                </div>
+                <div class="menu-usuario">
+                    <h3><?php echo $nome;?></h3>
+                    <ul>
+                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php"
+                                target="iframe-conteudo">Pedidos</a></li>
+                        <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php"
+                                target="iframe-conteudo">Cadastro</a></li>
+                        <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php"
+                                target="iframe-conteudo">Endereços</a></li>
+                        <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php"
+                                target="iframe-conteudo">Telefones</a></li>
+                        <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
+                    </ul>
             </div>
-            <div class="nome-user">
-                <a href="princ_insereFoto.php" target="iframe-conteudo">Alterar Foto</a>
-            </div>
-            <div class="menu-usuario">
-                <h3><?php echo $nome;?></h3>
-                <ul>
-                    <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php"
-                            target="iframe-conteudo">Pedidos</a></li>
-                    <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php"
-                            target="iframe-conteudo">Cadastro</a></li>
-                    <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php"
-                            target="iframe-conteudo">Endereços</a></li>
-                    <li><i class="fas fa-phone menu-icon"></i><a href="princ_telefone.php"
-                            target="iframe-conteudo">Telefones</a></li>
-                    <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
-                </ul>
-            </div>
+
         </div>
 
+        
         <div class="section-conteudo">
+       
             <div class="conteudo">
+           
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
+               
                     <!--
                         Aqui é linkado as páginas referentes ao usuario
                     -->
                 </iframe>
             </div>
+
         </div>
     </section>
 </body>
+
+<script>
+   
+function openNav() {
+  document.getElementById("mySidebar").style.width = "280px";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+   
 <script type="text/javascript" src="js/global.js"></script>
 <script type="text/javascript" src="js/user.js"></script>
 

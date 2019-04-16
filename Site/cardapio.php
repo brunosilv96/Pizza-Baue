@@ -166,32 +166,25 @@ if($conex->abrirConexao()){
 
 
         <nav class="navbar">
-            <ul>
-                <div class="container-nav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="cardapio.php">Cardápio</a></li>
-                    <li><a href="montepizza.php">Monte sua pizza</a></li>
+			<ul>
+				<!--<div class="container-nav">-->
+					<li><a href="index.php">Home</a></li>
+					<li><a href="cardapio.php">Cardápio</a></li>
+					<li><a href="montepizza.php">Monte sua pizza</a></li>
+				<!--</div>-->
+				<!--<div class="logo">-->
+					<li class="logo"><a href="index.php" class="logo"><img src="./images/logo4.png"></a></li>
+					<li><a href="sobre.php">Sobre</a></li>
+					<li><a href="#contato">Contato</a></li>
+					<li><a href="<?php echo $link;?>" class="btn-login"
+						onclick="fnModal(this)">
+							<?php echo $label;?></a></li>
+					<div class="line"></div>
+				
+			</ul>
 
-
-                </div>
-                <div class="logo">
-                    <a href="index.php" class="logo"><img src="./images/logo4.png">
-                    </a>
-                </div>
-            </ul>
-
-            <ul class="ul2">
-                <div class="container-nav2">
-                    <li><a href="sobre.php">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="<?php echo $link;?>" class="btn-login" onclick="fnModal(this)"><?php echo $label;?></a>
-                    </li>
-                    <div class="line"></div>
-                </div>
-            </ul>
-
-            </div>
-        </nav>
+			
+		</nav>
         <div class="jumbotron">
             <h1 class="jumbotron-heading">Escolha a sua pizza preferida</h1>
             <p class="jumbotron-text">Veja as melhores promoções e os melhores sabores</p>

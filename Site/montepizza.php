@@ -165,33 +165,25 @@ if(isset($_SESSION["id_usuario"])){
 		</div>
 		<input type="checkbox" id="bt-menu"> <label for="bt-menu">&#9776;</label>
 
-
 		<nav class="navbar">
 			<ul>
-				<div class="container-nav">
+				<!--<div class="container-nav">-->
 					<li><a href="index.php">Home</a></li>
 					<li><a href="cardapio.php">Cardápio</a></li>
 					<li><a href="montepizza.php">Monte sua pizza</a></li>
-				
-					
-				</div>
-				<div class="logo">
-					<a href="index.php" class="logo"><img src="./images/logo4.png">
-					</a>
-				</div>
-			</ul>
-
-			<ul class="ul2">
-				<div class="container-nav2">
-						<li><a href="sobre.php">Sobre</a></li>
+				<!--</div>-->
+				<!--<div class="logo">-->
+					<li class="logo"><a href="index.php" class="logo"><img src="./images/logo4.png"></a></li>
+					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="#contato">Contato</a></li>
 					<li><a href="<?php echo $link;?>" class="btn-login"
-						onclick="fnModal(this)"><?php echo $label;?></a></li>
+						onclick="fnModal(this)">
+							<?php echo $label;?></a></li>
 					<div class="line"></div>
-				</div>
+				
 			</ul>
 
-			</div>
+			
 		</nav>
 		<div class="jumbotron">
 			<h1 class="jumbotron-heading">O QUE VOCÊ QUER CUSTOMIZAR?</h1>
