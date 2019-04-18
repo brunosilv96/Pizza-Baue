@@ -115,13 +115,9 @@ if($conex->abrirConexao()){
 
         </div>
 
-        
-        <div class="section-conteudo container-fluid">
-       
-            <div class="conteudo-fluid">
-           
+        <div class="section-conteudo">
+            <div class="conteudo">
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
-               
                     <!--
                         Aqui é linkado as páginas referentes ao usuario
                     -->
