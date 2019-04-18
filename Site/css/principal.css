@@ -1,4 +1,16 @@
+.container-fluid{
+    width: 810px;
+  left: 50%;
+  position: relative;
+  margin-left: -405px;
+}
 
+
+.conteudo-fluid{
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #C0C0C0;
+}
 .navbar{
     width: 100%;
     margin-top: 15px;
@@ -10,7 +22,38 @@
 }
 
 
+/*.conteudo{
+    width: 75%;
+    height: 1000px;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 10%;
+    background-color: rgb(248, 250, 251);
+    margin-left: 20%;
+    padding-top: 15%;
+   
+}
 
+.conteudo h3{
+    color: black;
+    margin-top: -3rem;
+}
+
+iframe{
+    width: 100%;
+    height: 1100px;
+    margin: auto;
+    margin-top: -1.5rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    
+}
+
+/* FIM DO BODY */
+
+footer{
+    clear: both;
+}
 .navegacao{
     width: 100%;
     height: 40px;
@@ -39,13 +82,13 @@ header::before{
 }
 
 
-section{
+/*section{
     width: 98%;
     height: 800px;
     box-sizing: border-box;
     text-align: center;
     margin: auto;
-}
+}*/
  /* INICIO NAVBAR USER */
  .navbar-user {
     position: fixed;
@@ -321,36 +364,5 @@ section{
     text-decoration: none;
 }
 
-.conteudo{
-    width: 75%;
-    height: 1000px;
-    float: left;
-    box-sizing: border-box;
-    padding-top: 10%;
-    background-color: rgb(248, 250, 251);
-    margin-left: 20%;
-    padding-top: 15%;
-   
-}
 
-.conteudo h3{
-    color: black;
-    margin-top: -3rem;
-}
-
-iframe{
-    width: 100%;
-    height: 1100px;
-    margin: auto;
-    margin-top: -1.5rem;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: white;
-    
-}
-
-/* FIM DO BODY */
-
-footer{
-    clear: both;
-}
 

@@ -22,58 +22,60 @@ $resultados = $oCon->lerResultados();
         <meta name="author" content="Bruno Silva">
         <meta name="description" content="Pedidos do Wireframe">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/if_pedidos.css">
         <link rel="stylesheet" href="css/if_global.css">
+        <link rel="stylesheet" href="css/if_pedidos.css">
         <link rel="stylesheet" href="css/global.css">
     </head>
-    <body class="section-conteudo">
-        <section >
-        <div>
-          <h3>Perfil Pizza Baue</h3>
-        </div>
-       <div class="xp">
-            
-           <h3>MEDALHAS <i class="fas fa-medal"></i></h3>
+    <body>
+        <section class="container-fluid">
+            <div class="conteudo-fluid">
+                    <div>
+                    <h3>Perfil Pizza Baue</h3>
+                    </div>
+                <div class="xp">
+                        
+                    <h3>MEDALHAS <i class="fas fa-medal"></i></h3>
 
-           <h4>Nenhuma pizza comprada</h4>
-       </div>
+                    <h4>Nenhuma pizza comprada</h4>
+                </div>
 
-        <div class=" pedidos conteudo">
-            <h3>PEDIDOS</h3>
-            <table>
-                <tr>
-                    <td class="tam-pqn">Número</td>
-                    <td class="tam-pqn">Data</td>
-                    <td class="tam-med">Descrição</td>
-                    <td class="tam-pqn">Situação</td>
-                </tr>
-                <?php 
-                    foreach($resultados as $result){
-                ?>
-                        <tr>
-                            <td class="tam-pqn"><?php echo $result['num_pedido'] ?></td>
-                            <td class="tam-pqn"><?php echo $result['data_ped'] ?></td>
-                            <td class="tam-med"><?php echo $result['descricao'] ?></td>
-                            <td class="tam-pqn"><?php echo $result['situacao'] ?></td>
-                        </tr>
-                <?php 
-                    }
+                    <div class=" pedidos conteudo">
+                        <h3>PEDIDOS</h3>
+                        <table>
+                            <tr>
+                                <td class="tam-pqn">Número</td>
+                                <td class="tam-pqn">Data</td>
+                                <td class="tam-med">Descrição</td>
+                                <td class="tam-pqn">Situação</td>
+                            </tr>
+                            <?php 
+                                foreach($resultados as $result){
+                            ?>
+                                    <tr>
+                                        <td class="tam-pqn"><?php echo $result['num_pedido'] ?></td>
+                                        <td class="tam-pqn"><?php echo $result['data_ped'] ?></td>
+                                        <td class="tam-med"><?php echo $result['descricao'] ?></td>
+                                        <td class="tam-pqn"><?php echo $result['situacao'] ?></td>
+                                    </tr>
+                            <?php 
+                                }
 
-                    $oCon->fecharConexao();
-                ?>
-            </table>
-        </div>
+                                $oCon->fecharConexao();
+                            ?>
+                        </table>
+                    </div>
 
-        <div class="dados-cliente">
-            <h3>PIZZAS MONTADAS</h3>
-            <h2>0</h2>
-        </div>
-        <div class="dados-cliente">
-            <h3>COMENTÁRIOS DE AVALIAÇÃO</h3>
-             <h2>0</h2>
-         </div>
-        
-     </div>
+                    <div class="dados-cliente">
+                        <h3>PIZZAS MONTADAS</h3>
+                        <h2>0</h2>
+                    </div>
+                    <div class="dados-cliente">
+                        <h3>COMENTÁRIOS DE AVALIAÇÃO</h3>
+                        <h2>0</h2>
+                    </div>
+                    
+                </div>
+            </div>
  </section>
     </body>
 </html>

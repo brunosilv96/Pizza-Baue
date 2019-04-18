@@ -15,9 +15,22 @@
 
     text-align: center;
 }
+
+.container-fluid{
+    width: 810px;
+  left: 50%;
+  position: relative;
+  margin-left: -405px;
+}
+
+.conteudo-fluid{
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #C0C0C0;
+}
 .container-conteudo{
-    width: 90%;
-    margin-left: 5%;
+    /*width: 90%;
+    margin-left: 5%;*/
     background-color: rgb(255, 255, 255);
     padding-top: 30px;
     box-sizing: border-box;

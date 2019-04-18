@@ -54,6 +54,7 @@ if($conex->abrirConexao()){
     <!--Folhas de Estilo - CSS-->
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/principal.css">
+    
     <style>
 
 </style>
@@ -115,9 +116,9 @@ if($conex->abrirConexao()){
         </div>
 
         
-        <div class="section-conteudo">
+        <div class="section-conteudo container-fluid">
        
-            <div class="conteudo">
+            <div class="conteudo-fluid">
            
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
                
@@ -134,13 +135,13 @@ if($conex->abrirConexao()){
 <script>
    
 function openNav() {
-  document.getElementById("mySidebar").style.width = "280px";
+  document.getElementById("mySidebar").style.width = "295px";
   document.getElementById("main").style.marginLeft = "0px";
 }
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("main").style.marginRight= "0";
 }
 </script>
    
