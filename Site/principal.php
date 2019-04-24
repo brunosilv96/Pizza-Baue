@@ -139,7 +139,7 @@ if($conex->abrirConexao()){
   document.getElementById("menu-collapse").style.width = "280px";
 }
 
-/* Set the width of the sidebar to 0 (hide it) */
+
 function closeNav() {
   document.getElementById("menu-collapse").style.width = "0";
 }
