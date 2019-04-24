@@ -54,6 +54,7 @@ if($conex->abrirConexao()){
     <!--Folhas de Estilo - CSS-->
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/principal.css">
+    <link rel="stylesheet" type="text/css" href="css/if_global.css">
     
     <style>
 
@@ -63,13 +64,10 @@ if($conex->abrirConexao()){
 <body>
     <header class="header-user">
         <section class="user-header">
-       
             <nav class="navbar-user">
-                
+        
                 <ul>
-                <div id="main">
-        <button class="openbtn" onclick="openNav()">☰</button> 
-        </div>
+               
                         <li><a href="index.php">Home</a></li>
                         <li><a href="cardapio.php">Cardápio</a></li>
                         <li><a href="montepizza.php">Monte sua pizza</a></li>
@@ -81,7 +79,6 @@ if($conex->abrirConexao()){
                                 onclick="fnModal(this)"><?php echo $nome;?></a></li>
                         <div class="line"></div>
 
-                   
                 </ul>
 
                
@@ -89,9 +86,9 @@ if($conex->abrirConexao()){
         </section>
     </header>
     <section>
-        <div class="nav-lat" id="mySidebar">
+        <div class="nav-lat" id="menu-collapse">
          
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
                 <div class="foto-user" id="frnCadastro">
                     <img class="foto-perfil" id="imgFoto" src="images/user/<?php echo $nomeImagem;?>" />
                 </div>
@@ -101,8 +98,8 @@ if($conex->abrirConexao()){
                 <div class="menu-usuario">
                     <h3><?php echo $nome;?></h3>
                     <ul>
-                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php"
-                                target="iframe-conteudo">Pedidos</a></li>
+                        <li><i class="fas fa-cart-plus menu-icon"></i><a href="princ_pedidos.php" target="iframe-conteudo">Pedidos</a></li>
+                                           
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php"
                                 target="iframe-conteudo">Cadastro</a></li>
                         <li><i class="fas fa-map-marker-alt menu-icon"></i><a href="princ_endereco.php"
@@ -114,9 +111,17 @@ if($conex->abrirConexao()){
             </div>
 
         </div>
+        <button class="openbtn" onclick="openNav()">&#9776;
+        <a href="princ_pedidos.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-cart-plus menu-icon-collapse"></i></a>
+        <a href="princ_cadastro.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse"></i></a>
+        <a href="princ_endereco.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-map-marker-alt menu-icon-collapse"></i></a>
+        <a href="princ_telefone.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-phone menu-icon-collapse"></i></a>
+        <a href="php/sair.php" class="menu-icon-collapse"><i class="fas fa-sign-out-alt menu-icon-collapse"></i></a>
+                                  
+    </button> 
 
-        <div class="section-conteudo">
-            <div class="conteudo">
+        <div class="container-fluid">
+            <div class="conteudo-fluid">
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
                     <!--
                         Aqui é linkado as páginas referentes ao usuario
@@ -130,14 +135,13 @@ if($conex->abrirConexao()){
 
 <script>
    
-function openNav() {
-  document.getElementById("mySidebar").style.width = "295px";
-  document.getElementById("main").style.marginLeft = "0px";
+   function openNav() {
+  document.getElementById("menu-collapse").style.width = "280px";
 }
 
+/* Set the width of the sidebar to 0 (hide it) */
 function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginRight= "0";
+  document.getElementById("menu-collapse").style.width = "0";
 }
 </script>
    

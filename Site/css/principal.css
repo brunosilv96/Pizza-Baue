@@ -97,7 +97,7 @@ header::before{
     transition: all 300ms ease-in-out;
     z-index: 10;  
     margin-top:1%;
-    margin-left: 280;
+   /* margin-left: 280;*/
     background-color:  rgb(206, 55, 55);
     
 }
@@ -206,7 +206,7 @@ header::before{
     height: 100%;
     width: 280px;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: 0;
     background: rgb(255, 255, 255);
@@ -242,19 +242,26 @@ header::before{
     font-size: 36px;
     margin-left: 50px;
   }
+  .collapse{
+    background-color: rgb(115, 255, 0);
+ 
+  }
   
   .openbtn {
+    position: fixed;
     font-size: 20px;
     cursor: pointer;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(206, 55, 55);
     color: white;
     padding: 10px 15px;
     border: none;
+    width: 60px;
+    height: 100%;
   }
   
-  .openbtn:hover {
+  /*.openbtn:hover {
     background-color: #444;
-  }
+  }*/
   
   #main {
     transition:margin-left .5s;
@@ -304,6 +311,13 @@ header::before{
 }
 .menu-icon{
     margin-right: 10%;
+    float: left;
+    padding-top: 7px;
+}
+
+.menu-icon-collapse{
+    color:rgb(248, 250, 251);
+    padding-top: 40px;
 }
 .menu-usuario{
     width: 100%;

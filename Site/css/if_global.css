@@ -12,21 +12,25 @@
     height: 50px;
     background-color: #B22222;
     color: white;
-
     text-align: center;
 }
 
-.container-fluid{
-    width: 810px;
-    left: 50%;
-    position: relative;
-    margin-left: -405px;
-}
 
-.conteudo-fluid{
-    width: 800px;
+.container-fluid{
+    width: 1000px;
     padding: 20px;
     border: 1px solid #C0C0C0;
+   
+  
+}
+.conteudo-fluid{
+    width: 1000px;
+    left: 50%;
+    position: relative;
+    margin-left: -560px;
+    margin-top: 20% !important;
+  
+   
 }
 
 /*.container-conteudo{
