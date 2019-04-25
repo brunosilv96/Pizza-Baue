@@ -111,15 +111,17 @@ if($conex->abrirConexao()){
             </div>
 
         </div>
-        <button class="openbtn" onclick="openNav()">&#9776;
-        <a href="princ_pedidos.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-cart-plus menu-icon-collapse"></i></a>
-        <a href="princ_cadastro.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse"></i></a>
-        <a href="princ_endereco.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-map-marker-alt menu-icon-collapse"></i></a>
-        <a href="princ_telefone.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-phone menu-icon-collapse"></i></a>
-        <a href="php/sair.php" class="menu-icon-collapse"><i class="fas fa-sign-out-alt menu-icon-collapse"></i></a>
-                                  
-    </button> 
-
+		<div class="openbtn">
+			<div class="collapse-items">
+				<a href="#" onclick="openNav()" class="menu-icon-collapse"><i class="fas fa-bars menu-icon-collapse" alt="Visão Geral" title="Visão Geral"></i></a>
+				<a href="princ_pedidos.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-cart-plus menu-icon-collapse" alt="Pedidos" title="Pedidos"></i></a>
+				<a href="princ_cadastro.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse" alt="Configurar Cadastro" title="Configurar Cadastro"></i></a>
+				<a href="princ_endereco.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-map-marker-alt menu-icon-collapse" alt="Configurar Endereço" title="Configurar Endereço"></i></a>
+				<a href="princ_telefone.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-phone menu-icon-collapse" alt="Telefone" title="Telefone"></i></a>
+				<a href="php/sair.php" class="menu-icon-collapse"><i class="fas fa-sign-out-alt menu-icon-collapse" alt="Sair" title="Sair"></i></a>  
+			</div>
+		</div>
+	
         <div class="container-fluid">
             <div class="conteudo-fluid">
                 <iframe name="iframe-conteudo" src="princ_pedidos.php">
