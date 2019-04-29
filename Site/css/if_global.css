@@ -17,18 +17,22 @@
 
 
 .container-fluid{
-    width: 1000px;
-    padding: 20px;
-    border: 1px solid #C0C0C0;
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
    
   
 }
 .conteudo-fluid{
-    width: 1000px;
-    left: 50%;
-    position: relative;
-    margin-left: -560px;
-    margin-top: 20% !important;
+    width: 75vw;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 25%;
+ 
   
    
 }

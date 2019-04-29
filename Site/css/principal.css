@@ -1,15 +1,4 @@
-.container-fluid{
-    width: 810px;
-  left: 50%;
-  position: relative;
-  margin-left: -405px;
-}
 
-.conteudo-fluid{
-    width: 800px;
-    padding: 20px;
-    border: 1px solid #C0C0C0;
-}
 .navbar{
     width: 100%;
     margin-top: 15px;
@@ -45,7 +34,12 @@ iframe{
     margin-top: -1.5rem;
     border: 1px solid rgb(255, 255, 255);
     background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 8;
   
+
     
 }
 
@@ -100,6 +94,7 @@ header::before{
     top:0px;
    /* margin-left: 280;*/
     background-color:  rgb(206, 55, 55);
+   
     
 }
 .navbar-user .logo {
