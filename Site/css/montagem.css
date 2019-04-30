@@ -1,0 +1,123 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background:url(../images/fundo-madeira-e.jpg);
+	width: 100%;
+	margin: auto;
+	position: relative;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+
+}
+
+.botao{
+    width: 30%;
+	margin-top: 40%;
+}
+/*.btn-inicio{
+    width: 52%;
+	height: 15%;
+	border-radius: 20px;
+	border:none;
+	background-image: linear-gradient(to right,  rgb(206, 55, 55) , rgb(124, 12, 12));
+	color: #fff;
+	font-size: 2rem;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.btn-inicio:hover{
+	background-color:  rgb(161, 24, 24);
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
+}*/
+
+.sessao1{
+	width: 80%;
+	height: 100vh;
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+div.opcoes {
+    width: 100%; 
+    height: 100vh;
+    display: none;   
+    position: absolute;
+    box-sizing: border-box;
+	background:url(../images/fundo-madeira-e.jpg);
+	color: #fff;
+}
+
+.foto{
+    width: 350px; 
+}
+
+.sessao2{
+	width: 20%;
+	height: 100vh;
+
+	box-sizing: border-box;
+	float: left;
+}
+
+.previa{
+	width: 100%;
+	height: 60vh;
+	box-sizing: border-box;
+	border: 1px solid black;
+	color: #fff;
+	text-align: center;
+}
+
+.calcula{
+	width: 100%;
+	height: 40vh;
+	box-sizing: border-box;
+    border: 1px solid black;
+	text-align: center;
+	color: #fff;
+}
+
+.view-mensagem{
+	color: #009900;
+	text-align: center;
+}
+
+
+
+label
+{
+	display: block;
+	font-family: sans-serif;
+	margin: 3px;
+	padding: 15px;
+	color: #909090;
+	width: 20%;
+}
+#opcao2 label:hover
+{
+	background: #00990034;
+}
+input[type="checkbox"]
+{
+	opacity: 0;
+}
+input[type="checkbox"]:checked + SPAN
+{
+	font-weight: bolder;
+	color: #009900;
+}
