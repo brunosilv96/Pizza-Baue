@@ -15,7 +15,9 @@
         
         <label for="pic1"><img src="images/montagem/pic1.png" class="foto" alt="">
         <input type="radio" name="escolha" id="pic1" value="molho1">
+        
         <br><br>
+
         <label for="pic2"><img src="images/montagem/pic2.jpg" class="foto" alt="">
         <input type="radio" name="escolha" id="pic2" value="molho2">
 
