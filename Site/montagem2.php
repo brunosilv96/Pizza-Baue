@@ -11,6 +11,7 @@
 <body>
 <section class="montagem">
 	<form>
+		<!--Inicio da Primeira Etapa da Montagem-->
 		<div class="etapa1">
 			<div class="titulo">
 				<h2>Escolha a sua massa favorita</h2>
@@ -107,9 +108,37 @@
 				<button>Próximo</button>
 			</div>
 		</div>
-		<div class="etapa2">
-			
-		</div>
+
+		<!--Inicio da Segunda Etapa da Montagem-->
+			<div class="etapa2">
+				<div class="titulo">
+					<h2>Escolha a sua massa favorita</h2>
+					<p>Clique nos ingrediente de acordo com o seu gosto</p>
+				</div>
+				<?php 
+					for ($i=0; $i < 18; $i++) { 
+				?>
+				<div class="card2">
+					<div class="imagem2">
+							<img src="images/ingredientes/bacon.png">
+						</div>
+						<div class="sabor2">
+							<input type="radio" name="rdoMassa1" id="id_molho2">
+							<label for="id_molho2">Bacon</label>
+						</div>
+						<div class="preco2">
+							<p>R$ 10,00</p>
+						</div>
+				</div>
+				<?php 
+					}
+				?>
+
+				<div class="botoes">
+					<button>Anterior</button>
+					<button>Próximo</button>
+				</div>
+			</div>
 		<div class="etapa3">
 			
 		</div>

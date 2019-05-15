@@ -23,6 +23,7 @@
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
+	display: none;
 }
 
 .titulo{
@@ -95,12 +96,63 @@ img{
 	margin: auto;
 	border: 1px solid black;
 	box-sizing: border-box;
+	clear: both;
 }
 
 button{
 	width: 50%;
 	height: 100%;
 	float: left;
+}
+
+/*Configurações da Segunda Etapa da Montagem*/
+
+.etapa2{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.card2{
+	width: 15%;
+	height: 200px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	margin: 10px;
+}
+
+.imagem2{
+	width: 75%;
+	height: 140px;
+	border: 1px solid black;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+
+
+.sabor2{
+	width: 100%;
+	height: 30px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 3px;
+}
+
+.preco2{
+	width: 100%;
+	height: 30px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 3px;
+}
+
+iframe{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
 }
 
 
