@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.montagem{
+	width: 80%;
+	height: 100vh;
+	border: 1px solid black;
+	box-sizing: border-box;
+	margin: auto;
+	float: left;
+}
+
+.auxiliar{
+	width: 20%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left;
+}
+
+.etapa1{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.titulo{
+	width: 100%;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.massas{
+	width: 100%;
+	height: 39vh;
+	margin: auto;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+
+.card{
+	width: 23%;
+	height: 260px;
+	box-sizing: border-box;
+	margin-left: 7%;
+	margin-right: 2%;
+	float: left;
+}
+
+.imagem{
+	width: 70%;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+img{
+	height: 100%;
+	width: 100%;
+}
+
+.sabor{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px;
+}
+
+.preco{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px;
+}
+
+.molhos{
+	width: 100%;
+	height: 38vh;
+	margin: auto;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+
+.botoes{
+	width: 50%;
+	height: 40px;
+	margin: auto;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+button{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

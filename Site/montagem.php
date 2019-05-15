@@ -9,6 +9,8 @@
 <body>
 <!--container principal-->
 <section class="sessao1">
+
+
 	<!--Primeira etapa-->
     <div id="opcao1" class="opcoes"><h1>Escolha seu molho</h1>
         <br><br>
@@ -24,7 +26,9 @@
         
         <br><br><button type="submit" id="btn1" onclick="mostrar();visualizaDiv(2);">Proximo</button>
     </div>
-<!--Segunda etapa-->
+
+
+    <!--Segunda etapa-->
     <div id="opcao2" class="opcoes"><h2>Escolha seus Ingredientes</h2><br>
         (Máximo 5 ingredientes) 
 
@@ -48,17 +52,25 @@
     	<button id="btn2" onclick="visualizaDiv(3)">Proximo</button>
     	<button id="btn2" onclick="visualizaDiv(1)">voltar</button>
     </div>
+
+
 <!--Terceira etapa-->
     <div id="opcao3" class="opcoes">Passo 3
         <button id="btn3" onclick="visualizaDiv(4)">Proximo</button>
         <button id="btn3" onclick="visualizaDiv(2)">voltar</button>
     </div>
+
+
 <!--Quarta etapa-->
     <div id="opcao4" class="opcoes">Passo 4
         <button id="btn3" onclick="visualizaDiv(3)">voltar</button>
     </div>
-<!--Tela de inicio-->
+
+    <!--Tela de inicio-->
     <button id="btn1" class="botao" onclick="visualizaDiv(1)">Monte sua pizza</button>
+
+    <p>Começe a montar o seu sabor de acordo com o seu gosto</p>
+    <p>Clique no botão!</p>
 </section>
 
 <!--Container de vizualização -->

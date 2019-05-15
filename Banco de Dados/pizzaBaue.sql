@@ -56,3 +56,5 @@ CREATE TABLE cardapio(
     crdimagem varchar(100)
 );
 
+
+insert into usuario (nome, email, cpf, senha, funcionario) values("Administrador", "admin@admin.com", "999.999.999-99", MD5("123456"), "Sim");
