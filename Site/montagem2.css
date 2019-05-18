@@ -17,12 +17,37 @@
 	height: 100vh;
 	box-sizing: border-box;
 	float: left;
+	border: 1px solid black;
 }
 
 .etapa1{
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
+	display: none;
+}
+
+.etapa2{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: none;
+}
+
+.etapa3{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: block;
+}
+
+.etapa4{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
 	display: none;
 }
 
@@ -33,6 +58,16 @@
 	text-align: center;
 	padding: 10px;
 	box-sizing: border-box;
+}
+
+.titulo2{
+	width: 80%;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	position: fixed;
 }
 
 .massas{
@@ -62,8 +97,8 @@
 }
 
 img{
-	height: 100%;
 	width: 100%;
+	height: auto;
 }
 
 .sabor{
@@ -107,12 +142,6 @@ button{
 
 /*Configurações da Segunda Etapa da Montagem*/
 
-.etapa2{
-	width: 100%;
-	height: 100vh;
-	box-sizing: border-box;
-}
-
 .card2{
 	width: 15%;
 	height: 200px;
@@ -155,7 +184,10 @@ iframe{
 	box-sizing: border-box;
 }
 
-
+.ingredientes{
+	margin-top: 70px;
+	box-sizing: border-box;
+}
 
 
 

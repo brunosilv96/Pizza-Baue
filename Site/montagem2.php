@@ -1,5 +1,11 @@
 <?php 
+require_once 'php/lib/bancoDeDados.php';
 
+$oCon = new BancoDeDados();
+
+if(!$oCon->abrirConexao()){
+	echo "Sem conexão com Banco de Dados";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,35 +110,41 @@
 			</div>
 			
 			<div class="botoes">
-				<button>Anterior</button>
+				<button>Inicio</button>
 				<button>Próximo</button>
 			</div>
 		</div>
 
 		<!--Inicio da Segunda Etapa da Montagem-->
 			<div class="etapa2">
-				<div class="titulo">
-					<h2>Escolha a sua massa favorita</h2>
+				<div class="titulo2">
+					<h2>Escolha seus ingredientes favorita</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
 				</div>
-				<?php 
-					for ($i=0; $i < 18; $i++) { 
-				?>
-				<div class="card2">
-					<div class="imagem2">
-							<img src="images/ingredientes/bacon.png">
-						</div>
-						<div class="sabor2">
-							<input type="radio" name="rdoMassa1" id="id_molho2">
-							<label for="id_molho2">Bacon</label>
-						</div>
-						<div class="preco2">
-							<p>R$ 10,00</p>
-						</div>
+				<div class="ingredientes">
+					<?php 
+						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE idgcategoria != 1 AND idgcategoria != 2";
+						$oCon->executarSQL($sql);
+						$etapa2 = $oCon->lerResultados();
+
+						foreach ($etapa2 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+								<img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="rdoMassa1" id="id_molho2">
+								<label><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
 				</div>
-				<?php 
-					}
-				?>
 
 				<div class="botoes">
 					<button>Anterior</button>
@@ -140,10 +152,69 @@
 				</div>
 			</div>
 		<div class="etapa3">
-			
+			<div class="titulo2">
+					<h2>Escolha a sua massa favorita</h2>
+					<p>Clique nos ingrediente de acordo com o seu gosto</p>
+				</div>
+				<div class="ingredientes">
+					<?php 
+						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE idgcategoria != 1 AND idgcategoria != 2";
+						$oCon->executarSQL($sql);
+						$etapa3 = $oCon->lerResultados();
+						foreach ($etapa3 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+								<img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="rdoMassa1" id="id_molho2">
+								<label><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
+				</div>
+
+				<div class="botoes">
+					<button>Anterior</button>
+					<button>Próximo</button>
+				</div>
 		</div>
 		<div class="etapa4">
-			
+			<div class="titulo2">
+					<h2>Escolha a sua massa favorita</h2>
+					<p>Clique nos ingrediente de acordo com o seu gosto</p>
+				</div>
+				<div class="ingredientes">
+					<?php 
+						foreach ($etapa4 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+								<img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="rdoMassa1" id="id_molho2">
+								<label><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
+				</div>
+
+				<div class="botoes">
+					<button>Anterior</button>
+					<button>Finalizar</button>
+				</div>
 		</div>
 
 		<!--Visão da Tela Inicial da Montagem do Sabor-->
@@ -153,7 +224,7 @@
     </form>
 </section>
 
-<section class="axiliar">
+<section class="auxiliar">
 	<p>Pão</p>
 </session>
 </body>

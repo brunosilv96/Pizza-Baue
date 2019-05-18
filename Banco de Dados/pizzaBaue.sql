@@ -58,3 +58,19 @@ CREATE TABLE cardapio(
 
 
 insert into usuario (nome, email, cpf, senha, funcionario) values("Administrador", "admin@admin.com", "999.999.999-99", MD5("123456"), "Sim");
+
+CREATE TABLE categoria(
+    ctgcodigo int PRIMARY KEY AUTO_INCREMENT,
+    ctgnome varchar(50)
+);
+
+CREATE TABLE ingrediente(
+    igdcodigo int PRIMARY KEY AUTO_INCREMENT,
+    igdnome varchar(70),
+    igdvalor float(5.2),
+    igdimagem varchar(100),
+    igdcategoria int,
+    FOREIGN KEY (idgcategoria) REFERENCES categoria(ctgcodigo)
+);
+
+INSERT INTO categoria(ctgnome) VALUES("Massas"), ("Molhos"), ("Quijos"), ("Carnes"), ("Complementos"), ("Finalizações");
