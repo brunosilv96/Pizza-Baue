@@ -10,7 +10,44 @@
 }
 
 
+.conteudo{
+    width: 75%;
+    height: 1000px;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 10%;
+    background-color: rgb(248, 250, 251);
+    margin-left: 20%;
+    padding-top: 15%;
+   
+}
 
+.conteudo h3{
+    color: black;
+    margin-top: -3rem;
+}
+
+iframe{
+    width: 100%;
+    height: 1100px;
+    margin: auto;
+    margin-top: -1.5rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 8;
+  
+
+    
+}
+
+/* FIM DO BODY */
+
+footer{
+    clear: both;
+}
 .navegacao{
     width: 100%;
     height: 40px;
@@ -33,20 +70,19 @@ header::before{
     height: 0vh;
 }
 .user-header{
-    height: 80px;
+    height: 100px;
     width: 100%;
     background-color:  rgb(255, 255, 255);
 }
 
 
-section{
-    
+/*section{
     width: 98%;
     height: 800px;
     box-sizing: border-box;
     text-align: center;
     margin: auto;
-}
+}*/
  /* INICIO NAVBAR USER */
  .navbar-user {
     position: fixed;
@@ -55,15 +91,16 @@ section{
     width: 100%;
     transition: all 300ms ease-in-out;
     z-index: 10;  
-    margin-top:0%;
-    margin-left: 280;
+    top:0px;
+   /* margin-left: 280;*/
     background-color:  rgb(255, 255, 255);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+   
     
 }
 .navbar-user .logo {
     padding: 1.7rem 1.6rem;
-    margin-left: 14rem;
+    margin-left: 1px;
     margin-top: -6.7rem;    
 }
 .navbar-user .logo img {
@@ -72,64 +109,182 @@ section{
     margin-top: .5%;
 }
 .navbar-user ul {
-    float:left ;
-    margin-left: 1rem;  
+    margin: 10px;
+  display: flex;
+  list-style:none;
+  padding: -5px;
+  justify-content:center;
+  
 }
 .navbar-user ul li {
     display: inline;
+    min-width: 100px;
+    
 }
 .navbar-user ul li a {
-    padding: .5rem;
+    padding: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     /*transition: color 300ms ease-in-out;*/
     border-radius: 2px;
     font-size: 0.8rem;
-    color: rgb(146, 146, 146);
+    color: rgb(146,146,146);
      border-radius: 2px;
+     min-width: 100px;
+   
 }
-.navbar-user .ul-2{
-    margin: 0 7rem;
-}
+
 .navbar-user ul li a:hover{
     color: #555555;
     border-bottom: 3px solid rgb(255, 255, 255); 
-   /* transition: all 300ms ease-in-out; */
+    transition: all 300ms ease-in-out; 
 }
 
-.navbar-user .container-nav-user {
-    margin: 0 10rem;
+.navbar-user.scrolling ul li a:hover{
+    color: #4d4d4d;
+    border-bottom:none;
+    transition: all 300ms ease-in-out;
 }
-.navbar-user .container-nav2-user{
-    margin: 0 -12rem;
-}
+
+
 .navbar-user.scrolling {
     margin-top: -.1%;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1200px)
+{
+    .navbar-user ul
+  {
+    flex-wrap: wrap;
+	
+  }
+}
+
+/* MENU SCROLL
+.navbar-user.scrolling {
+    margin-top: -.1%;
+    background-color:  rgb(206, 55, 55);
+    box-sizing: border-box;
+    width: 85%;
+    margin-left: 280;
+    position: fixed;
+    height: 80px;
+    line-height: 80px;
+    z-index: 997;
 }
 
 
+.navbar-user.scrolling .logo {
+    padding: 1.7rem 1.6rem;
+   margin-left: 14rem;
+   margin-top: -6.7rem;  
+}
+.navbar-user .logo .img {
+    width: 100px;
+    margin-top: .5%;
+}
+.navbar-user.scrolling .logo img {
+   /* transition: all 300ms ease-in-out;
+    width: 100px;
+    margin-top: -.2%;
+}
+.navbar-user.scrolling ul{
+    float:left ;
+    margin-left: 1rem;  
+
+}
+.navbar-user.scrolling .ul-2{
+    margin: 0 7rem;
+}
+.navbar-user.scrolling ul li a {
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+     padding: .5rem;
+     border-radius: 2px;
+
+}
+*/
 /*FIM NAVBAR USER*/
 
 /*INICIO NAV LATERAL*/
-.nav-lat p{
+
+.nav-lat {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background:#2c323f;
+    overflow-x: hidden;
+    transition: all 500ms ease-in;
+    padding-top: 60px;
+    box-sizing: border-box;
+    margin-bottom: 200px;
+    margin-right: 1%;
+    margin-left: -1%;
+  }
+
+  .nav-lat p{
     color: white;
 }
+  
+  .nav-lat a {
+    padding: 0 !important;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .87);
+    display: block;
+    transition: 0.3s;
+    font-weight: 300;
+    line-height: 30px;
+  }
 
-.nav-lat{
-    width: 280px;
+  
+  .nav-lat .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #8d8d8d;
+  }
+
+  
+  .openbtn {
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #2c323f;;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: 60px;
     height: 100%;
-    float: left;
-    margin-right: 1%;
-    margin-bottom: 200px;
-    box-sizing: border-box;
-    background: #2c323f;
-    transition: all 300ms ease-in-out;
-    margin-left: -1%;
-    position:fixed;
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, .2);
-    
-}
+  }
+  
+  .collapse-items{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)  
+ }
+  
+  /*.openbtn:hover {
+    background-color: #444;
+  }*/
+  
+  #main {
+    transition:margin-left .5s;
+    padding: 16px;
+  }
+  
+  
+  @media screen and (max-height: 450px) {
+    .nav-lat {padding-top: 15px;}
+    .nav-lat a {font-size: 18px;}
+  }
 
 .foto-user{
     width: 150px;
@@ -151,20 +306,36 @@ section{
     width: 50%;
     height: 40px;
     margin: auto;
-    color: rgb(189, 189, 189);
+    color: rgb(255, 255, 255);
 }
 
 .nome-user > a{
     text-decoration: none;
-    color: rgb(189, 189, 189);
+    color: rgb(126, 126, 126);
 }
 .menu-usuario{
     width: 100%;
     height: 300px;
     color: rgb(99, 99, 99);
+    float: left;
 }
 .menu-icon{
     margin-right: 10%;
+    float: left;
+    padding-top: 7px;
+}
+
+.menu-icon-collapse{
+    color:rgb(248, 250, 251);
+    padding-top: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.menu-icon-collapse:hover{
+    color:rgb(199, 199, 199);
+    transform: scale(1.1);
+    transition: all 300ms ease-in-out;
 }
 .menu-usuario{
     width: 100%;
@@ -176,7 +347,7 @@ section{
     margin: auto;
     margin-top: 30px;
     margin-bottom: 20px;
-    color: rgb(189, 189, 189);
+    color: rgb(189,189,189);
     border-bottom: 1.5px solid rgb(65, 65, 65);
     font: bold;
 	padding: 4px 0;
@@ -224,39 +395,7 @@ section{
     text-decoration: none;
 }
 
-.conteudo{
-    width: 75%;
-    height: 1000px;
-    float: left;
-    box-sizing: border-box;
-    padding-top: 10%;
-    background-color: rgb(248, 250, 251);
-    margin-left: 20%;
-    padding-top: 15%;
-   
-}
 
-.conteudo h3{
-    color: black;
-    margin-top: -3rem;
-}
-
-iframe{
-    width: 100%;
-    height: 950px;
-    margin: auto;
-    margin-top: -1.5rem;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: white;
-    overflow: hidden;
-    
-}
-
-/* FIM DO BODY */
-
-footer{
-    clear: both;
-}
 
 .new-badge{
     font-weight: 300;
@@ -269,3 +408,4 @@ footer{
     margin-left: 4%;
    
 }
+

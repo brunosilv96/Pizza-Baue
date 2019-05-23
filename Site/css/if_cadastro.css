@@ -8,7 +8,27 @@ table {
 	margin-top: 25px;
 	margin-left: 100px;
 }
+.table-users{
+	width: 700x;
+	border-collapse: collapse;
+	border: 1px solid #eee;
+	
+}
+.tr1{
+	background-color: #ebebeb;
+	
+}
+.tr:hover {
+	background-color: #f4f4f4;
+	transition: all 300ms ease-in-out;
+}
 
+.td {
+	color: rgb(126, 126, 126);
+	border: 1px solid #eee;
+	padding: 12px 35px;
+	border-collapse: collapse;
+}
 form{
 	height: 90%;
 }
@@ -196,6 +216,20 @@ color: #FFFFFF;
 }
 .delete:hover{
 	background-color:  rgb(153, 12, 12);
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
+}
+
+.optusers{
+	padding: 7px 10px;
+	border-radius: 7px;
+	background-color: #14742b;
+	float: left;
+	margin-left: 1rem;
+}
+
+.optusers:hover{
+	background-color: #df7e00;
 	transition: all 300ms ease-in-out;
 	cursor: pointer;
 }

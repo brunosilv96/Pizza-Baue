@@ -70,7 +70,7 @@ CREATE TABLE ingrediente(
     igdvalor float(5.2),
     igdimagem varchar(100),
     igdcategoria int,
-    FOREIGN KEY (idgcategoria) REFERENCES categoria(ctgcodigo)
+    FOREIGN KEY (igdcategoria) REFERENCES categoria(ctgcodigo)
 );
 
 INSERT INTO categoria(ctgnome) VALUES("Massas"), ("Molhos"), ("Quijos"), ("Carnes"), ("Complementos"), ("Finalizações");

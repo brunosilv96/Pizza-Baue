@@ -37,32 +37,36 @@ if($oCon->abrirConexao()){
 <head>
 	<title>Listar Todos os Usuários</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/if_global.css">
+	<link rel="stylesheet" href="css/if_cadastro.css">
+	<link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-	<h1>Lista de Usuários Cadastrados</h1>
+
+		<h3>Usuários Cadastrados</h3>
 	<form> 
-		<input type="submit" name="semFuncionario" value="Listar Todos">
-		<input type="submit" name="comFuncionario" value="Apenas Funcionários">
-		<input type="submit" name="comCliente" value="Apenas Clientes">
+		<input type="submit" name="semFuncionario" value="Listar Todos" class="optusers">
+		<input type="submit" name="comFuncionario" value="Apenas Funcionários" class="optusers">
+		<input type="submit" name="comCliente" value="Apenas Clientes" class="optusers">
 	</form>
-	<table border="1">
-		<tr>
-			<td>ID</td>
-			<td>Nome</td>
-			<td>Usuário</td>
-			<td>CPF</td>
-			<td>Funcionário</td>
+	<table class="table-users">
+		<tr class="tr tr1">
+			<td class="td">ID</td>
+			<td class="td">Nome</td>
+			<td class="td">Usuário</td>
+			<td class="td">CPF</td>
+			<td class="td">Funcionário</td>
 		</tr>
 
 		<?php 
 			foreach($lista as $i){
 		?>
-			<tr>
-				<td><?php echo $i[0] ?></td>
-				<td><?php echo $i[1] ?></td>
-				<td><?php echo $i[2] ?></td>
-				<td><?php echo $i[3] ?></td>
-				<td><?php echo $i[5] ?></td>
+			<tr class="tr">
+				<td class="td"><?php echo $i[0] ?></td>
+				<td class="td"><?php echo $i[1] ?></td>
+				<td class="td"><?php echo $i[2] ?></td>
+				<td class="td"><?php echo $i[3] ?></td>
+				<td class="td"><?php echo $i[5] ?></td>
 			</tr>
 		<?php 
 			}
@@ -71,5 +75,6 @@ if($oCon->abrirConexao()){
 			unset($_GET);
 		?>
 	</table>
+	
 </body>
 </html>
