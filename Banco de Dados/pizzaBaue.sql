@@ -74,3 +74,8 @@ CREATE TABLE ingrediente(
 );
 
 INSERT INTO categoria(ctgnome) VALUES("Massas"), ("Molhos"), ("Quijos"), ("Carnes"), ("Complementos"), ("Finalizações");
+INSERT INTO ingrediente(igdnome, igdvalor, igdimagem, igdcategoria) VALUES("Bacon", 10.50, "bacon.png", 4), ("Atum", 2.50, "atum.png", 4), ("Calabresa", 5.99, "calabresa.png", 4);
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Massa Tradicional', '2.99', 'tradicional.png', '1'), (NULL, 'Molho de Tomate', '2.99', 'tomate.png', '2'), (NULL, 'Presunto', '2.99', 'presunto.png', '3'), (NULL, 'Azeitona Preta', '2.99', 'azeitona-preta.png', '5'), (NULL, 'Manjericão', '2.99', 'manjericao.png', '6');
+
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Massa Integral', '4.99', 'integral.png', '1');
+
