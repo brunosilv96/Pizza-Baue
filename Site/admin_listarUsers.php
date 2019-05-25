@@ -37,17 +37,16 @@ if($oCon->abrirConexao()){
 <head>
 	<title>Listar Todos os Usuários</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/if_global.css">
-	<link rel="stylesheet" href="css/if_cadastro.css">
-	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/if_usuarios.css">
 </head>
 <body>
-
 		<h3>Usuários Cadastrados</h3>
 	<form> 
-		<input type="submit" name="semFuncionario" value="Listar Todos" class="optusers">
-		<input type="submit" name="comFuncionario" value="Apenas Funcionários" class="optusers">
-		<input type="submit" name="comCliente" value="Apenas Clientes" class="optusers">
+		<div class="botoes">
+			<input type="submit" name="semFuncionario" value="Listar Todos" class="optusers">
+			<input type="submit" name="comFuncionario" value="Apenas Funcionários" class="optusers">
+			<input type="submit" name="comCliente" value="Apenas Clientes" class="optusers">
+		</div>
 	</form>
 	<table class="table-users">
 		<tr class="tr tr1">

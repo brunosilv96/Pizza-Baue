@@ -1,123 +1,271 @@
 *{
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-body{
-	background:url(../images/fundo-madeira-e.jpg);
-	width: 100%;
-	margin: auto;
-	position: relative;
-    margin: 0;
-    padding: 0;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-	background-position: center;
-
-}
-
-.botao{
-    width: 30%;
-	margin-top: 40%;
-}
-/*.btn-inicio{
-    width: 52%;
-	height: 15%;
-	border-radius: 20px;
-	border:none;
-	background-image: linear-gradient(to right,  rgb(206, 55, 55) , rgb(124, 12, 12));
-	color: #fff;
-	font-size: 2rem;
-    display: block;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-}
-.btn-inicio:hover{
-	background-color:  rgb(161, 24, 24);
-	transition: all 300ms ease-in-out;
-	cursor: pointer;
-}*/
-
-.sessao1{
+.montagem{
 	width: 80%;
 	height: 100vh;
+	border: 1px solid black;
 	box-sizing: border-box;
-	position: relative;
+	margin: auto;
+	float: left;
+}
+
+div.etapas{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	display: none;
+}
+.etapa0{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	display: block; 
+	padding-top: 7%;
+}
+
+.etapa1{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	display: none;
+	overflow: auto;
+}
+
+.etapa2{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	display: none;
+	overflow: auto;
+}
+
+.etapa3{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: none;
+}
+
+.etapa4{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: none;
+}
+
+.etapa5{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: none;
+}
+
+.etapafim{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	display: none;
+}
+
+.titulo{
+	width: 100%;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.titulo2{
+	width: 80%;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	position: fixed;
+}
+
+.card{
+	width: 23%;
+	height: 260px;
+	box-sizing: border-box;
+	margin: 15px;
+	float: left;
+}
+
+.imagem{
+	width: 70%;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.sabor{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px;
+}
+
+.preco{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px;
+}
+
+.botoes{
+	width: 50%;
+	height: 40px;
+	margin: auto;
+	border: 1px solid black;
+	box-sizing: border-box;
+	clear: both;
+}
+
+button{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+/*Configurações da Segunda Etapa da Montagem*/
+
+.card2{
+	width: 15%;
+	height: 200px;
+	box-sizing: border-box;
 	float: left;
 	text-align: center;
+	margin: 10px;
 }
 
-div.opcoes {
-    width: 100%; 
-    height: 100vh;
-    display: none;   
-    position: absolute;
-    box-sizing: border-box;
-	background:url(../images/fundo-madeira-e.jpg);
-	color: #fff;
+.imagem2{
+	width: 75%;
+	height: 140px;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
-.foto{
-    width: 350px; 
+.sabor2{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	padding: 3px;
 }
 
-.sessao2{
+.preco2{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	padding: 3px;
+}
+
+iframe{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.ingredientes{
+	margin-top: 70px;
+	box-sizing: border-box;
+}
+
+/*Estilos da .Etapa0 - Introdução a Montagem*/
+.introducao{
+	width: 80%;
+	height: 80%;
+	box-sizing: border-box;
+	margin: auto;
+	text-align: center;
+	padding: 50px;
+	border: 1px solid black;
+}
+
+.intro_titulo{
+	width: 100%;
+	height: 10%;
+	box-sizing: border-box;
+	margin-top: 30px;
+}
+
+.intro_conteudo{
+	width: 100%;
+	height: 70%;
+	margin-top: 30px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.intro_conteudo p{
+	margin-top: 20px;
+}
+
+/*DIV que cobre o botão*/
+.intro_botao{
+	width: 40%;
+	height: 40px;
+	margin: auto;
+}
+
+/*Estilo somente para o bontão da página de introdução*/
+.btn_intro{
+	width: 100%;
+	height: 40px;
+}
+
+/*Estilo de edição da barra auxiliar da montagem da pizza*/
+.auxiliar{
 	width: 20%;
 	height: 100vh;
-
 	box-sizing: border-box;
 	float: left;
+	border: 1px solid black;
 }
 
-.previa{
+.contrucao{
 	width: 100%;
 	height: 60vh;
 	box-sizing: border-box;
 	border: 1px solid black;
-	color: #fff;
-	text-align: center;
 }
 
-.calcula{
+.totalizador{
 	width: 100%;
 	height: 40vh;
 	box-sizing: border-box;
-    border: 1px solid black;
-	text-align: center;
-	color: #fff;
-}
-
-.view-mensagem{
-	color: #009900;
-	text-align: center;
+	border: 1px solid black;
 }
 
 
 
-label
-{
-	display: block;
-	font-family: sans-serif;
-	margin: 3px;
-	padding: 15px;
-	color: #909090;
-	width: 20%;
-}
-#opcao2 label:hover
-{
-	background: #00990034;
-}
-input[type="checkbox"]
-{
-	opacity: 0;
-}
-input[type="checkbox"]:checked + SPAN
-{
-	font-weight: bolder;
-	color: #009900;
-}
+
+
+
+
+
+
+
+
+
+
+

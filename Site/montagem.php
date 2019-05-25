@@ -1,114 +1,231 @@
+<?php 
+require_once 'php/lib/bancoDeDados.php';
+
+$oCon = new BancoDeDados();
+
+if(!$oCon->abrirConexao()){
+	echo "Sem conexão com Banco de Dados";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Montagem da Pizza</title>
+	<title>Montagem de Ingredientes</title>
 	<meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/montagem.css">
-
+	<link rel="stylesheet" type="text/css" href="css/montagem.css">
 </head>
 <body>
-<!--container principal-->
-<section class="sessao1">
+<section class="montagem">
+	<form name="frmMontagem">
+		<!--Inicio da Primeira Etapa da Montagem-->
+		<div id="etapa1" class="etapa1">
+			<div class="titulo">
+				<h2>Escolha a sua massa favorita</h2>
+				<p>Clique nos ingrediente de acordo com o seu gosto</p>
+			</div>
+			<?php 
+				$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 1";
+				$oCon->executarSQL($sql);
+				$etapa1 = $oCon->lerResultados();
 
+				foreach ($etapa1 as $lista) {
+			?>
+			<div class="card">
+				<div class="imagem">
+					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
+				</div>
+				<div class="sabor">
+					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>">
+					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+				</div>
+				<div class="preco">
+					<p>R$ <?php echo $lista['igdvalor']?></p>
+				</div>
+			</div>
+			<?php 
+				}
+			?>
+			<div class="botoes">
+				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2)">Próximo</button>
+			</div>
+		</div>
 
-	<!--Primeira etapa-->
-    <div id="opcao1" class="opcoes"><h1>Escolha seu molho</h1>
-        <br><br>
-        
-        <label for="pic1"><img src="images/montagem/pic1.png" class="foto" alt="">
-        <input type="radio" name="escolha" id="pic1" value="molho1">
-        
-        <br><br>
+		<div id="etapa2" class="etapa2">
+			<div class="titulo">
+				<h2>Escolha a sua molho favorito</h2>
+				<p>Clique nos ingrediente de acordo com o seu gosto</p>
+			</div>
+			<?php 
+				$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 2";
+				$oCon->executarSQL($sql);
+				$etapa2 = $oCon->lerResultados();
 
-        <label for="pic2"><img src="images/montagem/pic2.jpg" class="foto" alt="">
-        <input type="radio" name="escolha" id="pic2" value="molho2">
+				foreach ($etapa2 as $lista) {
+			?>
+			<div class="card">
+				<div class="imagem">
+					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
+				</div>
+				<div class="sabor">
+					<input type="radio" name="molho" id="<?php echo $lista['igdnome']?>">
+					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+				</div>
+				<div class="preco">
+					<p>R$ <?php echo $lista['igdvalor']?></p>
+				</div>
+			</div>
+			<?php 
+				}
+			?>
+			<div class="botoes">
+				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(1)">Voltar</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(3)">Próximo</button>
+			</div>
+		</div>
 
-        
-        <br><br><button type="submit" id="btn1" onclick="mostrar();visualizaDiv(2);">Proximo</button>
-    </div>
+		<!--Inicio da Segunda Etapa da Montagem-->
+			<div id="etapa3" class="etapa3">
+				<div class="titulo2">
+					<h2>Escolha seus ingredientes favoritos</h2>
+					<p>Clique nos ingredientes de acordo com o seu gosto</p>
+				</div>
+				<div class="ingredientes">
+					<?php 
+						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 3 OR igdcategoria = 4";
+						$oCon->executarSQL($sql);
+						$etapa2 = $oCon->lerResultados();
 
+						foreach ($etapa2 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
+				</div>
 
-    <!--Segunda etapa-->
-    <div id="opcao2" class="opcoes"><h2>Escolha seus Ingredientes</h2><br>
-        (Máximo 5 ingredientes) 
+				<div class="botoes">
+					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(2)">Voltar</button>
+					<button type="button" id="btn2" class="botao" onclick="visualizaDiv(4)">Próximo</button>
+				</div>
+			</div>
 
-        <form>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Parmesão</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Mussarela</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Gorgonzola</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Catupiry</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Mussarela de Búfala</span> </label>
-            <br>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Peito de Peru</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Lombo</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Bacon</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Calabresa</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Pepperoni</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Presunto</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Atum</span> </label>
-            <label><input type="checkbox" name="radValor" onclick="fnIngredientes(this)" /> <span>Frango</span> </label>
-        </form>
+			<!--Inicio da Terceira Etapa da Montagem-->
+		<div id="etapa4" class="etapa4">
+			<div class="titulo2">
+					<h2>Escolha os seus complementos favoritos</h2>
+					<p>Clique nos ingrediente de acordo com o seu gosto</p>
+				</div>
+				<div class="ingredientes">
+					<?php 
+						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 5";
+						$oCon->executarSQL($sql);
+						$etapa3 = $oCon->lerResultados();
 
-    	<button id="btn2" onclick="visualizaDiv(3)">Proximo</button>
-    	<button id="btn2" onclick="visualizaDiv(1)">voltar</button>
-    </div>
+						foreach ($etapa3 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
+				</div>
 
+				<div class="botoes">
+					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(3)">Voltar</button>
+					<button type="button" id="btn3" class="botao" onclick="visualizaDiv(5)">Próximo</button>
+				</div>
+		</div>
 
-<!--Terceira etapa-->
-    <div id="opcao3" class="opcoes">Passo 3
-        <button id="btn3" onclick="visualizaDiv(4)">Proximo</button>
-        <button id="btn3" onclick="visualizaDiv(2)">voltar</button>
-    </div>
+		<!--Inicio da Quarta Etapa da Montagem-->
+		<div id="etapa5" class="etapa5">
+			<div class="titulo2">
+					<h2>Escolha a sua finalização</h2>
+					<p>Clique nos ingrediente de acordo com o seu gosto</p>
+				</div>
+				<div class="ingredientes">
+					<?php 
+						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 6";
+						$oCon->executarSQL($sql);
+						$etapa4 = $oCon->lerResultados();
 
+						foreach ($etapa4 as $lista) {
+					?>
+					<div class="card2">
+						<div class="imagem2">
+						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
+							</div>
+							<div class="sabor2">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+							</div>
+							<div class="preco2">
+								<p>R$ <?php echo $lista['igdvalor']?></p>
+							</div>
+					</div>
+					<?php 
+						}
+					?>
+				</div>
 
-<!--Quarta etapa-->
-    <div id="opcao4" class="opcoes">Passo 4
-        <button id="btn3" onclick="visualizaDiv(3)">voltar</button>
-    </div>
+				<div class="botoes">
+					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4)">Voltar</button>
+					<button type="button">Finalizar</button>
+				</div>
+		</div>
 
-    <!--Tela de inicio-->
-    <button id="btn1" class="botao" onclick="visualizaDiv(1)">Monte sua pizza</button>
-
-    <p>Começe a montar o seu sabor de acordo com o seu gosto</p>
-    <p>Clique no botão!</p>
+		<!--Visão da Tela Inicial da Montagem do Sabor-->
+		<div class="etapa0">
+			<div class="introducao">
+				<div class="intro_titulo">
+					<h1>Começe a montar o seu sabor de acordo com o seu gosto</p></h1>
+		    		<p>Clique no botão!</p>
+				</div>
+				<div class="intro_conteudo">
+					<p>Bem vindo ao painel inicial de como iniciar a montagem do seu próprio sabor de pizza, navegue entre os ingredientes selecionando os que mais se ajustam ao seu paladar, no final de tudo se delicie com a própria criação</p>
+					<p>Bom Apetite!!</p>
+				</div>
+			</div>
+			<div class="intro_botao">
+				<button type="button" id="btn1" class="btn_intro" onclick="visualizaDiv(1)">Monte sua pizza</button>
+			</div>
+	    </div>
+	    <div class="etapafim">
+	    	<!--Etapa final - Exibe todas as escolhas do usuário-->
+	    </div>
+    </form>
 </section>
 
-<!--Container de vizualização -->
-<section class="sessao2">
-    <div class="previa">
-        Suas Escolhas:<br>
-        <br><span class="view-mensagem"></span>
-    
-    </div>
-
-	<div class="calcula">Calculadora
-        <br><br>
-        <div>
-            Valor da Unidade <br>R$<label id="din"> 25.50</label>
-        </div>
-
-        <br><br>
-
-        <select name="conta" onchange="mult()">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="9">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>		
-        </select>
-
-        <br><br>
-        <div>
-            <label id="result"></label>
-        </div>
-</section>
-
-
+<!--Menu lateral na área lateral da página de montagem-->
+<section class="auxiliar">
+	<div class="contrucao">
+		
+	</div>
+	<div class="totalizador">
+		
+	</div>
+</session>
 </body>
 <script src="js/montagem.js"></script>
 </html>
