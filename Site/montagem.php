@@ -18,7 +18,7 @@ if(!$oCon->abrirConexao()){
 <section class="montagem">
 	<form name="frmMontagem">
 		<!--Inicio da Primeira Etapa da Montagem-->
-		<div id="etapa1" class="etapa1">
+		<div id="etapa1" class="etapa1 global-etapas">
 			<div class="titulo">
 				<h2>Escolha a sua massa favorita</h2>
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -39,19 +39,19 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p>R$ <?php echo $lista['igdvalor']?></p>
+					<p class="price">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
 				}
 			?>
 			<div class="botoes">
-				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(2)">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</i></button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2)">Próximo<i class="fas fa-arrow-right"></i></button>
 			</div>
 		</div>
 
-		<div id="etapa2" class="etapa2">
+		<div id="etapa2" class="etapa2 global-etapas">
 			<div class="titulo">
 				<h2>Escolha a sua molho favorito</h2>
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -72,7 +72,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p>R$ <?php echo $lista['igdvalor']?></p>
+					<p class="price">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -85,7 +85,7 @@ if(!$oCon->abrirConexao()){
 		</div>
 
 		<!--Inicio da Segunda Etapa da Montagem-->
-			<div id="etapa3" class="etapa3">
+			<div id="etapa3" class="etapa3 global-etapas">
 				<div class="titulo2">
 					<h2>Escolha seus ingredientes favoritos</h2>
 					<p>Clique nos ingredientes de acordo com o seu gosto</p>
@@ -107,7 +107,7 @@ if(!$oCon->abrirConexao()){
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
-								<p>R$ <?php echo $lista['igdvalor']?></p>
+								<p class="price">R$ <?php echo $lista['igdvalor']?></p>
 							</div>
 					</div>
 					<?php 
@@ -122,7 +122,7 @@ if(!$oCon->abrirConexao()){
 			</div>
 
 			<!--Inicio da Terceira Etapa da Montagem-->
-		<div id="etapa4" class="etapa4">
+		<div id="etapa4" class="etapa4 global-etapas">
 			<div class="titulo2">
 					<h2>Escolha os seus complementos favoritos</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -144,7 +144,7 @@ if(!$oCon->abrirConexao()){
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
-								<p>R$ <?php echo $lista['igdvalor']?></p>
+								<p class="price">R$ <?php echo $lista['igdvalor']?></p>
 							</div>
 					</div>
 					<?php 
@@ -159,7 +159,7 @@ if(!$oCon->abrirConexao()){
 		</div>
 
 		<!--Inicio da Quarta Etapa da Montagem-->
-		<div id="etapa5" class="etapa5">
+		<div id="etapa5" class="etapa5 global-etapas">
 			<div class="titulo2">
 					<h2>Escolha a sua finalização</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -181,7 +181,7 @@ if(!$oCon->abrirConexao()){
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
-								<p>R$ <?php echo $lista['igdvalor']?></p>
+								<p class="price">R$ <?php echo $lista['igdvalor']?></p>
 							</div>
 					</div>
 					<?php 
@@ -191,20 +191,20 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4)">Voltar</button>
-					<button type="button">Finalizar</button>
+					<button type="button" class="botao">Finalizar</button>
 				</div>
 		</div>
 
 		<!--Visão da Tela Inicial da Montagem do Sabor-->
-		<div class="etapa0">
+		<div class="etapa0 global-etapas">
 			<div class="introducao">
 				<div class="intro_titulo">
-					<h1>Começe a montar o seu sabor de acordo com o seu gosto</p></h1>
+					<h1>Começe a montar a sua própria pizza!</p></h1>
 		    		<p>Clique no botão!</p>
 				</div>
 				<div class="intro_conteudo">
-					<p>Bem vindo ao painel inicial de como iniciar a montagem do seu próprio sabor de pizza, navegue entre os ingredientes selecionando os que mais se ajustam ao seu paladar, no final de tudo se delicie com a própria criação</p>
-					<p>Bom Apetite!!</p>
+					<p>Bem vindo ao painel inicial da montagem do seu próprio sabor de pizza, navegue entre os ingredientes selecionando os que mais se ajustam ao seu paladar, no final de tudo se delicie com a própria criação</p>
+					<p>Bom Apetite!</p>
 				</div>
 			</div>
 			<div class="intro_botao">
@@ -225,7 +225,7 @@ if(!$oCon->abrirConexao()){
 	<div class="totalizador">
 		
 	</div>
-</session>
+</section>
 </body>
 <script src="js/montagem.js"></script>
 </html>

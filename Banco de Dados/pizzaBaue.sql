@@ -74,8 +74,15 @@ CREATE TABLE ingrediente(
 );
 
 INSERT INTO categoria(ctgnome) VALUES("Massas"), ("Molhos"), ("Quijos"), ("Carnes"), ("Complementos"), ("Finalizações");
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Massa Pan', '2.99', 'pan2.png', '1');
 INSERT INTO ingrediente(igdnome, igdvalor, igdimagem, igdcategoria) VALUES("Bacon", 10.50, "bacon.png", 4), ("Atum", 2.50, "atum.png", 4), ("Calabresa", 5.99, "calabresa.png", 4);
 INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Massa Tradicional', '2.99', 'tradicional.png', '1'), (NULL, 'Molho de Tomate', '2.99', 'tomate.png', '2'), (NULL, 'Presunto', '2.99', 'presunto.png', '3'), (NULL, 'Azeitona Preta', '2.99', 'azeitona-preta.png', '5'), (NULL, 'Manjericão', '2.99', 'manjericao.png', '6');
-
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Tomate e Pimenta', '3.50', 'tomate-e-pimenta.png', '2'), (NULL, 'Molho Pesto', '2.50', 'pesto.png', '2');
 INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Massa Integral', '4.99', 'integral.png', '1');
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Queijo Parmesão', '2.99', 'parmesao.png', '3'), (NULL, 'Mussarela', '1.99', 'mussarela.png', '3'), (NULL, 'Catupiry', '3.99', 'catypiry.png', '3'), (NULL, 'Gorgonzola', '3.50', 'gorgonzola.png', '3');
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Lombo', '4.00', 'lombo.png', '4'), (NULL, 'Pepperoni', '5.50', 'pepperoni.png', '4'), (NULL, 'Frango', '6.99', 'frango.png', '4');
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Tomate em Cubos', '2.99', 'tomate-em-cubos.png', '5'), (NULL, 'Tomate Cereja', '2.50', 'tomate-cereja.png', '5'), (NULL, 'Milho', '2.99', 'milho.png', '5'), (NULL, 'Ovos', '1.50', 'ovo.png', '5');
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Champignon', '4.99', 'champingnon.png', '5'), (NULL, 'Pimentão', '2.99', 'pimentao.png', '5'), (NULL, 'Abacaxi', '3.99', 'abacaxi.png', '5'),(NULL, 'Palmito', '3.99', 'palmito.png', '5');
+INSERT INTO `ingrediente` (`igdcodigo`, `igdnome`, `igdvalor`, `igdimagem`, `igdcategoria`) VALUES (NULL, 'Orégano', '1.50', 'oregano.png', '6'), (NULL, 'Pimenta Calabresa', '2.50', 'pimenta-calabresa.png', '6'), (NULL, 'Azeite de Oliva', '1.10', 'azeite-de-oliva.png', '6'), (NULL, 'Alho Torrado', '1.50', 'alho-torrado.png', '6'), (NULL, 'Rúcula', '2.80', 'rucula.png', '6'), (NULL, 'Escarola', '2.50', 'escarola.png', '6'), (NULL, 'Tomate Seco', '1.10', 'tomate-seco.png', '6');
+
 
