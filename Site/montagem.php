@@ -68,7 +68,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="molho" id="<?php echo $lista['igdnome']?>">
+					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -80,7 +80,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(1)">Voltar</button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(3)">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3)">Próximo</button>
 			</div>
 		</div>
 
@@ -197,7 +197,11 @@ if(!$oCon->abrirConexao()){
 
 		<!--Visão da Tela Inicial da Montagem do Sabor-->
 		<div class="etapa0 global-etapas">
+		<div class="logo">
+			<a href="index.php"><img src="./images/logo4.png"></a>
+			</div>
 			<div class="introducao">
+		
 				<div class="intro_titulo">
 					<h1>Começe a montar a sua própria pizza!</p></h1>
 		    		<p>Clique no botão!</p>
@@ -219,11 +223,11 @@ if(!$oCon->abrirConexao()){
 
 <!--Menu lateral na área lateral da página de montagem-->
 <section class="auxiliar">
-	<div class="contrucao">
-		
+	<div class="construcao">
+		<h3>Veja suas escolhas:</h3>
 	</div>
 	<div class="totalizador">
-		
+		<h3>Total a pagar:</h3>
 	</div>
 </section>
 </body>

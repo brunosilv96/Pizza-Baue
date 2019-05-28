@@ -83,7 +83,7 @@ if($conex->abrirConexao()){
 
         </nav>-->
         <section>
-        <div class="nav-lat" id="menu-collapse">
+        <div class="nav-lat nav-adaptativo" id="menu-collapse">
          
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
                  <div class="foto-user" id="frnCadastro">

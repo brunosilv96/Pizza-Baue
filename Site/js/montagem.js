@@ -16,32 +16,48 @@ function visualizaDiv (div) {
 }
 
 
-/* vetor = Array.from(document.getElementsByName('massa'))
-
-filtraV = vetor.filter(function(posicao) {return posicao.checked}); /*
-
+let msg = document.querySelector(".view-mensagem");
 /* VALIDANDO RADIO - ETAPDA 1 */
 function validaRadio(div) {
 
     /* Guarda os resultados dentro da Váriavel*/
     vetor = Array.from(document.getElementsByName('massa'));
-    vetorM = Array.from(document.getElementsByName('molho'));
 
     /* Filtra os resultados da Váriavel*/ 
     filtraV = vetor.filter(function(posicao) {return posicao.checked});
-    filtraM = vetorM.filter(function(posicao) {return posicao.checked});
-
-    if (filtraV.length == 0)
-        {
-            alert('Por favor, selecione um Ingrediente.'); 
+    let escolha = filtraV;
+    
+    if(filtraV.length == 0){
+            alert('Por favor, selecione uma Massa.');
             return false;
-        } 
+    }
     visualizaDiv(div);
-   return true;
+    msg.textContent = escolha;
+    return false;
 }
 
 
-/* VALIDANDO INGREDIENTES - ETAPA 2 */
+/* VALIDANDO Radio - ETAPA 2 */
+function validaRadio2(div) {
+
+    /* Guarda os resultados dentro da Váriavel*/
+    vetorM = Array.from(document.getElementsByName('molhos'));
+
+    /* Filtra os resultados da Váriavel*/ 
+    filtraM = vetorM.filter(function(posicao) {return posicao.checked});
+    
+    if(filtraM.length == 0){
+            alert('Por favor, selecione um Molho.');
+            return false;
+    }
+    visualizaDiv(div);
+    msg.textContent = filtraM;
+    return false;
+}
+
+
+/* VALIDANDO - ETAPA 3 */
+
 //Função Ingredientes
 function fnIngredientes(oObjeto){
     
@@ -67,3 +83,5 @@ function validaCheck() {
         alert('Escolha no minimo 3 ingredientes!');
     }
 }
+
+

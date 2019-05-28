@@ -20,7 +20,7 @@ p,i{
 }
 
 .global-etapas{
-	background: url(../images/madeira-fundo.jpg);
+	background: url(../images/madeira.jpg);
 	position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -36,10 +36,22 @@ p,i{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgba(65, 24, 6, 0.5);
+    background-color:rgba(65, 24, 6, 0.3);
     display: block;
 }
+.logo{
+	width: 120px;
+	height: 120px;
+	margin-top: -40px;
+	margin-left: 4rem;
+	z-index: 10;
+    position: relative;
+}
 
+.logo > img{
+	width: 100%;
+	height: 100%;
+}
 .montagem{
 	width: 80%;
 	height: 100vh;
@@ -59,7 +71,7 @@ div.etapas{
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
-	display: block; 
+	display: inline-block; 
 	padding-top: 7%;
 }
 
@@ -166,9 +178,13 @@ div.etapas{
 	z-index: 10;
 	position: relative;
 }
-
+.imagem img:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+}
 img{
-	width: 100%;
+	width: 100;
 	height: 100%;
 }
 
@@ -238,7 +254,7 @@ button{
 }
 
 .imagem2{
-	width: 75%;
+	width: 70%;
 	height: 140px;
 	margin: auto;
 	box-sizing: border-box;
@@ -246,7 +262,11 @@ button{
 	z-index: 10;
 	position: relative;
 }
-
+.imagem2 img:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+}
 .sabor2{
 	width: 100%;
 	height: 30px;
@@ -282,7 +302,7 @@ iframe{
 
 .introducao{
 	width: 80%;
-	height: 80%;
+	height: 60%;
 	box-sizing: border-box;
 	margin: auto;
 	text-align: center;
@@ -295,7 +315,6 @@ iframe{
 	height: 10%;
 	box-sizing: border-box;
 	margin-top: 30px;
-	z-index: 1000;
 	z-index: 2;
     position: relative;
 }
@@ -349,10 +368,27 @@ iframe{
 	height: 100vh;
 	box-sizing: border-box;
 	float: left;
-	border: 1px solid black;
+	background: url(../images/madeira.jpg);
+	position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-.contrucao{
+.auxiliar::before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(65, 24, 6, 0.5);
+    display: block;
+}
+
+.construcao{
 	width: 100%;
 	height: 60vh;
 	box-sizing: border-box;
