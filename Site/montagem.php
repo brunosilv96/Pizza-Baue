@@ -38,7 +38,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p name="valor" class="price">R$ <?php echo $lista['igdvalor']?></p>
+					<p name="valorMassa" class="price">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -71,7 +71,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p class="price">R$ <?php echo $lista['igdvalor']?></p>
+					<p name="valorMolho" class="price">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -106,7 +106,7 @@ if(!$oCon->abrirConexao()){
 								<label for="<?php echo $lista['igdnome']?>"><span><?php echo $lista['igdnome']?></span></label>
 							</div>
 							<div class="preco2">
-								<p class="price">R$ <?php echo $lista['igdvalor']?></p>
+								<p name="valorIngre" class="price">R$ <?php echo $lista['igdvalor']?></p>
 							</div>
 					</div>
 					<?php 
@@ -116,7 +116,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(2)">Voltar</button>
-					<button type="button" id="btn2" class="botao" onclick="visualizaDiv(4)">Próximo</button>
+					<button type="button" id="btn2" class="botao" onclick="validaCheck(4)">Próximo</button>
 				</div>
 			</div>
 
@@ -153,7 +153,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(3)">Voltar</button>
-					<button type="button" id="btn3" class="botao" onclick="visualizaDiv(5)">Próximo</button>
+					<button type="button" id="btn3" class="botao" onclick="validaCheck2(5)">Próximo</button>
 				</div>
 		</div>
 
@@ -190,7 +190,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4)">Voltar</button>
-					<button type="button" class="botao">Finalizar</button>
+					<button type="button" class="botao" onclick="validaCheck3(1)">Finalizar</button>
 				</div>
 		</div>
 
@@ -228,6 +228,7 @@ if(!$oCon->abrirConexao()){
 	</div>
 	<div class="totalizador">
 		<h3>Total a pagar:</h3>
+		<label id="resultado"></label>
 	</div>
 </section>
 </div>
