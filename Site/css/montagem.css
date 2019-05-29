@@ -5,6 +5,9 @@
 	padding: 0;
 	font-family: 'Nunito', sans-serif;
 }
+body{
+	overflow: hidden; 
+}
 
 body{
 	overflow: hidden; 
@@ -56,6 +59,7 @@ p,i{
 	width: 100%;
 	height: 100%;
 }
+
 .montagem{
 	width: 80%;
 	height: 100vh;
@@ -181,6 +185,8 @@ div.etapas{
 	box-sizing: border-box;
 	z-index: 10;
 	position: relative;
+	opacity: 2;
+	transition: opacity all 400ms ease-in;
 }
 .imagem img:hover{
 	transform: scale(1.1);
@@ -405,7 +411,10 @@ iframe{
 	box-sizing: border-box;
 	border: 1px solid black;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 /* Animação nas imagens ao carregar a página*/
 @-webkit-keyframes fadeIn {
 	0% { opacity: 0; }
@@ -494,6 +503,7 @@ iframe{
 
 
 */
+<<<<<<< HEAD
 
 .view-mensagem{
 	color: #ffffff;
@@ -522,5 +532,7 @@ input[type="checkbox"]:checked + label
 
 
 
+=======
+>>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 
 
