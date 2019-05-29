@@ -15,9 +15,16 @@ function visualizaDiv (div) {
     objDiv.style.display = "block";
 }
 
+function exibeInicio(div){
+    let altera = document.getElementById('inicial'+div);
+
+    altera.style.display = "block";
+
+}
+
+/* VALIDANDO RADIO - ETAPDA 1 */
 
 let msg = document.querySelector(".view-mensagem");
-/* VALIDANDO RADIO - ETAPDA 1 */
 function validaRadio(div) {
 
     /* Guarda os resultados dentro da Váriavel*/
@@ -68,6 +75,50 @@ function fnIngredientes(oObjeto){
 		if (oSelecao[nCont].checked)
 			nAux++;
 
+	if (nAux > 4)
+	{
+		nCont=0;
+		while (!oSelecao[nCont].checked || oSelecao[nCont]==oObjeto)
+			nCont++
+		oSelecao[nCont].checked=false;
+	}
+}	
+
+
+/* VALIDANDO - ETAPA 4 */
+
+//Função Complementos
+function fnComplementos(oObjeto){
+    
+	let oSelecao = document.getElementsByName('comple');
+	let nCont, nAux = 0;
+
+	for (nCont = 0; nCont < oSelecao.length; nCont++)
+		if (oSelecao[nCont].checked)
+			nAux++;
+
+	if (nAux > 3)
+	{
+		nCont=0;
+		while (!oSelecao[nCont].checked || oSelecao[nCont]==oObjeto)
+			nCont++
+		oSelecao[nCont].checked=false;
+	}
+}	
+
+
+/* VALIDANDO - ETAPA 5 */
+
+//Função Finalização
+function fnFinal(oObjeto){
+    
+	let oSelecao = document.getElementsByName('final');
+	let nCont, nAux = 0;
+
+	for (nCont = 0; nCont < oSelecao.length; nCont++)
+		if (oSelecao[nCont].checked)
+			nAux++;
+
 	if (nAux > 2)
 	{
 		nCont=0;
@@ -77,11 +128,10 @@ function fnIngredientes(oObjeto){
 	}
 }	
 
-function validaCheck() {
-    if(document.frmMontagem.ingre.checked < 1)
-	{
-        alert('Escolha no minimo 3 ingredientes!');
-    }
+
+/* VALIDANDO Calculadora */
+function calcula(){
+
 }
 
 

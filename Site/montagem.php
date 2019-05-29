@@ -10,8 +10,10 @@ if(!$oCon->abrirConexao()){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Montagem de Ingredientes</title>
+	<title>Monte sua Pizza</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="./images/favicon2.png" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/montagem.css">
 </head>
 <body>
@@ -30,7 +32,7 @@ if(!$oCon->abrirConexao()){
 
 				foreach ($etapa1 as $lista) {
 			?>
-			<div class="card">
+			<div class="card fadeIn">
 				<div class="imagem">
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
@@ -39,7 +41,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p class="price">R$ <?php echo $lista['igdvalor']?></p>
+					<p name="valor" class="price">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -47,7 +49,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</i></button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(2)">Próximo<i class="fas fa-arrow-right"></i></button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2), calcula()">Próximo<i class="fas fa-arrow-right"></i></button>
 			</div>
 		</div>
 
@@ -63,7 +65,7 @@ if(!$oCon->abrirConexao()){
 
 				foreach ($etapa2 as $lista) {
 			?>
-			<div class="card">
+			<div class="card fadeIn">
 				<div class="imagem">
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
@@ -98,13 +100,13 @@ if(!$oCon->abrirConexao()){
 
 						foreach ($etapa2 as $lista) {
 					?>
-					<div class="card2">
-						<div class="imagem2">
+					<div class="card2 fadeIn">
+						<div class="imagem2 opcao2">
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
 								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
-								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
+								<label for="<?php echo $lista['igdnome']?>"><span><?php echo $lista['igdnome']?></span></label>
 							</div>
 							<div class="preco2">
 								<p class="price">R$ <?php echo $lista['igdvalor']?></p>
@@ -135,12 +137,12 @@ if(!$oCon->abrirConexao()){
 
 						foreach ($etapa3 as $lista) {
 					?>
-					<div class="card2">
+					<div class="card2 fadeIn">
 						<div class="imagem2">
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -172,12 +174,12 @@ if(!$oCon->abrirConexao()){
 
 						foreach ($etapa4 as $lista) {
 					?>
-					<div class="card2">
+					<div class="card2 fadeIn">
 						<div class="imagem2">
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -196,7 +198,7 @@ if(!$oCon->abrirConexao()){
 		</div>
 
 		<!--Visão da Tela Inicial da Montagem do Sabor-->
-		<div class="etapa0 global-etapas">
+		<div id="inicial" class="etapa0 global-etapas" onload="exibeInicio()">
 		<div class="logo">
 			<a href="index.php"><img src="./images/logo4.png"></a>
 			</div>
@@ -225,6 +227,7 @@ if(!$oCon->abrirConexao()){
 <section class="auxiliar">
 	<div class="construcao">
 		<h3>Veja suas escolhas:</h3>
+					<br><span class="view-mensagem"></span>
 	</div>
 	<div class="totalizador">
 		<h3>Total a pagar:</h3>

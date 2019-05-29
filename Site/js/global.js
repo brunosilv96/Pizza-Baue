@@ -31,6 +31,7 @@ function fnScrollLoadingEffect() {
     });
 }
 
+/*MODAL*/
 document.querySelector(".modal-close").onclick = function() {
     // Remove a classe "opened" para que o modal suma
     document.querySelector(".modal").classList.remove("opened");
@@ -105,7 +106,9 @@ function fnModalClose() {
     // Adiciona a classe "closed" no modal
     document.querySelector(".modal").classList.add("closed");
 }
+/*FIM MODAL*/
 
+/*MENU*/
 function menuSticky() {
     var navbar = document.querySelector("nav");
     if (window.pageYOffset >= 0.5) {
@@ -115,7 +118,6 @@ function menuSticky() {
     }
 }
 
-/* FIM MODAL */
 
 /* VALIDACAO CADASTRO */ 
 
@@ -337,7 +339,7 @@ setInterval(function() {
 window.onload = function() {
 responsiveSlider();  
 }
-
+/*FIM CARROSSEL*/
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
