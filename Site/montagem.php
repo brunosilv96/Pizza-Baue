@@ -10,16 +10,6 @@ if(!$oCon->abrirConexao()){
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-	<title>Monte sua Pizza</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="./images/favicon2.png" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
-=======
-	<title>Monte sua pizza!</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="./images/favicon2.png" />
->>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 	<link rel="stylesheet" type="text/css" href="css/montagem.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -108,11 +98,7 @@ if(!$oCon->abrirConexao()){
 						foreach ($etapa2 as $lista) {
 					?>
 					<div class="card2 fadeIn">
-<<<<<<< HEAD
 						<div class="imagem2 opcao2">
-=======
-						<div class="imagem2">
->>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">

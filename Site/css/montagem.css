@@ -411,10 +411,7 @@ iframe{
 	box-sizing: border-box;
 	border: 1px solid black;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 /* Animação nas imagens ao carregar a página*/
 @-webkit-keyframes fadeIn {
 	0% { opacity: 0; }
@@ -503,7 +500,6 @@ iframe{
 
 
 */
-<<<<<<< HEAD
 
 .view-mensagem{
 	color: #ffffff;
