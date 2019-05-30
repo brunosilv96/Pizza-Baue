@@ -1,0 +1,60 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+}
+
+h1{
+	text-align: center;
+}
+
+.cad_ingrediente{
+	width: 80%;
+	height: 550px;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 40px;
+}
+
+label{
+	width: 100%;
+	height: 30px;
+	float: left;
+	margin-top: 20px;
+}
+
+input{
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+select{
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+.botoes{
+	width: 100%;
+	height: 50px;
+	float: left;
+}
+
+button{
+	width: 50%;
+	height: 50px;
+	float: left;
+	margin-top: 50px;
+}
+
+a{
+	float: left;
+	margin-top: 5px;
+}
+

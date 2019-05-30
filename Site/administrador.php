@@ -99,6 +99,7 @@ if($conex->abrirConexao()){
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
                         <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
+                        <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_ingrediente.php" target="iframe-conteudo">Ingredientes</a></li>
                         <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_listarUsers.php" target="iframe-conteudo">Lista de Usuários</a></li>
                         <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
