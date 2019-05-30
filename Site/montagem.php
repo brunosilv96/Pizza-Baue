@@ -102,7 +102,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)" value="<?php echo $lista['igdnome']?>">
 								<label for="<?php echo $lista['igdnome']?>"><span><?php echo $lista['igdnome']?></span></label>
 							</div>
 							<div class="preco2">
@@ -139,7 +139,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)">
+								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)" value="<?php echo $lista['igdnome']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -176,7 +176,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)">
+								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)" value="<?php echo $lista['igdnome']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">

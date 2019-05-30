@@ -54,11 +54,11 @@ function validaRadio2(div) {
             return false;
 	}
 
-	let escolha = filtraM[0].value;
+	let escolha = filtraM[0].value + "<br>";
 	let msg = document.querySelector(".view-mensagem");
 
+	msg.innerHTML += "<br>" + escolha;
     visualizaDiv(div);
-    msg.innerHTML += "<br>" + escolha;
     return false;
 }
 
@@ -74,6 +74,16 @@ function validaCheck(div){
 		alert('Por favor, selecione no mínimo 3 Ingredientes !');
 		return false;
 	}
+
+	let nCont = 0;
+	let cMsg = "";
+	let msg = document.querySelector(".view-mensagem");
+	
+	for (nCont=0; nCont<filtraIngre.length; nCont++)
+	  cMsg += (filtraIngre[nCont].value) + "<br>";
+	
+	msg.innerHTML += "<br>" + cMsg;
+
 	visualizaDiv(div);
     return false; 
 }
@@ -109,6 +119,16 @@ function validaCheck2(div){
 		alert('Por favor, selecione no mínimo 2 Complementos !');
 		return false;
 	}
+
+	let nCont = 0;
+	let cMsg = "";
+	let msg = document.querySelector(".view-mensagem");
+	
+	for (nCont=0; nCont<filtraComple.length; nCont++)
+	  cMsg += (filtraComple[nCont].value) + "<br>";
+	
+	msg.innerHTML += "<br>" + cMsg;
+
 	visualizaDiv(div);
     return false; 
 }
@@ -144,6 +164,16 @@ function validaCheck3(div){
 		alert('Por favor, selecione no mínimo 2 Finalizações !');
 		return false;
 	}
+
+	let nCont = 0;
+	let cMsg = "";
+	let msg = document.querySelector(".view-mensagem");
+	
+	for (nCont=0; nCont<filtraFinal.length; nCont++)
+	  cMsg += (filtraFinal[nCont].value) + "<br>";
+	
+	msg.innerHTML += "<br>" + cMsg;
+
 	visualizaDiv(div);
     return false; 
 }
