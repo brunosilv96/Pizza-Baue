@@ -394,7 +394,7 @@ iframe{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgba(65, 24, 6, 0.5);
+    background-color:rgba(65, 24, 6, 0.1);
     display: block;
 }
 
@@ -502,7 +502,8 @@ iframe{
 */
 
 .view-mensagem{
-	color: #ff8800;
+	color: #ffcb1e;
+	font-weight: bolder;
 	font-size: 15px;
 }
 

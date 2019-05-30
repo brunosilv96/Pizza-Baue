@@ -1,6 +1,9 @@
+@import '../fonts/nunito/css/nunito-all.css';
+@import '../fonts/fontawesome/css/fontawesome.min.css';
 *{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', sans-serif;
 }
 
 body{
@@ -11,6 +14,12 @@ body{
 
 h1{
 	text-align: center;
+	color: rgb(192, 21, 21);
+	font: bold;
+	padding: 4px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .cad_ingrediente{
@@ -26,12 +35,45 @@ label{
 	height: 30px;
 	float: left;
 	margin-top: 20px;
+	color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+	
 }
-
+.lb label{
+	color: rgb(80, 80, 80);
+	font-weight: 800px;
+	text-transform: capitalize;
+	font-size: 18px;
+}
 input{
 	width: 100%;
-	height: 30px;
+	
 	float: left;
+}
+
+.input-cadastro{
+	outline: none;
+    display: block;
+    background: rgba(132, 132, 132, 0.1);
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: all 300ms ease-in-out;
+}
+
+.input-cadastro:focus {
+	border: 1.5px solid rgba(190, 13, 13, 0.849);
 }
 
 select{
@@ -45,7 +87,27 @@ select{
 	height: 50px;
 	float: left;
 }
+.botoes-btn{
+	outline: none;
+	background: rgba(190, 13, 13, 0.849);
+	border: 0;
+	padding: 12px 20px;
+	float: left;
+	color: #FFFFFF;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 500;
+	line-height: inherit;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+	
+}
 
+.botoes-btn:hover {
+	background-color: #ff0000;
+	cursor: pointer;
+}
 button{
 	width: 50%;
 	height: 50px;

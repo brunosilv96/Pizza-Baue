@@ -33,16 +33,16 @@ $resultados = $oCon->lerResultados();
 	<form class="cad_ingrediente" method="POST" enctype="multipart/form-data" action="php/cadastraIngrediente.php">
 		<h1>Cadastro de Ingredientes</h1>
 		
-		<label>Nome do Ingrediente</label>
-		<input type="text" name="txtNome" required>
+		<label class="lb">Ingrediente</label>
+		<input class="input-cadastro" type="text" name="txtNome" required>
 
-		<label>Preço R$ (Por Ingrediente/Porção)</label>
-		<input type="text" name="txtValor" required>
+		<label class="lb">Preço R$ (Porção)</label>
+		<input class="input-cadastro" type="text" name="txtValor" required>
 
-		<label>Imagem do Ingrediente</label>
-		<input type="file" name="imgIngrediente" required>
+		<label class="lb">Imagem do Ingrediente</label>
+		<input class="input-cadastro" type="file" name="imgIngrediente" required>
 
-		<label>Categoria</label>
+		<label class="lb">Categoria</label>
 		<select name="boxCategoria" required>
 			<option value="null">Selecione a Categoria</option>
 			<?php 
@@ -57,8 +57,8 @@ $resultados = $oCon->lerResultados();
 		</select>
 
 		<div class="botoes">
-			<button type="submit">Salvar</button>
-			<button type="reset">Limpar</button>
+			<button class="botoes-btn" type="submit">Salvar</button>
+			<button class="botoes-btn"type="reset">Limpar</button>
 		</div>
 	</form>
 </body>

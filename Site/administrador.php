@@ -98,9 +98,9 @@ if($conex->abrirConexao()){
                     <li><i class="fas fa-cart-plus menu-icon"></i><a href="admin_pedidos.php" target="iframe-conteudo">Principais Pedidos<span class="new-badge">0 new</span></a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="cad_func.php" target="iframe-conteudo">Cadastrar Usuários</a></li>
                         <li><i class="fas fa-users-cog menu-icon"></i><a href="princ_cadastro.php" target="iframe-conteudo">Cadastro</a></li>
-                        <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
-                        <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_ingrediente.php" target="iframe-conteudo">Ingredientes</a></li>
-                        <li><i class="fas fa-user-edit menu-icon"></i><a href="admin_listarUsers.php" target="iframe-conteudo">Lista de Usuários</a></li>
+                        <li><i class="fas fa-users-cog menu-icon"></i><a href="admin_cardapio.php" target="iframe-conteudo">Cardápio</a></li>
+                        <li><i class="fas fa-users-cog menu-icon"></i><a href="admin_ingrediente.php" target="iframe-conteudo">Ingredientes</a></li>
+                        <li><i class="fas fa-list menu-icon"></i><a href="admin_listarUsers.php" target="iframe-conteudo">Lista de Usuários</a></li>
                         <li><i class="fas fa-sign-out-alt menu-icon"></i><a href="php/sair.php">Sair</a></li>
                     </ul>
                 </div>
@@ -111,7 +111,9 @@ if($conex->abrirConexao()){
 				<a href="admin_pedidos.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-cart-plus menu-icon-collapse" alt="Pedidos" title="Pedidos"></i></a>
 				<a href="cad_func.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse" alt="Configurar Cadastro" title="Configurar Cadastro"></i></a>
 				<a href="princ_cadastro.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse" alt="Configurar Endereço" title="Configurar Endereço"></i></a>
-				<a href="admin_cardapio.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-user-edit menu-icon-collapse" alt="Telefone" title="Telefone"></i></a>
+                <a href="admin_cardapio.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse" alt="Inserir pizzas ao cardápio" title="Telefone"></i></a>
+                <a href="admin_ingrediente.php" target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-users-cog menu-icon-collapse" alt="Inserir ingredientes" title="Configurar Endereço"></i></a>
+				<a href="admin_listarUsers.php"  target="iframe-conteudo" class="menu-icon-collapse"><i class="fas fa-list menu-icon-collapse" alt="Lista de usuários" title="Telefone"></i></a>
 				<a href="php/sair.php" class="menu-icon-collapse"><i class="fas fa-sign-out-alt menu-icon-collapse" alt="Sair" title="Sair"></i></a>  
 			</div>
 		</div>

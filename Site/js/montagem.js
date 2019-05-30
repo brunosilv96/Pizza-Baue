@@ -200,12 +200,18 @@ function fnFinal(oObjeto){
 
 /* VALIDANDO Calculadora */
 function calcula(){
-		
-	total = document.getElementsByName('valorMassa').value + 
-			 document.getElementsByName('valorMolho').value +
-			  document.getElementById('resultado').innerText;
+	
+	let resultado = document.querySelector(".view-valor");
 
-    document.getElementById("resultado").innerHTML = total;
+		massa= parseFloat(document.getElementsByName('valorMassa').value);
+		molho=parseFloat(document.getElementsByName('valorMolho').value);
+
+		resultado.textContent = parseFloat(massa+molho);
+		return false; 
+	
+
+	
 }
+	
 
 

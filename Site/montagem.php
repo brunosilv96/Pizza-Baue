@@ -38,7 +38,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p name="valorMassa" class="price">R$ <?php echo $lista['igdvalor']?></p>
+					<p name="valorMassa" class="price" value="<?php echo $lista['igdvalor']?>">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -46,7 +46,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</i></button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(2), calcula()">Próximo<i class="fas fa-arrow-right"></i></button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2), calcula()">Próximo</button>
 			</div>
 		</div>
 
@@ -71,7 +71,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
-					<p name="valorMolho" class="price">R$ <?php echo $lista['igdvalor']?></p>
+					<p name="valorMolho" class="price" value="<?php echo $lista['igdvalor']?>">R$ <?php echo $lista['igdvalor']?></p>
 				</div>
 			</div>
 			<?php 
@@ -227,7 +227,7 @@ if(!$oCon->abrirConexao()){
 	</div>
 	<div class="totalizador">
 		<h3>Total a pagar:</h3>
-		<label id="resultado"></label>
+		<br><span class="view-valor"></span>
 	</div>
 </section>
 </div>
