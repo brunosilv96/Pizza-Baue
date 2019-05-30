@@ -34,7 +34,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>">
+					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -56,7 +56,7 @@ if(!$oCon->abrirConexao()){
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
 			</div>
 			<?php 
-				$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 2";
+				$sql = "SELECT igdnome, format(igdvalor, 2)igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 2";
 				$oCon->executarSQL($sql);
 				$etapa2 = $oCon->lerResultados();
 
@@ -67,7 +67,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>">
+					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -91,7 +91,7 @@ if(!$oCon->abrirConexao()){
 				</div>
 				<div class="ingredientes">
 					<?php 
-						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 3 OR igdcategoria = 4";
+						$sql = "SELECT igdnome, format(igdvalor, 2) igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 3 OR igdcategoria = 4";
 						$oCon->executarSQL($sql);
 						$etapa2 = $oCon->lerResultados();
 
@@ -128,7 +128,7 @@ if(!$oCon->abrirConexao()){
 				</div>
 				<div class="ingredientes">
 					<?php 
-						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 5";
+						$sql = "SELECT igdnome, format(igdvalor, 2) igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 5";
 						$oCon->executarSQL($sql);
 						$etapa3 = $oCon->lerResultados();
 
@@ -165,7 +165,7 @@ if(!$oCon->abrirConexao()){
 				</div>
 				<div class="ingredientes">
 					<?php 
-						$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 6";
+						$sql = "SELECT igdnome, format(igdvalor, 2)igdvalor , igdimagem FROM ingrediente WHERE igdcategoria = 6";
 						$oCon->executarSQL($sql);
 						$etapa4 = $oCon->lerResultados();
 
@@ -203,7 +203,6 @@ if(!$oCon->abrirConexao()){
 		
 				<div class="intro_titulo">
 					<h1>Começe a montar a sua própria pizza!</p></h1>
-		    		<p>Clique no botão!</p>
 				</div>
 				<div class="intro_conteudo">
 					<p>Bem vindo ao painel inicial da montagem do seu próprio sabor de pizza, navegue entre os ingredientes selecionando os que mais se ajustam ao seu paladar, no final de tudo se delicie com a própria criação</p>

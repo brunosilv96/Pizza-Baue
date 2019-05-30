@@ -194,8 +194,8 @@ div.etapas{
 	transition: all 300ms ease-in-out;
 }
 img{
-	width: 100%;
-	height: 100%;
+	width: auto;
+	height: 80%;
 }
 
 .sabor{
@@ -514,21 +514,11 @@ input[type="checkbox"]:checked + label
 {
 	font-weight: bolder;
 	color: #18d100;
-	font-size: 18px;
+	font-size: 17px;
 	transition: all 300ms ease-out;
 }
 
 
 
-
-
-
-
-
-
-
-
-=======
->>>>>>> 1d55274334ca82ec8d4dd8def10de49322303da1
 
 

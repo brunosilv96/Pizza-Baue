@@ -27,17 +27,16 @@ function exibeInicio(div){
 function validaRadio(div) {
 
 	vetor = Array.from(document.getElementsByName('massa'));
-	
-    /* Filtra os resultados da Váriavel*/ 
-	filtraV = vetor.filter(function(posicao) {return posicao.checked});
-	
-    let escolha = filtraV;
-	let msg = document.querySelector(".view-mensagem");
+	filtraV = vetor.filter(function(posicao) {return posicao.checked}); /* Filtra os resultados da Váriavel check*/ 
 	
     if(filtraV.length == 0){
             alert('Por favor, selecione uma Massa.');
             return false;
-    }
+	}
+
+	let escolha = filtraV[0].value;
+	let msg = document.querySelector(".view-mensagem");
+
     visualizaDiv(div);
     msg.textContent = escolha;
     return false;
@@ -48,19 +47,18 @@ function validaRadio(div) {
 function validaRadio2(div) {
 
     vetorM = Array.from(document.getElementsByName('molhos'));
-
-    /* Filtra os resultados da Váriavel*/ 
-    filtraM = vetorM.filter(function(posicao) {return posicao.checked});
-	
-	let escolha = filtraM;
-	let msg = document.querySelector(".view-mensagem");
+    filtraM = vetorM.filter(function(posicao) {return posicao.checked}); /* Filtra os resultados da Váriavel*/ 
 	
     if(filtraM.length == 0){
             alert('Por favor, selecione um Molho.');
             return false;
-    }
+	}
+
+	let escolha = filtraM[0].value;
+	let msg = document.querySelector(".view-mensagem");
+
     visualizaDiv(div);
-    msg.textContent = escolha;
+    msg.innerHTML += "<br>" + escolha;
     return false;
 }
 
