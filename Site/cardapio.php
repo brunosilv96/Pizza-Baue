@@ -170,7 +170,7 @@ if($conex->abrirConexao()){
 				<!--<div class="container-nav">-->
 					<li><a href="index.php">Home</a></li>
 					<li><a href="cardapio.php">Cardápio</a></li>
-					<li><a href="montepizza.php">Monte sua pizza</a></li>
+					<li><a href="montagem.php">Monte sua pizza</a></li>
 				<!--</div>-->
 				<!--<div class="logo">-->
 					<li class="logo"><a href="index.php" class="logo"><img src="./images/logo4.png"></a></li>

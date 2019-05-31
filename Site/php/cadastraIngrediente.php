@@ -13,6 +13,7 @@ if(!$oCon->abrirConexao()){
 	echo "Erro ao abrir conexão com Banco de Dados<br><br>";
 }
 
+try{
 /*Faz a triagem de categoria de acordo com a seleção do usuário*/
 switch ($_POST['boxCategoria']) {
 	case 'Massas':
@@ -51,17 +52,21 @@ $nomeDoArquivo = $_FILES["imgIngrediente"]["name"];
 $caminhoDoArquivo = $_FILES["imgIngrediente"]["tmp_name"];
 
 /* Detalha o caminho correto onde a imagem irá ser armagenada */
-$destino = "../ingredientes/$nomeDoArquivo";
+$destino = "../images/ingredientes/$nomeDoArquivo";
 
 /* Faz a ação de mover o arquivo de arcordo com as configurações passadas */
 $resultado = move_uploaded_file($caminhoDoArquivo, $destino);
 
-$sql = "INSERT INTO ingrediente(igdnome, igdvalor, igdimagem, igdcategoria, id_usuario_fk) VALUES('$_POST[txtNome]', '$_POST[txtValor]', '$nomeDoArquivo', '$categoria', '$usuario')";
+$sql = "INSERT INTO ingrediente(igdnome, igdvalor, igdimagem, igdcategoria) VALUES ('$_POST[txtNome]', '$_POST[txtValor]', '$nomeDoArquivo', '$categoria')";
 
 $oCon->executarSQL($sql);
 
 $oCon->fecharConexao();
 
-header('Location: ../admin_ingrediente.php');
+header('Location: ../admin_ingrediente.php?Sucesso');
+
+}catch(Exception $e){
+	header('Location: ../admin_ingrediente.php?Erro');
+}
 
 ?>

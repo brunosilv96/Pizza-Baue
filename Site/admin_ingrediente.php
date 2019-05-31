@@ -36,7 +36,7 @@ $resultados = $oCon->lerResultados();
 		<label class="lb">Ingrediente</label>
 		<input class="input-cadastro" type="text" name="txtNome" required>
 
-		<label class="lb">Preço R$ (Porção)</label>
+		<label class="lb">Preço (R$/Porção)</label>
 		<input class="input-cadastro" type="text" name="txtValor" required>
 
 		<label class="lb">Imagem do Ingrediente</label>
