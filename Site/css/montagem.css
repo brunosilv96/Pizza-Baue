@@ -501,7 +501,11 @@ iframe{
 
 */
 
-.view-mensagem{
+.view-mensagem,
+.view-mensagem2,
+.view-mensagem3,
+.view-mensagem4,
+.view-mensagem5{
 	color: #ffcb1e;
 	font-weight: bolder;
 	font-size: 15px;

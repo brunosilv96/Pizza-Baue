@@ -55,9 +55,9 @@ function validaRadio2(div) {
 	}
 
 	let escolha = filtraM[0].value + "<br>";
-	let msg = document.querySelector(".view-mensagem");
+	let msg = document.querySelector(".view-mensagem2");
 
-	msg.innerHTML += "<br>" + escolha;
+	msg.innerHTML = escolha;
     visualizaDiv(div);
     return false;
 }
@@ -77,12 +77,12 @@ function validaCheck(div){
 
 	let nCont = 0;
 	let cMsg = "";
-	let msg = document.querySelector(".view-mensagem");
+	let msg = document.querySelector(".view-mensagem3");
 	
 	for (nCont=0; nCont<filtraIngre.length; nCont++)
 	  cMsg += (filtraIngre[nCont].value) + "<br>";
 	
-	msg.innerHTML += "<br>" + cMsg;
+	msg.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -122,12 +122,12 @@ function validaCheck2(div){
 
 	let nCont = 0;
 	let cMsg = "";
-	let msg = document.querySelector(".view-mensagem");
+	let msg = document.querySelector(".view-mensagem4");
 	
 	for (nCont=0; nCont<filtraComple.length; nCont++)
 	  cMsg += (filtraComple[nCont].value) + "<br>";
 	
-	msg.innerHTML += "<br>" + cMsg;
+	msg.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -167,12 +167,12 @@ function validaCheck3(div){
 
 	let nCont = 0;
 	let cMsg = "";
-	let msg = document.querySelector(".view-mensagem");
+	let msg = document.querySelector(".view-mensagem5");
 	
 	for (nCont=0; nCont<filtraFinal.length; nCont++)
 	  cMsg += (filtraFinal[nCont].value) + "<br>";
 	
-	msg.innerHTML += "<br>" + cMsg;
+	msg.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -201,6 +201,17 @@ function fnFinal(oObjeto){
 /* VALIDANDO Calculadora */
 function calcula(){
 	
+	vetor = Array.from(document.getElementsByName('valorMassa'));
+	filtraV = vetor.filter(function(posicao) {return posicao.checked}); /* Filtra os resultados da Váriavel check*/ 
+
+	let escolha = filtraV[0];
+	let msg = document.querySelector(".view-valor");
+
+	msg.textContent = pasrFloat(escolha);
+
+
+
+	/*
 	let resultado = document.querySelector(".view-valor");
 
 		massa= parseFloat(document.getElementsByName('valorMassa').value);
@@ -208,7 +219,7 @@ function calcula(){
 
 		resultado.textContent = parseFloat(massa+molho);
 		return false; 
-	
+	*/
 
 	
 }

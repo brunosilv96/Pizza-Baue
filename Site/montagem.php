@@ -224,6 +224,10 @@ if(!$oCon->abrirConexao()){
 	<div class="construcao">
 		<h3>Veja suas escolhas:</h3>
 					<br><span class="view-mensagem"></span>
+					<br><span class="view-mensagem2"></span>
+					<br><span class="view-mensagem3"></span>
+					<br><span class="view-mensagem4"></span>
+					<br><span class="view-mensagem5"></span>
 	</div>
 	<div class="totalizador">
 		<h3>Total a pagar:</h3>
