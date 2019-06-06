@@ -143,7 +143,24 @@ div.etapas{
 	position: relative;
 	display: none;
 }
-
+.container-passos{
+	width: 100%;
+    height: 50px;
+	margin-top: 3%;
+	display: flex;
+}
+.passo-etapa{
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	margin-left: 5%;
+	float: left;
+	flex-grow: 1;
+	line-height: 37px;
+	color: azure;
+	background-color: rgba(255, 255, 255, 0.794);
+	border-radius: 7px;
+}
 .titulo{
 	width: 100%;
 	height: 70px;
@@ -207,6 +224,7 @@ img{
 	z-index: 10;
 	position: relative;
 	color: #ffffff;
+	font-weight: bolder;
 }
 
 .preco{
@@ -216,19 +234,21 @@ img{
 	text-align: center;
 	padding: 5px;
 	z-index: 10;
-    position: relative;
+	position: relative;
+	font-weight: bolder;
 }
 .price{
 	color: #ff8800;
 }
 .botoes{
-	width: 50%;
+	width: 45%;
 	height: 40px;
 	margin: auto;
 	box-sizing: border-box;
 	clear: both;
 	z-index: 10;
-    position: relative;
+	position: relative;
+	
 }
 .botao{
 	background-color: rgb(109, 9, 9);
@@ -236,6 +256,8 @@ img{
 	font-size: 18px;
 	font-weight: 500;
 	color: rgb(255, 255, 255);
+	margin-left: 5%;
+	border-radius: 10px;
 }
 
 .botao:hover{
@@ -244,7 +266,7 @@ img{
 	cursor: pointer;
 }
 button{
-	width: 50%;
+	width: 45%;
 	height: 100%;
 	float: left;
 }
@@ -283,6 +305,7 @@ button{
 	box-sizing: border-box;
 	padding: 3px;
 	color: #ffffff;
+	font-weight: bolder;
 	z-index: 10;
 	position: relative;
 }
@@ -294,6 +317,7 @@ button{
 	padding: 3px;
 	z-index: 10;
 	position: relative;
+	font-weight: bolder;
 }
 
 iframe{
@@ -403,10 +427,34 @@ iframe{
 	width: 100%;
 	height: 60vh;
 	box-sizing: border-box;
-	border: 1px solid black;
 	text-align: center;
 }
 
+.construcao-final{
+	width: 50%;
+	height: 60vh;
+	box-sizing: border-box;
+	text-align: justify;
+	position: relative;
+   left: 18%; 
+   right: 25%;
+   top: 5%;
+	float: left;
+}
+
+.image{
+	width: 300px;
+	height: 700px;
+	top: -55%;
+	left: 50%;
+	z-index: 10;
+	position: relative;
+	
+}
+.image>img{
+	width: 100%;
+	height: 100%;
+}
 .totalizador{
 	width: 100%;
 	height: 40vh;
@@ -457,9 +505,13 @@ iframe{
 .view-mensagem5fim{
 	color: #ffcb1e;
 	font-weight: bolder;
-	font-size: 15px;
+	font-size: 18px;
 }
-
+.construcao-final>.view-valor{
+	color: #ffcb1e;
+	font-weight: bolder;
+	font-size: 25px;
+}
 .view-valor{
 	color: #ffcb1e;
 	font-weight: bolder;

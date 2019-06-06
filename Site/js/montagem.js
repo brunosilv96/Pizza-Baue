@@ -22,6 +22,7 @@ function exibeInicio(div){
 
 }
 
+
 /* --- ETAPA 1 ---  VALIDANDO RADIO --- ETAPA 1 --- */
 
 function validaRadio(div) {
@@ -105,7 +106,7 @@ function fnIngredientes(oObjeto){
 		if (oSelecao[nCont].checked)
 			nAux++;
 
-	if (nAux > 4)
+	if (nAux > 5)
 	{
 		nCont=0;
 		while (!oSelecao[nCont].checked || oSelecao[nCont]==oObjeto)
@@ -251,22 +252,38 @@ function calcula(){
 	filtraIngre = vetor.filter(function(posicao) {return posicao.checked});
 
 	let nCont = 0;
-	for (nCont=0; nCont<filtraIngre.length; nCont++);
+	for (nCont = 0; nCont<filtraIngre.length; nCont++){
+		filtraIngre[nCont].value;
+	}
 
 
 	/* COMPLEMENTOS */
 	vetor = Array.from(document.getElementsByName('comple'));
 	filtraComple = vetor.filter(function(posicao) {return posicao.checked});
 
+	let nContC = 0;
+	
+	for (nContC=0; nContC<filtraComple.length; nContC++){
+		filtraComple[nContC].value;
+	}
+	  
+	
+	
 	/* FINALIZAÇÕES */
 	vetor = Array.from(document.getElementsByName('final'));
 	filtraFinal = vetor.filter(function(posicao) {return posicao.checked});
 
 
 	let v1 = filtraV[0].getAttribute('data-valor');
+	let v2 = filtraM[0].getAttribute('data-valor');
+	let v3 = filtraIngre[0].getAttribute('data-valor');
+	//let v4 = filtraComple[0].getAttribute('data-valor');
+	//let v5 = filtraFinal[0].getAttribute('data-valor');
+
 	let msg = document.querySelector(".view-valor");
 
-	msg.innerHTML = parseFloat(v1);
+	msg.innerHTML = parseFloat(v1) + parseFloat(v2) + parseFloat(v3);
+	
 
 	
 }

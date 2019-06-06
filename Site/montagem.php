@@ -18,10 +18,32 @@ if(!$oCon->abrirConexao()){
 	<form name="frmMontagem">
 		<!--Inicio da Primeira Etapa da Montagem-->
 		<div id="etapa1"class="etapa1 global-etapas">
+
+		<div class="container-passos">
+		
+						<div class="passo-etapa">
+			
+							<p>Massa</p>
+					</div>
+					<div class="passo-etapa">
+							<p>Molho</p>
+					</div>
+					<div class="passo-etapa">
+							<p>Ingrediente</p>
+					</div>
+					<div class="passo-etapa">
+							<p>Complemento</p>
+					</div>
+					<div class="passo-etapa">
+							<p>Finalização</p>
+					</div>
+		 </div>
+		 
 			<div class="titulo">
 				<h2>Escolha a sua massa favorita</h2>
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
 			</div>
+			
 			<?php 
 				$sql = "SELECT igdnome, igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 1";
 				$oCon->executarSQL($sql);
@@ -34,7 +56,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>"  data-valor="<?php echo $lista['igdvalor']?>">
+					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?> - R$ <?php echo $lista['igdvalor']?>"  data-valor="<?php echo $lista['igdvalor']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -51,6 +73,27 @@ if(!$oCon->abrirConexao()){
 		</div>
 
 		<div id="etapa2" class="etapa2 global-etapas">
+
+		<div class="container-passos">
+		
+		<div class="passo-etapa">
+
+			<p>Massa</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Molho</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Ingrediente</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Complemento</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Finalização</p>
+	</div>
+</div>
+
 			<div class="titulo">
 				<h2>Escolha a sua molho favorito</h2>
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -67,7 +110,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
+					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?> - R$ <?php echo $lista['igdvalor']?>" data-valor="<?php echo $lista['igdvalor']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -102,7 +145,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)" value="<?php echo $lista['igdnome']?> - R$ <?php echo $lista['igdvalor']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><span><?php echo $lista['igdnome']?></span></label>
 							</div>
 							<div class="preco2">
@@ -139,7 +182,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
+								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)" value="<?php echo $lista['igdnome']?> - R$ <?php echo $lista['igdvalor']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -176,7 +219,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
+								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)" value="<?php echo $lista['igdnome']?> - R$ <?php echo $lista['igdvalor']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -196,13 +239,21 @@ if(!$oCon->abrirConexao()){
 				
 		<!--Etapa final - Exibe todas as escolhas do usuário-->
 		<div id="etapa6" class="etapa6 global-etapas">
-			<div class="construcao">
-				<h3>Veja suas escolhas:</h3>
+			<div class="construcao-final fadeIn">
+				<h2>Veja suas escolhas:</h2>
 						<br><span class="view-mensagemfim"></span>
 						<br><span class="view-mensagem2fim"></span>
 						<br><span class="view-mensagem3fim"></span>
 						<br><span class="view-mensagem4fim"></span>
 						<br><span class="view-mensagem5fim"></span>
+
+						<h2>Valor total:</h2>
+						<br><span class="view-valor">R$ 0,00</span>
+
+						
+			</div>
+			<div class="image fadeIn">
+			<a href="index.php"><img src="./images/chefe.png"></a>
 			</div>
 				<div class="botoes">
 					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(5); aparece()">Voltar</button>
@@ -245,7 +296,7 @@ if(!$oCon->abrirConexao()){
 	</div>
 	<div class="totalizador">
 		<h3>Total a pagar:</h3>
-		<br><span class="view-valor"></span>
+		<br><span class="view-valor">R$ 0,00</span>
 	</div>
 </section>
 </div>
