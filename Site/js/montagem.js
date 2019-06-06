@@ -1,7 +1,7 @@
 /* Function esconder div */
 function visualizaDiv (div) {
     //Especifique quantas divs serão utilizadas no total:
-    var divTotal = 5;
+    var divTotal = 6;
     
     var objDiv = document.getElementById("etapa"+div);  
     
@@ -36,9 +36,11 @@ function validaRadio(div) {
 
 	let escolha = filtraV[0].value;
 	let msg = document.querySelector(".view-mensagem");
-
+	let msgfim = document.querySelector(".view-mensagemfim");
+	
     visualizaDiv(div);
-    msg.textContent = escolha;
+	msg.textContent = escolha;
+	msgfim.textContent = escolha;
     return false;
 }
 
@@ -56,8 +58,11 @@ function validaRadio2(div) {
 
 	let escolha = filtraM[0].value + "<br>";
 	let msg = document.querySelector(".view-mensagem2");
+	let msgfim = document.querySelector(".view-mensagem2fim");
 
 	msg.innerHTML = escolha;
+	msgfim.innerHTML = escolha;
+	
     visualizaDiv(div);
     return false;
 }
@@ -78,11 +83,13 @@ function validaCheck(div){
 	let nCont = 0;
 	let cMsg = "";
 	let msg = document.querySelector(".view-mensagem3");
+	let msgfim = document.querySelector(".view-mensagem3fim");
 	
 	for (nCont=0; nCont<filtraIngre.length; nCont++)
 	  cMsg += (filtraIngre[nCont].value) + "<br>";
 	
 	msg.innerHTML = cMsg;
+	msgfim.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -123,11 +130,13 @@ function validaCheck2(div){
 	let nCont = 0;
 	let cMsg = "";
 	let msg = document.querySelector(".view-mensagem4");
+	let msgfim = document.querySelector(".view-mensagem4fim");
 	
 	for (nCont=0; nCont<filtraComple.length; nCont++)
 	  cMsg += (filtraComple[nCont].value) + "<br>";
 	
 	msg.innerHTML = cMsg;
+	msgfim.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -168,11 +177,13 @@ function validaCheck3(div){
 	let nCont = 0;
 	let cMsg = "";
 	let msg = document.querySelector(".view-mensagem5");
+	let msgfim = document.querySelector(".view-mensagem5fim");
 	
 	for (nCont=0; nCont<filtraFinal.length; nCont++)
 	  cMsg += (filtraFinal[nCont].value) + "<br>";
 	
 	msg.innerHTML = cMsg;
+	msgfim.innerHTML = cMsg;
 
 	visualizaDiv(div);
     return false; 
@@ -198,28 +209,64 @@ function fnFinal(oObjeto){
 }	
 
 
+/* Ocultando a div Auxiliar */
+function esconde(){
+
+	let altera = document.getElementsByClassName('auxiliar');
+	let altera2 = document.getElementsByClassName('montagem');
+	var i;
+
+	for (i = 0; i < altera.length; i++) {
+		  altera[i].style.display = "none";
+		  altera2[i].style.width = "100%";
+	}
+}
+
+function aparece(){
+
+	let mostra = document.getElementsByClassName('auxiliar');
+	let mostra2 = document.getElementsByClassName('montagem');
+	var i;
+
+	for (i = 0; i < mostra.length; i++) {
+		mostra[i].style.display = "block";
+		mostra2[i].style.width = "80%";
+  }	
+}
+
+
 /* VALIDANDO Calculadora */
 function calcula(){
 	
-	vetor = Array.from(document.getElementsByName('valorMassa'));
-	filtraV = vetor.filter(function(posicao) {return posicao.checked}); /* Filtra os resultados da Váriavel check*/ 
+	/* MASSA */ 
+	vetor = Array.from(document.getElementsByName('massa'));
+	filtraV = vetor.filter(function(posicao) {return posicao.checked});
+	
+	/* MOLHOS */
+	vetor = Array.from(document.getElementsByName('molhos'));
+	filtraM = vetor.filter(function(posicao) {return posicao.checked});
 
-	let escolha = filtraV[0];
+	/* INGREDIENTES */
+	vetor = Array.from(document.getElementsByName('ingre'));
+	filtraIngre = vetor.filter(function(posicao) {return posicao.checked});
+
+	let nCont = 0;
+	for (nCont=0; nCont<filtraIngre.length; nCont++);
+
+
+	/* COMPLEMENTOS */
+	vetor = Array.from(document.getElementsByName('comple'));
+	filtraComple = vetor.filter(function(posicao) {return posicao.checked});
+
+	/* FINALIZAÇÕES */
+	vetor = Array.from(document.getElementsByName('final'));
+	filtraFinal = vetor.filter(function(posicao) {return posicao.checked});
+
+
+	let v1 = filtraV[0].getAttribute('data-valor');
 	let msg = document.querySelector(".view-valor");
 
-	msg.textContent = pasrFloat(escolha);
-
-
-
-	/*
-	let resultado = document.querySelector(".view-valor");
-
-		massa= parseFloat(document.getElementsByName('valorMassa').value);
-		molho=parseFloat(document.getElementsByName('valorMolho').value);
-
-		resultado.textContent = parseFloat(massa+molho);
-		return false; 
-	*/
+	msg.innerHTML = parseFloat(v1);
 
 	
 }

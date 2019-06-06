@@ -131,12 +131,12 @@ div.etapas{
 	z-index: 10;
 	position: relative;
 	display: none;
-	
 }
 
-.etapafim{
+.etapa6{
 	width: 100%;
 	height: 100vh;
+	margin: auto;
 	box-sizing: border-box;
 	overflow: auto;
 	z-index: 10;
@@ -384,6 +384,7 @@ iframe{
     background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	display: block;
 }
 
 .auxiliar::before{
@@ -403,6 +404,7 @@ iframe{
 	height: 60vh;
 	box-sizing: border-box;
 	border: 1px solid black;
+	text-align: center;
 }
 
 .totalizador{
@@ -410,6 +412,7 @@ iframe{
 	height: 40vh;
 	box-sizing: border-box;
 	border: 1px solid black;
+	text-align: center;
 }
 
 /* Animação nas imagens ao carregar a página*/
@@ -435,77 +438,29 @@ iframe{
 	-moz-animation: fadeIn 1s ease-in-out;
 	-o-animation: fadeIn 1s ease-in-out;
 	animation: fadeIn 1s ease-in-out;
-	}
-
-/*LOADING- CSS */
-/*#preloader {
-		position:fixed;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-		background-color:#F27620;
-		z-index:999; 
-	}
-	#preloader .inner {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);  
-	}
-	.bolas > div {
-	  display: inline-block;
-	  background-color: #fff;
-	  width: 25px;
-	  height: 25px;
-	  border-radius: 100%;
-	  margin: 3px;
-	  -webkit-animation-fill-mode: both;
-	  animation-fill-mode: both;
-	  animation-name: animarBola;
-	  animation-timing-function: linear;
-	  animation-iteration-count: infinite;
-	   
-	}
-	.bolas > div:nth-child(1) {
-		animation-duration:0.75s ;
-		animation-delay: 0;
-	}
-	.bolas > div:nth-child(2) {
-		animation-duration: 0.75s ;
-		animation-delay: 0.12s;
-	}
-	.bolas > div:nth-child(3) {
-		animation-duration: 0.75s  ;
-		animation-delay: 0.24s;
-	}
-	 
-	@keyframes animarBola {
-	  0% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		opacity: 1;
-	  }
-	  16% {
-		-webkit-transform: scale(0.1);
-		transform: scale(0.1);
-		opacity: 0.7;
-	  }
-	  33% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		opacity: 1; 
-	  } 
-	}
-
-
-*/
+}
 
 .view-mensagem,
 .view-mensagem2,
 .view-mensagem3,
 .view-mensagem4,
 .view-mensagem5{
+	color: #ffcb1e;
+	font-weight: bolder;
+	font-size: 15px;
+}
+
+.view-mensagemfim,
+.view-mensagem2fim,
+.view-mensagem3fim,
+.view-mensagem4fim,
+.view-mensagem5fim{
+	color: #ffcb1e;
+	font-weight: bolder;
+	font-size: 15px;
+}
+
+.view-valor{
 	color: #ffcb1e;
 	font-weight: bolder;
 	font-size: 15px;

@@ -34,7 +34,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>">
+					<input type="radio" name="massa" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>"  data-valor="<?php echo $lista['igdvalor']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -46,7 +46,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</i></button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(2), calcula()">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2); calcula()">Próximo</button>
 			</div>
 		</div>
 
@@ -67,7 +67,7 @@ if(!$oCon->abrirConexao()){
 					<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>"></label>
 				</div>
 				<div class="sabor">
-					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>">
+					<input type="radio" name="molhos" id="<?php echo $lista['igdnome']?>" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
 					<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 				</div>
 				<div class="preco">
@@ -79,7 +79,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(1)">Voltar</button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3)">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3); calcula()">Próximo</button>
 			</div>
 		</div>
 
@@ -102,7 +102,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)" value="<?php echo $lista['igdnome']?>">
+								<input type="checkbox" name="ingre" id="<?php echo $lista['igdnome']?>" onclick="fnIngredientes(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><span><?php echo $lista['igdnome']?></span></label>
 							</div>
 							<div class="preco2">
@@ -116,7 +116,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(2)">Voltar</button>
-					<button type="button" id="btn2" class="botao" onclick="validaCheck(4)">Próximo</button>
+					<button type="button" id="btn2" class="botao" onclick="validaCheck(4); calcula()">Próximo</button>
 				</div>
 			</div>
 
@@ -139,7 +139,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)" value="<?php echo $lista['igdnome']?>">
+								<input type="checkbox" name="comple" id="<?php echo $lista['igdnome']?>" onclick="fnComplementos(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -176,7 +176,7 @@ if(!$oCon->abrirConexao()){
 						<label for="<?php echo $lista['igdnome']?>"><img src="images/ingredientes/<?php echo $lista['igdimagem']?>">
 							</div>
 							<div class="sabor2">
-								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)" value="<?php echo $lista['igdnome']?>">
+								<input type="checkbox" name="final" id="<?php echo $lista['igdnome']?>" onclick="fnFinal(this)" value="<?php echo $lista['igdnome']?>" data-valor="<?php echo $lista['igdvalor']?>">
 								<label for="<?php echo $lista['igdnome']?>"><?php echo $lista['igdnome']?></label>
 							</div>
 							<div class="preco2">
@@ -189,8 +189,24 @@ if(!$oCon->abrirConexao()){
 				</div>
 
 				<div class="botoes">
-					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4)">Voltar</button>
-					<button type="button" class="botao" onclick="validaCheck3(1)">Finalizar</button>
+					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4); aparece()">Voltar</button>
+					<button type="button" class="botao" onclick="validaCheck3(6); esconde()">Finalizar</button>
+				</div>
+		</div>
+				
+		<!--Etapa final - Exibe todas as escolhas do usuário-->
+		<div id="etapa6" class="etapa6 global-etapas">
+			<div class="construcao">
+				<h3>Veja suas escolhas:</h3>
+						<br><span class="view-mensagemfim"></span>
+						<br><span class="view-mensagem2fim"></span>
+						<br><span class="view-mensagem3fim"></span>
+						<br><span class="view-mensagem4fim"></span>
+						<br><span class="view-mensagem5fim"></span>
+			</div>
+				<div class="botoes">
+					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(5); aparece()">Voltar</button>
+					<button type="submit" class="botao">Concluir</button>
 				</div>
 		</div>
 
@@ -212,15 +228,13 @@ if(!$oCon->abrirConexao()){
 			<div class="intro_botao">
 				<button type="button" id="btn1" class="btn_intro" onclick="visualizaDiv(1)">Monte sua pizza</button>
 			</div>
-	    </div>
-	    <div class="etapafim">
-	    	<!--Etapa final - Exibe todas as escolhas do usuário-->
-	    </div>
+			</div>
+			
     </form>
 </section>
 
 <!--Menu lateral na área lateral da página de montagem-->
-<section class="auxiliar">
+<section id="auxi" class="auxiliar">
 	<div class="construcao">
 		<h3>Veja suas escolhas:</h3>
 					<br><span class="view-mensagem"></span>
