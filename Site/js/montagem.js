@@ -236,6 +236,27 @@ function aparece(){
 }
 
 
+
+function passoPasso(){
+	let	altera1 = document.getElementById('passo-etapa-1');
+	altera1.style.background = "#cc1010";
+}
+function passoPasso2(){
+	let	altera2 = document.getElementById('passo-etapa-2');
+	altera2.style.background = "#cc1010";
+}
+function passoPasso3(){
+	let	altera3 = document.getElementById('passo-etapa-3');
+	altera3.style.background = "#cc1010";
+}
+function passoPasso4(){
+	let	altera2 = document.getElementById('passo-etapa-4');
+	altera2.style.background = "#cc1010";
+}
+function passoPasso5(){
+	let	altera2 = document.getElementById('passo-etapa-5');
+	altera2.style.background = "#cc1010";
+}
 /* VALIDANDO Calculadora */
 function calcula(){
 	

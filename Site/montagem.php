@@ -21,7 +21,7 @@ if(!$oCon->abrirConexao()){
 
 		<div class="container-passos">
 		
-						<div class="passo-etapa">
+						<div class="passo-etapa" id="passo-etapa-1">
 			
 							<p>Massa</p>
 					</div>
@@ -68,7 +68,7 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(0)">Inicio</i></button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio(2); calcula()">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio(2); passoPasso2(); calcula();">Próximo</button>
 			</div>
 		</div>
 
@@ -80,7 +80,7 @@ if(!$oCon->abrirConexao()){
 
 			<p>Massa</p>
 	</div>
-	<div class="passo-etapa">
+	<div class="passo-etapa" id="passo-etapa-2">
 			<p>Molho</p>
 	</div>
 	<div class="passo-etapa">
@@ -122,12 +122,32 @@ if(!$oCon->abrirConexao()){
 			?>
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(1)">Voltar</button>
-				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3); calcula()">Próximo</button>
+				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3); passoPasso3(); calcula()">Próximo</button>
 			</div>
 		</div>
 
 		<!--Inicio da Segunda Etapa da Montagem-->
 			<div id="etapa3" class="etapa3 global-etapas">
+
+			<div class="container-passos">
+		
+				<div class="passo-etapa">
+
+					<p>Massa</p>
+			</div>
+			<div class="passo-etapa">
+					<p>Molho</p>
+			</div>
+			<div class="passo-etapa" id="passo-etapa-3">
+					<p>Ingrediente</p>
+			</div>
+			<div class="passo-etapa">
+					<p>Complemento</p>
+			</div>
+			<div class="passo-etapa">
+					<p>Finalização</p>
+			</div>
+		</div>
 				<div class="titulo2">
 					<h2>Escolha seus ingredientes favoritos</h2>
 					<p>Clique nos ingredientes de acordo com o seu gosto</p>
@@ -159,12 +179,31 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(2)">Voltar</button>
-					<button type="button" id="btn2" class="botao" onclick="validaCheck(4); calcula()">Próximo</button>
+					<button type="button" id="btn2" class="botao" onclick="validaCheck(4); passoPasso4(); calcula()">Próximo</button>
 				</div>
 			</div>
 
 			<!--Inicio da Terceira Etapa da Montagem-->
 		<div id="etapa4" class="etapa4 global-etapas">
+		<div class="container-passos">
+		
+		<div class="passo-etapa">
+
+			<p>Massa</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Molho</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Ingrediente</p>
+	</div>
+	<div class="passo-etapa" id="passo-etapa-4">
+			<p>Complemento</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Finalização</p>
+	</div>
+</div>
 			<div class="titulo2">
 					<h2>Escolha os seus complementos favoritos</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -196,12 +235,31 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(3)">Voltar</button>
-					<button type="button" id="btn3" class="botao" onclick="validaCheck2(5)">Próximo</button>
+					<button type="button" id="btn3" class="botao" onclick="validaCheck2(5); passoPasso5();">Próximo</button>
 				</div>
 		</div>
 
 		<!--Inicio da Quarta Etapa da Montagem-->
 		<div id="etapa5" class="etapa5 global-etapas">
+		<div class="container-passos">
+		
+		<div class="passo-etapa">
+
+			<p>Massa</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Molho</p>
+	</div>
+	<div class="passo-etapa">
+			<p>Ingrediente</p>
+	</div>
+	<div class="passo-etapa" >
+			<p>Complemento</p>
+	</div>
+	<div class="passo-etapa" id="passo-etapa-5">
+			<p>Finalização</p>
+	</div>
+</div>
 			<div class="titulo2">
 					<h2>Escolha a sua finalização</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -277,7 +335,7 @@ if(!$oCon->abrirConexao()){
 				</div>
 			</div>
 			<div class="intro_botao">
-				<button type="button" id="btn1" class="btn_intro" onclick="visualizaDiv(1)">Monte sua pizza</button>
+				<button type="button" id="btn1" class="btn_intro" onclick="visualizaDiv(1), passoPasso()">Monte sua pizza</button>
 			</div>
 			</div>
 			
