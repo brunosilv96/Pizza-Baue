@@ -208,6 +208,7 @@ if(!$oCon->abrirConexao()){
 					<h2>Escolha os seus complementos favoritos</h2>
 					<p>Clique nos ingrediente de acordo com o seu gosto</p>
 				</div>
+				<!-- COMPLEMENTOS -->
 				<div class="ingredientes">
 					<?php 
 						$sql = "SELECT igdnome, format(igdvalor, 2) igdvalor, igdimagem FROM ingrediente WHERE igdcategoria = 5";
@@ -235,7 +236,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn1" class="botao" onclick="visualizaDiv(3)">Voltar</button>
-					<button type="button" id="btn3" class="botao" onclick="validaCheck2(5); passoPasso5();">Próximo</button>
+					<button type="button" id="btn3" class="botao" onclick="validaCheck2(5); passoPasso5(); calcula()">Próximo</button>
 				</div>
 		</div>
 
@@ -291,7 +292,7 @@ if(!$oCon->abrirConexao()){
 
 				<div class="botoes">
 					<button type="button" id="btn4" class="botao" onclick="visualizaDiv(4); aparece()">Voltar</button>
-					<button type="button" class="botao" onclick="validaCheck3(6); esconde()">Finalizar</button>
+					<button type="button" class="botao" onclick="validaCheck3(6); esconde(); calcula()">Finalizar</button>
 				</div>
 		</div>
 				
@@ -306,7 +307,7 @@ if(!$oCon->abrirConexao()){
 						<br><span class="view-mensagem5fim"></span>
 
 						<h2>Valor total:</h2>
-						<br><span class="view-valor">R$ 0,00</span>
+						<br><span class="view-valorfim"><h3> R$ 0,00</h3></span>
 
 						
 			</div>

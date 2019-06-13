@@ -436,15 +436,15 @@ iframe{
 	box-sizing: border-box;
 	text-align: justify;
 	position: relative;
-   left: 18%; 
-   right: 25%;
-   top: 5%;
+   	left: 18%; 
+   	right: 25%;
+   	top: 5%;
 	float: left;
 }
 
 .image{
 	width: 300px;
-	height: 700px;
+	height: 600px;
 	top: -55%;
 	left: 50%;
 	z-index: 10;
@@ -494,8 +494,8 @@ iframe{
 .view-mensagem4,
 .view-mensagem5{
 	color: #ffcb1e;
-	font-weight: bolder;
 	font-size: 15px;
+	font-weight: bolder;
 }
 
 .view-mensagemfim,
@@ -512,7 +512,7 @@ iframe{
 	font-weight: bolder;
 	font-size: 25px;
 }
-.view-valor{
+.view-valorfim>h3{
 	color: #ffcb1e;
 	font-weight: bolder;
 	font-size: 15px;

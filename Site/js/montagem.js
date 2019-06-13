@@ -236,7 +236,6 @@ function aparece(){
 }
 
 
-
 function passoPasso(){
 	let	altera1 = document.getElementById('passo-etapa-1');
 	altera1.style.background = "#cc1010";
@@ -257,57 +256,72 @@ function passoPasso5(){
 	let	altera2 = document.getElementById('passo-etapa-5');
 	altera2.style.background = "#cc1010";
 }
+
+
 /* VALIDANDO Calculadora */
+
 function calcula(){
 	
+	let msgfim = document.querySelector(".view-valorfim");
+	let msg = document.querySelector(".view-valor");
+
 	/* MASSA */ 
 	vetor = Array.from(document.getElementsByName('massa'));
 	filtraV = vetor.filter(function(posicao) {return posicao.checked});
-	
+
+		let v1 = parseFloat(filtraV[0].getAttribute('data-valor'));
+		msg.innerHTML = (v1);
+
 	/* MOLHOS */
 	vetor = Array.from(document.getElementsByName('molhos'));
 	filtraM = vetor.filter(function(posicao) {return posicao.checked});
+
+	let v2 = 0;
+
+		if(filtraM.length >= 1){
+			v2 = parseFloat(filtraM[0].getAttribute('data-valor'));
+		}
+		msg.innerHTML = ((v1) + (v2)).toFixed(2);
 
 	/* INGREDIENTES */
 	vetor = Array.from(document.getElementsByName('ingre'));
 	filtraIngre = vetor.filter(function(posicao) {return posicao.checked});
 
-	let nCont = 0;
-	for (nCont = 0; nCont<filtraIngre.length; nCont++){
-		filtraIngre[nCont].value;
-	}
-
+		let v3 = 0;
+		if(filtraIngre.length >= 3){
+			let nCont = 0;
+			for (nCont=0; nCont<filtraIngre.length; nCont++)
+			v3 += parseFloat(filtraIngre[nCont].getAttribute('data-valor'));
+		}
+		msg.innerHTML = ((v1) + (v2) + (v3)).toFixed(2);
 
 	/* COMPLEMENTOS */
 	vetor = Array.from(document.getElementsByName('comple'));
 	filtraComple = vetor.filter(function(posicao) {return posicao.checked});
 
-	let nContC = 0;
-	
-	for (nContC=0; nContC<filtraComple.length; nContC++){
-		filtraComple[nContC].value;
-	}
-	  
-	
-	
+	let v4 = 0;
+		if(filtraComple.length >= 2){
+			let nConta = 0;
+			for (nConta=0; nConta<filtraComple.length; nConta++)
+			v4 += parseFloat(filtraComple[nConta].getAttribute('data-valor'));
+		}
+		msg.innerHTML = ((v1) + (v2) + (v3) + (v4)).toFixed(2);
+
 	/* FINALIZAÇÕES */
 	vetor = Array.from(document.getElementsByName('final'));
 	filtraFinal = vetor.filter(function(posicao) {return posicao.checked});
 
-
-	let v1 = filtraV[0].getAttribute('data-valor');
-	let v2 = filtraM[0].getAttribute('data-valor');
-	let v3 = filtraIngre[0].getAttribute('data-valor');
-	//let v4 = filtraComple[0].getAttribute('data-valor');
-	//let v5 = filtraFinal[0].getAttribute('data-valor');
-
-	let msg = document.querySelector(".view-valor");
-
-	msg.innerHTML = parseFloat(v1) + parseFloat(v2) + parseFloat(v3);
-	
-
-	
+	let v5 = 0;
+		if(filtraFinal.length >= 2){
+			let nCont3 = 0;
+			for (nCont3=0; nCont3<filtraComple.length; nCont3++)
+			v5 += parseFloat(filtraComple[nCont3].getAttribute('data-valor'));
+		}
+		msg.innerHTML = (v1) + (v2) + (v3) + (v4) + (v5);
+		msgfim.innerHTML = (v1) + (v2) + (v3) + (v4) + (v5);
 }
+
+
 	
 
 
