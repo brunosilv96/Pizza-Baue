@@ -317,11 +317,9 @@ function calcula(){
 			for (nCont3=0; nCont3<filtraComple.length; nCont3++)
 			v5 += parseFloat(filtraComple[nCont3].getAttribute('data-valor'));
 		}
-		msg.innerHTML = (v1) + (v2) + (v3) + (v4) + (v5);
-		msgfim.innerHTML = (v1) + (v2) + (v3) + (v4) + (v5);
+		msg.innerHTML = ((v1) + (v2) + (v3) + (v4) + (v5)).toFixed(2);
+		msgfim.innerHTML = ((v1) + (v2) + (v3) + (v4) + (v5)).toFixed(2);
 }
 
-
 	
-
 

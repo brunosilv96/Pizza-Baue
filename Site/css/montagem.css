@@ -507,17 +507,19 @@ iframe{
 	font-weight: bolder;
 	font-size: 18px;
 }
+
 .construcao-final>.view-valor{
 	color: #ffcb1e;
 	font-weight: bolder;
 	font-size: 25px;
 }
-.view-valorfim>h3{
+
+.view-valor,
+.view-valorfim{
 	color: #ffcb1e;
 	font-weight: bolder;
-	font-size: 15px;
+	font-size: 25px;
 }
-
 
 input[type="checkbox"]
 {

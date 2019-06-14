@@ -93,7 +93,6 @@ if(!$oCon->abrirConexao()){
 			<p>Finalização</p>
 	</div>
 </div>
-
 			<div class="titulo">
 				<h2>Escolha a sua molho favorito</h2>
 				<p>Clique nos ingrediente de acordo com o seu gosto</p>
@@ -120,6 +119,7 @@ if(!$oCon->abrirConexao()){
 			<?php 
 				}
 			?>
+
 			<div class="botoes">
 				<button type="button" id="btn1" class="botao" onclick="visualizaDiv(1)">Voltar</button>
 				<button type="button" id="btn1" class="botao" onclick="validaRadio2(3); passoPasso3(); calcula()">Próximo</button>
@@ -328,7 +328,7 @@ if(!$oCon->abrirConexao()){
 			<div class="introducao">
 		
 				<div class="intro_titulo">
-					<h1>Começe a montar a sua própria pizza!</p></h1>
+					<h1>Comece a montar a sua própria pizza!</p></h1>
 				</div>
 				<div class="intro_conteudo">
 					<p>Bem vindo ao painel inicial da montagem do seu próprio sabor de pizza, navegue entre os ingredientes selecionando os que mais se ajustam ao seu paladar, no final de tudo se delicie com a própria criação</p>
